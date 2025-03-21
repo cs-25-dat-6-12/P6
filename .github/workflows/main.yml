@@ -1,0 +1,27 @@
+# This workflow will build the project and run all tests
+
+name: run tests
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  python-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - name: Install pip
+      run: python -m pip install --upgrade pip
+    - name: install dependencies
+      run: pip install -r requirements.txt
+    - name: run tests
+      run: pytest
