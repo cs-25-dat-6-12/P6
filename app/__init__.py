@@ -113,5 +113,37 @@ def writefunction(text):
         "text": list
     })
     out.to_csv("test", sep="\t")
+    
+def write_transliterated_matches(output_path):
+    yiddish = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t")
+    roman = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv", sep="\t")
+    laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
+    id, title_yiddish, title_roman, title_LASKI, name_parts_yiddish, name_parts_roman, name_parts_LASKI = [], [], [], [], [], [], []
+    bool_table = yiddish.isna()
+    for i, row in yiddish.iterrows():
+        if not bool_table["geo_source"][i]:
+            source_string = row["geo_source"].replace("laski:", "")
+            for j, row2 in laski.iterrows():
+                if row2["id"] == source_string:
+                    id.append(row["id"])
+                    title_yiddish.append(row["title"])
+                    title_roman.append(roman["title"][i])
+                    title_LASKI.append(row2["title"])
+                    name_parts_yiddish.append(row["name_parts"])
+                    name_parts_roman.append(roman["name_parts"][i])
+                    name_parts_LASKI.append(row2["name_parts"])
+    output = pd.DataFrame({
+        "id": id,
+        "title_yiddish": title_yiddish,
+        "title_roman": title_roman,
+        "title_LASKI": title_LASKI,
+        "name_parts_yiddish": name_parts_yiddish,
+        "name_parts_roman": name_parts_roman,
+        "name_parts_LASKI": name_parts_LASKI
+    })
+    output.to_csv(output_path, sep="\t")
+
+
 if __name__ == "__main__":
     transliterate_zylbercweig("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv")
+    write_transliterated_matches("datasets/testset15-Zylbercweig-Laski/Transliterated_matches.csv")
