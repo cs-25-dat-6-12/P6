@@ -15,3 +15,17 @@ class Test_transliterate_yiddish():
 
     def test_names(self):
         assert app.transliterate_yiddish("אַּבבּדול") == "abvdui"
+        
+class Test_Levenshtein():
+    def test_base_cases(self):
+        assert app.levenshtein_distance("", "dsa") == 3
+        assert app.levenshtein_distance("", "dsa4") == 4
+        assert app.levenshtein_distance("", "dsa321") == 6
+        assert app.levenshtein_distance("dsa", "") == 3
+        assert app.levenshtein_distance("dsa4", "") == 4
+        assert app.levenshtein_distance("dsa321", "") == 6
+    def test_same_string(self):
+        assert app.levenshtein_distance("", "") == 0
+        assert app.levenshtein_distance("house", "house") == 0
+    def test_strings(self):
+        assert app.levenshtein_distance("ghost", "house") == 3
