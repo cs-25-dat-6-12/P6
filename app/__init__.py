@@ -118,7 +118,7 @@ def write_transliterated_matches(output_path):
     yiddish = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t")
     roman = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv", sep="\t")
     laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
-    id, title_yiddish, title_roman, title_LASKI, name_parts_yiddish, name_parts_roman, name_parts_LASKI = [], [], [], [], [], [], []
+    id, id2, title_yiddish, title_roman, title_LASKI, name_parts_yiddish, name_parts_roman, name_parts_LASKI = [], [], [], [], [], [], [], []
     bool_table = yiddish.isna()
     for i, row in yiddish.iterrows():
         if not bool_table["geo_source"][i]:
@@ -126,6 +126,7 @@ def write_transliterated_matches(output_path):
             for j, row2 in laski.iterrows():
                 if row2["id"] == source_string:
                     id.append(row["id"])
+                    id2.append(row2["id"])
                     title_yiddish.append(row["title"])
                     title_roman.append(roman["title"][i])
                     title_LASKI.append(row2["title"])
@@ -133,7 +134,8 @@ def write_transliterated_matches(output_path):
                     name_parts_roman.append(roman["name_parts"][i])
                     name_parts_LASKI.append(row2["name_parts"])
     output = pd.DataFrame({
-        "id": id,
+        "id_zylbercweig": id,
+        "id_laski": id2,
         "title_yiddish": title_yiddish,
         "title_roman": title_roman,
         "title_LASKI": title_LASKI,
@@ -143,24 +145,6 @@ def write_transliterated_matches(output_path):
     })
     output.to_csv(output_path, sep="\t")
     
-def levenshtein_distance(str1, str2):
-    m = len(str1)
-    n = len(str2)
- 
-    matrix = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
- 
-    for i in range(m + 1):
-        matrix[i][0] = i
-    for j in range(n + 1):
-        matrix[0][j] = j
- 
-    for i in range(1, m + 1):
-        for j in range(1, n + 1):
-            if str1[i - 1] == str2[j - 1]:
-                matrix[i][j] = min(matrix[i - 1][j - 1], 1 + matrix[i][j - 1], 1 + matrix[i - 1][j])
-            else:
-                matrix[i][j] = 1 + min(matrix[i][j - 1], matrix[i - 1][j], matrix[i - 1][j - 1])
-    return matrix[m][n]
 
 if __name__ == "__main__":
     transliterate_zylbercweig("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv")
