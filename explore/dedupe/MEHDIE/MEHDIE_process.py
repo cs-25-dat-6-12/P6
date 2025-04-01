@@ -20,9 +20,18 @@ import datetimetype
 from unidecode import unidecode
 
 string_feature_set = set()
+full_feature_list = []
+rows = []
 
 
 def preProcess(column):
+    if isinstance(column, (int, float)):
+        return str(
+            column
+        )  # No need for unidecode on numeric data(unidecode doesn't work on numeric data)
+    elif column is None:
+        return None
+
     column = unidecode(column)
     column = re.sub("  +", " ", column)
     column = re.sub("\n", " ", column)
@@ -33,46 +42,70 @@ def preProcess(column):
 
 
 # Read and preprocess data from CSV file, ignoring lat and lon columns
-def readData(filename):
+def readData(filenames):
     data_d = {}
-    with open(filename) as f:
-        reader = csv.DictReader(f)
-        rows = []
+    # add the rows from both files to a list to join them
+    for file in filenames:
+        with open(file, encoding="utf8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                rows.append(row)
 
-        # find out which features are in the name_parts dicts and add the rows to a list
-        print("Finding distinct name parts")
-        for row in reader:
-            rows.append(row)
-            for feature in eval(row["name_parts"]):
+    # find out all features that exist and which features are in the name_parts dicts
+    print("Finding distinct name parts")
+    bad_rows = []
+    for row in rows:
+        for feature in row:
+            if feature not in full_feature_list:
+                full_feature_list.append(feature)
+        try:
+            for feature in eval(
+                row["name_parts"]
+                .replace('""""', '""#""')
+                .replace('""', '"')
+                .replace('"#"', '""')
+            ):
                 string_feature_set.add(feature)
-        print(f"Name parts found: {string_feature_set}")
+        except SyntaxError:
+            bad_rows.append(row)
+    print(f"Name parts found: {string_feature_set}")
 
-        print("Cleaning rows")
-        for row in rows:
-            clean_row = {
-                k: preProcess(v)
-                for k, v in row.items()
-                if k not in ["lat", "lon", "title", "name_parts"]
-            }
+    # remove any rows that threw a SyntaxError when their name parts were evaluated
+    for row in bad_rows:
+        print(f"Row {row["id"]} has badly formatted name parts. Discarding it.")
+        rows.remove(row)
 
-            if row.get("name_parts") != None:
-                # try:
-                name_parts = eval(row["name_parts"].replace('""', '"'))
-                for feature in string_feature_set:
-                    clean_row.update({feature: name_parts.get(feature)})
+    # assigning new IDs to every row to ensure the data is cohesive (and to get around the wierd ID schemes of both datasets)
+    next_id = 0
+    for row in rows:
+        row.update({"id": next_id})
+        next_id = next_id + 1
 
-            if row.get("birth_date"):
-                clean_row.update(
-                    {"birth_date": row.get("birth_date").replace("-", "/")}
-                )
+    print("Cleaning rows")
+    for row in rows:
+        clean_row = {
+            k: preProcess(v)
+            for k, v in row.items()
+            if k not in ["lat", "lon", "title", "name_parts"]
+        }
 
-            if row.get("death_date"):
-                clean_row.update(
-                    {"death_date": row.get("death_date").replace("-", "/")}
-                )
+        if row.get("name_parts") != None:
+            name_parts = eval(
+                row["name_parts"]
+                .replace('""""', '""#""')
+                .replace('""', '"')
+                .replace('"#"', '""')
+            )
+            for feature in string_feature_set:
+                clean_row.update({feature: name_parts.get(feature)})
+        if row.get("birth_date"):
+            clean_row.update({"birth_date": row.get("birth_date").replace("-", "/")})
 
-            row_id = int(row["Id"])
-            data_d[row_id] = clean_row
+        if row.get("death_date"):
+            clean_row.update({"death_date": row.get("death_date").replace("-", "/")})
+
+        row_id = int(row["id"])
+        data_d[row_id] = clean_row
 
     return data_d
 
@@ -111,13 +144,18 @@ if __name__ == "__main__":
 
     logging.getLogger("dedupe").setLevel(logging.DEBUG)
 
-    input_file = "yv_italy.csv"
-    output_file = "yv_italy_output.csv"
-    settings_file = "yv_italy_learned_settings"
-    training_file = "yv_italy_training.json"
+    # setup
+
+    output_file = "MEHDIE_output.csv"
+    settings_file = "MEHDIE_learned_settings"
+    training_file = "MEHDIE_training.json"
+
+    LASKI_file = os.path.join("data", "LASKI.csv")
+    Zylbercweig_file = os.path.join("data", "Zylbercweig_roman.csv")
 
     print("Importing data...")
-    data_d = readData(input_file)
+    input_files = {LASKI_file, Zylbercweig_file}
+    data_d = readData(input_files)
 
     # Debugging: Add print statements to inspect data_d
     print(type(data_d))
@@ -129,17 +167,13 @@ if __name__ == "__main__":
     else:
         # Set variables for comparison
         fields = [
-            dedupe.variables.Custom(
-                "gender", comparator=same_or_not_comparator, has_missing=True
-            ),
-            datetimetype.DateTime("birth_date", yearfirst=True, has_missing=True),
-            datetimetype.DateTime("death_date", yearfirst=True, has_missing=True),
-            # dedupe.variables.String("birth_place", has_missing=True),
-            # dedupe.variables.String("death_place", has_missing=True),
-            # dedupe.variables.String("associatedPlaces", has_missing=True),
-            dedupe.variables.Custom(
-                "title_source", comparator=different_or_not_comparator, has_missing=True
-            ),
+            #dedupe.variables.Custom("gender", same_or_not_comparator, has_missing=True),
+            #datetimetype.DateTime("birth_date", yearfirst=True, has_missing=True),
+            #datetimetype.DateTime("death_date", yearfirst=True, has_missing=True),
+            #dedupe.variables.String("birth_place", has_missing=True),
+            #dedupe.variables.String("death_place", has_missing=True),
+            #dedupe.variables.String("associatedPlaces", has_missing=True),
+            dedupe.variables.Custom("title_source", different_or_not_comparator),
         ]
         # Add name parts for comparison
         for feature in string_feature_set:
@@ -192,12 +226,11 @@ if __name__ == "__main__":
                 "confidence_score": score,
             }
 
-    with open(output_file, "w") as f_output, open(input_file) as f_input:
-        reader = csv.DictReader(f_input)
-        fieldnames = ["Cluster ID", "confidence_score"] + reader.fieldnames
+    with open(output_file, "w",encoding='utf-8') as f_output:
+        fieldnames = ["Cluster ID", "confidence_score"] + full_feature_list
         writer = csv.DictWriter(f_output, fieldnames=fieldnames)
         writer.writeheader()
-        for row in reader:
-            row_id = int(row["Id"])
+        for row in rows:
+            row_id = int(row["id"])
             row.update(cluster_membership[row_id])
             writer.writerow(row)
