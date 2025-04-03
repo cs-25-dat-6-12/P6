@@ -44,11 +44,14 @@ def preProcess(column):
 # Read and preprocess data from CSV file, ignoring lat and lon columns
 def readData(filenames):
     data_d = {}
-    # add the rows from both files to a list to join them
+    # add the rows from both files to a list to join them. Keep track of where the rows came from
+    file_number = -1
     for file in filenames:
+        file_number += 1
         with open(file, encoding="utf8") as f:
             reader = csv.DictReader(f)
             for row in reader:
+                row.update({"data_source": file_number})
                 rows.append(row)
 
     # find out all features that exist and which features are in the name_parts dicts
@@ -123,7 +126,7 @@ def different_or_not_comparator(field_1, field_2):
         if field_1 != field_2:
             return 0
         else:
-            return 1
+            return 10000000
 
 
 # Main execution
@@ -167,13 +170,13 @@ if __name__ == "__main__":
     else:
         # Set variables for comparison
         fields = [
-            #dedupe.variables.Custom("gender", same_or_not_comparator, has_missing=True),
-            #datetimetype.DateTime("birth_date", yearfirst=True, has_missing=True),
-            #datetimetype.DateTime("death_date", yearfirst=True, has_missing=True),
-            #dedupe.variables.String("birth_place", has_missing=True),
-            #dedupe.variables.String("death_place", has_missing=True),
-            #dedupe.variables.String("associatedPlaces", has_missing=True),
-            dedupe.variables.Custom("title_source", different_or_not_comparator),
+            # dedupe.variables.Custom("gender", same_or_not_comparator, has_missing=True),
+            # datetimetype.DateTime("birth_date", yearfirst=True, has_missing=True),
+            # datetimetype.DateTime("death_date", yearfirst=True, has_missing=True),
+            # dedupe.variables.String("birth_place", has_missing=True),
+            # dedupe.variables.String("death_place", has_missing=True),
+            # dedupe.variables.String("associatedPlaces", has_missing=True),
+            dedupe.variables.Custom("data_source", different_or_not_comparator),
         ]
         # Add name parts for comparison
         for feature in string_feature_set:
@@ -226,7 +229,7 @@ if __name__ == "__main__":
                 "confidence_score": score,
             }
 
-    with open(output_file, "w",encoding='utf-8') as f_output:
+    with open(output_file, "w", encoding="utf-8") as f_output:
         fieldnames = ["Cluster ID", "confidence_score"] + full_feature_list
         writer = csv.DictWriter(f_output, fieldnames=fieldnames)
         writer.writeheader()

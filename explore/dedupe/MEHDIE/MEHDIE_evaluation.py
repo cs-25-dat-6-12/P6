@@ -17,8 +17,12 @@ def evaluateDuplicates(stats):
 
 def getOutputStats():
     # the files to look at
-    manual_clusters = "Transliterated_em.csv"
-    dedupe_clusters = "MEHDIE_output.csv"
+    manual_clusters = (
+        "C:/Users/miglo/Desktop/Uni/dedupe-examples/MEHDIE/transliterated_em.csv"
+    )
+    dedupe_clusters = (
+        "C:/Users/miglo/Desktop/Uni/dedupe-examples/MEHDIE/MEHDIE_output.csv"
+    )
     with open(manual_clusters, encoding="utf8") as mc:
         true_positives = 0  # how many times did we pair two people correctly
         total_true = 0  # how many actual matching pairs are there in total
@@ -27,11 +31,11 @@ def getOutputStats():
         mc_reader = csv.DictReader(mc)
         for row in mc_reader:
             total_true += 1
-            print(f"Pair {total_true}:")
+            # print(f"Pair {total_true}:")
             name_parts_roman = row.get("name_parts_roman")
-            print(name_parts_roman)
+            # print(name_parts_roman)
             name_parts_LASKI = row.get("name_parts_LASKI")
-            print(name_parts_LASKI)
+            # print(name_parts_LASKI)
             roman_cluster = -1
             LASKI_cluster = -1
             with open(dedupe_clusters, encoding="utf8") as dc:
@@ -41,10 +45,10 @@ def getOutputStats():
                     # find true positives
                     if row.get("name_parts") == name_parts_roman:
                         roman_cluster = cluster_id
-                        print(f"Found roman_custer: {cluster_id}")
+                        # print(f"Found roman_custer: {cluster_id}")
                     if row.get("name_parts") == name_parts_LASKI:
                         LASKI_cluster = cluster_id
-                        print(f"Found LASKI_cluster: {cluster_id}")
+                        # print(f"Found LASKI_cluster: {cluster_id}")
                     if (
                         roman_cluster > -1
                         and LASKI_cluster > -1
@@ -52,7 +56,8 @@ def getOutputStats():
                     ):
                         # two people are in the same cluster and those two people are a confirmed match
                         true_positives += 1
-                        continue
+                        break
+
         # find total number of positives
         # reset reader
         clusters = {}
@@ -61,14 +66,22 @@ def getOutputStats():
             for row in dc_reader:
                 cluster_id = row.get("Cluster ID")
                 clusters.update({cluster_id: clusters.get(cluster_id, 0) + 1})
-
+        biggest_cluster_size = 0
         for cluster in clusters:
             n = clusters.get(cluster)
+            if n > biggest_cluster_size:
+                biggest_cluster_size = n
+            # print(f"cluster {cluster} has {n} people")
             total_positives += n * (n - 1) / 2
-
+            # print("total matches: ", total_positives)
+        print(f"biggest cluster has {biggest_cluster_size} people")
         # find false positives
         # how many times did we pair two people incorrectly
         false_positives = total_positives - true_positives
+
+        assert true_positives <= total_true
+        assert 0 <= true_positives <= total_positives
+        assert 0 <= false_positives <= total_positives
 
         return {
             "true_positives": true_positives,
