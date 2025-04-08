@@ -115,33 +115,20 @@ def writefunction(text):
     out.to_csv("test", sep="\t")
     
 def write_transliterated_matches(output_path):
-    yiddish = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t")
-    roman = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv", sep="\t")
-    laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
-    id, id2, title_yiddish, title_roman, title_LASKI, name_parts_yiddish, name_parts_roman, name_parts_LASKI = [], [], [], [], [], [], [], []
-    bool_table = yiddish.isna()
-    for i, row in yiddish.iterrows():
-        if not bool_table["geo_source"][i]:
-            source_string = row["geo_source"].replace("laski:", "")
-            for j, row2 in laski.iterrows():
-                if row2["id"] == source_string:
-                    id.append(row["id"])
-                    id2.append(row2["id"])
-                    title_yiddish.append(row["title"])
-                    title_roman.append(roman["title"][i])
-                    title_LASKI.append(row2["title"])
-                    name_parts_yiddish.append(row["name_parts"])
-                    name_parts_roman.append(roman["name_parts"][i])
-                    name_parts_LASKI.append(row2["name_parts"])
+    matches = pd.read_csv("datasets/testset15-Zylbercweig-Laski/em.tsv", sep="\t")
+    id_1, id_2, title_1, title_2, judgement = [], [], [], [], []
+    for _, row in matches.iterrows():
+        id_1.append(row["id_1"])
+        id_2.append(row["id_2"])
+        title_1.append(transliterate_name_parts(row["title_1"]))
+        title_2.append(row["title_2"])
+        judgement.append(row["judgement"])
     output = pd.DataFrame({
-        "id_zylbercweig": id,
-        "id_laski": id2,
-        "title_yiddish": title_yiddish,
-        "title_roman": title_roman,
-        "title_LASKI": title_LASKI,
-        "name_parts_yiddish": name_parts_yiddish,
-        "name_parts_roman": name_parts_roman,
-        "name_parts_LASKI": name_parts_LASKI
+        "id_1": id_1,
+        "id_2": id_2,
+        "title_1": title_1,
+        "title_2": title_2,
+        "judgement": judgement
     })
     output.to_csv(output_path, sep="\t")
     

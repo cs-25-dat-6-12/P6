@@ -1,85 +1,1805 @@
 id_1	title_1	id_2	title_2	judgement
-temp_981	נאַטאַן אַלטמאַן	yt/lex/A/altman-natan.htm	Natan Altman	True
-temp_1141	הערי אַניסמאַן	yt/lex/A/anisman-harry.htm	Harry Anisman	True
-temp_1181	ריוואַ אַנציפּאָוויטש	yt/lex/A/antsipovitsh-riva.htm	Riva Antsipovitsh	True
-temp_2881	סעם בּלומשטיין	yt/lex/B/blumstein-sam.htm	Sam Blumstein	True
-temp_4291	גאָלדיצע	yt/lex/G/golditsa.htm	Golditsa	True
-temp_4451	איזי גאָלדשטיין	yt/lex/G/goldstein-izzy.htm	Izzy Goldstein	True
-temp_4481	גוסטאַוו גאָלדשטיין	yt/lex/G/goldstein-gustav.htm	Gustav Goldstein	True
-temp_4501	דזשעני גאָלדשטיין	yt/lex/G/goldstein-jan-d.htm	Jan D. Goldstein	True
-temp_4571	שמואליקל גאָלדשטיין	yt/lex/G/goldstein-shmulik.htm	Shmulik Goldstein	True
-temp_4691	יצחק גאניקמאַן	yt/lex/G/ganikman-itzhak.htm	Itzhak Ganikman	True
-temp_5361	עליאַס גליקמאַן	yt/lex/G/glickman-elias.htm	Elias Glickman	True
-temp_6371	יצחק דאניעל	yt/lex/D/daniel-itzhak.htm	Itzhak Daniel	True
-temp_6511	יידל דובּינסקי	yt/lex/D/dubinsky-yudel.htm	Yudel Dubinsky	True
-temp_6551	מאַניאַ דוליצקאיא	moyt/lex/D/dulitskaya-manya-V5.htm	Manya Dulitskaya	True
-temp_6571	לעאָן דושמאַן	yt/lex/D/dushman-leon.htm	Leon Dushman	True
-temp_6711	בעל דידזשא	yt/lex/D/didja-belle.htm	Belle Didja	True
-temp_6751	ליזע דייכעס	moyt/lex/D/deyches-liza-V5.htm	Liza Deyches	True
-temp_6811	ס. דינגאָל	yt/lex/D/dingol-s.htm	S. Dingol	True
-temp_6851	סאול דיקשטיין	yt/lex/D/dickstein-sol.htm	Sol Dickstein	True
-temp_6991	עמאַ דרייזינאַ	yt/lex/D/dreyzina-ema.htm	Ema Dreyzina	True
-temp_7291	מאיר האָניגמאַן	yt/lex/H/honigman-meyer.htm	Meyer Honigman	True
-temp_7431	זיגמונט האַרט	moyt/lex/B/bolk-zigmunt-V5.htm	Zigmunt Bolk	True
-temp_7511	גיזי היידען-פּריזאַמענט	yt/lex/H/heyden-pryzament-gizi.htm	Gizi Heyden-Pryzament	True
-temp_7531	העלענאַ היימאַן	yt/lex/H/heyman-helena.htm	Helena Heyman	True
-temp_7691	מאַקס העניג	yt/lex/H/henig-max.htm	Max Henig	True
-temp_8081	שמעון וואלצינאק	yt/lex/V/valtsinak-shimon.htm	Shimon Valtsinak	True
-temp_8131	פעני וואַקסמאַן	yt/lex/V/vaksman-fanny.htm	Fanny Vaksman	True
-temp_8311	פישל וויטקאווער	moyt/lex/V/vitkover-fishl-V5.htm	Fishl Vitkover	True
-temp_8551	אייזיק וויינשטאָק	yt/lex/V/vaynstok-ayzik.htm	Ayzik Vaynstok	True
-temp_8621	שאול וויינשטיין	yt/lex/W/wallerstein-saul.htm	Saul Wallerstein	True
-temp_8781	העלענאַ ווייסמאַן	yt/lex/V/vaysman-helena.htm	Helena Vaysman	True
-temp_8831	משה ווייספעלד	yt/lex/V/vaysfeld-moshe.htm	Moshe Vaysfeld	True
-temp_8981	גערטרוד וויניק	yt/lex/V/vinik-gertrude.htm	Gertrude Vinik	True
-temp_9171	זעליג זאַבּאָלינסקי	yt/lex/Z/zabolinski-zelig.htm	Zelig Zabolinski	True
-temp_9271	דוב זאוואדזקי	moyt/lex/Z/zawadzki-dov-V5.htm	Dov Zawadzki	True
-temp_9511	זאַרין (?)	moyt/lex/Z/zorin-V5.htm	[?] Zorin	True
-temp_9701	בּעני זיידמאַן	yt/lex/Z/zeidman-bennie.htm	Bennie Zeidman	True
-temp_9821	גרשון זייקין	yt/lex/Z/zeykin-gershon.htm	Gershon Zeykin	True
-temp_10051	עני זימאן	yt/lex/Z/ziman-annie.htm	Annie Ziman	True
-temp_10141	פישל זינגער	yt/lex/S/singer-fishel.htm	Fishel Singer	True
-temp_10821	כאנע טייטש	moyt/lex/T/teitsh-chana-V5.htm	Chana Teitsh	True
-temp_10911	מענדעל טעפּליצקי	yt/lex/T/teplitzky-mendel.htm	Mendel Teplitzky	True
-temp_11021	שמעון טרייבוש	yt/lex/T/treibush-shimen.htm	Shimen Treibush	True
-temp_11421	בּ. יאַנפּאָלסקי	yt/lex/Y/yanpolski-b.htm	B. Yanpolski	True
-temp_11611	יהואש	yt/lex/Y/yehoash.htm	Yehoash	True
-temp_12151	יצחק לאַטאָוויטש	yt/lex/L/latovitsh-itzhak.htm	Itzhak Latovitsh	True
-temp_12341	הערי לאַנדמאַן	yt/lex/L/landman-harry.htm	Harry Landman	True
-temp_12351	זילע לאַנדסמאַן	yt/lex/L/landsman-zila.htm	Zila Landsman	True
-temp_12411	מאַקס לאַסקי	yt/lex/L/lasky-max.htm	Max Lasky	True
-temp_12441	יצחק לאַקס	yt/lex/L/laks-itzhak.htm	Itzhak Laks	True
-temp_12581	פעני לוּבּריצקי	yt/lex/L/lubritsky-fannie.htm	Fannie Lubritsky	True
-temp_12591	סעם לוּדוויק	yt/lex/L/ludvik-sam.htm	Sam Ludvik	True
-temp_12611	עפראים לויטער	yt/lex/L/loyter-efraim.htm	Efraim Loyter	True
-temp_12631	לופט	moyt/lex/L/luft-V5.htm	Luft	True
-temp_12701	זעליג ליבגאָלד	yt/lex/L/liebgold-zelig.htm	Zelig Liebgold	True
-temp_12711	לעאָן ליבגאָלד	yt/lex/L/liebgold-leon.htm	Leon Liebgold	True
-temp_13081	סידני ליכט	yt/lex/L/licht-sidney.htm	Sidney Licht	True
-temp_13101	משה ליכטענשטיין	yt/lex/L/lichtenstein-moshe.htm	Moshe Lichtenstein	True
-temp_13111	לילי ליליאַנאַ	yt/lex/L/lilliana-lilly.htm	Lilly Lilliana	True
-temp_13151	לילית	moyt/lex/L/lilit-V5.htm	Lilit	True
-temp_13221	לינעצקי	yt/lex/L/linetsky.htm	Linetsky	True
-temp_13241	מאַלקע ליסאַק	yt/lex/L/lisak-malka.htm	Malka Lisak	True
-temp_13271	נחוּם ליפּאָווסקי	yt/lex/L/lipovski-nakhum.htm	Nakhum Lipovski	True
-temp_13351	ליפּשיץ	moyt/lex/L/lifshits-V5.htm	Lifshits	True
-temp_13361	האָדע ליפּשיץ	yt/lex/L/lifshits-hoda.htm	Hoda Lifshits	True
-temp_13371	יחזקאל ליפּשיץ	yt/lex/L/lipshitz-yekhezkel-dr.htm	Yekhezkel Lipshitz	True
-temp_13381	יצחק ליפּשיץ	yt/lex/L/lipshitz-itzhak.htm	Itzhak Lipshitz	True
-temp_13501	זיגמונט לעוו	yt/lex/L/lev-zygmunt.htm	Zygmunt Lev	True
-temp_13521	זשעני לעוויטאַס	yt/lex/L/levitas-jennie.htm	Jennie Levitas	True
-temp_13761	לייבוש לענסקי	yt/lex/L/lensky-leibush.htm	Leibush Lensky	True
-temp_13961	מאָגילניצקי	yt/lex/M/mogilnitski.htm	Mogilnitski	True
-temp_14101	פיליפּ מאַלץ	yt/lex/M/maltz-philip.htm	Philip Maltz	True
-temp_14311	מאַפּו	moyt/lex/M/mapu-V5.htm	Mapu	True
-temp_14661	יודל מוט	moyt/lex/M/mutt-yudl-V5.htm	Yudl Mutt	True
-temp_14771	לייזער מיטניק	yt/lex/M/mitnick-leiser.htm	Leiser Mitnick	True
-temp_14991	זקן מיליך	yt/lex/M/milikh-zokn.htm	Zokn Milikh	True
-temp_15941	יצחק ניימאַן	yt/lex/N/neyman-itzhak.htm	Itzhak Neyman	True
-temp_16171	ליזאַ סאַלמאַן	yt/lex/S/salman-lisa.htm	Lisa Salman	True
-temp_16431	העריס סטאַמבּולקא	yt/lex/S/stambulka-harris.htm	Harris Stambulka	True
-temp_16481	צילע סטראַשון	moyt/lex/S/strashun-tsili-V5.htm	Tsili Strashun	True
-temp_16491	יוסף סטרוּגאטש	yt/lex/S/strugatsh-yosef.htm	Yosef Strugatsh	True
-temp_16621	שלום סימאָוויטש	yt/lex/S/simovitsh-sholem.htm	Sholem Simovitsh	True
-temp_16721	לידאַ סלאַוואַ-ליס	yt/lex/S/slava-lis-lyda.htm	Lyda Slava-Lis	True
-temp_16731	פאַניאַ סלאַווינא	moyt/lex/S/slavina-fanya-V5.htm	Fanya Slavina	True
+temp_01	אַּבבּדול	yt/lex/A/abdul.htm	Abdul	True
+temp_21	ציפע (צפּורה) אַבּעלמאַן	moyt/lex/A/abelman-tsipa-V5.htm	Tsipa Abelman	True
+temp_31	בּן-ציון אבּעלסאָן	moyt/lex/A/abelson-ben-zion-V5.htm	Ben-Zion Abelson	True
+temp_81	יצחק (האַבּער) אַבּערמאַן	yt/lex/A/aberman-isaac.htm	Isaac Aberman	True
+temp_91	ידא (פעלטענשטיין) אַבּראַגאַם	yt/lex/A/abragam-ida.htm	Ida Abragam	True
+temp_111	א. (אברהם קאַגאַן) אַבּראַמאָוו	yt/lex/A/abramov-a.htm	A. Abramov	True
+temp_121	אַדאָלף (אברהם פּערקאָף) אַבּראַמאָוו	yt/lex/A/abramov-adolf.htm	Adolf Abramov	True
+temp_131	בּאָריס (פיינלאַנד) אַבּראַמאָוו	yt/lex/A/abramov-boris.htm	Boris Abramov	True
+temp_141	מערי (מרים איינהאָרן) אַבּראַמאָוו	yt/lex/A/abramov-mary.htm	Mary Abramov	True
+temp_101	אַבּראַמאָוו	yt/lex/A/abramov.htm	Abramov	True
+temp_161	בּינע (פוקס) אַבּראַמאָוויטש	yt/lex/A/abramovich-bina.htm	Bina Abramovich	True
+temp_181	מאַקס (מענדל) אַבּראַמאָוויטש	yt/lex/A/abramovich-max.htm	Max Abramovich	True
+temp_191	ח. ע. אַבּראַמאָוויץ	yt/lex/A/abramovits-ch-e.htm	Ch.E. Abramovits	True
+temp_171	חיים אַבּראַמאָוויטש	yt/lex/A/abramovitsh-chaim.htm	Chaim Abramovitsh	True
+temp_151	איזאָק אַבּראַמאָוויטש	yt/lex/A/abramovitsh-isaak.htm	Isaak Abramovitsh	True
+temp_201	אַדאָלף (אבּראַמאָוויטש) אַבּראמס	yt/lex/A/abrams-adolph.htm	Adolph Abrams	True
+temp_671	דוד אייבּראמס	yt/lex/A/abrams-david.htm	David Abrams	True
+temp_221	ג. אַבּראַמסקי	yt/lex/A/abramski-g.htm	G. Abramski	True
+temp_211	אייוואַן אַבּראַמסאָן	yt/lex/A/abramson-ivan.htm	Ivan Abramson	True
+temp_911	יוסף אכראן	yt/lex/A/achron-joseph.htm	Joseph Achron	True
+temp_431	משה יעקב אדערשלעגער	yt/lex/A/adershleger-moshe-yakov.htm	Moshe Yakov Adershleger	True
+temp_391	עמיליע (שרה-מילקע שטאַנג) אַדלער	yt/lex/A/adler-amelia.htm	Amelia Adler	True
+temp_271	בּעני אַדלער	yt/lex/A/adler-benny.htm	Benny Adler	True
+temp_411	צילע אַדלער	yt/lex/A/adler-celia.htm	Celia Adler	True
+temp_261	אסתר (שאַצקי) אַדלער	moyt/lex/A/adler-esther-V5.htm	Esther Adler	True
+temp_401	פרענציס אַדלער	yt/lex/A/adler-frances.htm	Frances Adler	True
+temp_301	היימאַן (בּאַרטפעלד) אַדלער	yt/lex/A/adler-hyman.htm	Hyman Adler	True
+temp_351	ישראל אַדלער	yt/lex/A/adler-israel.htm	Israel Adler	True
+temp_331	יעקב פּ. (יעקב בּן פּנחס) אַדלער	yt/lex/A/adler-jacob-p.htm	Jacob P. Adler	True
+temp_281	דזשוליא אַדלער	yt/lex/A/adler-julia.htm	Julia Adler	True
+temp_371	סעם אַדלער	yt/lex/A/adler-sam.htm	Sam Adler	True
+temp_361	סטעלאַ אַדלער	yt/lex/A/adler-stella.htm	Stella Adler	True
+temp_341	ירמיהו (גאָלדענבּערג-טווערסקי) אַדלער	yt/lex/A/adler-yirmeyahu.htm	Yirmeyahu Adler	True
+temp_311	יוזשע אַדלער	yt/lex/A/adler-yuzhe.htm	Yuzhe Adler	True
+temp_251	אַדאָלפי	yt/lex/A/adolfi.htm	Adolfi	True
+temp_1351	ניקאָליי אפרת	yt/lex/A/afrat-nikolai.htm	Nikolai Afrat	True
+temp_241	סעם (שלמה) אַגעד	yt/lex/A/agid-sam.htm	Sam Agid	True
+temp_1031	אהרן אָלעקסאַנדראָוו	yt/lex/A/aleksandrov-aaron.htm	Aaron Aleksandrov	True
+temp_1041	ח. (וויליאַם מילער) אָלעקסאַנדראָוו	yt/lex/A/aleksandrov-ch.htm	Ch. Aleksandrov	True
+temp_1061	י. (יהושע עלקין) אַלקאָן	yt/lex/A/alkan-yehoshua.htm	Yehoshua Alkan	True
+temp_1001	שמואל אַלמאַן	yt/lex/A/alman-shmuel.htm	Shmuel Alman	True
+temp_1011	א. (אליהו חיים שעפּס) אלמי	yt/lex/A/almi-a.htm	A. Almi	True
+temp_1051	איסאַק אַלפּעראָוויטש	moyt/lex/A/alperovitsh-isak-V5.htm	Isak Alperovitsh	True
+temp_951	בּאָריס אַלטמאַן	yt/lex/A/altman-boris.htm	Boris Altman	True
+temp_961	מאָריס אַלטמאַן	yt/lex/A/altman-morris.htm	Morris Altman	True
+temp_971	משה אַלטמאן	moyt/lex/A/altman-moshe-V5.htm	Moshe Altman	True
+temp_991	לייבּ אַלטשולער	yt/lex/A/altshuler-leyb.htm	Leyb Altshuler	True
+temp_1111	אַלעקס (אַלעקסאַנדער) אַמאַסיאַ	yt/lex/A/amasia-alex.htm	Alex Amasia	True
+temp_1121	הערש אַמאַסיאַ	yt/lex/A/amasia-hersh.htm	Hersh Amasia	True
+temp_1101	פּעטער (פּסח גאָלדבּערג) אַמאַטין	yt/lex/A/amatin-peter.htm	Peter Amatin	True
+temp_1131	גאָלדע (געניאַ שניידער) אַמזעל	yt/lex/A/amzel-golde.htm	Golde Amzel	True
+temp_1151	אניעלא (חנה קאמפּאַנעיעץ-פּאָליאַקאָוו)	yt/lex/A/aniela.htm	Aniela	True
+temp_1161	ז. י. (זלמן יצחק אַראָנסאָן) אנכי	yt/lex/A/ankhi-z-i.htm	Z.I. Ankhi	True
+temp_1171	ש. (שלמה-זאַנוול ראַפּאָפּאָרט) אַנ-סקי	yt/lex/A/an-ski-s.htm	S. An-ski	True
+temp_1271	דוד אַפּאָטהעקער	yt/lex/A/apotheker-david.htm	David Apotheker	True
+temp_1301	אַננאַ (בּערקאָוויטש) אַפּעל	yt/lex/A/appel-anna.htm	Anna Appel	True
+temp_1291	איזידאָר (יאַפּקאָ) אַפּעל	yt/lex/A/appel-isadore.htm	Isadore Appel	True
+temp_1311	מאָריס (אַפּעלאויג) אַפּעל	yt/lex/A/appel-morris.htm	Morris Appel	True
+temp_1321	מישאַ אַפּעלבּוים	yt/lex/A/appelbaum-misha.htm	Misha Appelbaum	True
+temp_1281	סאָפיא (שרה פריינד) אַפּטייקער	yt/lex/A/apteiker-sofia.htm	Sofia Apteiker	True
+temp_1561	פריצי אַרקאָ	yt/lex/A/arco-fritzi.htm	Fritzi Arco	True
+temp_1531	איסאַק אַרקאָ	yt/lex/A/arco-isaac.htm	Isaac Arco	True
+temp_1541	יצחק ארקא	yt/lex/A/arco-itzhak.htm	Itzhak Arco	True
+temp_1551	מאַניע (פישזאָן) אַרקאָ	yt/lex/A/arco-manya.htm	Manya Arco	True
+temp_1501	מרים (מאַניע מאָרגוליס) אַרנאָן	yt/lex/A/arnon-miriam.htm	Miriam Arnon	True
+temp_1511	ראָזע ארנשטיין	yt/lex/A/arnstein-rose.htm	Rose Arnstein	True
+temp_1441	יודעס אַראָנטשיק	yt/lex/A/aronchik-yudes.htm	Yudes Aronchik	True
+temp_1461	פייוול אַראָנעס	yt/lex/A/arones-feivl.htm	Feivl Arones	True
+temp_1431	הערמאַן אַראָנאָוויטש	yt/lex/A/aronovitsh-herman.htm	Herman Aronovitsh	True
+temp_1451	בּרוך אַראָנסאָן	yt/lex/A/aronson-borukh.htm	Borukh Aronson	True
+temp_1591	שלום אַש	yt/lex/A/asch-sholem.htm	Sholem Asch	True
+temp_1611	איזידאָר (אייזיק) אשכנזי	yt/lex/A/aschkenazy-izidor.htm	Izidor Aschkenazy	True
+temp_1581	חיהלע אַש	yt/lex/A/ash-khayele.htm	Khayele Ash	True
+temp_1621	מירע אשכנזי	yt/lex/A/ashkenazy-mira.htm	Mira Ashkenazy	True
+temp_1631	צילע (פעפער) אשכנזי	yt/lex/A/ashkenazy-tsile.htm	Tsile Ashkenazy	True
+temp_1191	בּרוך אַס	moyt/lex/A/ass-boruch-V5.htm	Boruch Ass	True
+temp_1211	כ. אָסטראָווסקי	moyt/lex/A/astrovsky-kh-V5.htm	Kh. Astrovsky	True
+temp_601	דזשעני אַטלאַס	yt/lex/A/atlas-jennie.htm	Jennie Atlas	True
+temp_481	בּאָריס (בן-ציון) אויערבּאַך	yt/lex/A/auerbach-boris.htm	Boris Auerbach	True
+temp_471	אפרים אויערבּאַך	yt/lex/A/auerbach-ephraim.htm	Ephraim Auerbach	True
+temp_491	יצחק אויערבּאַך	yt/lex/A/auerbach-isaac.htm	Isaac Auerbach	True
+temp_501	ס. אויערבּאַך	yt/lex/A/auerbach-s.htm	S. Auerbach	True
+temp_511	סעם אויערבּאַך	yt/lex/A/auerbach-sam.htm	Sam Auerbach	True
+temp_441	עני (חנה סויבּער) אויגענבּליק	yt/lex/A/augenblick-annie.htm	Annie Augenblick	True
+temp_451	פיליפּ אויגענבּליק	yt/lex/A/augenblik-philip.htm	Philip Augenblik	True
+temp_461	נחום אויסלענדער	yt/lex/A/auslander-nahum.htm	Nahum Auslander	True
+temp_1371	אַנעטאַ (פּרענער) אַקסעלראד	yt/lex/A/axelrad-aneta.htm	Aneta Axelrad	True
+temp_1361	אברהם (אברהם יצחק) אַקסעלראד	yt/lex/A/axelrad-avraham.htm	Avraham Axelrad	True
+temp_1391	מינאַ (בּלייכמאַן) אַקסעלראד	yt/lex/A/axelrad-minnie.htm	Minnie Axelrad	True
+temp_1381	מאָריס (מעיר) אַקסעלראד	yt/lex/A/axelrad-morris.htm	Morris Axelrad	True
+temp_1401	ראָזא אַקסעלראד	yt/lex/A/axelrad-rosa.htm	Rosa Axelrad	True
+temp_1411	רחל (קאָהוט) אַקסעלראד	yt/lex/A/axelrad-rukhl.htm	Rukhl Axelrad	True
+temp_691	נייטען (נטע) אייזיקאָוויטש	yt/lex/A/ayzikovitsh-nathan.htm	Nathan Ayzikovitsh	True
+temp_591	אַלעקסאַנדער (אָרליוק) אזראַ	yt/lex/A/azro-alexander.htm	Alexander Azro	True
+temp_22851	ראָזע שאָמער-באַטשעלעס	yt/lex/B/bachelis-rose-shomer.htm	Rose Shomer Bachelis	True
+temp_1661	איידא בּאַדאַנעס	yt/lex/B/badanes-ida-dr.htm	Ida Badanes	True
+temp_1681	גרשם בּאָדער	yt/lex/B/bader-gershom.htm	Gershom Bader	True
+temp_1691	שמחה (ניעדזשעוויעצקי) בּאדער	moyt/lex/B/bader-simcha-V5.htm	Simcha Bader	True
+temp_1671	מאַקס (מוני בּאַדיאָן) בּאַדין	yt/lex/B/badin-max.htm	Max Badin	True
+temp_2141	שלמה (בעללויא) בּדחן	yt/lex/B/badkhan-shlomo.htm	Shlomo Badkhan	True
+temp_3031	בּעל בּעיקער	yt/lex/B/baker-belle.htm	Belle Baker	True
+temp_1851	מישע בּאַנקאָוו	yt/lex/B/bankov-misha.htm	Misha Bankov	True
+temp_1841	יאַנקעוו בּאַננקאָוו	yt/lex/B/bankov-yankev.htm	Yankev Bankov	True
+temp_1951	בּן-צבי (פּאַוועל בּרענער) בּאַראָטאָוו	yt/lex/B/baratov-ben-tsvi.htm	Ben-Tsvi Baratov	True
+temp_1971	דוד בּאַראַץ	yt/lex/B/baratz-david.htm	David Baratz	True
+temp_1981	ש. (שמואל בּערבּער) בּאַרבּער	yt/lex/B/barber-sh.htm	Sh. Barber	True
+temp_1961	יוסף בּאַראָנדעס	yt/lex/B/barondess-joseph.htm	Joseph Barondess	True
+temp_2081	אברהם בּאַרסעל	yt/lex/B/barsel-avraham.htm	Avraham Barsel	True
+temp_2091	ליזא בּארסקא-פישער	moyt/lex/B/barska-fisher-liza-V5.htm	Liza Barska-Fisher	True
+temp_2131	ישראל בּאַרסקי	yt/lex/B/barski-israel.htm	Israel Barski	True
+temp_2011	וואָלף בּאַרזעל	yt/lex/B/barzell-wolfe.htm	Wolfe Barzell	True
+temp_1891	בּען בּאַסענקאָ	yt/lex/B/basenko-ben.htm	Ben Basenko	True
+temp_1871	מישע בּאסין	moyt/lex/B/basin-misha-V5.htm	Misha Basin	True
+temp_1881	אברהם בּאַסלאַווסקי	yt/lex/B/baslavsky-avraham.htm	Avraham Baslavsky	True
+temp_1861	אהרן בּאַסטאמסקי	moyt/lex/B/bastomski-aaron-V5.htm	Aaron Bastomski	True
+temp_2221	אברהם בּוים	yt/lex/B/baum-abraham.htm	Abraham Baum	True
+temp_3131	ראָזא (זילבּערט) בּעקער	yt/lex/B/becker-rosa-V7.htm	Rosa Becker	True
+temp_3141	בּעריש בּעקערמאַן	yt/lex/B/beckerman-berish.htm	Berish Beckerman	True
+temp_3061	משה-אליעזר (בּיילינסאָן) בּעלינסאָן	yt/lex/B/beilinson-moses-eliezer.htm	Moses Eliezer Beilinson	True
+temp_3151	שמעון בּעקערמאַן	yt/lex/B/bekerman-simeon.htm	Simeon Bekerman	True
+temp_3121	מאַקס בּעקלער	yt/lex/B/bekler-max.htm	Max Bekler	True
+temp_2571	מאריס בּיעלאווסקי	yt/lex/B/belavsky-morris.htm	Morris Belavsky	True
+temp_3051	אַננאַ (חנה) בּעלאגאלאווסקאַ	moyt/lex/B/belegolovska-anna-V5.htm	Anna Belegolovska	True
+temp_1721	נחום בּאַזעלינסקי	moyt/lex/B/belezavski-nachum-V5.htm	Nachum Belezavski	True
+temp_3091	בּעלא (רובּינליכט) בּעלערינא	yt/lex/B/bellarina-bella.htm	Bella Bellarina	True
+temp_3101	יאַשאַ (יעקב בּעלפער) בּעלצער	yt/lex/B/belzer-yasha.htm	Yasha Belzer	True
+temp_3071	יודל (ספּיוואַק) בּעלזער	yt/lex/B/belzer-yudl.htm	Yudl Belzer	True
+temp_2971	בּן-אלי (מאַטיאַס גרינבּערג)	yt/lex/B/ben-ali.htm	Ben-Ali	True
+temp_3001	יעקב (שטשירין) בּן-עמי	yt/lex/B/ben-ami-jacob.htm	Jacob Ben-Ami	True
+temp_2991	א. א. (אהרן הורוויטש) בּן-גור	yt/lex/B/ben-gur-aa.htm	A.A. Ben-Gur	True
+temp_3011	בּענדעדיקט דר. בּן-ציון	yt/lex/B/benzion-benedict-dr.htm	Benedict Benzion	True
+temp_3271	מיכה יוסף בּערדיטשעווסקי	yt/lex/B/berdichevsky-micha-josef.htm	Micha Josef Berdichevsky	True
+temp_3171	רודאָלף (זילבערבערג) בּערג	yt/lex/B/berg-rudolf.htm	Rudolf Berg	True
+temp_3221	דוד בּערגעלסאָן	yt/lex/B/bergelson-david.htm	David Bergelson	True
+temp_3241	לעאָן בּערגער	yt/lex/B/berger-leon.htm	Leon Berger	True
+temp_3191	איציק-מענדל בּערגמאַן	yt/lex/B/bergman-itsik-mendl.htm	Itsik Mendl Bergman	True
+temp_3211	שמחה בּערגמאַן	yt/lex/B/bergman-simcha.htm	Simcha Bergman	True
+temp_3251	יעקב (גרינבערג) בּערגרין	yt/lex/B/bergreen-jacob.htm	Jacob Bergreen	True
+temp_3381	אברהם בּערקאַוויטש	yt/lex/B/berkovitsh-avraham.htm	Avraham Berkovitsh	True
+temp_3421	לייזער בּערקאָוויטש	yt/lex/B/berkovitsh-leyzer.htm	Leyzer Berkovitsh	True
+temp_3431	שרה בּערקאָוויטש	yt/lex/B/berkovitsh-sarah.htm	Sarah Berkovitsh	True
+temp_3391	יוסף (יוזשבו) בּערקאָוויטש	yt/lex/B/berkovitsh-yosef.htm	Yosef Berkovitsh	True
+temp_3441	אידאַ בּערקאָווסקאַ	yt/lex/B/berkovska-ida.htm	Ida Berkovska	True
+temp_3411	יצחק-דוב בּערקאָוויטש	yt/lex/B/berkowitz-yitzhak-dov.htm	Yitzhak Dov Berkowitz	True
+temp_3291	הענריק בּערלעווי	yt/lex/B/berlewi-henryk.htm	Henryk Berlewi	True
+temp_3301	הענרי (הענעך בּיילי) בּערמאַן	yt/lex/B/berman-henry.htm	Henry Berman	True
+temp_3311	הערמאן בּערמאן	yt/lex/B/berman-herman.htm	Herman Berman	True
+temp_3321	מינאַ בּערן	yt/lex/B/bern-mina.htm	Mina Bern	True
+temp_3331	בּערל (טאָפּ) בּערנאַרד	yt/lex/B/bernardi-berel.htm	Berel Bernardi	True
+temp_3341	העלען (לאמפּעל -- טאָפּף) בּערנאַרדי	yt/lex/B/bernardi-helen.htm	Helen Bernardi	True
+temp_3351	בּערל (בּורשטין) בּערנשטיין	yt/lex/B/bernstein-berl.htm	Berl Bernstein	True
+temp_3281	יהושע (בּירטון) בּערטאַנאָוו	yt/lex/B/bertanov-yehoshua.htm	Yehoshua Bertanov	True
+temp_3111	מישע (איטעלסאָן) בּעסאַראַבּאָוו	yt/lex/B/besarabov-misha.htm	Misha Besarabov	True
+temp_3451	סאלי (שרה רבקה) בּעשטענדיג	yt/lex/B/beshtendig-sally.htm	Sally Beshtendig	True
+temp_2491	סאָפיאַ בּיי	yt/lex/B/bey-sophia.htm	Sophia Bey	True
+temp_2501	אשר בּיילין	yt/lex/B/beylin-asher.htm	Asher Beylin	True
+temp_3021	איסר בּעזמאַן	yt/lex/B/bezman-iser.htm	Iser Bezman	True
+temp_2421	א. ה. בּיאַלין	yt/lex/B/bialin-a-h.htm	A.H. Bialin	True
+temp_2431	ראָזעטא (בּיאלאסטאצקי) בּיאַליס	yt/lex/B/bialis-roseta.htm	Roseta Bialis	True
+temp_2441	חנה (ראָזענצווייג) בּיאַלקאָוויטש	yt/lex/B/bialkowicz-chana.htm	Chana Bialkowicz	True
+temp_2451	ישראל בּיאַלקאָוויטש	yt/lex/B/bialkowicz-izrael.htm	Izrael Bialkowicz	True
+temp_2461	סענדער בּיבּער	yt/lex/B/biber-sender.htm	Sender Biber	True
+temp_2471	העלען בּידאַ	yt/lex/B/bida-helen.htm	Helen Bida	True
+temp_2481	איטשע וו. בּידערמאַן	yt/lex/B/biderman-itshe.htm	Itshe V. Biderman	True
+temp_2561	גליקא (דעגענשטיין) בּיעלאווסקי	yt/lex/B/bielavski-glika.htm	Glika Bielavski	True
+temp_2581	ל. ס. בּיעלי	yt/lex/B/biely-ls.htm	L.S. Biely	True
+temp_2591	צבי בּיקעלס-שפּיצער	yt/lex/B/bikels-spitzer-dr-tsvi.htm	Tsvi Bikels-Spitzer	True
+temp_2521	יעקב בּילדער	yt/lex/B/bilder-yakov.htm	Yakov Bilder	True
+temp_2531	פישל בּימקאָ	yt/lex/B/bimko-fishl.htm	Fishl Bimko	True
+temp_2541	שלמה בּינדער	moyt/lex/B/binder-shlomo-V5.htm	Shlomo Binder	True
+temp_2611	דוד בּירנבּוים	moyt/lex/B/birnbaum-david-V5.htm	David Birnbaum	True
+temp_2621	יוסף בּירנבּוים	yt/lex/B/birnbaum-joseph.htm	Joseph Birnbaum	True
+temp_2631	לואיס (יעקב לייבּ) בּירנבּוים	yt/lex/B/birnbaum-louis.htm	Louis Birnbaum	True
+temp_2651	מיני (מינדל פּילפּעל) בּירנבּוים	yt/lex/B/birnbaum-minnie.htm	Minnie Birnbaum	True
+temp_2661	(נחום) נתן בּירנבּוים	yt/lex/B/birnbaum-nathan-dr.htm	Nathan Birnbaum	True
+temp_2671	ראָזא בּירנבּוים	yt/lex/B/birnbaum-rosa.htm	Rosa Birnbaum	True
+temp_2681	יעקב בּירנבּערג	yt/lex/B/birnberg-jacob.htm	Jacob Birnberg	True
+temp_2641	מ. בּירנבּוים	yt/lex/B/birnboym-m.htm	M. Birnboym	True
+temp_2601	פעלא בּירא	yt/lex/B/biro-fela.htm	Fela Biro	True
+temp_2691	קיידי (קיילע מייעראָוויטש) בּלאַכמאַן	yt/lex/B/blackman-katie.htm	Katie Blackman	True
+temp_2701	אברהם בּלאַנק	yt/lex/B/blank-avraham.htm	Avraham Blank	True
+temp_2711	בּנימין בּלאַנק	yt/lex/B/blank-benjamin.htm	Benjamin Blank	True
+temp_2731	לעאָן בּלאַנק	yt/lex/B/blank-leon.htm	Leon Blank	True
+temp_2721	יחיאל בּלאַנק	yt/lex/B/blank-yekhiel.htm	Yekhiel Blank	True
+temp_2911	בּעטי (בּיילע קאַץ) בּלייכמאַן	yt/lex/B/bleichman-betty.htm	Betty Bleichman	True
+temp_2921	יעקב בּלייכמאַן	yt/lex/B/bleichman-jacob.htm	Jacob Bleichman	True
+temp_2941	יעקב בּלייפער	yt/lex/B/bleifer-jacob.htm	Jacob Bleifer	True
+temp_2901	העלען (יונה) בּליי	yt/lex/B/bley-helen.htm	Helen Bley	True
+temp_2931	יחזקאל בּלייכער	yt/lex/B/bleyker-yekhezkel.htm	Yekhezkel Bleykher	True
+temp_2951	משה בּליישטיפט	yt/lex/B/bleyshtift-moshe.htm	Moshe Bleyshtift	True
+temp_2891	מנחם (מיטיע) בּליאַכאַר	moyt/lex/B/bliacher-menachem-V5.htm	Menachem Bliacher	True
+temp_2961	יצחק בּליפעלד	yt/lex/B/bliefield-itzhak.htm	Itzhak Bliefeld	True
+temp_2741	מילדרעד בּלאַק	yt/lex/B/block-mildred.htm	Mildred Block	True
+temp_2861	לופּוס (זאב) בּלומענפעלד	yt/lex/B/bloomenfeld-lupus.htm	Lupus Bloomenfeld	True
+temp_2751	הירש בּלאָשטיין	yt/lex/B/bloshteyn-hirsh.htm	Hirsh Bloshteyn	True
+temp_2761	מיראַ בּלויפאַרבּ	moyt/lex/B/bloyfarb-mira-V5.htm	Mira Bloyfarb	True
+temp_2771	אברהם בּלום	yt/lex/B/blum-abraham.htm	Abraham Blum	True
+temp_2791	חנה (חנה-בּלומע צענציפּער) בּלום	moyt/lex/B/blum-chana-V5.htm	Chana Blum	True
+temp_2781	הענרי (היינריך) בּלום	yt/lex/B/blum-henry.htm	Henry Blum	True
+temp_2811	סעם (אַלעקסאַנדער) בּלום	yt/lex/B/blum-sam.htm	Sam Blum	True
+temp_2801	סאמועל (שמואל) בּלום	yt/lex/B/blum-samuel.htm	Samuel Blum	True
+temp_2871	דיאַנאַ בּלומענפעלד-טורקאָוו	yt/lex/B/blumenfeld-turkow-diana.htm	Diana Blumenfeld-Turkow	True
+temp_2821	דוד בּלומענטאַל	yt/lex/B/blumental-david.htm	David Blumental	True
+temp_2831	נייטאן בּלומענטאַל	yt/lex/B/blumental-neytan.htm	Neytan Blumental	True
+temp_1911	פעלי בּאָקמאַן	yt/lex/B/bokman-feli.htm	Feli Bokman	True
+temp_1921	לואיס (לייבּ) בּאָקשיצקי	yt/lex/B/bokshitzky-louis.htm	Louis Bokshitzky	True
+temp_1831	בּאָנטשע (אַברהם ראָזענפעלד)	moyt/lex/B/bontshe-V5.htm	Bontshe	True
+temp_1821	בּען בּאָנוס	yt/lex/B/bonus-ben.htm	Ben Bonus	True
+temp_1991	שלמה בּאָרדיזשאַנער	yt/lex/B/bordizhaner-shlomo.htm	Shlomo Bordizhaner	True
+temp_2071	בּאָרישעוו	moyt/lex/B/borishev-V5.htm	Borishev	True
+temp_2051	פראַנץ (אפרים) בּאָריץ	yt/lex/B/borits-frants.htm	Frants Borits	True
+temp_2061	קלאַראַ (דרוקער) בּאָריץ	yt/lex/B/borits-klara.htm	Klara Borits	True
+temp_2101	מאַליאַ בּארקאווסקא	moyt/lex/B/borkovska-malya-V5.htm	Malya Borkovska	True
+temp_1931	בּערל (בּאַרדאַקין) בּאַראָדקין	yt/lex/B/borodkin-berl.htm	Berl Borodkin	True
+temp_1941	סאָניאַ בּאַראָדקין	yt/lex/B/borodkin-sonya.htm	Sonya Borodkin	True
+temp_2021	אירענא (דבורה) בּארטשעווסקא	moyt/lex/B/bortshevska-irena-V5.htm	Irena Bortshevska	True
+temp_1761	יעקב בּאטאשאַנסקי	yt/lex/B/botoshansky-jacob.htm	Jacob Botoshansky	True
+temp_1771	בּערל בּאָטוויניק	yt/lex/B/botvinik-berl.htm	Berl Botvinik	True
+temp_1781	רבקה בּאָיאַרסקא	yt/lex/B/boyarska-rivka.htm	Rivka Boyarska	True
+temp_1791	רפאל בּאָיאַרסקי-בּאָגאַרט	yt/lex/B/boyarsky-bogart-rafael.htm	Rafael Boyarsky-Bogart	True
+temp_2271	לייזער בּויקע	yt/lex/B/boyke-leyzer.htm	Leyzer Boyke	True
+temp_2241	אננאַ (חנה פּאָלאַקאָווסקא) בּוים	yt/lex/B/boym-anna.htm	Anna Boym	True
+temp_2231	אלימלך בּוים	yt/lex/B/boym-elimelekh.htm	Elimelekh Boym	True
+temp_2261	יהודה-לייבּ בּוימוואָל	yt/lex/B/boymvol-yehuda-leib.htm	Yehuda Leib Boymvol	True
+temp_1731	אַברהמלע בּאָזשיק	yt/lex/B/bozyk-avrahamele.htm	Avrahamele Bozyk	True
+temp_1741	מאַקס בּאָזשיק	yt/lex/B/bozyk-max.htm	Max Bozyk	True
+temp_1751	רייזל בּאָזשיק	yt/lex/B/bozyk-reizel.htm	Reizel Bozyk	True
+temp_3651	מאיר בּראַף	yt/lex/B/braff-meyer.htm	Meyer Braff	True
+temp_3461	כינע (פישזאָן) בּראַגינסקאַ	yt/lex/B/braginska-chine.htm	Chine Braginska	True
+temp_3561	אברהם הערש בּראַלמאַן	yt/lex/B/bralman-avraham-hersh.htm	Avraham Hersh Bralman	True
+temp_3601	שאול בּראַנדעס	yt/lex/B/brandes-saul.htm	Saul Brandes	True
+temp_3611	יוסף (סמאָלניק) בּראַנדעסקאָ	yt/lex/B/brandesko-joseph.htm	Joseph Brandesko	True
+temp_3841	עגאָן בּרעכער	yt/lex/B/brecher-egon.htm	Egon Brecher	True
+temp_3771	פּאול בּרייטמאן	yt/lex/B/breitman-paul.htm	Paul Breitman	True
+temp_3851	אברהם בּרען	yt/lex/B/bren-abraham.htm	Abraham Bren	True
+temp_3861	יוסף חיים בּרענער	yt/lex/B/brenner-yosef-chaim.htm	Yosef Chaim Brenner	True
+temp_3871	יצחק בּרקסטאָוויצקי	yt/lex/B/brestovitsky-yitzhak.htm	Yitzhak Brestovitsky	True
+temp_3831	שרה בּרעז	moyt/lex/B/brez-sarah-V5.htm	Sarah Brez	True
+temp_3751	דוד בּרידזשער	yt/lex/B/bridger-david.htm	David Bridger	True
+temp_3781	(ליפּ) יצחק-ליפּע בּריל	yt/lex/B/brill-yitzhak-lipe.htm	Yitzhak-Lipe Brill	True
+temp_3791	אליא (גאָלדע זיידלין) בּרין	yt/lex/B/brin-alya.htm	Alya Brin	True
+temp_3801	ראָזא (שקליארזש) בּרין	yt/lex/B/brin-roza.htm	Roza Brin	True
+temp_3811	שלום בּרין	yt/lex/B/brin-sholom.htm	Sholom Brin	True
+temp_3821	חיים בּריסמאַן	yt/lex/B/brisman-chaim.htm	Chaim Brisman	True
+temp_3761	אַננאַ בּריה	yt/lex/B/briya-anna.htm	Anna Briya	True
+temp_3501	משה בּראַדערזאָהן	yt/lex/B/broderzon-moshe.htm	Moshe Broderzon	True
+temp_3491	מוסיא בּראדסקי	moyt/lex/B/brodski-musia-V5.htm	Musia Brodski	True
+temp_3481	אהרן בּראָדסקי	yt/lex/B/brodsky-aaron.htm	Aaron Brodsky	True
+temp_3471	בּראָדסקי	moyt/lex/B/brodsky-V5.htm	Brodsky	True
+temp_3681	יוסף בּרוידי	yt/lex/B/brody-joseph.htm	Joseph Brody	True
+temp_3671	מ. ז. (מייער גרוזני) בּרוידא	yt/lex/B/broida-m-z.htm	M.Z. Broida	True
+temp_3571	חיים בּראָמבּערג	yt/lex/B/bromberg-chaim.htm	Chaim Bromberg	True
+temp_3641	דוד בּראָנשטיין	yt/lex/B/bronshteyn-david.htm	David Bronshteyn	True
+temp_3631	אסתר (סטאלארסקאיא) בּראָנשטיין	yt/lex/B/bronstein-esther.htm	Esther Bronstein	True
+temp_3721	דוד בּרוין	yt/lex/B/brown-david.htm	David Brown	True
+temp_3531	קייטי (גיטל בּאַקאָן) בּראַון	yt/lex/B/brown-katie.htm	Katie Brown	True
+temp_3541	ראָזא (רחל איזאקסאָן) בּראון	yt/lex/B/brown-rose.htm	Rose Brown	True
+temp_3701	שמחה בּרוידע	yt/lex/B/broyde-simcha.htm	Simcha Broyde	True
+temp_3711	יצחק בּרוידעס	yt/lex/B/broydes-itzhak.htm	Itzhak Broydes	True
+temp_2281	נפתּלי בּוכוואַלד	yt/lex/B/buchwald-naftali.htm	Naftali Buchwald	True
+temp_2351	אברהם בּוקשטיין	yt/lex/B/buckstein-abraham.htm	Abraham Buckstein	True
+temp_2161	בּעסי (בּודניק) בּודאַנאָוו	yt/lex/B/budanov-bessie.htm	Bessie Budanov	True
+temp_2171	יאָסל בּודייסקי	moyt/lex/B/budeyski-yosl-V5.htm	Yosl Budeyski	True
+temp_2191	צילע (ציפּע מא*גילנער) בּודקין	yt/lex/B/budkin-celia.htm	Celia Budkin	True
+temp_2181	מישע בּודקין	yt/lex/B/budkin-misha.htm	Misha Budkin	True
+temp_2331	מאַקס בּוקאַנסקי	yt/lex/B/bukanski-max.htm	Max Bukanski	True
+temp_2341	יוסף בּוקסענבּוים	yt/lex/B/buksenboym-joseph.htm	Joseph Buksenboym	True
+temp_2321	אברהם בּולקין	yt/lex/B/bulkin-avraham.htm	Avraham Bulkin	True
+temp_2301	גוירטי בּולמאַן	yt/lex/B/bulman-gertie.htm	Gertie Bulman	True
+temp_2311	מאַקס בּולמאַן	yt/lex/B/bulman-max.htm	Max Bulman	True
+temp_2291	יוסף (בּולקין) בּולאָוו	yt/lex/B/buloff-joseph.htm	Joseph Buloff	True
+temp_2361	קאַרל (בּצלאל) בּוראָוויק	yt/lex/B/burovik-karl.htm	Karl Burovik	True
+temp_2381	חייקעלע בּורשטין	yt/lex/B/burshtin-kheykele.htm	Kheykele Burshtin	True
+temp_2391	מינאַ (האַלפּערן) בּורשטין	moyt/lex/B/burshtin-mina-V5.htm	Mina Burshtin	True
+temp_2401	משה בּורשטין	moyt/lex/B/burshtin-moshe-V5.htm	Moshe Burshtin	True
+temp_2371	פּסח בּורשטיין	yt/lex/B/burstein-pesach.htm	Pesach Burstein	True
+temp_2211	איזידאָר בּוזעט	yt/lex/B/buzet-izidor.htm	Izidor Buzet	True
+temp_2201	חבל בּוזגאן	yt/lex/B/buzgan-chevel.htm	Chevel Buzgan	True
+temp_2551	בּיעגין	moyt/lex/B/byegun-V5.htm	Byegun	True
+temp_21301	איזידאָר קעשיר	yt/lex/C/casher-izidore.htm	Izidore Casher	True
+temp_11961	לייוויק כאַנוקאָוו	yt/lex/C/chanukoff-leivik.htm	Leivik Chanukoff	True
+temp_11101	מנחם טשאַפּניק	yt/lex/C/chapnik-menachem.htm	Menachem Chapnik	True
+temp_11981	לעאָן כאַראַז	yt/lex/C/charaz-leon.htm	Leon Charaz	True
+temp_11921	כאַווער-פּאַווער (גרשון איינבּינדער)	yt/lex/C/chaver-paver.htm	Chaver-Paver	True
+temp_11211	בּרוּך טשעמערינסקי	yt/lex/C/chemerinski-baruch.htm	Baruch Chemerinski	True
+temp_11221	טשעפּלין	yt/lex/C/cheplin.htm	Cheplin	True
+temp_11241	דזשעק (יצחק-יעקב חרש) טשעריש	yt/lex/C/cherish-jack.htm	Jack Cherish	True
+temp_11261	עני (פיינמאַן) טשערניאַק	yt/lex/C/cherniak-annie.htm	Annie Cherniak	True
+temp_11251	יוסף טשערניאַווסקי	yt/lex/C/cherniavsky-joseph.htm	Joseph Cherniavsky	True
+temp_11231	אַלעקס טשערטאָוו	yt/lex/C/chertov-alexander.htm	Alexander Chertov	True
+temp_11191	דוד טשעטשיק	yt/lex/C/chetshik-david.htm	David Chetshik	True
+temp_11121	דאָראַ טשיזשיק	yt/lex/C/chizhik-dora.htm	Dora Chizhik	True
+temp_11141	לאה טשיזשיק	yt/lex/C/chizhik-leah.htm	Leah Chizhik	True
+temp_11151	מאַניאַ (פירשטענפעלד) טשיזשיק	yt/lex/C/chizhik-manya.htm	Manya Chizhik	True
+temp_11161	משה טשיזשיק	yt/lex/C/chizhik-moshe.htm	Moshe Chizhik	True
+temp_11131	יוסף טשיזשיק	yt/lex/C/chizhik-yosef.htm	Yosef Chizhik	True
+temp_11171	עמנוּאל טשיזשיק	yt/lex/C/chizik-emanuel.htm	Emanuel Chizik	True
+temp_11111	ג. טשאָרני	yt/lex/C/chorny-g.htm	G. Chorny	True
+temp_20301	טשאַרלי קאָהען	yt/lex/C/cohan-charlie.htm	Charlie Cohan	True
+temp_20291	הערי קאָהען	yt/lex/C/cohen-harry.htm	Harry Cohen	True
+temp_20251	ס. ה. (נודעלמאַן) קאָהן	yt/lex/C/cohen-s-h.htm	S.H. Cohen	True
+temp_20561	ה. א. (קאָהן) קאַנדעל	yt/lex/C/condell-h.a.htm	H.A. Condell	True
+temp_20261	ראָזעטאַ קאָהן	yt/lex/C/conn-rosetta.htm	Rosetta Conn	True
+temp_20611	וויליאַם קאַנראָד	yt/lex/C/conrad-william.htm	William Conrad	True
+temp_6351	בּעטי (בראַצלאַווסקאַ) דאַלסקאַ	yt/lex/D/dalska-betty.htm	Betty Dalska	True
+temp_6901	דוד (צוויבעלשאַרף) דענק	yt/lex/D/dank-david.htm	David Dank	True
+temp_6391	מרדכי דאַנציס	yt/lex/D/dantsis-mordechai.htm	Mordechai Dantsis	True
+temp_6421	וואָלף (אייזנשטיין) דארעלין	yt/lex/D/darelin-wolf.htm	Wolf Darelin	True
+temp_6481	צני-הערש דאַשעווסקי	yt/lex/D/dashevsky-tsvi-hersh.htm	Tsvi Hersh Dashevsky	True
+temp_6491	חנה (עדעלמאַן) דאַשקעוויטש	yt/lex/D/dashkevitsh-chana.htm	Chana Dashkevitsh	True
+temp_6251	אַדאָלף דאובער	moyt/lex/D/dauber-adolf-V5.htm	Adolf Dauber	True
+temp_6261	דאוויד דאַווידאָוו	yt/lex/D/davidov-david-II.htm	David Davidov	True
+temp_6261	דאוויד דאַווידאָוו	moyt/lex/D/davidov-david-V5.htm	David Davidov	True
+temp_6281	אפרים דאַווידזאָהן	yt/lex/D/davidzon-efrayim.htm	Efrayim Davidzon	True
+temp_621	דוד (איגנאַטאָווסקי) איגנאַטאָוו	yt/lex/D/davidzon-mikhl.htm	Mikhl Davidzon	True
+temp_6311	סעם דאַיען	yt/lex/D/dayen-sam.htm	Sam Dayen	True
+temp_6321	שרה דאַיען	yt/lex/D/dayen-sarah.htm	Sarah Dayen	True
+temp_6301	חנה דאַיען-דאָבּראָוויסקאַ	yt/lex/D/dayen-dobrovinska-chana.htm	Chana Dayen-Dobrovinska	True
+temp_6791	שמואל דייקסעל	yt/lex/D/dayksel-shmuel.htm	Shmuel Dayksel	True
+temp_6871	הערי א. (דאַלעטיצקי דעל	yt/lex/D/dell-harry-a.htm	Harry A. Dell	True
+temp_6891	יואל-דוד דעמבּיצער	yt/lex/D/dembitser-yoel-david.htm	Yoel David Dembitser	True
+temp_6881	וואָלף דעמאָנט	yt/lex/D/demont-volf.htm	Volf Demont	True
+temp_6911	יאָזעף (יוסף-חיים) דעססער	yt/lex/D/desser-joseph.htm	Joseph Desser	True
+temp_6721	יצחק (סאָלאָמיאַניק) דייטש	yt/lex/D/deytsh-itzhak.htm	Itzhak Deytsh	True
+temp_6731	מיני (מענקעס) דייטש	yt/lex/D/deytsh-minnie.htm	Minnie Deytsh	True
+temp_6741	שייע דייטש	moyt/lex/D/deitsh-shaye-V5.htm	Shaye Deytsh	True
+temp_6761	סעם (גאָלובאַק) דיימאÀָנט	yt/lex/D/diamont-sam.htm	Sam Diamont	True
+temp_6701	יאָזעף דיבּעק	yt/lex/D/dibek-yozef.htm	Yozef Dibek	True
+temp_6841	אייזיק (יצחק) מאיר דיק	yt/lex/D/dick-isaac-meir.htm	Isaac Meir Dick	True
+temp_6831	יעקב דינעזאָן	yt/lex/D/dineson-jacob.htm	Jacob Dineson	True
+temp_6821	שמחה דינמאַן (דילמאַן)	yt/lex/D/dinman-simcha.htm	Simcha Dinman	True
+temp_6861	משה דלוזשנאָווסקי	yt/lex/D/dluznowsky-moshe.htm	Moshe Dluznowsky	True
+temp_6231	יחזקאל דאָבּרושין	yt/lex/D/dobrushin-yekhezkel.htm	Yekhezkel Dobrushin	True
+temp_6401	רובּין (ראובן) דאָקטאָר	yt/lex/D/doctor-rubin.htm	Rubin Doctor	True
+temp_6241	יצחק דאגים	yt/lex/D/dogim-yitskhok.htm	Yitskhok Dogim	True
+temp_6411	בּ. דאָקטאָראָוו	yt/lex/D/doktorov-b.htm	B. Doktorov	True
+temp_6331	לאה דאָלינגער	yt/lex/D/dolinger-leah.htm	Leah Dolinger	True
+temp_6341	מנחם-מענדל דאָליצקי	yt/lex/D/dolitzky-menachem-mendel.htm	Menachem Mendel Dolitzky	True
+temp_6431	אייבּ דאָרף	yt/lex/D/dorf-abe.htm	Abe Dorf	True
+temp_6461	עלזאַ דאָרף	yt/lex/D/dorf-elza.htm	Elza Dorf	True
+temp_6451	עטל (עפּעלבלאַט) דאָרף	yt/lex/D/dorf-ethel.htm	Ethel Dorf	True
+temp_6441	מאָריס דאָרף	yt/lex/D/dorf-morris.htm	Morris Dorf	True
+temp_6541	זכריה-אברהם דויבער	moyt/lex/D/doyber-zechariah-avraham-V5.htm	Zechariah-Avraham Doyber	True
+temp_6921	דזשאָזעף דראַבּקין	yt/lex/D/drabkin-joseph.htm	Joseph Drabkin	True
+temp_6961	נאַטאַן (ניסן) דראַנאָוו	yt/lex/D/dranov-nathan.htm	Nathan Dranov	True
+temp_6951	נאַדיאַ (גרעסיע מייטוס) דראַנאָוו	yt/lex/D/dranova-nadya.htm	Nadya Dranova	True
+temp_6981	זשעניע דרייזין	moyt/lex/D/dreyzin-jennie-V5.htm	Jennie Dreyzin	True
+temp_7001	ה. דרימער	yt/lex/D/drimer-h.htm	H. Drimer	True
+temp_6931	? דראָזדאָוויטש	yt/lex/D/drozdovitsh.htm	? Drozdovitsh	True
+temp_6971	לייב דרוקער	moyt/lex/D/drucker-leib-V5.htm	Leib Drucker	True
+temp_6501	דאָראַ (ראַבוורין) דובּינסקאַ	yt/lex/D/dubinska-dora.htm	Dora Dubinska	True
+temp_6521	ראובן דובּינסקי	moyt/lex/D/dubinsky-reuben-V5.htm	Reuben Dubinsky	True
+temp_6531	הילעל דובּראָווינסקי	yt/lex/D/dubrovinsky-hillel.htm	Hillel Dubrovinsky	True
+temp_6561	וואָלף דורמאשקין	moyt/lex/D/durmashkin-wolf-V5.htm	Wolf Durmashkin	True
+temp_6801	אָסיפּ (יוסף פּערלמאַן) דימאָוו	yt/lex/D/dymow-osip.htm	Osip Dymow	True
+temp_17121	שלמה עדעלהייט	yt/lex/E/edelheit-shlomo.htm	Shlomo Edelheit	True
+temp_17111	מאָריץ (משה) עדעלהאָפער	yt/lex/E/edelhofer-moritz.htm	Moritz Edelhofer	True
+temp_17141	יוראַעל עדעלמאַן	yt/lex/E/edelman-israel.htm	Israel Edelman	True
+temp_17151	לאַריסאַ עדעלמאַן	yt/lex/E/edelman-larissa.htm	Larissa Edelman	True
+temp_17161	סאָניע עדעלמאַן	yt/lex/E/edelman-sonia.htm	Sonia Edelman	True
+temp_17131	וואָלף עדעלמאַן	yt/lex/E/edelman-wolf.htm	Wolf Edelman	True
+temp_17181	יאָזעף (יוסף) עדעלשטיין	yt/lex/E/edelstein-joseph.htm	Joseph Edelstein	True
+temp_17191	פּאַוּלינאַ (פינקעלשטיין) עדעלשטיין	yt/lex/E/edelstein-pauline.htm	Pauline Edelstein	True
+temp_17091	תּנחוּם עדוּת	yt/lex/E/edut-tenakhum.htm	Tenakhum Edut	True
+temp_17231	חיים ע(ה)רענרייך	yt/lex/E/ehrenreich-chaim.htm	Chaim Ehrenreich	True
+temp_17221	הירש עהרענרייך	yt/lex/E/ehrenreich-hirsh.htm	Hirsh Ehrenreich	True
+temp_17661	מרדכי ערליך	yt/lex/E/ehrlich-mordechai.htm	Mordechai Ehrlich	True
+temp_17201	עהרליך	yt/lex/E/ehrlich.htm	Ehrlich	True
+temp_851	אברהם איינעס	yt/lex/E/eines-avraham.htm	Avraham Eines	True
+temp_841	ליזאַ איינהאָרן	yt/lex/E/einhorn-lisa.htm	Lisa Einhorn	True
+temp_861	אַברהם אייסען	yt/lex/E/eisen-avraham-dr.htm	Avraham Eisen	True
+temp_741	ליובא אייזענבּערג	yt/lex/E/eisenberg-lyuba.htm	Lyuba Eisenberg	True
+temp_721	עווא אייזען-אָרענשטיין	moyt/lex/E/eisen-orenstein-eva-V5.htm	Eva Eisen-Orenstein	True
+temp_791	אַלטער אייזענשלאָס	yt/lex/E/eisenschloss-alter.htm	Alter Eisenschloss	True
+temp_701	ראובן אייזלאַנד	yt/lex/E/eisland-reuben.htm	Reuben Eisland	True
+temp_711	גאָלדע אייזמאַן	yt/lex/E/eisman-goldie.htm	Goldie Eisman	True
+temp_17581	איזידאָר עקסלער	yt/lex/E/eksler-isidore.htm	Isidore Eksler	True
+temp_17271	משה עלבּיום	yt/lex/E/elbaum-moshe.htm	Moshe Elbaum	True
+temp_17281	איזידאָר (יצחק-לייבּ) עלגאַרד	yt/lex/E/elgard-isidore.htm	Isidore Elgard	True
+temp_17291	מאַניע (מרים בּובער) עלגאַרד	yt/lex/E/elgard-manye.htm	Manye Elgard	True
+temp_17321	מרים עליאַס	yt/lex/E/elias-miriam.htm	Miriam Elias	True
+temp_17331	אַלעקסאַנדער עליאַסבערג	yt/lex/E/eliasberg-alexander.htm	Alexander Eliasberg	True
+temp_1021	פערנאַנדאָ אַלעסקאָ	yt/lex/E/eliscu-fernanda.htm	Fernanda Eliscu	True
+temp_17361	עלישעוואַ (שעוואַ בּאָקשטיין)	yt/lex/E/elisheva.htm	Elisheva	True
+temp_17401	אברהם עלשטיין	yt/lex/E/ellstein-abraham.htm	Abraham Ellstein	True
+temp_17371	מישאַ (מאָריס הילמאַן) עלמאַן	yt/lex/E/elman-mischa.htm	Mischa Elman	True
+temp_17301	בּערנאַרד עלווינג	yt/lex/E/elving-bernard.htm	Bernard Elving	True
+temp_17311	ראָזאַ עלווינג	yt/lex/E/elving-rose.htm	Rose Elving	True
+temp_17411	לוצא (יחיאל) ענגעלבערג	yt/lex/E/engelberg-lutsa.htm	Lutsa Engelberg	True
+temp_17431	יואל ענטין	yt/lex/E/entin-joel.htm	Joel Entin	True
+temp_17471	העשל עפּ(פּ)עלבּערג	yt/lex/E/epelberg-heshl.htm	Heshl Epelberg	True
+temp_17461	בּ. (מנחם-בּעריש) עפּעלבּיום	yt/lex/E/eppelbaum-b.htm	B. Eppelbaum	True
+temp_17491	גרישאַ (יואל) עפּשטיין	yt/lex/E/epstein-grisha.htm	Grisha Epstein	True
+temp_17501	הלל-לייבּ עפּשטיין	yt/lex/E/epstein-hillel-leyb.htm	Hillel Leyb Epstein	True
+temp_17541	מ.ב. עפּשטיין	moyt/lex/E/epstein-mb-V5.htm	M.B. Epstein	True
+temp_17551	מאַרק עפּשטיין	yt/lex/E/epstein-mark.htm	Mark Epstein	True
+temp_17571	שכנא עפּשטיין	yt/lex/E/epstein-shakhne.htm	Shakhne Epstein	True
+temp_17511	וויליאַם (הלל) עפּשטיין	yt/lex/E/epstein-william.htm	Wiliam Epstein	True
+temp_17591	אַדאָלף ערבּער	yt/lex/E/erber-adolph.htm	Adolph Erber	True
+temp_17611	עני (פראַנקענבּערג) ערבּער	yt/lex/E/erber-annie.htm	Annie Erber	True
+temp_17601	דזוּשליוּס (יחיאל) ערבּער	yt/lex/E/erber-julius.htm	Julius Erber	True
+temp_17621	שמשון ערדבּערג	yt/lex/E/erdberg-shimshon.htm	Shimshon Erdberg	True
+temp_17631	סאָפיאַ (גאַרפינקעל) ערדי	moyt/lex/E/erdi-sofia-V5.htm	Sofia Erdi	True
+temp_17651	מאַקס (זלמן מערקין) עריק	yt/lex/E/erik-max.htm	Max Erik	True
+temp_17671	שמעון ערנסט	yt/lex/E/ernst-shimeon.htm	Shimeon Ernst	True
+temp_17451	יאָזעף עסקרייז	yt/lex/E/eskreyz-yozef.htm	Yozef Eskreyz	True
+temp_17441	סלאַוואַ עסטרין	yt/lex/E/estrin-slava.htm	Slava Estrin	True
+temp_17261	שרה עטינגער	yt/lex/E/ettinger-sarah.htm	Sarah Ettinger	True
+temp_17251	שלמה (דר.) עטינגער	yt/lex/E/ettinger-shlomo.htm	Shlomo Ettinger	True
+temp_17241	יוסף עטינגער	yt/lex/E/ettinger-yosef.htm	Yosef Ettinger	True
+temp_681	אייגענפעלד (ערבּער)	yt/lex/E/eygenfeld.htm	Eygenfeld	True
+temp_811	יצחק אייכעל	yt/lex/E/eykhl-yitskhok.htm	Yitskhok Eykhl	True
+temp_821	בּאַשע איינהאָרן	yt/lex/E/eynhorn-bashe.htm	Bashe Eynhorn	True
+temp_831	דוד איינהאָרן	yt/lex/E/eynhorn-david.htm	David Eynhorn	True
+temp_731	אברהם אייזענבּערג	yt/lex/E/eyzenberg-avraham.htm	Avraham Eyzenberg	True
+temp_781	שלמה אייזענשטאַרק	yt/lex/E/eyzenshtark-shlomo.htm	Shlomo Eyzenshtark	True
+temp_751	מרדכי אייזענשטאַט	yt/lex/E/eyzenshtat-mordechai.htm	Mordechai Eyzenshtat	True
+temp_771	נחמה אייזענשטאט	moyt/lex/E/eyzenshtat-nekhama-V5.htm	Nechama Eyzenshtat	True
+temp_801	לייבּל אייזערמאַן	yt/lex/E/eyzerman-leibl.htm	Leibl Eyzerman	True
+temp_18921	דוד פאַכלער	yt/lex/F/fachler-david.htm	David Fachler	True
+temp_18931	ראָזאַ פאַכלער	yt/lex/F/fachler-rosa.htm	Rosa Fachler	True
+temp_18951	ראָבערט פאַלק	yt/lex/F/falk-robert.htm	Robert Falk	True
+temp_18961	יואל-בעריש פאַלקאָוויטש	yt/lex/F/falkowitz-joel-berish.htm	Joel Berish Falkowitz	True
+temp_18941	יעקב פאַללער	yt/lex/F/faller-jacob.htm	Jacob Faller	True
+temp_18911	אליעזר פאַוויר	yt/lex/F/favir-eliezer.htm	Eliezer Favir	True
+temp_19491	אייזיק (פעדאָרעסקי) פעדער	yt/lex/F/feder-ayzik.htm	Ayzik Feder	True
+temp_19501	משה פעדער	yt/lex/F/feder-moshe.htm	Moshe Feder	True
+temp_19101	רחל פייגענבערג	yt/lex/F/feigenberg-rachel.htm	Rachel Feigenberg	True
+temp_19121	יהושע פייל	yt/lex/F/feil-yehoshua.htm	Yehoshua Feil	True
+temp_19141	דאָראַ פיין	moyt/lex/F/fein-dora-V5.htm	Dora Fein	True
+temp_19131	איידאַ פיין	yt/lex/F/fein-ida.htm	Ida Fein	True
+temp_19151	העריס פיינבערג	yt/lex/F/feinberg-harris.htm	Harris Feinberg	True
+temp_19521	אַהרן פעלדמאַן	yt/lex/F/feldman-aaron.htm	Aaron Feldman	True
+temp_19541	איגנאַץ פערקויף	yt/lex/F/ferkauf-ignats.htm	Ignats Ferkauf	True
+temp_19551	סעם (שמואל-בערל) פערקויף	yt/lex/F/ferkauf-sam.htm	Sam Ferkauf	True
+temp_19561	שמשון פערשט	yt/lex/F/fersht-shimshon.htm	Shimshon Fersht	True
+temp_19111	לייבע פייווישאָוו	yt/lex/F/feyvishov-leybe.htm	Leybe Feyvishov	True
+temp_19081	הערמאַן פידלער	yt/lex/F/fiedler-herman.htm	Herman Fiedler	True
+temp_19311	אסתר פיעלד	yt/lex/F/field-esther.htm	Esther Field	True
+temp_19231	פילאָפּ	yt/lex/F/filop.htm	Filop	True
+temp_19251	אַנעטאַ פינקעל	yt/lex/F/finkel-aneta.htm	Aneta Finkel	True
+temp_19261	בעלאַ פינקעל	yt/lex/F/finkel-bella.htm	Bella Finkel	True
+temp_19271	לוסי פינקעל	yt/lex/F/finkel-lucy.htm	Lucy Finkel	True
+temp_19321	בנימין פישביין	yt/lex/F/fishbein-benjamin.htm	Benjamin Fishbein	True
+temp_19401	יצחק פישעלעוויטש	yt/lex/F/fishelewitz-yitskhok.htm	Yitskhok Fishelewitz	True
+temp_19391	אפרים-פישל פישעלזאָהן	yt/lex/F/fishelzon-efrayim-fishl.htm	Efrayim Fishl Fishelzon	True
+temp_19411	הערמאַן פישער	moyt/lex/F/fisher-herman-V5.htm	Herman Fisher	True
+temp_19431	לובא פישער	moyt/lex/F/fisher-luba-V5.htm	Luba Fisher	True
+temp_19441	סאַמועל (שאול-פּנחס) פישער	yt/lex/F/fisher-samuel.htm	Samuel Fisher	True
+temp_19341	בערטאַ פישלער	yt/lex/F/fishler-berta.htm	Berta Fishler	True
+temp_19351	הערי (הערשל) פישמאַן	yt/lex/F/fishman-harry.htm	Harry Fishman	True
+temp_19371	יעקב פישמאַן	yt/lex/F/fishman-yakov.htm	Yakov Fishman	True
+temp_19481	פלייסיג (?)	yt/lex/F/fleisig.htm	[?] Fleisig	True
+temp_18901	אַנדזשאַ פאָדערמאַן	yt/lex/F/foderman-andzha.htm	Andzha Foderman	True
+temp_18861	ל. פאָגעלמאַן	yt/lex/F/fogelman-l.htm	L. Fogelman	True
+temp_18891	פעליקס פאָגעלנעסט	yt/lex/F/fogelnest-feliks.htm	Feliks Fogelnest	True
+temp_18881	פּאָולין פאָגעלנעסט	yt/lex/F/fogelnest-pauline.htm	Pauline Fogelnest	True
+temp_18871	סעם פאָגעלנעסט	yt/lex/F/fogelnest-sam.htm	Sam Fogelnest	True
+temp_19881	אברהם פרענק	yt/lex/F/frank-abraham.htm	Abraham Frank	True
+temp_19901	חנה (איינבּינדער) פרענק	yt/lex/F/frank-chana.htm	Chana Frank	True
+temp_19911	יעקב פרענק	yt/lex/F/frank-jacob.htm	Jacob Frank	True
+temp_19921	נייטאַן (הפתלי) פרענק	yt/lex/F/frank-nathan.htm	Nathan Frank	True
+temp_19821	אַדאָלף פריימאַן	yt/lex/F/freeman-adolph.htm	Adolph Freeman	True
+temp_19831	אַננאַ (האָכבּערגער) פריימאַן	yt/lex/F/freeman-anna.htm	Anna Freeman	True
+temp_19851	פלאָראַ פריימאַן	yt/lex/F/freiman-flora.htm	Flora Freiman	True
+temp_19841	לואיס (לייזער געניוק) פריימאַן	yt/lex/F/freiman-louis.htm	Louis Freiman	True
+temp_19941	ברוך פרענקעל	yt/lex/F/frenkel-barukh.htm	Barukh Frenkel	True
+temp_19951	יצחק פרענקעל	yt/lex/F/frenkel-yitzhak.htm	Yitzhak Frenkel	True
+temp_19861	אַניטאַ פריינטלעך-שעף	yt/lex/F/freundlich-sheff-anita.htm	Anita Freundlich-Sheff	True
+temp_19801	עמיל (אליהו) פרידעס	moyt/lex/F/frides-emil-V5.htm	Emil Frides	True
+temp_19661	(?) פרידמאַן	yt/lex/F/fridman.htm	[?] Fridman	True
+temp_19761	פייוועלע פרידמאַן	yt/lex/F/fridman-feyvele.htm	Feyvele Fridman	True
+temp_19691	הענעך פרידמאַן	moyt/lex/F/fridman-henekh-V5.htm	Henekh Fridman	True
+temp_19731	לייב פרידמאַן	yt/lex/F/fridman-leyb.htm	Leyb Fridman	True
+temp_19751	סאַראַ (שרה גלעוויצקאַ) פרידמאַן	yt/lex/F/lex-fridman-sara.htm	Sara Fridman	True
+temp_19621	י. פריד	yt/lex/F/fried-y.htm	Y. Fried	True
+temp_19651	עדוואַרד פרידלענדער	yt/lex/F/friedlander-edward.htm	Edward Friedlander	True
+temp_19671	אַלבערט (וועלוול-אַלטער) פרידמאַן	yt/lex/F/friedman-albert.htm	Albert Friedman	True
+temp_19681	בצלאל פרידמאַן	yt/lex/F/friedman-betsalel.htm	Betsalel Friedman	True
+temp_19721	לאַראַ (לאה וויינטרויבּ) פרידמאַן	yt/lex/F/friedman-lara.htm	Lara Friedman	True
+temp_19641	לואיס פרידזעל	yt/lex/F/friedsell-louis.htm	Louis Friedsell	True
+temp_19591	הערש פרוימאַוויטש	moyt/lex/F/froymovitsh-hersh-V5.htm	Hersh Froymovitsh	True
+temp_19601	אברהם פרומקין	yt/lex/F/frumkin-abraham.htm	Abraham Frumkin	True
+temp_19611	זאַנוויל פרומקיס	yt/lex/F/frumkis-zanvil.htm	Zanvil Frumkis	True
+temp_19031	יעקב פוקס	yt/lex/F/fuchs-yakov.htm	Yakov Fuchs	True
+temp_19061	אַרי פורמאַן	yt/lex/F/fuhrman-ari.htm	Ari Fuhrman	True
+temp_19051	אברהם פורמאַן	yt/lex/F/fuhrman-avraham.htm	Avraham Fuhrman	True
+temp_19041	רוזשא פוקס	moyt/lex/F/fuks-ruzha-V5.htm	Ruzha Fuks	True
+temp_19071	נאָרמאַן פורמאַן	yt/lex/F/furman-norman.htm	Norman Furman	True
+temp_5381	הערי געבּיל	yt/lex/G/gabel-harry.htm	Harry Gabel	True
+temp_5391	מאַקס (מנחם-מענדעל געבּיל	yt/lex/G/gabel-max.htm	Max Gabel	True
+temp_4001	אברהם גאכאנסקי	moyt/lex/G/gachanski-abraham-V5.htm	Abraham Gachanski	True
+temp_4011	מרים (מינדע) גאכאנסקי	moyt/lex/G/gachanski-miriam-V5.htm	Miriam Gachanski	True
+temp_4651	בּרוך גאלינסקי	yt/lex/G/galinski-barukh.htm	Barukh Galinski	True
+temp_4661	פּאליא (שלוגליט) גאַלינסקי	yt/lex/G/galinski-polia.htm	Polia Galinski	True
+temp_4681	אסתר גאמעראוו (פאָגעל)	moyt/lex/G/gamerov-fogel-esther-V5.htm	Esther Gamerov-Fogel	True
+temp_4721	פעלא גארבארזש	moyt/lex/G/garbazh-fela-V5.htm	Fela Garbazh	True
+temp_4711	משה גארבארזש	moyt/lex/G/garbazh-moshe-V5.htm	Moshe Garbazh	True
+temp_4731	רבקה גארבער	moyt/lex/G/garber-rivka-V5.htm	Rivka Garber	True
+temp_4831	אשר גארפינקעל	yt/lex/G/garfinkel-asher.htm	Asher Garfinkel	True
+temp_4781	יעקב גארטעלוויטש	yt/lex/G/gartelovitsh-yakov.htm	Yakov Gartelovitsh	True
+temp_4791	יעקב (הארטענשטיין) גאַרטענשעיין	yt/lex/G/gartenstein-jacob.htm	Jacob Gartenstein	True
+temp_4701	הענרי מ. גאסטווירט	yt/lex/G/gastvirt-henry-m.htm	Henry M. Gastvirt	True
+temp_3911	ראָזאַ (פאזניאק) גאזעל	moyt/lex/G/gazel-roza-V5.htm	Roza Gazel	True
+temp_3901	מאַרקוס (מענדעלע) גאַזאָווסקי	yt/lex/G/gazovsky-marcus.htm	Marcus Gazovsky	True
+temp_5401	פּיניע געדולד	moyt/lex/G/geduld-pinie-V5.htm	Pinie Geduld	True
+temp_5451	בּערנאַרד געלינג	yt/lex/G/geiling-bernard.htm	Bernard Geiling	True
+temp_5411	מיכל געלבּאַרט	yt/lex/G/gelbart-michael.htm	Michael Gelbart	True
+temp_5421	געניאַ געלבער	yt/lex/G/gelber-genia.htm	Genia Gelber	True
+temp_5441	אידאַ געלפאַנד	moyt/lex/G/gelfand-ida-V5.htm	Ida Gelfand	True
+temp_5471	מ. געלער	yt/lex/G/geller-m.htm	M. Geller	True
+temp_5501	סאָלאָמאַן גענפער	yt/lex/G/genfer-solomon.htm	Solomon Genfer	True
+temp_5571	א. מ. גערמאַן	yt/lex/G/german-a-m.htm	A.M. German	True
+temp_5581	ישראל גערמאַן	moyt/lex/G/german-israel-V5.htm	Israel German	True
+temp_5591	לוסי (לאָשאַ קוטנער) גערמאַן	yt/lex/G/german-lucy.htm	Lucy German	True
+temp_5601	מישע (הערמאַן) גערמאַן	yt/lex/G/german-misha.htm	Misha German	True
+temp_5631	מ. (משה גערשויג) גערשאָי	yt/lex/G/gershoy-m.htm	M. Gershoy	True
+temp_5651	סעם (שמואל) גערשטענזאַנג	yt/lex/G/gerstenzang-sam.htm	Sam Gerstenzang	True
+temp_5611	בּערטאַ גערסטין	yt/lex/G/gerstin-berta.htm	Berta Gerstin	True
+temp_5521	סעם (ישראל) גערטלער	yt/lex/G/gertler-sam.htm	Sam Gertler	True
+temp_5531	אַדאָלף גערטנער	yt/lex/G/gertner-adolf.htm	Adolf Gertner	True
+temp_5541	בּעטי גערטנער	yt/lex/G/gertner-betty.htm	Betty Gertner	True
+temp_5561	יאַקאָוו גערטנער	yt/lex/G/gertner-jacob.htm	Jacob Gertner	True
+temp_5551	דזשעני (שיינדל שטערן) גערטנער	yt/lex/G/gertner-jennie.htm	Jennie Gertner	True
+temp_5621	מ. (מאָשקאָוויטש) גערץ	yt/lex/G/gertz-m.htm	M. Gertz	True
+temp_5511	זשאַן (שמואל יעקב) געצמאַן	yt/lex/G/getsman-jan.htm	Jan Getsman	True
+temp_5001	מיכל (גזשיבאָוויטש) גיבּסאָן	yt/lex/G/gibson-michael.htm	Michael Gibson	True
+temp_5041	בּער גילמאַן	yt/lex/G/gilman-ben.htm	Ben Gilman	True
+temp_5051	לואי גילראָד	yt/lex/G/gilrod-louie.htm	Louie Gilrod	True
+temp_5031	איזידאָר גילטמאַן	yt/lex/G/giltman-izidor.htm	Izidor Giltman	True
+temp_5061	יעקב-בּער גימפּעל	yt/lex/G/gimpel-yaakov-ber.htm	Yaakov Ber Gimpel	True
+temp_5111	נתן גינטער	yt/lex/G/ginter-nathan.htm	Nathan Ginter	True
+temp_5121	סאַראַ (מייסטערמאַן) גינטער	yt/lex/G/ginter-sara.htm	Sara Ginter	True
+temp_5141	לואיס מ. (אליחו) גינצבּורג	yt/lex/G/gintsburg-louis-m.htm	Louis M. Gintsburg	True
+temp_5151	סאָניאַ (שרה טשערעשניאַ) גינצבּורג	yt/lex/G/gintsburg-sonya.htm	Sonya Gintsburg	True
+temp_5071	אַדעלאַ גינזבּורג	yt/lex/G/ginzburg-adela.htm	Adela Ginzburg	True
+temp_5081	חיים גינזבּורג	moyt/lex/G/ginzburg-chaim-V5.htm	Chaim Ginzburg	True
+temp_5101	שאול גינזבּורג	yt/lex/G/ginzburg-saul.htm	Saul Ginzburg	True
+temp_5091	יעקב גינזבּורג	yt/lex/G/ginzburg-yakov.htm	Yakov Ginzburg	True
+temp_5161	מאָריס גיסנעט	yt/lex/G/gisnet-morris.htm	Morris Gisnet	True
+temp_5171	איסאַק גלאַדסטאָן	yt/lex/G/gladstone-isaak.htm	Isaak Gladstone	True
+temp_5241	ישראל גלאַטשטיין	moyt/lex/G/glatstein-israel-V5.htm	Israel Glatstein	True
+temp_5231	יעקב גלאַטשטיין	yt/lex/G/glatstein-jacob.htm	Jacob Glatstein	True
+temp_5221	שמואל גלאַזערמאַן	yt/lex/G/glazerman-shmuel.htm	Shmuel Glazerman	True
+temp_5191	נאַאום (נחמן גלאַזמאַן) גלאַזונאָוו	yt/lex/G/glazman-barukh.htm	Barukh Glazman	True
+temp_5211	משה גלאַזמאַן	yt/lex/G/glazman-moshe.htm	Moshe Glazman	True
+temp_5181	בּעטיע (בונצע טייקין) גלאַזונאָוו	yt/lex/G/glazunov-betty.htm	Betty Glazunov	True
+temp_5291	הערשעל גליק	yt/lex/G/glick-hershel.htm	Hershel Glick	True
+temp_5301	אסתר גליקמאַן	yt/lex/G/glickman-esther.htm	Esther Glickman	True
+temp_5351	עטל (גליק) גליקמאַן	yt/lex/G/glikman-ethel.htm	Ethel Glikman	True
+temp_5321	מאַלווינע (פלאקסבוים) גליקמאַן	yt/lex/G/glikman-malvina.htm	Malvina Glikman	True
+temp_5331	מאַרקוס גליקמאַן	yt/lex/G/glikman-markus.htm	Markus Glikman	True
+temp_5341	מעכעלע גליקמאַן	yt/lex/G/glikman-mekhele.htm	Mekhele Glikman	True
+temp_5311	יעקב גליקמאַן	yt/lex/G/glikman-yakov.htm	Yakov Glikman	True
+temp_5271	נאָרבּערט גלימער	yt/lex/G/glimer-norbert.htm	Norbert Glimer	True
+temp_5281	סטעפאַניע (שטייף) גלימער	yt/lex/G/glimer-stefanie.htm	Stefanie Glimer	True
+temp_5261	גדליה גליוויצקי	moyt/lex/G/glivitski-gedalya-V5.htm	Gedalya Glivitski	True
+temp_3891	וולאַדיסלאַוו גאָדיק	yt/lex/G/godik-vladislav.htm	Vladislav Godik	True
+temp_4101	קלאַראַ (בלאַנק) גאָלד	yt/lex/G/gold-clara.htm	Clara Gold	True
+temp_4031	הערמאַן (הלל גורני) גאָלד	yt/lex/G/gold-herman.htm	Herman Gold	True
+temp_4051	לייבּוש גאָלד	yt/lex/G/gold-leibush.htm	Leibush Gold	True
+temp_4061	לעאן (לייבּעלע גאָלדוואָג) גאָלד	yt/lex/G/gold-leon.htm	Leon Gold	True
+temp_4071	ניוסיאַ (מיסי דאָלדבערג) גאָלד	yt/lex/G/gold-nyusya.htm	Nyusya Gold	True
+temp_4081	סטעלאַ (טאָלצע שטאָלצענגאָלד) גאָלד	yt/lex/G/gold-stella.htm	Stella Gold	True
+temp_4091	צילע (צביה גרופט) גאָלד	yt/lex/G/gold-tsila.htm	Tsila Gold	True
+temp_4041	זישע גאָלד	yt/lex/G/gold-zishe.htm	Zishe Gold	True
+temp_4121	אברהם גאָלדבּערג	yt/lex/G/goldberg-avraham.htm	Avraham Goldberg	True
+temp_4151	דינה גאָלדבּערג	yt/lex/G/goldberg-diana-V7.htm	Diana Goldberg	True
+temp_4161	הערשל גאָלדבּערג	yt/lex/G/goldberg-hershl.htm	Hershl Goldberg	True
+temp_4131	איטשע גאָלדבּערג	yt/lex/G/goldberg-itshe.htm	Itshe Goldberg	True
+temp_4181	יעקב גאָלדבּערג	yt/lex/G/goldberg-jacob.htm	Jacob Goldberg	True
+temp_4211	לילי גאָלדבּערג	moyt/lex/G/goldberg-lili-V5.htm	Lili Goldberg	True
+temp_4191	לואי גאָלדבּערג	yt/lex/G/goldberg-louie.htm	Louie Goldberg	True
+temp_4201	לואיס (לייבוש) גאָלדבּערג	yt/lex/G/goldberg-louis.htm	Louis Goldberg	True
+temp_4231	מיכל גאָלדבּערג	yt/lex/G/goldberg-michael.htm	Michael Goldberg	True
+temp_4221	מאָריס גאָלדבּערג	yt/lex/G/goldberg-morris.htm	Morris Goldberg	True
+temp_4241	משהלע גאָלדבּערג	yt/lex/G/goldberg-moshele.htm	Moshele Goldberg	True
+temp_4251	נייטאן גאָלדבּערג	yt/lex/G/goldberg-nathan.htm	Nathan Goldberg	True
+temp_4271	ראָזא (פינקענטאל) גאָלדבּערג	yt/lex/G/goldberg-rose.htm	Rose Goldberg	True
+temp_4261	סעם גאָלדבּערג	yt/lex/G/goldberg-sam.htm	Sam Goldberg	True
+temp_4171	יודל גאָלדבּערג	yt/lex/G/goldberg-yudl.htm	Yudl Goldberg	True
+temp_4361	אסתר גאָלדענבערג	moyt/lex/G/goldenberg-esther-V5.htm	Esther Goldenberg	True
+temp_4331	הערשל (קאַליגראַף) גאָלדענבּורג	yt/lex/G/goldenberg-hershl.htm	Hershl Goldenberg	True
+temp_4321	איציקל גאָלדענבּורג	yt/lex/G/goldenberg-itsikl.htm	Itsikl Goldenberg	True
+temp_4351	שפרה (האַזענבערג) גאָלדענבּורג	yt/lex/G/goldenberg-shifra.htm	Shifra Goldenberg	True
+temp_4381	אברהם (גאָלדענפאָדים) גאָלדפאַדען	yt/lex/G/goldfaden-abraham.htm	Abraham Goldfaden	True
+temp_4411	נפתלי (גאָלדענפאָדים) גאָלדפאַדען	yt/lex/G/goldfaden-naftali.htm	Naftali Goldfaden	True
+temp_4421	פּאולינע (פּאָליע ווערבעל) גאָלדפאַדען	yt/lex/G/goldfaden-paulina.htm	Paulina Goldfaden	True
+temp_4431	שמעיה (גאָלדענפאָדים) גאָלדפאַדען	yt/lex/G/goldfaden-shimi.htm	Shimi Goldfaden	True
+temp_4391	וואָלף גאָלדפאַדען	yt/lex/G/goldfaden-wolf.htm	Wolf Goldfaden	True
+temp_4281	סידני (סאַמועל גאָלדשטיין) גאָלדין	yt/lex/G/goldin-sidney.htm	Sidney Goldin	True
+temp_4441	אברהם גאָלדקנאָפּף	yt/lex/G/goldknopf-avraham-dr.htm	Avraham Goldknopf	True
+temp_4311	דוד גאָלדמאַן	yt/lex/G/goldman-david.htm	David Goldman	True
+temp_4301	גאָלדמאַן	yt/lex/G/goldman.htm	Goldman	True
+temp_4581	יוסף גאָלדשמידט	yt/lex/G/goldshmidt-joseph.htm	Joseph Goldshmidt	True
+temp_2251	יחיאל בּוים	yt/lex/G/goldsmith-yechiel.htm	Yechiel Goldsmith	True
+temp_4461	ב. י. (ברוך) גאָלדשטיין	yt/lex/G/goldstein-b-i.htm	B.I. Goldstein	True
+temp_4521	יוסף גאָלדשטיין	yt/lex/G/goldstein-joseph.htm	Joseph Goldstein	True
+temp_4561	שכר גאָלדשטיין	yt/lex/G/goldstein-sokher.htm	Sokher Goldstein	True
+temp_4511	זינאַ גאָלדשטיין	yt/lex/G/goldstein-zina.htm	Zina Goldstein	True
+temp_4021	וויקטאָר גאָלאָווטשינער	yt/lex/G/golovtshiner-viktor.htm	Viktor Golovtshiner	True
+temp_4671	העלענא (הערצבּלוט) גאָלצאווא	yt/lex/G/goltsava-helena.htm	Helena Goltsava	True
+temp_4641	סאָניע (גרענשטאַט) גאָלובּטשיק	yt/lex/G/golubchik-sonya.htm	Sonya Golubchik	True
+temp_4611	אַננאַ (חנה רובינשטיין) גאָלובּאָק	yt/lex/G/golubok-anna.htm	Anna Golubok	True
+temp_4601	אברהם גאָלובּאָק	yt/lex/G/golubok-avraham.htm	Avraham Golubok	True
+temp_4621	לעאָן גאָלובּאָק	yt/lex/G/golubok-leon.htm	Leon Golubok	True
+temp_4771	יעקב גאָרדין	yt/lex/G/gordin-jacob.htm	Jacob Gordin	True
+temp_4751	הערשל גאָרדאָן	moyt/lex/G/gordon-hershl-V5.htm	Hershl Gordon	True
+temp_4741	הערש-לייב גאָרדאָן	yt/lex/G/gordon-hersh-leib.htm	Hersh Leib Gordon	True
+temp_4761	וויעראַ גאָרדאָן	yt/lex/G/gordon-vera.htm	Vera Gordon	True
+temp_4821	אסתר גאָרעלאָוואַ-קאַגאַן	yt/lex/G/gorelova-kogan-esther.htm	Esther Gorelova-Kogan	True
+temp_4801	בּ. (יצחק גוידא-הוידא) גאָרין	yt/lex/G/gorin-b.htm	B. Gorin	True
+temp_4811	זיסל גאָרליצקאַ-ריינגלאַס	yt/lex/G/gorlitska-reinglass-zisl.htm	Zisl Gorlitska-Reinglass	True
+temp_3971	פריעדריך ווילהעלם גאָטער	yt/lex/G/goter-friedrich-wilhelm.htm	Friedrich Wilhelm Goter	True
+temp_3981	אברהם-יצחק גאָטפריד	yt/lex/G/gotfrid-avraham-yitzhak.htm	Avraham-Yitzhak Gotfrid	True
+temp_3991	איידל (ערליך) גאָטפריד	yt/lex/G/gotfrid-eydel.htm	Eydel Gotfrid	True
+temp_3961	חנא גאָטעספעלד	yt/lex/G/gottesfeld-chone.htm	Chone Gottesfeld	True
+temp_3951	קלאַראַ (גערשאָוויטש) גאָטליבּ	yt/lex/G/gottlieb-clara.htm	Clara Gottlieb	True
+temp_3941	לעאָן (לייבוש-אהרן) גאָטליבּ	yt/lex/G/gottlieb-leon.htm	Leon Gottlieb	True
+temp_3931	לואיס סילא גאָטליבּ	yt/lex/G/gottlieb-louis-silo.htm	Louis Silo Gottlieb	True
+temp_3921	אברהם-בּער גאָטלאָבּער	yt/lex/G/gottlober-avraham-ber.htm	Avraham Ber Gottlober	True
+temp_5691	אַנעטאַ גראַדנער	yt/lex/G/gradner-aneta.htm	Aneta Gradner	True
+temp_5711	ישראל (ראָזענפעלד) גראַדנער	yt/lex/G/gradner-israel.htm	Israel Gradner	True
+temp_5721	רייטשעל (ריינאַלדס) גראַדנער	yt/lex/G/gradner-rachel.htm	Rachel Gradner	True
+temp_5921	לעאָן גראַף	yt/lex/G/graf-leon.htm	Leon Graf	True
+temp_5931	פּיטער (פּתחיה) גראַף	yt/lex/G/graf-peter-V8.htm	Peter Graf	True
+temp_5771	אַלעקסאַנדער גראנאך	yt/lex/G/granach-alexander.htm	Alexander Granach	True
+temp_5731	בנימין גראובארד	moyt/lex/G/graubart-benjamin-V5.htm	Benjamin Graubart	True
+temp_6041	אָסקאַר גרין	yt/lex/G/green-oscar.htm	Oscar Green	True
+temp_6131	צעזאר (בּצלאל) גרינבּערג	yt/lex/G/greenberg-caesar.htm	Caesar Greenberg	True
+temp_6121	פעני (טאָמאַשעווסקי) גרינבּערג	yt/lex/G/greenberg-fannie.htm	Fannie Greenberg	True
+temp_6101	יעקב גרינבּערג	yt/lex/G/greenberg-jacob.htm	Jacob Greenberg	True
+temp_6091	יוסף גרינבּערג	yt/lex/G/greenberg-joseph.htm	Joseph Greenberg	True
+temp_6111	סעמיועל (שמחה) גרינבּערג	yt/lex/G/greenberg-samuel.htm	Samuel Greenberg	True
+temp_6061	הערש גרינבּלאַט	yt/lex/G/greenblatt-harry.htm	Harry Greenblatt	True
+temp_6161	ראזא (טרייטלער) גרינפעלד	yt/lex/G/greenfield-rose.htm	Rose Greenfield	True
+temp_6191	חיים גרינשפּאַן	yt/lex/G/greenshpan-chaim.htm	Chaim Greenshpan	True
+temp_6031	אפּרים גריידיקער	yt/lex/G/greidiker-efrim.htm	Efrim Greidiker	True
+temp_6071	הענריק גרינבּערג	yt/lex/G/grinberg-henryk.htm	Henryk Grinberg	True
+temp_6081	חיים-בצלאל גרינבּערג	yt/lex/G/grinberg-khayim-betsalel.htm	Khayim-Betsalel Grinberg	True
+temp_6051	איזידאָר גרינבּלאַט	yt/lex/G/grinblat-izidor.htm	Izidor Grinblat	True
+temp_6141	יהודה גרינהויז	yt/lex/G/grinhoyz-yehuda.htm	Yehuda Grinhoyz	True
+temp_6201	פייוול גרינשפּאַן	moyt/lex/G/grinshpan-feivl-V5.htm	Feivl Grinshpan	True
+temp_6211	ישראל גרינשפּון	moyt/lex/G/grinshpun-israel-V5.htm	Israel Grinshpun	True
+temp_6171	חנה גרינשטיין	moyt/lex/G/grinshteyn-khana-V5.htm	Khana Grinshteyn	True
+temp_5751	טשאַרלס וו. גראָלל	yt/lex/G/groll-charles-w.htm	Charles W. Groll	True
+temp_5741	דוד גראָלל	yt/lex/G/groll-david.htm	David Groll	True
+temp_5781	סאַמי גראָנעמאַן	yt/lex/G/gronemann-sammy-dr.htm	Sammy Gronemann	True
+temp_5941	איידאַ (בריה) גראָפּער	yt/lex/G/groper-ida.htm	Ida Groper	True
+temp_5951	יוסף גראָפּער	yt/lex/G/groper-joseph.htm	Joseph Groper	True
+temp_5811	חנה (מאַנדעלטאָרט) גראָסבּערג	yt/lex/G/grosberg-chana.htm	Chana Grosberg	True
+temp_5791	אייבּי גראס	yt/lex/G/gross-abie.htm	Abie Gross	True
+temp_5801	נפתלי גראָס	yt/lex/G/gross-naftali.htm	Naftali Gross	True
+temp_5901	פעני (אַדלער) גראָסמאַן	yt/lex/G/grossman-fannie.htm	Fannie Grossman	True
+temp_5841	העלען גראָסמאַן	yt/lex/G/grossman-helen.htm	Helen Grossman	True
+temp_5821	אוירווינג (יצחק לייבּ) גראָסמאַן	yt/lex/G/grossman-irving-V8.htm	Irving Grossman	True
+temp_5861	יעקב גראָסמאַן	yt/lex/G/grossman-jacob.htm	Jacob Grossman	True
+temp_5891	פּאַוועל גראסמאַן	moyt/lex/G/grossman-pavel-V5.htm	Pavel Grossman	True
+temp_5881	סעמועל בּ. גראָסמאַן	yt/lex/G/grossman-samuel-b-V8.htm	Samuel B. Grossman	True
+temp_5911	שלמה גראָסמאַן	yt/lex/G/grossman-shlomo.htm	Shlomo Grossman	True
+temp_5871	סילוויאַ גראָסמאַן	yt/lex/G/grossman-sylvia.htm	Sylvia Grossman	True
+temp_5851	וו. מ. (דוד וואָלף) גראָסמאַן	yt/lex/G/grossman-vm.htm	V.M. Grossman	True
+temp_5991	בּערל גרודבּערג	yt/lex/G/grudberg-berl.htm	Berl Grudberg	True
+temp_6021	אַננאַ גרושקאָף	yt/lex/G/grushkof-anna.htm	Anna Grushkof	True
+temp_6011	אברהם (גרושקאָווסקי) גרושקאָוו	yt/lex/G/grushkov-avraham.htm	Avraham Grushkov	True
+temp_4861	הערש גודעלמאַן	yt/lex/G/gudelman-hersh.htm	Hersh Gudelman	True
+temp_4841	בּעלאַ גודינסקאַ	yt/lex/G/gudinsky-bella.htm	Bella Gudinsky	True
+temp_4851	בּעסי גודמאַן	yt/lex/G/gudman-bessie.htm	Bessie Gudman	True
+temp_4921	מ. גולדאָן אַלפרעד	yt/lex/G/gulden-alfred-m.htm	Alfred M. Gulden	True
+temp_4971	אייזיק גורעוויטש	yt/lex/G/gurevitsh-isaac.htm	Isaac Gurevitsh	True
+temp_4981	מרים (מינאַ) גורעוויטש	yt/lex/G/gurevitsh-miriam.htm	Miriam Gurevitsh	True
+temp_4991	משה-לייב גורעוויטש	moyt/lex/G/gurevitsh-moshe-leib-V5.htm	Moshe Leib Gurevitsh	True
+temp_4951	גדליה גורמאן	moyt/lex/G/gurman-gedalya-V5.htm	Gedalya Gurman	True
+temp_4941	משה גורוויטש	moyt/lex/G/gurvitsh-moshe-V5.htm	Moshe Gurvitsh	True
+temp_4931	ראובן גוסקין	yt/lex/G/guskin-reuben.htm	Reuben Guskin	True
+temp_4901	בּערטא (אַקסעלראַד) גוטענטאַג	yt/lex/G/gutentag-berta.htm	Berta Gutentag	True
+temp_4911	קאַרל גוטענטאַג	yt/lex/G/gutentag-karl.htm	Karl Gutentag	True
+temp_4891	מילאני גוטמאַן	yt/lex/G/gutman-milani.htm	Milani Gutman	True
+temp_4871	מערי (מיליע ציפּקוס) גוטאָוויטש	yt/lex/G/gutovitsh-mary.htm	Mary Gutovitsh	True
+temp_7011	? האבּער	yt/lex/H/haber.htm	? Haber	True
+temp_7031	קלאַראַ (פריימאַן) האַבּערמאַן	yt/lex/H/haberman-clara.htm	Clara Haberman	True
+temp_7021	יאָזעף האַבּערמאַן	yt/lex/H/haberman-yozef.htm	Yozef Haberman	True
+temp_7481	אסתר (וויינרויב-האַלפּערן) הדסה	yt/lex/H/hadassah-esther.htm	Esther Hadassah	True
+temp_7171	באָריס האַלפּערן	moyt/lex/H/halpern-boris-V5.htm	Boris Halpern	True
+temp_7181	דינה האַלפּערן	yt/lex/H/halpern-dina.htm	Dina Halpern	True
+temp_7211	לעאָ האַלפּערן	yt/lex/H/halpern-leo.htm	Leo Halpern	True
+temp_7221	משה-לייב האַלפּערן	yt/lex/H/halpern-moyshe-leyb.htm	Moyshe-Leyb Halpern	True
+temp_7191	יהונתן האַלפּערן	yt/lex/H/halpern-yehonatan.htm	Yehonatan Halpern	True
+temp_7201	יצחק-צבי הלוי האַלפּערן	yt/lex/H/halpern-yitzhak-tsvi-halevi.htm	Yitzhak Tsvi HaLevi Halpern	True
+temp_7241	דוד-גדליה האַמבּורגער	yt/lex/H/hamburger-dovid-gedalyah.htm	Dovid Gedalyah Hamburger	True
+temp_7251	נייטאַן האַמבּורגער	yt/lex/H/hamburger-neytan.htm	Neytan Hamburger	True
+temp_7261	בּיילע (אריעל) האַנדפוס	yt/lex/H/handfus-beyla.htm	Beyla Handfus	True
+temp_7271	ישכר האַנדפוס	yt/lex/H/handfus-yisokhar.htm	Yisokhar Handfus	True
+temp_7811	עזרא הררי	yt/lex/H/harari-ezra.htm	Ezra Harari	True
+temp_7351	משה האַר	yt/lex/H/harr-moshe.htm	Moshe Harr	True
+temp_7701	אַל העריס	yt/lex/H/harris-al.htm	Al. Harris	True
+temp_7391	אייבּ (אברהם העכט) האַרט	yt/lex/H/hart-abe.htm	Abe Hart	True
+temp_7401	בּערטא (מאַהלער) האַרט	yt/lex/H/hart-bertha.htm	Bertha Hart	True
+temp_7421	הערש האַרט	yt/lex/H/hart-hersh.htm	Hersh Hart	True
+temp_7441	סידני (יוסף הערש) האַרט	yt/lex/H/hart-sidney.htm	Sidney Hart	True
+temp_7561	משה היינע-חיימאָוויטש	yt/lex/H/heine-chaimovich-moshe.htm	Moshe Heine-Chaimovich	True
+temp_7641	אַננאַ העלד	yt/lex/H/held-anna.htm	Anna Held	True
+temp_7651	דוד העלין	yt/lex/H/helin-david.htm	David Helin	True
+temp_7671	איציק (הערשקאָוויטש) העלער	moyt/lex/H/heller-itsik-V5.htm	Itsik Heller	True
+temp_7661	זיידל שמואל-יהודה העלמאַן	yt/lex/H/helman-zeydl-shmuel-yehuda.htm	Zeydl Shmuel-Yehuda Helman	True
+temp_7721	דוד-משה הערמאַלין	yt/lex/H/hermalin-david-moshe.htm	David Moshe Hermalin	True
+temp_7731	משה הערמאַלין	moyt/lex/H/hermalin-moshe-V5.htm	Moshe Hermalin	True
+temp_7711	מייראָן ט. העריק	yt/lex/H/herrick-myron-t.htm	Myron T. Herrick	True
+temp_7801	איציק הערשקאָוויטש	yt/lex/H/hershkovitsh-itsik.htm	Itsik Hershkovitsh	True
+temp_7771	שלום הערצבערג	moyt/lex/H/hertsberg-sholem-V5.htm	Sholem Hertsberg	True
+temp_7781	רעגינע הערצלין	moyt/lex/H/hertslikh-regina-V5.htm	Regina Hertslikh	True
+temp_7761	יוסף ה. הרב הערץ	yt/lex/H/hertz-joseph-h-rabbi.htm	Joseph H. Hertz	True
+temp_7751	יוסף הערץ	yt/lex/H/hertz-yosef.htm	Yosef Hertz	True
+temp_7541	לואיס (לואיס הערמאַן) היימאַן	yt/lex/H/heyman-louis.htm	Louis Heyman	True
+temp_7551	מיני (ערנסט) היימאַן	yt/lex/H/heyman-minnie.htm	Minnie Heyman	True
+temp_7571	וואָלדעמאַר היינצע	yt/lex/H/heyntze-voldemar.htm	Voldemar Heyntze	True
+temp_7581	דבורה (דאָרעלע) הילסבּערג	moyt/lex/H/hilsberg-devora-V5.htm	Devora Hilsberg	True
+temp_7591	מרדכי הילסבּערג	yt/lex/H/hilsberg-mordechai.htm	Mordechai Hilsberg	True
+temp_7631	זלמן-לייבּ הירשפעלד	yt/lex/H/hirschfeld-zalmen-leib.htm	Zalmen Leib Hirschfeld	True
+temp_7601	דוד הירש	yt/lex/H/hirsh-david.htm	David Hirsh	True
+temp_7621	פּרץ הירשבּיין	yt/lex/H/hirshbein-peretz.htm	Peretz Hirshbein	True
+temp_7051	אברהם האָכבּאַן	yt/lex/H/hochban-abraham.htm	Abraham Hochban	True
+temp_7071	מרדכי האָכבּערג	yt/lex/H/hochberg-mordechai.htm	Mordechai Hochberg	True
+temp_7081	רחל (אַריעל) האָכבּערג	yt/lex/H/hochberg-rukhl.htm	Rukhl Hochberg	True
+temp_7091	שאול האָכבּערג	yt/lex/H/hochberg-shaul.htm	Shaul Hochberg	True
+temp_7061	יעטאַ האָכבּערג	moyt/lex/H/hochberg-yetta-V5.htm	Yetta Hochberg	True
+temp_7101	הערי (כאזין) האָכשטיין	yt/lex/H/hochstein-harry.htm	Harry Hochstein	True
+temp_7111	יעקב האָכשטיין	yt/lex/H/hochstein-jacob.htm	Jacob Hochstein	True
+temp_7321	האָפמאַן (?)	moyt/lex/H/hoffman-V5.htm	[?] Hoffman	True
+temp_7331	לעאָן האָפמאַן	yt/lex/H/hoffman-leon.htm	Leon Hoffman	True
+temp_7341	פּאולין האָפמאַן	yt/lex/H/hoffman-pauline.htm	Pauline Hoffman	True
+temp_7121	יוסף האָלדער	yt/lex/H/holder-yosef.htm	Yosef Holder	True
+temp_7141	חנה (פינקענטאל) האָלענדער	yt/lex/H/hollander-chana.htm	Chana Hollander	True
+temp_7131	איזידאָר האָלענדער	yt/lex/H/hollander-isidore.htm	Isidore Hollander	True
+temp_7151	לייב האָלענדער	yt/lex/H/hollander-leib.htm	Leib Hollander	True
+temp_7231	רחל האָלצער	yt/lex/H/holtser-rukhl.htm	Rukhl Holtser	True
+temp_7301	קלאַראַ (גאָלדענבּערג) האָניגמאַן	yt/lex/H/honigman-clara.htm	Clara Honigman	True
+temp_7311	מיצי האָפּע	yt/lex/H/hope-mitzi.htm	Mitzi Hope	True
+temp_7451	רוזשאַ האָרן	yt/lex/H/horn-ruzha.htm	Ruzha Horn	True
+temp_7461	נייטן ה. האָרנשטיין	yt/lex/H/hornstein-nathan-h-dr.htm	Nathan H. Hornstein	True
+temp_7371	איציקל האָראָוויץ	yt/lex/H/horovitsh-itsikl.htm	Itsikl Horovits	True
+temp_7361	אָזיאַס האָראָוויץ	yt/lex/H/horowitz-ozias.htm	Ozias Horowitz	True
+temp_7381	עדיט האָראָוויץ-זילבערמאַן	yt/lex/H/horowitz-silbermann-edith.htm	Edith Horowitz-Silbermann	True
+temp_7501	שאַרלאָטע (שיפרע) הורוויץ	yt/lex/H/hurwitz-charlotte.htm	Charlotte Hurwitz	True
+temp_7491	פּראָפעסאָר משה איש הלוי	yt/lex/H/hurwitz-moshe-ish-halevi.htm	Moshe Ish HaLevi Hurwitz	True
+temp_871	יצחק אינווענטאַרזש	yt/lex/I/inventarz-itskhok.htm	Itskhok Inventarzh	True
+temp_901	שמואל איריס	yt/lex/I/iris-shmuel.htm	Shmuel Iris	True
+temp_891	סאָניאַ (פעלדמאַן) איריס	yt/lex/I/iris-sonya.htm	Sonya Iris	True
+temp_661	לייזער איטעלמאַן	yt/lex/I/itelman-leyzer.htm	Leyzer Itelman	True
+temp_651	איטקין	moyt/lex/I/itkin-V5.htm	Itkin	True
+temp_11901	לינקע (ליבּע) יתום	yt/lex/I/itum-linke.htm	Linke Itum	True
+temp_881	שבּתי איצקאָוויטש	yt/lex/I/itzkowitz-shabtai.htm	Shabtai Itzkowitz	True
+temp_631	פּינקוס (פּנחס איזבעסקי) איזבּעסקאָ	yt/lex/I/izbesko-pinkus.htm	Pinkus Izbesko	True
+temp_641	איזמאַליאָננאַ	yt/lex/I/izmalyonna.htm	Izmalyonna	True
+temp_6581	שרה דזשאַקלין-האַמער	yt/lex/J/jacklin-sarah-hammer.htm	Sarah Hammer Jacklin	True
+temp_11541	היימאַן (חיים-נתן) יאַקובּאָוויטש	yt/lex/J/jacobowitz-hyman.htm	Hyman Jacobowitz	True
+temp_6601	בּעטי (טרייאלער) דזשייקאָבּס	yt/lex/J/jacobs-betty.htm	Betty Jacobs	True
+temp_6631	בּעטי (ביילע שור) דזשייקאָבּסאָן	yt/lex/J/jacobson-bessie.htm	Bessie Jacobson	True
+temp_6671	הענריעטאַ דזשייקאַבּסאָן	yt/lex/J/jacobson-henrietta.htm	Henrietta Jacobson	True
+temp_6661	היימי (חיים-מענדל) דזשייקאַבּסאָן	yt/lex/J/jacobson-hymie.htm	Hymie Jacobson	True
+temp_6681	יוסף (יאַקאָבזאָן) דזשייקאַבּסאָן	yt/lex/J/jacobson-joseph.htm	Joseph Jacobson	True
+temp_11331	לוּאי יאָזעפזאָהן	yt/lex/J/josephson-louie.htm	Louie Josephson	True
+temp_11341	סאַול יאָזעפזאָן	yt/lex/J/josephson-sol.htm	Sol Josephson	True
+temp_11301	דזשין (בּעלאַ) יאָוועליר	yt/lex/J/juvelier-jeanne.htm	Jeanne Juvelier	True
+temp_11311	קלמן יאָוועליר	yt/lex/J/juvelier-kalmen.htm	Kalmen Juvelier	True
+temp_11641	מאַרק יוּווילער	yt/lex/J/juwiler-mark.htm	Mark Juwiler	True
+temp_20231	ישראל (אברהם) קאַהאַן	moyt/lex/K/kahan-israel-V5.htm	Israel [-Avraham] Kahan	True
+temp_20271	לאַזאַר קאַהאַן	yt/lex/K/kahan-lazar.htm	Lazar Kahan	True
+temp_12001	צבי כִַּÅהַן	yt/lex/K/kahan-tsvi.htm	Tsvi Kahan	True
+temp_21091	דזשעני קייזער	yt/lex/K/kaiser-jenny.htm	Jenny Kaiser	True
+temp_20391	בערטאַ קאַליש	yt/lex/K/kalich-bertha.htm	Bertha Kalich	True
+temp_20381	יעקב קאַליך	yt/lex/K/kalich-jacob.htm	Jacob Kalich	True
+temp_20421	הערי קאַלצאַנאָוויטש	yt/lex/K/kalmanowitz-harry.htm	Harry Kalmanowitz	True
+temp_20411	אולריך קאַלמוס	yt/lex/K/kalmus-ulrich.htm	Ulrich Kalmus	True
+temp_20431	ישראל קאמאי	moyt/lex/K/kamai-israel-V5.htm	Israel Kamai	True
+temp_20441	אהרן קאַמיאָנאוו	moyt/lex/K/kamianov-aaron-V5.htm	Aaron Kamianov	True
+temp_20581	אהרן קאַניעווסקי	yt/lex/K/kanievsky-aaron.htm	Aaron Kanievsky	True
+temp_20571	פּנחס קאַניסקעוויטש	yt/lex/K/kaniskevitsh-pinchus.htm	Pinchus Kaniskevitsh	True
+temp_20591	לעאָפּאָלד (לייבּ) קאַנער	yt/lex/K/kanner-leopold.htm	Leopold Kanner	True
+temp_20601	שרה (פרילינג) קאַנער	yt/lex/K/kanner-sarah.htm	Sarah Kanner	True
+temp_20691	סעם (זכריה) קאַפּלאַן	yt/lex/K/kaplan-sam.htm	Sam Kaplan	True
+temp_20681	יצחק קאַפּלאַן	yt/lex/K/kaplan-yitzhak.htm	Yitzhak Kaplan	True
+temp_20801	ליבּע (לינאַ) קאַרליק	yt/lex/K/karlik-liba.htm	Liba Karlik	True
+temp_20791	מישע קאַרלאָס	moyt/lex/K/karlos-misha-V5.htm	Misha Karlos	True
+temp_20861	מאַקס קאַרפּ	yt/lex/K/karp-max.htm	Max Karp	True
+temp_20871	ראָזע קאַרפּ	yt/lex/K/karp-rosa.htm	Rosa Karp	True
+temp_20881	דאָראַ (דבורה) קארפּינאָוויטש	moyt/lex/K/karpinovitsh-dora-V5.htm	Dora Karpinovitsh	True
+temp_20631	וואדיא קאָסיאקאוו	moyt/lex/K/kasiakov-vadya-V5.htm	Vadya Kasiakov	True
+temp_21251	סעם קעסטין	yt/lex/K/kasten-sam.htm	Sam Kasten	True
+temp_21241	סוזי (סילווער) קעסטין	yt/lex/K/kasten-suzi.htm	Suzi Kasten	True
+temp_20621	איזאַק (יצחק) קאַסוואן	yt/lex/K/kasvan-izak.htm	Izak Kasvan	True
+temp_12011	איזאַק כּץ	yt/lex/K/katz-isaac-V7.htm	Isaac Katz	True
+temp_12021	מיכאל כּץ	moyt/lex/K/katz-michael-V5.htm	Michael Katz	True
+temp_20751	יעקב קאַצמאַן	yt/lex/K/katzman-jacob.htm	Jacob Katzman	True
+temp_21201	יעקב קלעטער	yt/lex/K/kelter-jacob.htm	Jacob Kelter	True
+temp_21231	מאָריס (כליוונער) קעניג	yt/lex/K/kenig-morris.htm	Morris Kenig	True
+temp_21271	יאָזעף קעסלער	yt/lex/K/kessler-joseph.htm	Joseph Kessler	True
+temp_20481	יוסף (אָסיפּ) קאַמיען	moyt/lex/K/keymon-khaim-yosef-V5.htm	Khaim-Yosef Keymon	True
+temp_21101	דוד קייזעראָוויטש	yt/lex/K/keyzerovitsh-david.htm	David Keyzerovitsh	True
+temp_10331	חקלאי (פעלדמאַן)	yt/lex/K/khaklai.htm	Khaklai	True
+temp_10271	? חאַלאַן-חאַלאַנאָוו	yt/lex/K/khalan-khalanov.htm	[?] Khalan-Khalanov	True
+temp_11951	א. כאַליף	yt/lex/K/khalif-a.htm	A. Khalif	True
+temp_10291	יוסף חאַש	yt/lex/K/khash-yosef.htm	Yosef Khash	True
+temp_10301	משה חאַשקעס	yt/lex/K/khashkes-moshe.htm	Moshe Khashkes	True
+temp_10281	מישא חאסין	moyt/lex/K/khasin-misha-V5.htm	Misha Khasin	True
+temp_11941	משה כאטשעוואַצקי	moyt/lex/K/khatshevatsky-moshe-V5.htm	Moshe Khatshevatsky	True
+temp_11931	טויביע כאַזאַק	yt/lex/K/khazak-tevye.htm	Tevye Khazak	True
+temp_10321	חיים-אריה חזן	yt/lex/K/khazan-khayim-arye.htm	Khayim Arye Khazan	True
+temp_21061	יוסף קיגעל	moyt/lex/K/kigel-yosef-V5.htm	Yosef Kigel	True
+temp_21121	שרה קינדמאַן-מעסטעל	yt/lex/K/kindman-sarah.htm	Sarah Kindman	True
+temp_21151	יעקב קירשענבוים	yt/lex/K/kirschenbaum-jacob.htm	Jacob Kirschenbaum	True
+temp_21141	הירש-מאיר קירשענבוים	yt/lex/K/kirshenbaum-hirsh-meir.htm	Hirsh Meir Kirshenbaum	True
+temp_21081	משה-מיכאל קיטאַי	yt/lex/K/kitai-moshe-michal.htm	Moshe Michal Kitai	True
+temp_21211	מאַקס קלעטער	yt/lex/K/kletter-max.htm	Max Kletter	True
+temp_21161	אייזיק קלומאק	yt/lex/K/klumak-isaac.htm	Isaac Klumak	True
+temp_20171	פּאַלינאַ (סעגאַל) קאָברין	yt/lex/K/kobrin-paulina.htm	Paulina Kobrin	True
+temp_20181	אייב קאָגוט	yt/lex/K/kogut-abe.htm	Abe Kogut	True
+temp_20521	ישראל קאָמפּאַנעעץ	moyt/lex/K/kompaneyets-israel-V5.htm	Israel Kompaneyets	True
+temp_20511	לאה (גאָטליבּ) קאָמפּאַנעעץ	yt/lex/K/kompaneyets-leah.htm	Leah Kompaneyets	True
+temp_20491	מאַקס קאָמפּאַנעיעץ	yt/lex/K/kompaneyets-max.htm	Max Kompaneyets	True
+temp_20701	לואיס קאַפּעלמאַן	yt/lex/K/kopelman-louis.htm	Louis Kopelman	True
+temp_20651	לעא קאָפּ	yt/lex/K/kopp-leo-dr.htm	Leo Kopp	True
+temp_20851	קאַרעס	yt/lex/K/kores.htm	[?] Kores	True
+temp_20811	ז. (זישע) קאָרנבליט	yt/lex/K/kornblit-zishe.htm	Zishe Kornblit	True
+temp_20831	בערטאַ (בתיה קוריער) קאָרנפעלד	yt/lex/K/kornfeld-berta.htm	Berta Kornfeld	True
+temp_20841	מלכה קאָרנשטיין	yt/lex/K/kornstein-malka.htm	Malka Kornstein	True
+temp_20821	ס. קארנטייער	moyt/lex/K/kornteyer-s-V5.htm	S. Kornteyer	True
+temp_20321	אסתר קאָוואַלסקאַ	yt/lex/K/kovalska-esther.htm	Esther Kovalska	True
+temp_20331	מתתיהו (קאָוואַל) קאָוואַלסקי	yt/lex/K/kovalski-matisyahu.htm	Matisyahu Kovalski	True
+temp_21341	פיליפּ (יצחק ראָמבּראָ) קראַנץ	yt/lex/K/krantz-philip.htm	Philip Krantz	True
+temp_21351	שרה קראַנצפעלד	yt/lex/K/kranzfeld-sarah.htm	Sarah Kranzfeld	True
+temp_21361	]?[ קראַסטאָשעווסקי	yt/lex/K/krastoshevsky.htm	[?] Krastoshevsky	True
+temp_21381	שלמה קרויזע	yt/lex/K/krause-solomon.htm	Solomon Krause	True
+temp_21391	לאה (לויפלאַנד) קרויזע-מילער	moyt/lex/K/krause-miller-leah-V5.htm	Leah Krause-Miller	True
+temp_21421	בערטאַ קרייצנערג	yt/lex/K/kreitsberg-bertha.htm	Bertha Kreitsberg	True
+temp_21431	יאַשאַ (סאַקסאַנסקי) קרייצנערג	yt/lex/K/kreitzberg-yasha.htm	Yasha Kreitzberg	True
+temp_21461	יצחק קרעלמאַן	yt/lex/K/krelman-yitzhak.htm	Yitzhak Krelman	True
+temp_21481	איסאַק קרעמער	moyt/lex/K/kremer-isak-V5.htm	Isak Kremer	True
+temp_21511	לואיס קרעמער	yt/lex/K/kremer-louis.htm	Louis Kremer	True
+temp_21501	יוסף קרעמער	moyt/lex/K/kremer-yosef-V5.htm	Yosef Kremer	True
+temp_21531	יעקב קרעפּליאַק	yt/lex/K/kreplak-jacob.htm	Jacob Kreplak	True
+temp_21541	מאַקס קרעשאווער	yt/lex/K/kreshover-max.htm	Max Kreshover	True
+temp_21521	מרים קרעסין	yt/lex/K/kressyn-miriam.htm	Miriam Kressyn	True
+temp_21451	לעאָן קרישטאַל	yt/lex/K/kristol-leon.htm	Leon Kristol	True
+temp_21311	הערי קראָהן	yt/lex/K/krohn-harry.htm	Harry Krohn	True
+temp_21331	עלקאַ קראַטשאַק	moyt/lex/K/krotshak-elka-V5.htm	Elka Krotshak	True
+temp_21371	]?[ קרוג	yt/lex/K/krug.htm	Krug	True
+temp_20981	לעאָן (ישעיה-אריה) קופּערמאַן	yt/lex/K/kuperman-leon.htm	Leon Kuperman	True
+temp_21011	גאָדל ]?[ קוראַזש	yt/lex/K/kurazh-godl.htm	Godl Kurazh	True
+temp_21021	יעקב קורלענדער	yt/lex/K/kurlender-yakov.htm	Yakov Kurlender	True
+temp_21051	כייקעלע קושניר	moyt/lex/K/kushnir-khaykele-V5.htm	Khaykele Kushnir	True
+temp_20971	לעאָן קוסמאַן	yt/lex/K/kusman-leon.htm	Leon Kusman	True
+temp_20951	סאָלאָמאָן קוסטין	yt/lex/K/kustin-solomon.htm	Solomon Kustin	True
+temp_21001	מאָטעלע קוציק	moyt/lex/K/kutsik-motele-V5.htm	Motele Kutsik	True
+temp_20921	לייב קוזניעצאָוו	moyt/lex/K/kuznetsov-leyb-V5.htm	Leyb Kuznetsov	True
+temp_12061	אהרן לאַגער	yt/lex/L/lager-aaron.htm	Aaron Lager	True
+temp_12461	נאַיע לאקערניק	moyt/lex/L/lakernik-naya-V5.htm	Naya Lakernik	True
+temp_12451	סאַבּינאַ (שרה) לאַקסער	yt/lex/L/lakser-sabina.htm	Sabina Lakser	True
+temp_12261	חיה לאַנדוי	yt/lex/L/landau-chaya.htm	Chaya Landau	True
+temp_12271	יהוּדה-לייבּ לאַנדוי	yt/lex/L/landau-yehuda-leib-dr.htm	Yehuda Leib Landau	True
+temp_12211	שמעון לאַנדאַ	moyt/lex/L/landau-simeon-V5.htm	Simeon Landau	True
+temp_12251	זישע לאַנדוי	yt/lex/L/landau-zisha.htm	Zisha Landau	True
+temp_12301	משה לאַנדוי-קלעקוי	yt/lex/L/landau-klekoy-moshe.htm	Moshe Landau-Klekoy	True
+temp_12361	לערָנאַרד לאַנדעס	yt/lex/L/landes-leonard-dr.htm	Leonard Landes	True
+temp_12321	יוסף לאנדיס	yt/lex/L/landis-joseph.htm	Joseph Landis	True
+temp_12331	דר. לאַנדמאַן	yt/lex/L/landman-dr.htm	Landman	True
+temp_12221	שרה לאַנדאָ	yt/lex/L/lando-sarah.htm	Sarah Lando	True
+temp_12201	יחיאל לאַנדאָ	yt/lex/L/lando-yekhiel.htm	Yekhiel Lando	True
+temp_12241	הענרי מאָריס לאַנדוואָרטה	yt/lex/L/landvorth-henry-morris-dr.htm	Henry Morris Landvorth	True
+temp_12181	ה. לאַנג	yt/lex/L/lang-harry.htm	Harry Lang	True
+temp_12191	קלאַראַ לאַנגסנער	yt/lex/L/langsner-clara.htm	Clara Langsner	True
+temp_12371	זקן זרח-פּלטיאל לאַנצמאַן	yt/lex/L/lantsman-zokn-zarakh=paltiel.htm	Zokn Zarakh=Paltiel Lantsman	True
+temp_12471	יהוּדית (רבקה חאַנענזאָהן) לאַרעס	yt/lex/L/lares-yehudis.htm	Yehudis Lares	True
+temp_12391	בּראָניאַ לאַסקאַ	yt/lex/L/laska-bronya.htm	Bronya Laska	True
+temp_12401	פיליפּ לאַסקאָווסקי	yt/lex/L/laskowski-philip.htm	Philip Laskowski	True
+temp_12381	הערמאַן לאַסטער	yt/lex/L/laster-herman.htm	Herman Laster	True
+temp_12171	יאָזעף לאַטיינער	yt/lex/L/latayner-yosef.htm	Yosef Latayner	True
+temp_12141	בּערטאַ (בּיילע גוּרעוויטש) לאַטאָוויטש	yt/lex/L/latovitsh-berta.htm	Berta Latovitsh	True
+temp_12081	דזשעני (שמילאָוויטש) לאוויץ	yt/lex/L/lavitz-jennie.htm	Jennie Lavitz	True
+temp_12091	פּעפּי (פּלפּוּל) לאַוויץ	yt/lex/L/lavitz-pepi.htm	Pepi Lavitz	True
+temp_12101	פּנחס לאַווענדאַ	yt/lex/L/lawanda-pinchus.htm	Pinchus Lawanda	True
+temp_12431	אברהם לאַקס	yt/lex/L/lax-abraham.htm	Abraham Lax	True
+temp_12111	חנה (ראַקאָווער) לאַזאַר-אינגאַרד	yt/lex/L/lazar-ingard-chana.htm	Chana Lazar-Ingard	True
+temp_12121	עליאַס (אליעזר שאַפיר) לאַזאַראָוו	yt/lex/L/lazarov-elias.htm	Elias Lazarov	True
+temp_12131	פייגע (קריניצאַיאַ) לאַזאַראָוו	yt/lex/L/lazarov-feige.htm	Feige Lazarov	True
+temp_13441	אַהרן לעבּעדיעוו	yt/lex/L/lebedeff-aaron.htm	Aaron Lebedeff	True
+temp_13451	וויעראַ (רבקה שעכטמאַן) לעבּעדיעוו	yt/lex/L/lebedeff-vera.htm	Vera Lebedeff	True
+temp_13431	דער (חיים גוּטמאַן) לעבּעדיגער	yt/lex/L/lebediger-der.htm	Der Lebediger	True
+temp_13461	דוד לעדערמאַן	yt/lex/L/lederman-david.htm	David Lederman	True
+temp_13481	אַדאָלף (אהרן) לעהרער	yt/lex/L/lehrer-adolf.htm	Adolf Lehrer	True
+temp_13491	זלמן לעהרער	yt/lex/L/lehrer-zalman.htm	Zalman Lehrer	True
+temp_13041	דניאל לייבּל	yt/lex/L/leibel-daniel.htm	Daniel Leibel	True
+temp_12991	דוד לייבּאָוויטש	yt/lex/L/leibovitsh-david.htm	David Leibovitsh	True
+temp_13001	הערץ לייבאָוויטש	moyt/lex/L/leibovitsh-herts-V5.htm	Herts Leibovitsh	True
+temp_13011	מאָטי לייבאָוויטש	moyt/lex/L/leibovitsh-moti-V5.htm	Moti Leibovitsh	True
+temp_13031	רייטשעל לייבּאָוויטש	yt/lex/L/leibovitsh-raytshel.htm	Raytshel Leibovitsh	True
+temp_13021	ציליע לייבאָוויטש	moyt/lex/L/leibovitsh-tsile-V5.htm	Tsile Leibovitsh	True
+temp_13061	ה. (לייוויק האַלפּער) לייוויק	yt/lex/L/leivick-h.htm	H. Leivick	True
+temp_13741	בּערטאַ לעלטשוּק	yt/lex/L/lelchuk-bertha.htm	Bertha Lelchuk	True
+temp_13751	ס. (סאַראַ פיינשטיין) לעמבּערג	yt/lex/L/lemberg-s.htm	S. Lemberg	True
+temp_13421	לעאָניד לעאָנאָוו	moyt/lex/L/leonov-leonid-V5.htm	Leonid Leonov	True
+temp_13841	מרים לערער	yt/lex/L/lerer-miriam.htm	Miriam Lerer	True
+temp_13851	שפרה לערער	yt/lex/L/lerer-shifra.htm	Shifra Lerer	True
+temp_13791	א. (אליהו) לערמאַן	moyt/lex/L/lerman-eliyahu-V5.htm	Eliyahu Lerman	True
+temp_13811	יוסף-יהוּדה לערנער	yt/lex/L/lerner-joseph-judah.htm	Joseph Judah Lerner	True
+temp_13831	מאַריאַ (מרים ראַבּיאָוויטש) לערנער	yt/lex/L/lerner-maria.htm	Maria Lerner	True
+temp_13781	דזשאָזעף לעסינג	yt/lex/L/lessing-joseph.htm	Joseph Lessing	True
+temp_13511	פייגע (לעווין) לעוואַנדאָ	yt/lex/L/levando-feyga.htm	Feyga Levando	True
+temp_13661	אברהם לעוועבּראָווסקי	yt/lex/L/levebrovski-avraham.htm	Avraham Levebrovski	True
+temp_13721	פעני (פּערלמאַן) לעווענשטיין	yt/lex/L/levenshteyn-fannie.htm	Fannie Levenshteyn	True
+temp_13681	דוד לעווענזאָן	yt/lex/L/levenson-david.htm	David Levenson	True
+temp_13691	יעקב לעווענסאָהן	yt/lex/L/levenson-jacob.htm	Jacob Levenson	True
+temp_13701	איזידאָר (אפרים-יצחק) לעווענשטיין	yt/lex/L/levenstein-isidor.htm	Isidor Levenstein	True
+temp_13531	אַלטער לעווין	moyt/lex/L/levin-alter-V5.htm	Alter Levin	True
+temp_13551	דוד לעווין	yt/lex/L/levin-david.htm	David Levin	True
+temp_13571	הערי (הערשל) לעווין	yt/lex/L/levin-harry.htm	Harry Levin	True
+temp_13561	דזשוליאַ לעווין	yt/lex/L/levin-julia.htm	Julia Levin	True
+temp_13591	לוּסי (ליבּע) לעווין	yt/lex/L/levin-lucy.htm	Lucy Levin	True
+temp_13601	נייטאַן לעווין	yt/lex/L/levin-neytan.htm	Neytan Levin	True
+temp_13611	שמוּאל לעווין	yt/lex/L/levin-shmuel.htm	Shmuel Levin	True
+temp_13581	ז. לעווין	yt/lex/L/levin-z.htm	Z. Levin	True
+temp_13541	אַננאַ (לעווענשטיין) לעווין	yt/lex/L/levine-anna.htm	Anna Levine	True
+temp_13631	אברהם לעווינסאָן	yt/lex/L/levinson-abraham.htm	Abraham Levinson	True
+temp_13621	לוּדוויג (אריה-לייבּ) לעווינזאָן	yt/lex/L/levinzon-ludvig.htm	Ludvig Levinzon	True
+temp_13651	גרשון-חיים לעוונער	yt/lex/L/levner-gershon-chaim.htm	Gershon-Chaim Levner	True
+temp_12861	יוּליוּס ליוויי	yt/lex/L/levy-julius.htm	Julius Levy	True
+temp_12871	מאַקס ליוויי	yt/lex/L/levy-max.htm	Max Levy	True
+temp_12981	א. (אברהם-מרדכי) לייב	yt/lex/L/leyb-a.htm	A. Leyb	True
+temp_13731	א. (אהרן גלאַץ) לעיעלעס	yt/lex/L/leyeles-a.htm	A. Leyeles	True
+temp_12691	שמוּאל ליאַמפּערט	yt/lex/L/liampert-shmuel.htm	Shmuel Liampert	True
+temp_12761	בּנציון ליבּער	yt/lex/L/liber-bentsion-dr.htm	Bentsion Liber	True
+temp_12811	משה ליבערמאַן	yt/lex/L/liberman-moshe.htm	Moshe Liberman	True
+temp_12781	מענוּכאַ ליבּערט	yt/lex/L/libert-menukha.htm	Menukha Libert	True
+temp_12791	שרה (לאה) ליבערט	yt/lex/L/libert-sarah.htm	Sarah L. Libert	True
+temp_12771	יאַנקעוו ליבּערט	yt/lex/L/libert-yankev.htm	Yankev Libert	True
+temp_12801	אָליא ליבערט-לובאָצקי	yt/lex/L/libert-lubotski-olya.htm	Olya Libert-Lubotski	True
+temp_12731	ז. (ישראל-זלמן הירוויטש) ליבּין	yt/lex/L/libin-z.htm	Z. Libin	True
+temp_12751	פּאוּל (איצקאָווסקי) ליבּמאַן	yt/lex/L/libman-paul.htm	Paul Libman	True
+temp_12821	יצחק (ליבּער) ליבּרעסקאָ	yt/lex/L/libresko-yitskhok.htm	Yitskhok Libresko	True
+temp_13071	דוד (דניאל פרענקל) ליכט	yt/lex/L/licht-david.htm	David Licht	True
+temp_12741	מאָריץ (יצחק-משה) ליבּליך	yt/lex/L/lieblich-moritz.htm	Moritz Lieblich	True
+temp_13411	פריידעלע ליפּשיץ	yt/lex/L/lifschitz-freydele.htm	Freydele Lifschitz	True
+temp_13391	מיריאָם (שוּמסקי) ליפּשיץ	yt/lex/L/lifshits-miriam.htm	Miriam Lifshits	True
+temp_13401	משה ליפּשיץ (ליוושיץ)	yt/lex/L/lifshits-moyshe.htm	Moyshe Lifshits	True
+temp_13131	משה-לייבּ ליליענבּלום	yt/lex/L/lilienblum-moses-leib.htm	Moses Leib Lilienblum	True
+temp_13141	ליליפּוט (גבריאל-הירש קרעטשמער)	yt/lex/L/liliput.htm	Liliput	True
+temp_13161	אָליאַ (לאָליאַ צעדערבּוים) לילית	yt/lex/L/lilith-ola.htm	Ola Lilith	True
+temp_13181	פּאול (לייבאָוויטש) לימאַן	yt/lex/L/liman-paul.htm	Paul Liman	True
+temp_13191	שלמה לינדענפעלד	yt/lex/L/lindenfeld-shlomo.htm	Shlomo Lindenfeld	True
+temp_13201	נ. בּ. (נתן בּלינדער) לינדער	yt/lex/L/linder-nb.htm	N.B. Linder	True
+temp_13211	יצחק-יואל לינעיצקי	yt/lex/L/linetzky-isaac-joel.htm	Isaac Joel Linetzky	True
+temp_13261	אַנקאַ ליפּאָווסקי	moyt/lex/L/lipinsky-anka-V5.htm	Anka Lipinsky	True
+temp_13281	יצחק ליפּינסקי	yt/lex/L/lipinsky-yitzhock.htm	Yitzhock Lipinsky	True
+temp_13291	משה ליפּמאַן	yt/lex/L/lipman-moshe.htm	Moshe Lipman	True
+temp_13301	נאַטאַליאַ (נייטשע עלבּוים) ליפּמאַן	yt/lex/L/lipman-natalia.htm	Natalia Lipman	True
+temp_13251	אברהם ליפּאָוויצקי	yt/lex/L/lipovietsky-avraham.htm	Avraham Lipovietsky	True
+temp_13311	מ. (מרדכי יאַוואָראָווסקי) ליפּסאָן	yt/lex/L/lipson-m.htm	M. Lipson	True
+temp_13321	וואָלאָדיאַ ליפּצין	yt/lex/L/liptsin-volodya.htm	Volodya Liptsin	True
+temp_13331	סיליע (פּעקער) ליפּצין	yt/lex/L/lipzin-celia.htm	Celia Lipzin	True
+temp_12891	עני (חנה ליפּמאַן) ליטאן	yt/lex/L/litan-annie.htm	Annie Litan	True
+temp_12931	אברהם ליטמאַן	yt/lex/L/littman-abraham.htm	Abraham Littman	True
+temp_12961	פּעפּי (פּעשע קאַהאַנע) ליטמאַן	yt/lex/L/littman-pepi.htm	Pepi Littman	True
+temp_12951	יעקב ליטמאַן	yt/lex/L/littman-yakov.htm	Yakov Littman	True
+temp_12941	יעטאַ (זילבּערמאַן) ליטמאַן	yt/lex/L/littman-yetta.htm	Yetta Littman	True
+temp_12901	מוישע ליטוואַקאָוו	yt/lex/L/litvakov-moshe.htm	Moshe Litvakov	True
+temp_12911	בּערטאַ ליטווינאַ-ווייסהאָף	yt/lex/L/litvina-veyshof-berta.htm	Berta Litvina-Veyshof	True
+temp_12921	ל. (לייבּ גוּרעוויטש) ליטווינאָוו	yt/lex/L/litvinov-l.htm	L. Litvinov	True
+temp_12041	מאַלווינאַ (טרייטלער) לאָבּעל	yt/lex/L/lobel-malvina.htm	Malvina Lobel	True
+temp_12051	סאָלאָמאָן (לייבּעל) לאָבּעל	yt/lex/L/lobel-solomon.htm	Solomon Lobel	True
+temp_12681	לעאָ (משה-לייבּ) ליאָוו	yt/lex/L/loew-leo.htm	Leo Loew	True
+temp_12071	סעמיוּעל לאָהנפעלד	yt/lex/L/lohnfeld-samuel.htm	Samuel Lohnfeld	True
+temp_12311	שמואל-יקיר לאָנדינסקי	yt/lex/L/londinski-shmuel-yakir.htm	Shmuel-Yakir Londinski	True
+temp_12231	בצלאל לאָנדאָן	yt/lex/L/london-betsalel.htm	Betsalel London	True
+temp_12491	רעגינאַ (רבקה) לובּאַרטאָווסקאַ	yt/lex/L/lubartovska-regina.htm	Regina Lubartovska	True
+temp_12541	פּאָליאַ לובעלסקאַ	yt/lex/L/lubelska-paula.htm	Paula Lubelska	True
+temp_12511	עני (הענדזשיאַ לוּבּמיאַק) לוּבּין	yt/lex/L/lubin-annie.htm	Annie Lubin	True
+temp_12501	הערי (הערשל לויגזאַלץ) לוּבּין	yt/lex/L/lubin-harry.htm	Harry Lubin	True
+temp_12521	לעאָן (לייבוש) לובינסקי	yt/lex/L/lubinski-leon.htm	Leon Lubinski	True
+temp_12481	יעקב לוּבּאָצקי	yt/lex/L/lubotski-jacob.htm	Jacob Lubotski	True
+temp_12571	דעיוו (דוד) לוּבּריצקי	yt/lex/L/lubritsky-dave.htm	Dave Lubritsky	True
+temp_12561	גאָלדע לוּבּריצקי	yt/lex/L/lubritsky-goldie.htm	Goldie Lubritsky	True
+temp_12551	אייזיק-יאַנקעל לוּבּריצקי	yt/lex/L/lubritsky-isaac-jacob.htm	Isaac Jacob Lubritsky	True
+temp_12601	סאָניאַ (קוריצקאַ) לודנער	moyt/lex/L/ludner-sonia-V5.htm	SonIa Ludner	True
+temp_12641	שלמה לוּפטיג	yt/lex/L/luftig-shlomo.htm	Shlomo Luftig	True
+temp_12651	הערש לוּקאָווסקי	yt/lex/L/lukovski-hersh.htm	Hersh Lukovski	True
+temp_12621	בּרוך לוּמעט	yt/lex/L/lumet-boruch.htm	Boruch Lumet	True
+temp_12671	אַרן לוּריע	yt/lex/L/lurie-arn.htm	Arn Lurie	True
+temp_13171	בּיניאַמין לימאַן	yt/lex/L/lyman-binyamin.htm	Binyamin Lyman	True
+temp_12851	סעם (שמוּאל) ליוּדנער	yt/lex/L/lyudner-sam.htm	Sam Lyudner	True
+temp_14041	חנה (געכט) מאַכאָראָווסקאַ	moyt/lex/M/macharovska-chana-V5.htm	Chana Macharovska	True
+temp_14061	משה-דוד מאַכאָראָווסקי	yt/lex/M/macharovsky-moshe-david.htm	Moshe Dovid Macharovsky	True
+temp_14071	ר. מאַכנאָווסקאַ	yt/lex/M/makhnovska-r.htm	R. Machnovska	True
+temp_14651	חנה מגיד	yt/lex/M/magid-khana.htm	Khana Magid	True
+temp_13951	אַלעקסאַנדער מאַגידזאָהן	yt/lex/M/magidzohn-aleksander.htm	Aleksander Magidzohn	True
+temp_13941	איידאַ (סטאָן) מאַגידזאָהן	yt/lex/M/magidzohn-ida.htm	Ida Magidzohn	True
+temp_15191	ל. (לייבּל זאַלצמאַן) מלאך	yt/lex/M/malach-leib.htm	Leib Malach	True
+temp_14081	יואל-לייבּ מאַלאַנוּט	yt/lex/M/malamut-yoel-leyb.htm	Yoel Leyb Malamut	True
+temp_14091	פ. ה. מאַליי	yt/lex/M/maley-fh.htm	F.H. Maley	True
+temp_14121	ישראל (מאַדזשעוויצקי) מאַנדעל	yt/lex/M/mandel-israel.htm	Israel Mandel	True
+temp_14131	מ. ש. מאַנדעל	yt/lex/M/mandel-m-sh.htm	M.Sh. Mandel	True
+temp_14141	לעאָן מאַנדעלטאָרט	yt/lex/M/mandeltort-leon.htm	Leon Mandeltort	True
+temp_14201	עני (אייזענבּערג) מאַנע	yt/lex/M/manne-annie.htm	Annie Manne	True
+temp_14191	סאָלאָמאָן מאַנע	yt/lex/M/manne-solomon.htm	Solomon Manne	True
+temp_14171	הערמאַן מאַננעס	yt/lex/M/mannes-herman.htm	Herman Mannes	True
+temp_14471	ישראל מארכעווקא	moyt/lex/M/marchevka-israel-V5.htm	Israel Marchevka	True
+temp_14371	קלאַראַ (בּלייכמאַן) מאַרגאָלין	yt/lex/M/margolin-clara.htm	Clara Margolin	True
+temp_14341	א. מאַרגאָלין	yt/lex/M/margolin-a-dr.htm	A. Margolin	True
+temp_14361	סאַמוּאיל א. מאַרגאָלין	yt/lex/M/margolin-samuel-a.htm	Samuel A. Margolin	True
+temp_14351	זכריה מאַרגאָלין	moyt/lex/M/margolin-zakhariah-V5.htm	Zakhariah Margolin	True
+temp_14381	עדוואַרד (יקותיאל) מאַרגאָליס	yt/lex/M/margolis-edward.htm	Edward Margolis	True
+temp_15481	ידידיה מרגלית	yt/lex/M/margolis-yedidya.htm	Yedidya Margolis	True
+temp_15471	אליהוּ רבּי מרגליוּת	yt/lex/M/margolius-eliyahu.htm	Eliyahu Margolius	True
+temp_14451	מאַקס מאַריענהאָף	yt/lex/M/marienhof-max.htm	Max Marienhof	True
+temp_14501	פיליפּ מאַרק	yt/lex/M/mark-philip.htm	Philip Mark	True
+temp_14551	פּערעץ מאַרקיש	yt/lex/M/markish-peretz.htm	Peretz Markish	True
+temp_14511	א. מאַרקאָוו	yt/lex/M/markov-a-dr.htm	A. Markov	True
+temp_14531	משה מאַרקאָוויטש	yt/lex/M/markovitsh-moshe.htm	Moshe Markovitsh	True
+temp_14521	יוסף מאַרקאָוויטש	yt/lex/M/markowitz-joseph.htm	Joseph Markowitz	True
+temp_14541	לואי מאַרקאָוויטש	yt/lex/M/markowitz-louie.htm	Louie Markowitz	True
+temp_14571	רודאלף (ראדקינסאן) מארקס	yt/lex/M/marks-rudolph.htm	Rudolph Marks	True
+temp_14561	צילע מארקס	yt/lex/M/marks-tsile.htm	Tsile Marks	True
+temp_14481	גרישא מאַרמאָ	moyt/lex/M/marmo-grisha-V5.htm	Grisha Marmo	True
+temp_15511	קאַרל (קלמן-צבי) מרמר	yt/lex/M/marmor-karl.htm	Karl Marmor	True
+temp_14581	דניאל מארשאק	yt/lex/M/marshak-daniel.htm	Daniel Marshak	True
+temp_14411	שמואל מאַרוויל	moyt/lex/M/marvil-shmuel-V5.htm	Shmuel Marvil	True
+temp_14251	זשעניע (ווינקלער) מאַסאָף	yt/lex/M/masoff-jennie.htm	Jennie Masoff	True
+temp_14261	סאַמוּעל מאַסאָף	yt/lex/M/masoff-samuel.htm	Samuel Masoff	True
+temp_14271	יואל מאַסטבּוים	yt/lex/M/mastboym-yoel.htm	Yoel Mastboym	True
+temp_14011	דינה מאַטוס	moyt/lex/M/matus-dina-V5.htm	Dina Matus	True
+temp_14801	נחמן מייזיל	yt/lex/M/mayzel-nachman.htm	Nachman Mayzel	True
+temp_15221	דייוויד מעדאָוו	yt/lex/M/medoff-david.htm	David Medoff	True
+temp_15231	ראַיסע מעדוועדעוואַ	yt/lex/M/medviedeva-raisa.htm	Raisa Medviedeva	True
+temp_15241	ראָסי מעדוויעדעוואַ	yt/lex/M/medviedeva-rosie.htm	Rosie Medviedeva	True
+temp_14841	קלאַראַ (פרידהאָפער) מייזּעלס	yt/lex/M/meisels-clara.htm	Clara Meisels	True
+temp_15271	העלא מעל (מעלמאַן)	moyt/lex/M/mel-hela-V5.htm	Hela Mel	True
+temp_15201	משה מלמד	yt/lex/M/melamed-moshe.htm	Moshe Melamed	True
+temp_15291	אַלטער (אַלטער הערץ) מעליצער	yt/lex/M/melitzer-alter.htm	Alter Melitzer	True
+temp_15301	מאיר מעלמאַן	yt/lex/M/melman-meir.htm	Meir Melman	True
+temp_15311	נחום מעלניק	yt/lex/M/melnick-nachum.htm	Nachum Melnick	True
+temp_15321	אַדאָלף מעלצער	yt/lex/M/meltzer-adolf.htm	Adolf Meltzer	True
+temp_15351	עני מעלצער	yt/lex/M/meltzer-annie.htm	Annie Meltzer	True
+temp_15331	איזידאָר מעלצער	yt/lex/M/meltzer-isidor.htm	Isidor Meltzer	True
+temp_15341	דזשוּליוס מעלצער	yt/lex/M/meltzer-julius.htm	Julius Meltzer	True
+temp_15211	מנחם (מנחם גאָלדבּערג)	yt/lex/M/menakhem.htm	Menakhem	True
+temp_15401	פאַניע מענדעלעוויטש	yt/lex/M/mendelevitsh-fanya.htm	Fanya Mendelevitsh	True
+temp_14151	יאָזעף מאַנדעלקערן	yt/lex/M/mendelson-jozef.htm	Jozef Mendelson	True
+temp_15381	שלמה (קוּיאַווסקי) מענדעלסאָן	yt/lex/M/mendelson-shlomo.htm	Shlomo Mendelson	True
+temp_15361	אברהם מענדזשעלעווסקי	yt/lex/M/mendzelevsky-avraham.htm	Avraham Mendzelevsky	True
+temp_15411	יעלענאַ מענעס	yt/lex/M/menes-yelena.htm	Yelena Menes	True
+temp_15451	אַרן מערענזאָן	yt/lex/M/merenzon-aron.htm	Aron Merenzon	True
+temp_15461	וואָלף מערקוּר	yt/lex/M/merkur-wolf.htm	Wolf Merkur	True
+temp_15441	אַדאַם מעסקאָ	yt/lex/M/mesko-adam.htm	Adam Mesko	True
+temp_15421	יעקב מעסטעל	yt/lex/M/mestel-jacob.htm	Jacob Mestel	True
+temp_15431	יצחק (-יונה) מעסטעל	yt/lex/M/mestel-yitzhak.htm	Yitzhak Mestel	True
+temp_14791	באָריס מיידעלמאַן	moyt/lex/M/meydelman-boris-V5.htm	Boris Meydelman	True
+temp_14851	גרעטא מייער	yt/lex/M/meyer-greta.htm	Greta Meyer	True
+temp_14861	העניך מייער	yt/lex/M/meyer-hanoch.htm	Hanoch Meyer	True
+temp_14871	מאָרריס (משה) מייער	yt/lex/M/meyer-morris.htm	Morris Meyer	True
+temp_14881	דוד מייעראָוויטש	yt/lex/M/meyerowitz-david.htm	David Meyerowitz	True
+temp_14891	טעסי (טויבּע שטאַרק) מייעראָוויטש	yt/lex/M/meyerowitx-tessie.htm	Tessie Meyerowitz	True
+temp_14901	ליאָסע מייערסאָן	yt/lex/M/meyerson-lyosa.htm	Lyosa Meyerson	True
+temp_14711	יהושע (מ. סגל) מזח	yt/lex/M/mezach-yehoshua.htm	Yehoshua Mezach	True
+temp_14751	אַדאַלף (אברהם) מידע	yt/lex/M/mide-adolfo.htm	Adolfo Mide	True
+temp_15141	נחמן מיפעלעוו	yt/lex/M/mifelev-nakhmen.htm	Nakhmen Mifelev	True
+temp_14731	שמוּאל (מאַנדעל) מיגדאַלאָוויטש	yt/lex/M/migdalovitsh-shmuel.htm	Shmuel Migdalovitsh	True
+temp_14741	איגנאַצי (מיגדאַל) מיגדאַלסקי	yt/lex/M/migdalski-ignatsi.htm	Ignatsi Migdalski	True
+temp_14931	בּ. (יוסף איזבּיצקי) מיכאַלעוויטש	yt/lex/M/mikhalevitsh-b.htm	B. Mikhalevitsh	True
+temp_15071	הערי (הערש מאַלעטץ) מילער	yt/lex/M/miller-harry.htm	Harry Miller	True
+temp_15001	העלענאַ מיללער	yt/lex/M/miller-helena.htm	Helena Miller	True
+temp_15061	היימאַן (?) מילער	yt/lex/M/miller-hyman.htm	Hyman [?] Miller	True
+temp_15011	לוּאיס ע. (ל. בּאַנדעס) מיללער	yt/lex/M/miller-louis-e.htm	Louis E. Miller	True
+temp_15021	ש. (ישעיה) מיללער	yt/lex/M/miller-sh.htm	Sh. Miller	True
+temp_15031	מאַרקאָ (מאַרעק) מילנער	yt/lex/M/milner-marko.htm	Marko Milner	True
+temp_15041	מוישע מילנער	yt/lex/M/milner-moishe.htm	Moishe Milner	True
+temp_14981	מ. און י. מילטאָן	yt/lex/M/milton-m-and-i.htm	M. and I. Milton	True
+temp_15111	איזי מינעוויץ	moyt/lex/M/minevits-izzy-V5.htm	Izzy Minevits	True
+temp_15081	חנן יעקב מיניקעס	yt/lex/M/minikes-chanan-yaakov.htm	Chanan Yaakov Minikes	True
+temp_15121	יוכבד יהודית מינקאָוואַ	yt/lex/M/minkova-yocheved-yehudis.htm	Yocheved-Yehudis Minkova	True
+temp_15131	משה מינקוס	yt/lex/M/minkus-moshe.htm	Moshe Minkus	True
+temp_15101	עליע (אליהוּ זאַץ) מינץ	yt/lex/M/mintz-eli.htm	Eli Mintz	True
+temp_15091	מייקעל (מיכאל) מינץ	yt/lex/M/mintz-michael.htm	Michael Mintz	True
+temp_15181	ראָזע (ראַשעל) מישנוּן	yt/lex/M/mishnun-rose.htm	Rose Mishnun	True
+temp_15161	מאַקס (מאָטל) מישוּראַט	yt/lex/M/mishurat-max.htm	Max Mishurat	True
+temp_15151	מאיר (ראַטוּשניק) מישוּראַט	yt/lex/M/mishurat-meyer.htm	Meyer Mishurat	True
+temp_14761	אייק מיטניק	yt/lex/M/mitnick-ike.htm	Ike Mitnick	True
+temp_14781	אהרן מיטעלמאַן	yt/lex/M/mittelman-aaron.htm	Aaron Mittelman	True
+temp_13881	מאַרק מאָאין	yt/lex/M/moen-mark.htm	Mark Moen	True
+temp_13911	אַמאַליע (פינקעלשטיין) מאָגולעסקאָ	yt/lex/M/mogulesko-amalia.htm	Amalia Mogulesko	True
+temp_13921	בּעסי מאָגוּלעסקאָ	yt/lex/M/mogulesko-bessie.htm	Bessie Mogulesko	True
+temp_14211	מרדכי-מנוס מאַנעסאָוויץ	yt/lex/M/monesovits-mordechai-manus.htm	Mordechai-Manus Monesovits	True
+temp_14221	אַרי (דוד-אריה פרידמאַן) מאָנפריד	yt/lex/M/monfried-ari.htm	Ari Monfried	True
+temp_14231	לאַזאַרוּס (אליעזר) מאָנפריד	yt/lex/M/monfried-lazarus.htm	Lazarus Monfried	True
+temp_14331	הערמאַן מאָראַט	yt/lex/M/morat-herman.htm	Herman Morat	True
+temp_14491	אברהם (מנקר) מאַרעווסקי	yt/lex/M/morevski-avraham.htm	Avraham Morevski	True
+temp_14431	סעם (שמוּאל-משה גאַנז) מאָריס	yt/lex/M/morris-sam.htm	Sam Morris	True
+temp_11851	י. א. מעריסאָן)	yt/lex/M/morrison-moritz.htm	Moritz Morrison	True
+temp_14241	אברהם מאָס	moyt/lex/M/mos-avraham-V5.htm	Avraham Mos	True
+temp_14611	מאָריס מאָשקאָוויטש	yt/lex/M/moshkovitch-morris.htm	Morris Moshkovitch	True
+temp_14601	מאַקס מאָשקאָוויטש	yt/lex/M/moshkovitsh-max.htm	Max Moshkovitsh	True
+temp_14621	משה מאָשקאָוויטש	yt/lex/M/moshkovitsh-moshe.htm	Moshe Moshkovitsh	True
+temp_14631	נאַדיאַ (גוּדעוויטש) מאָשקאָוויטש	yt/lex/M/moshkovitsh-nadya.htm	Nadya Moshkovitsh	True
+temp_14641	פּאַשאַ (בּאַסיאַ?) מאָשקאָוויטש	yt/lex/M/moshkovitsh-pasha.htm	Pasha Moshkovitsh	True
+temp_14281	יעקב-יוסף מאָסקאָוויטש ראָמאַנער	yt/lex/M/moskovitsh-romaner-yakov-yosef.htm	Yakov Yosef Moskovitsh Romaner	True
+temp_13891	בנציון מאָזער	yt/lex/M/mozer-bentsion-V4.htm	Bentsion Mozer	True
+temp_14671	א. מוּקדוני	yt/lex/M/mukdoni-a-dr.htm	A. Mukdoni	True
+temp_14691	יאָסל מוראק	moyt/lex/M/murak-yosl-V5.htm	Yosl Murak	True
+temp_14701	חיים אליעזר מוּשקאַט	yt/lex/M/mushkat-chaim-eliezer.htm	Chaim Eliezer Mushkat	True
+temp_14721	מאָרק מיאָדאָווניק	yt/lex/M/myodovinik-mark.htm	Mark Myodovnik	True
+temp_14811	בּעלאַ מייזעל	yt/lex/M/mysell-bella.htm	Bella Mysell	True
+temp_15731	נח (בּוּשעלעוויטש) נאַכבּוש	yt/lex/N/nachbush-noach.htm	Noach Nachbush	True
+temp_15611	בּעלאַ (נאַדאָלסקי) נאַדעל	yt/lex/N/nadel-bela.htm	Bela Nadel	True
+temp_15591	נאַדינאַ (נ. בּ. קאַצנעלבּויגן)	yt/lex/N/nadina.htm	Nadina	True
+temp_15601	משה (יצחק רייז) נאַדיר	yt/lex/N/nadir-moishe.htm	Moishe Nadir	True
+temp_15571	לעאן (לייבּ) נאַדאָלסקי	yt/lex/N/nadolsky-leon.htm	Leon Nadolsky	True
+temp_15581	סאָניאַ (שרה קאַץ) נאַדאָלסקי	yt/lex/N/nadolsky-sonia.htm	Sonia Nadolsky	True
+temp_15561	אהרן נאַגער	yt/lex/N/nager-aaron.htm	Aaron Nager	True
+temp_15721	דאָלי (אוּרי) נאכבּאר	yt/lex/N/nakhbar-doli.htm	Doli Nakhbar	True
+temp_15741	נאַכומאָוויטש (?)	moyt/lex/N/nakhumovitsh-V5.htm	[?] Nakhumovitsh	True
+temp_15771	אברהם-חיים נאמן	yt/lex/N/namn-avraham-chaim.htm	Avraham Chaim Namn	True
+temp_15761	אַראָן נאַמיאָט	yt/lex/N/namyot-aron.htm	Aron Namyot	True
+temp_16061	לאה (קיגעל-אייזענבּערג) נעמי	yt/lex/N/naomi-leah.htm	Leah Naomi	True
+temp_15641	בּ. (נאַטאַן בּרייטמאַן) נאַטאַן	yt/lex/N/natan-b.htm	B. Natan	True
+temp_15661	שרה נאַטאַן	yt/lex/N/natan-sarah.htm	Sarah Natan	True
+temp_15651	שמחה נאַטאַן	yt/lex/N/natan-simcha.htm	Simcha Natan	True
+temp_15671	אַמאַליע (נאַטאַליאַ ?) נאַטאַנסאָן	yt/lex/N/natanson-amalya.htm	Amalya Natanson	True
+temp_15681	אַננאַ (מילשטיין) נאַטאַנסאָן	yt/lex/N/nathanson-anna.htm	Anna Nathanson	True
+temp_15701	טשאַרלס נאַטאַנסאָן	yt/lex/N/nathanson-charles.htm	Charles Nathanson	True
+temp_15691	דזשוּליוּס (יוליוס נאַטאַנסאָן	yt/lex/N/nathanson-julius.htm	Julius Nathanson	True
+temp_15711	סאָניא (חיה-שרה) נאַטאַנסאָן	yt/lex/N/nathanson-sonia.htm	Sonia Nathanson	True
+temp_15551	אברהם נאַאוּמאָוו	yt/lex/N/naumov-avraham.htm	Avraham Naumov	True
+temp_16021	מישע נעכאַמקאָס	yt/lex/N/nechamkus-misha.htm	Misha Nechamkus	True
+temp_16051	משה נעלקען	moyt/lex/N/nelken-moshe-V5.htm	Moshe Nelken	True
+temp_16031	טשאַרלס (שכנא) נעלסאָן	yt/lex/N/nelson-charles.htm	Charles Nelson	True
+temp_16041	לייע (קאַצנעלסאָן) נעלסאָן	yt/lex/N/nelson-leye.htm	Leye Nelson	True
+temp_16081	אסתר נעראָסלאַווסקאַ	yt/lex/N/neroslavska-esther.htm	Esther Neroslavska	True
+temp_16071	משה נעסטאָר	yt/lex/N/nestor-moshe.htm	Moshe Nestor	True
+temp_15881	יעקב ניומאַן	yt/lex/N/newman-yakov.htm	Yakov Newman	True
+temp_15891	מאָזעס ניי	yt/lex/N/ney-mozes.htm	Mozes Ney	True
+temp_15921	אהרן ניימאַן	yt/lex/N/neyman-aaron.htm	Aaron Neyman	True
+temp_15911	אברהם (בּאַראַקאַן) ניימאַן	yt/lex/N/neyman-abraham.htm	Abraham Neyman	True
+temp_15931	יחזקאל-משה ניימאַן	yt/lex/N/neyman-yekhezkel-moshe.htm	Yekhezkel Moshe Neyman	True
+temp_15951	נפתּלי-הערץ ניימאַנאָוויץ	yt/lex/N/neymanovits-naftali-herts.htm	Naftali Herts Neymanovits	True
+temp_15961	דוד ניימאַרק	yt/lex/N/neymark-david.htm	David Neymark	True
+temp_15971	זעלדע (זינא) ניימילער	moyt/lex/N/neymiler-zelda-V5.htm	Zelde Neymiler	True
+temp_15871	שמוּאל (טשאַרני) ניגער	yt/lex/N/niger-shmuel.htm	Shmuel Niger	True
+temp_16001	מייער ניקאָלאַיעווסקי	moyt/lex/N/nikolayevski-meir-V5.htm	Meir Nikolayevski	True
+temp_16011	אשר-לייבּ נירענבּערג	yt/lex/N/nirenberg-asher-leyb.htm	Asher Leyb Nirenberg	True
+temp_15991	חיים ניסענצווייג	yt/lex/N/nisentsvayg-chaim.htm	Chaim Nisentsvayg	True
+temp_15751	הערש-דוד נאָמבּערג	yt/lex/N/nomberg-hersh-dovid.htm	Hersh Dovid Nomberg	True
+temp_15781	בּארוּך (בּענעדיקט לעווין) נאָרד	yt/lex/N/nord-barukh.htm	Barukh Nord	True
+temp_15811	יוסף נאָרפלוּם	yt/lex/N/norflus-yosef.htm	Yosef Norflus	True
+temp_15801	יצכאָק נאָרינסקי	yt/lex/N/norinsky-yitzchok.htm	Yitzchok Norinsky	True
+temp_15791	מאָריץ (טרעפלער) נאָרוויד	yt/lex/N/norvid-moritz.htm	Moritz Norvid	True
+temp_15621	מאריס (בּאַכנאָוו) נאוויקאָוו	yt/lex/N/novikov-morris.htm	Morris Novikov	True
+temp_15831	משה-שמוּאל נוימאַן	yt/lex/N/noyman-moshe-shmuel.htm	Moshe Shmuel Noyman	True
+temp_15631	יצחק נאָזשיק	yt/lex/N/nozyk-itzhak.htm	Itzhak Nozyk	True
+temp_15821	יצחק נוּגער	yt/lex/N/nuger-itzhak.htm	Itzhak Nuger	True
+temp_15841	אברהם נוּסבּוים	yt/lex/N/nusbaum-avraham.htm	Avraham Nusbaum	True
+temp_15851	יצחק נוּסינאָוו	yt/lex/N/nusinov-itzhak.htm	Itzhak Nusinov	True
+temp_15861	לייזער נוסענבוים	yt/lex/N/nussenbaum-leyzer.htm	Leyzer Nussenbaum	True
+temp_41	אַדאָלף אַבּערבּערג	yt/lex/O/oberberg-adolf.htm	Adolf Oberberg	True
+temp_61	יאָזעף אבּערלענדער	yt/lex/O/oberlander-joseph.htm	Joseph Oberlander	True
+temp_71	סאָפיע אָבּערלענדער	yt/lex/O/oberlander-sophia.htm	Sophia Oberlander	True
+temp_51	אַלעקסאַדער אַבּערלענדער	yt/lex/O/oberlender-alexander.htm	Alexander Oberlender	True
+temp_1341	פּעלינאַ (פּערל) אָפפערמאַן	yt/lex/O/offerman-paulina.htm	Paulina Offerman	True
+temp_231	סעם (שמואל) אַגורסקי	yt/lex/O/ogursky-sam.htm	Sam Ogursky	True
+temp_1081	אומע (פרומע) אָלקעניצקי	moyt/lex/O/olkenitski-ume-V5.htm	Ume Olkenitski	True
+temp_1091	אַלעקסאַנדער (יהושע) אָלשאַנעצקי	yt/lex/O/olshanetsky-alexander.htm	Alexander Olshanetsky	True
+temp_1261	יוסף (יוסף אָפּאַטאָווסקי) אָפּאטאַשו	yt/lex/O/opatoshu-joseph.htm	Joseph Opatoshu	True
+temp_1481	שמעון אָרליוק	yt/lex/O/orliuk-shimeon.htm	Shimeon Orliuk	True
+temp_1471	אסתר (סניעגאָוו) אָרזשעווסקאַיאַ	yt/lex/O/orzhevskaya-esther.htm	Esther Orzhevskaya	True
+temp_1641	מ. אָשעראָוויטש	yt/lex/O/osherowitch-m.htm	M. Osherowitch	True
+temp_1251	יוליוס (אייזענבעט) אָסקאַר	yt/lex/O/oskar-julius.htm	Julius Oskar	True
+temp_1231	אָסקאַר (יהושע אָסטריצקי) אַסטראָף	yt/lex/O/ostroff-oscar.htm	Oscar Ostroff	True
+temp_1201	חיים אָסטראָווסקי	yt/lex/O/ostrovsky-chaim.htm	Chaim Ostrovsky	True
+temp_1221	סעם (שמואל) אָסטראָווסקי	yt/lex/O/ostrowsky-samuel.htm	Samuel Ostrowsky	True
+temp_19811	פריידעלע (אוישער)	yt/lex/O/oysher-fraydele-v8.htm	Fraydele Oysher	True
+temp_521	משה אוישער	yt/lex/O/oysher-moishe.htm	Moishe Oysher	True
+temp_17681	בערל פּאַדאָוויטש	yt/lex/P/padovitsh-berl.htm	Berl Padovitsh	True
+temp_18031	דזשייקאָב פּאלעי	yt/lex/P/paley-jacob.htm	Jacob Paley	True
+temp_17981	יאָהאַן (יונה) פּאליי	yt/lex/P/paley-yohan.htm	Yohan Paley	True
+temp_18011	ס. פּאַלמע	yt/lex/P/palme-s.htm	S. Palme	True
+temp_18061	פייגעלע פּאַניץ	yt/lex/P/panitz-feigele.htm	Feigele Panitz	True
+temp_18171	ה. פּאָפּאַק	yt/lex/P/papak-h.htm	H. Papak	True
+temp_18181	משה פּאַפּיערין	moyt/lex/P/papierin-moshe-V5.htm	Moshe Papierin	True
+temp_18191	אברהם-יצחק פּאַפּירנא	yt/lex/P/papyrna-avraham-yakov.htm	Avraham Yakov Papyrna	True
+temp_18211	נייטאן פּאַרנעס	yt/lex/P/parnes-nathan.htm	Nathan Parnes	True
+temp_18131	עדוואַרד פּאַסקאַל	yt/lex/P/pascal-edward.htm	Edward Pascal	True
+temp_18141	שמעון פּאַסקאַל	yt/lex/P/paskal-simon.htm	Simon Paskal	True
+temp_18151	דזשאַנעט פּאַסקעוויטש	yt/lex/P/paskewitz-janet.htm	Janet Paskewitz	True
+temp_18161	מאַלווינאַ פּאַסקעוויטש	yt/lex/P/paskewitz-malvina.htm	Malvina Paskewitz	True
+temp_18111	חנינא פּאַסטערנאַק	yt/lex/P/pasternak-khanina.htm	Khanina Pasternak	True
+temp_18101	ווילי פּאַסטערנאַק	yt/lex/P/pasternak-willy.htm	Willy Pasternak	True
+temp_17821	יעקב פּאַט	yt/lex/P/pat-jacob.htm	Jacob Pat	True
+temp_17881	אליהו (עליאַס) פּאַטראָן	yt/lex/P/patron-elihu.htm	Elihu Patron	True
+temp_17891	פּאָלאַ (פּאַולינאַ פּאַטראָן) פּאַטראָני	yt/lex/P/patroni-pola.htm	Pola Patroni	True
+temp_17761	ה. פּאול	yt/lex/P/paul-h.htm	H. Paul	True
+temp_17781	רחל-לאה פּאָול	yt/lex/P/paul-ruchel-leah.htm	Ruchel-Leah Paul	True
+temp_17771	יוסף פּאול	yt/lex/P/paul-yosef.htm	Yosef Paul	True
+temp_17741	פּ. פּאוויק	yt/lex/P/pavik-p.htm	P. Pavik	True
+temp_17751	מישע פּאַוולאָציקי	moyt/lex/P/pavlotsiki-misha-V5.htm	Misha Pavlotsiki	True
+temp_18451	צילע פּירסאָן	yt/lex/P/pearson-celia.htm	Celia Pearson	True
+temp_18531	קלאַראַ פּעקער	yt/lex/P/pecker-clara.htm	Clara Pecker	True
+temp_18521	וויקטאָר פּעקער	yt/lex/P/pecker-victor.htm	Victor Pecker	True
+temp_18541	יעקב פּעקעראָוו	yt/lex/P/pekerov-yakov.htm	Yakov Pekerov	True
+temp_18511	מרדכי פּעלץ	yt/lex/P/peltz-mordechai.htm	Mordechai Peltz	True
+temp_18641	משה פּערענסאָן	yt/lex/P/perenson-moshe.htm	Moshe Perenson	True
+temp_18651	יצחק פּערקאָף	yt/lex/P/perkoff-yitzhak.htm	Yitzhak Perkoff	True
+temp_18661	רובין פּערקאָף	yt/lex/P/perkoff-rubin.htm	Rubin Perkofff	True
+temp_18561	יעקב פּערלמאַן	yt/lex/P/perlman-jacob.htm	Jacob Perlman	True
+temp_18581	אפרים פּערלמוטער	yt/lex/P/perlmuter-efrim.htm	Efrim Perlmuter	True
+temp_18601	מרדכי פּערלמוטער	yt/lex/P/perlmuter-mordechai.htm	Mordechai Perlmuter	True
+temp_18591	אַרנאָלד פּערלמוטער	yt/lex/P/perlmutter-arnold.htm	Arnold Perlmutter	True
+temp_18611	ראובן פּערלמוטער	yt/lex/P/perlmutter-reuven.htm	Reuven Perlmutter	True
+temp_18621	שלום פּערלמוטער	yt/lex/P/perlmutter-sholem.htm	Sholem Perlmutter	True
+temp_18551	בעטי (ראָזענבּערג) פּערלאָוו	yt/lex/P/perlov-betty.htm	Betty Perlov	True
+temp_17871	שייע פּאַטלאַך	moyt/lex/P/petlakh-shaye-V5.htm	Shaye Petlakh	True
+temp_18411	יעטע פּיקעלטשיק	yt/lex/P/pikeltshik-yetta.htm	Yetta Pikeltshik	True
+temp_18351	מוישע פּינטשעווסקי	yt/lex/P/pinchevsky-moishe.htm	Moishe Pinchevsky	True
+temp_18321	מאַקס פּיין	yt/lex/P/pine-max.htm	Max Pine	True
+temp_18371	מאיר פּינעס	yt/lex/P/pines-meir-dr.htm	Meir Pines	True
+temp_18381	שאָלעם פּינקוס	yt/lex/P/pinkus-sholem.htm	Sholem Pinkus	True
+temp_18361	דוד פּינסקי	yt/lex/P/pinski-david.htm	David Pinski	True
+temp_18341	פּ. פּינטשיק	yt/lex/P/pintshik-p.htm	P. Pintshik	True
+temp_18441	יצחק פּיראזשניקאָוו	yt/lex/P/pirozhnikov-yitskhok.htm	Yitskhok Pirozhnikov	True
+temp_18301	ראָזע פּיוואַר	yt/lex/P/pivar-rose.htm	Rose Pivar	True
+temp_18461	קאַטיאַ פּלאַווינאַ	yt/lex/P/plavina-katya.htm	Katya Plavina	True
+temp_18471	מענדל פּלאַוונער	yt/lex/P/plavner-mendl.htm	Mendl Plavner	True
+temp_18481	רבקהלע פּלאַוונער	yt/lex/P/plavner-rivkele.htm	Rivke'le Plavner	True
+temp_18491	דניאל פּלאַטקין	yt/lex/P/plotkin-daniel.htm	Daniel Plotkin	True
+temp_17731	חיים פּאָדליאַס	yt/lex/P/podlias-chaim.htm	Chaim Podlias	True
+temp_17721	פרויקע (אפרים) פּאָדלובני	yt/lex/P/podlubny-froyke.htm	Froyke Podlubny	True
+temp_17711	נ. י. (נאַום פּאָדלובני	yt/lex/P/podlubny-ny.htm	N.Y. Podlubny	True
+temp_17691	וויעראַ פּאָדאָלסקאַ	yt/lex/P/podolska-vera.htm	Vera Podolska	True
+temp_17701	שלום פּאָדזאַמטשע	yt/lex/P/podzamce-sholom.htm	Sholom Podzamce	True
+temp_17911	אברהם יצחק פּאָך	yt/lex/P/pokh-avraham-yitzhok.htm	Avraham Yitzhok Pokh	True
+temp_17921	טויבע (פישעל) פּאָך	yt/lex/P/pokh-toybe.htm	Toybe Pokh	True
+temp_17961	אהרן (פּאָליאַטשעק) פּאָליאַקאָוו	yt/lex/P/poliakov-aron.htm	Aron Poliakov	True
+temp_17971	זאָן פּאָליאַקאָוו	yt/lex/P/poliakov-zon.htm	Zon Poliakov	True
+temp_18001	בן-ציון פּאָליפּאַדע	yt/lex/P/polipade-ben-zion.htm	Ben Zion Polipade	True
+temp_17951	מ. פּאָליאַק	yt/lex/P/polyak-m.htm	M. Polyak	True
+temp_17991	? פּאָליעוויק	yt/lex/P/polyevik.htm	[?] Polyevik	True
+temp_18041	נ. פּאָמעראַנץ	yt/lex/P/pomerants-n.htm	N. Pomerants	True
+temp_18051	ח. פּאָנטש	yt/lex/P/pontsh-kh.htm	Kh. Pontsh	True
+temp_18201	דוד פּאַפּער	yt/lex/P/popper-david.htm	David Popper	True
+temp_18221	ה. (הירש פּאָרודאָמינסקי) פּאַרסקי	moyt/lex/P/porski-h-V5.htm	H. Porski	True
+temp_17841	ריקודה פּאָטאַש-פוקס	yt/lex/P/potash-fuks-rikuda.htm	Rikuda Potash-Fuks	True
+temp_17851	משה פּאָטאַשינסקי	yt/lex/P/potashinski-moshe.htm	Moshe Potashinski	True
+temp_17861	מיכאַאיל פּאָטאַשניק	yt/lex/P/potashnik-mikhail.htm	Mikhail Potashnik	True
+temp_17831	לידיאַ פּאָטאָצקאַ	yt/lex/P/pototska-lidia.htm	Lidia Pototska	True
+temp_17801	הערש פּאָזנאַנסקי	yt/lex/P/poznanski-hersh.htm	Hersh Poznanski	True
+temp_17791	אַריה (ישראַל אַריה פּאָזשקאָוו) פּאָזי	yt/lex/P/pozy-arnold.htm	Arnold Pozy	True
+temp_18821	יעקב פּרעגער	yt/lex/P/prager-jacob.htm	Jacob Prager	True
+temp_18671	רעגינע פּראַגער	yt/lex/P/prager-regina.htm	Regina Prager	True
+temp_18691	אברהם פּראוואטינער	yt/lex/P/pravatiner-abraham.htm	Abraham Pravatiner	True
+temp_18831	יוסף-שלמה פּרענאָוויץ	yt/lex/P/prenovits-yosef-shlomo.htm	Yosef Shlomo Prenovits	True
+temp_18721	יאַן (איזיק לאַזאַראָוויטש) פּריבעאַגו	yt/lex/P/pribeagu-jan.htm	Jan Pribeagu	True
+temp_18711	יצחק פּריבולסקי	yt/lex/P/pribulski-yitzhok.htm	Yitzhok Pribulski	True
+temp_18791	נח פּרילוצקי	yt/lex/P/prilutski-noah.htm	Noah Prilutski	True
+temp_18801	א. פּרינץ	yt/lex/P/prints-a.htm	A. Prints	True
+temp_18731	יעקב פּריזאַמענט	yt/lex/P/prizament-jacob.htm	Jacob Prizament	True
+temp_18741	משה פּריזאַמענט	yt/lex/P/prizament-moyshe.htm	Moyshe Prizament	True
+temp_18751	שלמה פּריזאַמענט	yt/lex/P/prizament-shlomo.htm	Shlomo Prizament	True
+temp_18811	יעקב פּרנס	yt/lex/P/prns-jacob.htm	Jacob Prns	True
+temp_18701	יוליוס פּראָנד	yt/lex/P/prond-julius.htm	Julius Prond	True
+temp_18501	אהרן פּסאַכיס	yt/lex/P/psakhis-aharon.htm	Aharon Psakhis	True
+temp_18251	לעוו פּולווער	yt/lex/P/pulver-lev.htm	Lev Pulver	True
+temp_18431	רוזשאַ (טאַרקעוויטש) פּיעקארניק	yt/lex/P/pyekarnik-ruzha.htm	Ruzha Pyekarnik	True
+temp_18391	יעקב פּיעקאַרניק	moyt/lex/P/pyekarnik-yakov-V5.htm	Yakov Pyekarnik	True
+temp_21651	מלכה (ראַבּינאָוויטש) ראַבעל	yt/lex/R/rabell-malkah.htm	Malkah Rabell	True
+temp_21561	מנהם-מענדל ראבין	moyt/lex/R/rabin-menachem-mendl-V5.htm	Menachem-Mendl Rabin	True
+temp_21641	אסתר ראַבינער	yt/lex/R/rabiner-esther.htm	Esther Rabiner	True
+temp_21601	ליובא ראַבינאָוויטש	moyt/lex/R/rabinovitsh-lyuba-V5.htm	Lyuba Rabinovitsh	True
+temp_21571	אברהם ראַבינאָוויטש	yt/lex/R/rabinowitz-abraham.htm	Abraham Rabinowitz	True
+temp_21611	לעאָן (לייבל) ראַבינאָוויטש	yt/lex/R/rabinowitz-leon.htm	Leon Rabinowitz	True
+temp_21621	ראָזאַ (טאַראַרוצקאַיאַ) ראַבינאָוויטש	yt/lex/R/rabinowitz-rosa.htm	Rosa Rabinowitz	True
+temp_22231	קלאַראַ ראַפאַלאַ	yt/lex/R/rafalo-clara.htm	Clara Rafalo	True
+temp_22221	איוואַ ראַפאַלאַ	yt/lex/R/rafalo-eva.htm	Eva Rafalo	True
+temp_22241	חיים מ. ראַפאַלאַוויטש	yt/lex/R/rafalovitsh-chaim-m.htm	Chaim M. Rafalovitsh	True
+temp_22131	ראַכמאַנאָוו (?)	moyt/lex/R/rakhmanov-V5.htm	[?] Rakhmanov	True
+temp_22141	לייזער ראַכמאַנאָוו	moyt/lex/R/rakhmanov-leyzer-V5.htm	Leyzer Rakhmanov	True
+temp_22271	נ. ראַקאָוו	yt/lex/R/rakov-n.htm	N. Rakov	True
+temp_22261	יוליוס (יחיאל) ראַקאָוו	moyt/lex/R/rakow-julius-V5.htm	Julius Rakow	True
+temp_22151	משה ראַן	moyt/lex/R/ran-moshe-V5.htm	Moshe Ran	True
+temp_22181	היימאַן ראַפּאַפּאָרט	yt/lex/R/rapoport-hyman.htm	Hyman Rapoport	True
+temp_22171	אהרן ב. ראַפּאַפּאָרט	yt/lex/R/rappaport-aaron-b.htm	Aaron B. Rappaport	True
+temp_22191	ליזע (שולמית) ראַפּעל	yt/lex/R/rappel-lisa.htm	Lisa Rappel	True
+temp_21701	לייזער ראוך	moyt/lex/R/raukh-leyzer-V5.htm	Leyzer Raukh	True
+temp_22731	יעקב רעכטצייט	yt/lex/R/rechtzeit-jacob.htm	Jacob Rechtzeit	True
+temp_22741	סימאָר רעכטצייט	yt/lex/R/rechtzeit-seymour.htm	Seymour Rechtzeit	True
+temp_22621	יעקב ריינגלאַס	yt/lex/R/reinglass-jacob.htm	Jacob Reinglass	True
+temp_22631	פעני ריינהאַרט	yt/lex/R/reinhart-fannie.htm	Fannie Reinhart	True
+temp_22521	שÉרה רייזען	yt/lex/R/reisen-sara.htm	Sara Reisen	True
+temp_22511	זלמן רייזען	yt/lex/R/reisen-zalman.htm	Zalman Reisen	True
+temp_22571	דוד רייטץ (רייצען)	yt/lex/R/reitz-david.htm	David Reitz	True
+temp_22491	בנימין חיים רייז	yt/lex/R/reiz-binyamin-chaim.htm	Binyamin Chaim Reiz	True
+temp_22751	יעקב רעלעס	moyt/lex/R/reles-yakov-V5.htm	Yakov Reles	True
+temp_22761	עדווין א. (אַראָלד רעלקין	yt/lex/R/relkin-edwin-a.htm	Edwin A. Relkin	True
+temp_22721	יוסף רעטיק	yt/lex/R/retik-yosef.htm	Yosef Retik	True
+temp_22641	באָריס רייסקי	moyt/lex/R/reyski-boris-V5.htm	Boris Reyski	True
+temp_22531	אַנעטאַ רייזער	moyt/lex/R/reyzer-aneta-V5.htm	Aneta Reyzer	True
+temp_22711	מאַקאַר אָסיפּאָוויטש רעזניקאָוו	yt/lex/R/reznikov-makar-osipovitsh.htm	Makar Osipovitsh Reznikov	True
+temp_22461	ריבּאק (?)	moyt/lex/R/ribak-V5.htm	[?] Ribak	True
+temp_22671	נייטאַן ריכטער	yt/lex/R/richter-neytan.htm	Neytan Richter	True
+temp_22681	דזשאַנעט רינגלער	yt/lex/R/ringler-jeanette.htm	Jeanette Ringler	True
+temp_22701	מ. ריסקינד	moyt/lex/R/riskind-m-V5.htm	M. Riskind	True
+temp_22481	מלכה ריטען	yt/lex/R/riten-malka.htm	Malka Riten	True
+temp_22471	מרדכי ריוועסמאַן	yt/lex/R/rivesman-mordechai.htm	Mordechai Rivesman	True
+temp_21631	לעה (לעאַ) ראָבינס	yt/lex/R/robbins-leo.htm	Leo Robbins	True
+temp_21671	הלל ראָגאָף	yt/lex/R/rogoff-hillel.htm	Hillel Rogoff	True
+temp_21661	דוד ראָגאָוו	yt/lex/R/rogow-david.htm	David Rogow	True
+temp_22391	יעטאַ רויך	yt/lex/R/roich-yetta.htm	Yetta Roich	True
+temp_22371	בּן-ציון רויטמאַן	moyt/lex/R/roitman-ben-tsion-V5.htm	Ben-Tsion Roitman	True
+temp_22381	זלמן רויטמאַן	moyt/lex/R/roitman-zalman-V5.htm	Zalman Roitman	True
+temp_21721	וויעראַ (שפרע ווינער) ראָזאַנקאָ	yt/lex/R/rosanko-vera.htm	Vera Rosanko	True
+temp_21731	אברהם ראזען	moyt/lex/R/rosen-avraham-dr-V5.htm	Avraham Rosen	True
+temp_21741	גערטאַ ראָזען	yt/lex/R/rosen-gerta.htm	Gerta Rosen	True
+temp_21761	מאַקס ראָזען	yt/lex/R/rosen-max.htm	Max Rosen	True
+temp_21881	ישראל (אַמעריקע) ראָזענבּערג	yt/lex/R/rosenberg-israel-II.htm	Israel Rosenberg	True
+temp_21811	אַדאָלף (אהרון) ראָזענבּלום	yt/lex/R/rosenblum-adolf.htm	Adolf Rosenblum	True
+temp_21821	בּעטי (בּיילע) ראָזענבּלום	yt/lex/R/rosenblum-betty.htm	Betty Rosenblum	True
+temp_21831	דבורה ראָזענבּלום	yt/lex/R/rosenblum-devorah.htm	Devorah Rosenblum	True
+temp_22041	לייזער ראָזענשטיין	yt/lex/R/rosenstein-leyzer.htm	Leyzer Rosenstein	True
+temp_22051	סעמועל ראָזענשטיין	yt/lex/R/rosenstein-samuel.htm	Samuel Rosenstein	True
+temp_21921	באָריס ראָזענטאַל	yt/lex/R/rosenthal-boris.htm	Boris Rosenthal	True
+temp_21981	קלאַראַ ראָזענטאַל	yt/lex/R/rosenthal-klara.htm	Klara Rosenthal	True
+temp_21951	מאַקס ראָזענטאַל	yt/lex/R/rosenthal-max.htm	Max Rosenthal	True
+temp_21961	נייטאן ראָזענטאַל	yt/lex/R/rosenthal-nathan.htm	Nathan Rosenthal	True
+temp_21971	סאַבּינאַ ראָזענטאַל	yt/lex/R/rosenthal-sabina.htm	Sabina Rosenthal	True
+temp_21931	יאַשאַ (יעקב-בּער) ראָזענטאַל	yt/lex/R/rosenthal-yasha.htm	Yasha Rosenthal	True
+temp_22061	גרשון ראט	yt/lex/R/rot-gershon.htm	Gershon Rot	True
+temp_22361	יצחק רויטבּלום	yt/lex/R/rothblum-isaac.htm	Isaac Rothblum	True
+temp_22071	בּנימין ראָטמאַן	yt/lex/R/rothman-benjamin.htm	Benjamin Rothman	True
+temp_22111	עליאַס ראָטשטיין	yt/lex/R/rothstein-elias.htm	Elias Rothstein	True
+temp_22121	פעליא ראָטשטיין	moyt/lex/R/rotshteyn-felia-V5.htm	Felia Rotshteyn	True
+temp_21711	אזיאש ראזאניעצקי	moyt/lex/R/rozanietski-oziash-V5.htm	Oziash Rozanietski	True
+temp_21841	אברהם ראָזענבּערג	moyt/lex/R/rozenberg-avraham-V5.htm	Avraham Rozenberg	True
+temp_21861	טוביה-גדליה ראָזענבּערג	moyt/lex/R/rozenberg-tuviya-gedalyahu-V5.htm	Tuviya-Gedalyahu Rozenberg	True
+temp_21801	]?[ ראָזענבּלום	yt/lex/R/rozenblum.htm	[?] Rozenblum	True
+temp_21781	אברהם ראזענבּוים	yt/lex/R/rosenboym-avraham.htm	Avraham Rozenboym	True
+temp_21791	יעקב-חיים ראזענבּוים	moyt/lex/R/rozenboym-yakov-chaim-V5.htm	Yakov Chaim Rozenboym	True
+temp_22001	הערמאַן ראָזענפאַרב	moyt/lex/R/rozenfarb-herman-V5.htm	Herman Rozenfarb	True
+temp_22011	יונה ראָזענפעלד	yt/lex/R/rozenfeld-yonah.htm	Yonah Rozenfeld	True
+temp_21941	לייבּ ראָזענטאַל	moyt/lex/R/rozental-leyb-V5.htm	Leyb Rozental	True
+temp_22031	רעגינאַ ראָזענצווייג	moyt/lex/R/rozentsvayg-regina-V5.htm	Regina Rozentsvayg	True
+temp_22021	ראָוז-לי ראָזענצווייג	yt/lex/R/rozentsvayg-rose-lee.htm	Rose Lee Rozentsvayg	True
+temp_22281	גרשון רובין	yt/lex/R/rubin-gershon.htm	Gershon Rubin	True
+temp_22301	מלך רובין	moyt/lex/R/rubin-melech-V5.htm	Melech Rubin	True
+temp_22311	מנחם (עקהייזער רובין	yt/lex/R/rubin-menachem.htm	Menachem Rubin	True
+temp_22321	ראָזאַ רובין	yt/lex/R/rubin-rose.htm	Rose Rubin	True
+temp_22291	יעקב רובין	yt/lex/R/rubin-yakov.htm	Yakov Rubin	True
+temp_22331	נחום רובינשטיין	moyt/lex/R/rubinshteyn-nakhum-V5.htm	Nakhum Rubinshteyn	True
+temp_22401	יוסף רומשינסקי	yt/lex/R/rumshinsky-joseph.htm	Joseph Rumshinsky	True
+temp_22411	אָסיפּ רוניטש	yt/lex/R/runitsch-ossip.htm	Ossip Runitsch	True
+temp_22431	שמעון רוסקין	yt/lex/R/ruskin-shimen.htm	Shimen Ruskin	True
+temp_22421	הענרי (הייםנעסוויזשקי) רוסאָטאַ	yt/lex/R/russotto-henry.htm	Henry Russotto	True
+temp_15491	(יקוּתיאל)	moyt/lex/R/rutenberg-yekutiel-V5.htm	Yekutiel Rutenberg	True
+temp_22441	הענריק (היים) ריבּא	moyt/lex/R/ryba-henryk-V5.htm	Henryk Ryba	True
+temp_16091	דוד-משה סאַבּסיי	yt/lex/S/sabsey-david-moshe.htm	David Moshe Sabsey	True
+temp_16931	הערי (צבי-הערש) סעקלער	yt/lex/S/sackler-harry.htm	Harry Sackler	True
+temp_16101	בּנימין סאַדיגוּרסקי	yt/lex/S/sadigurski-benjamin.htm	Benjamin Sadigurski	True
+temp_22781	מאַקס (מרדכי) שאַדאווסקי	moyt/lex/S/sadowski-max-V5.htm	Max Sadowski	True
+temp_16361	מיכאַאיל (סאַדייגוּרסקי) סאַקס	yt/lex/S/saks-michael.htm	Michael Saks	True
+temp_16181	קלמן סאַלמאַן	moyt/lex/S/salman-kalman-V5.htm	Kalman Salman	True
+temp_16251	מיכאל סאָמערסאָן	yt/lex/S/samerson-mikhal.htm	Mikhal Samerson	True
+temp_16191	דעיוו סאַמאָלעסקאָ	yt/lex/S/samolesko-dave.htm	Dave Samolesko	True
+temp_16241	ס. (שלמה רעזידענט) סאַמוּאילאָוו	yt/lex/S/samuilov-s.htm	S. Samuilov	True
+temp_16211	יעטאַ סאַמוּאילאָוו-שאָר	yt/lex/S/samuilov-schorr-yetta.htm	Yetta Samuilov-Schorr	True
+temp_16231	משה-בּער סאַמוּאילאָוו	yt/lex/S/samuylow-moshe-ber.htm	Moshe Ber Samuylow	True
+temp_16911	יעקב קאָפּל סענדלער	yt/lex/S/sandler-jacob-kopel.htm	Jacob Kopel Sandler	True
+temp_16291	פּרץ סאַנדלער	yt/lex/S/sandler-peretz.htm	Peretz Sandler	True
+temp_16301	ראָזאַ סאַנדלער	moyt/lex/S/sandler-rosa-V5.htm	Rosa Sandler	True
+temp_16271	א. (אַלעקסאַנגערוּ-סאַמוּעלי) סאַנדוּ	yt/lex/S/sando-a.htm	A. Sando	True
+temp_16311	שלום סאַנטאָפּ	yt/lex/S/santup-sholem.htm	Sholem Santup	True
+temp_16321	איזי (איסאַק) סאַפּאָזשניקאָוו	moyt/lex/S/sapozhnikov-izzy-V5.htm	Izzy Sapozhnikov	True
+temp_9451	לודוויג (לוי יצחק) זאַץ	yt/lex/S/satz-ludwig.htm	Ludwig Satz	True
+temp_16121	בערנאַרד (בערל זאַבלאָצקי) סאַוער	yt/lex/S/sauer-bernard.htm	Bernard Sauer	True
+temp_16111	דזשוּבּי (בּאבּעלע) סאָוּר	yt/lex/S/sauer-jubi.htm	Jubi Sauer	True
+temp_22831	גוסטאַוו שאַכט	yt/lex/S/schacht-gustav.htm	Gustav Schacht	True
+temp_23991	עמנואל שעכטער	moyt/lex/S/schechter-emanuel-V5.htm	Emanuel Schechter	True
+temp_23981	לעאָן שעכטער	yt/lex/S/schechter-leon.htm	Leon Schechter	True
+temp_23631	ראָזאַ (ריקל בּריה) שילינג	moyt/lex/S/schilling-rosa-V5.htm	Rosa Schilling	True
+temp_23621	סעם (שמחה) שילינג	yt/lex/S/schilling-sam.htm	Sam Schilling	True
+temp_23701	יצחק שלאָסבּערג	yt/lex/S/schlossberg-isaac.htm	Isaac Schlossberg	True
+temp_23821	שלמה שניידער	yt/lex/S/schneider-shlomo.htm	Shlomo Schneider	True
+temp_23841	רעי שנייער	yt/lex/S/schneier-rae.htm	Rae Schneier	True
+temp_23831	סעם שנייער	yt/lex/S/schneier-samuel-s.htm	Samuel S. Schneier	True
+temp_23851	לואיס (ישראל-לייבּ) שניצער	yt/lex/S/schnitzer-louis.htm	Louis Schnitzer	True
+temp_23911	דוד שעהנהאָלץ	yt/lex/S/schoenholtz-david.htm	David Schoenholtz	True
+temp_23011	אַנשל שאָר (שור)	yt/lex/S/schorr-anshel.htm	Anshel Schorr	True
+temp_23321	ברוך שור	yt/lex/S/schorr-baruch.htm	Baruch Schorr	True
+temp_23031	יהושע-העשל שאָר	yt/lex/S/schorr-yehoshua-heshel.htm	Yehoshua Heshel Schorr	True
+temp_23331	זעליג שור	yt/lex/S/schorr-zelig.htm	Zelig Schorr	True
+temp_23291	נייטאַן שולמאַן	yt/lex/S/schulman-nathan.htm	Nathan Schulman	True
+temp_23101	אַדעלאַ (פינקעלשטיין) שוואַרץ	yt/lex/S/schwartz-adela.htm	Adela Schwartz	True
+temp_23181	פעני (גלאַגער שוואַרץ	yt/lex/S/schwartz-fannie.htm	Fannie Schwartz	True
+temp_23121	לאה (שאַצקי) שוואַרץ	moyt/lex/S/schwartz-leah-V5.htm	Leah Schwartz	True
+temp_23141	מאַרגאַרעטאַ שוואַרץ	yt/lex/S/schwartz-margareta.htm	Margareta Schwartz	True
+temp_23151	מאָריס שוואַרץ	yt/lex/S/schwartz-maurice.htm	Maurice Schwartz	True
+temp_23131	מאיר שוואַרץ	yt/lex/S/schwartz-meyer.htm	Meyer Schwartz	True
+temp_23161	מרדכי שוואַרץ	yt/lex/S/schwartz-mordechai.htm	Mordechai Schwartz	True
+temp_23171	סעם שוואַרץ	yt/lex/S/schwartz-sam.htm	Sam Schwartz	True
+temp_23221	יוסף שוואַרצבּערג	yt/lex/S/schwartzberg-joseph.htm	Joseph Schwartzberg	True
+temp_23241	מאַרק שווייד	yt/lex/S/schweid-mark.htm	Mark Schweid	True
+temp_17081	צבי סקוּלער	yt/lex/S/scooler-zvi.htm	Zvi Scooler	True
+temp_16921	שלום סעקוּנדא	yt/lex/S/secunda-sholom.htm	Sholom Secunda	True
+temp_16811	בּעטי (גליקמאַן) סעגאַל	yt/lex/S/segal-betty.htm	Betty Segal	True
+temp_16801	בּאָריס סעגאַל	yt/lex/S/segal-boris.htm	Boris Segal	True
+temp_16821	חיה סעגאַל	yt/lex/S/segal-chaya.htm	Chaya Segal	True
+temp_16851	אַמאַליע (מלכּה) סעגאַלעסקאָ	yt/lex/S/segalesko-amalia.htm	Amalia Segalesko	True
+temp_16861	חיים-מאיר סעגאַלעסקאָ	yt/lex/S/segalesko-chaim-meir.htm	Chaim Meir Segalesko	True
+temp_16871	מרדכי סעגאַלעסקאָ	yt/lex/S/segalesko-mordechai.htm	Mordechai Segalesko	True
+temp_16841	נחום סעגאַלאָוויטש	yt/lex/S/segalovitsh-nakhum.htm	Nakhum Segalovitsh	True
+temp_16831	זוּסמאַן סעגאַלאָוויטש	yt/lex/S/segalowitch-zusman.htm	Zusman Segalowitch	True
+temp_9691	מאַרווין ל. זייגער	yt/lex/S/seiger-dr-marvin-l.htm	Marvin L. Seiger	True
+temp_16651	שיינע-רחל (זאַמקאָוו) סימקאָף	yt/lex/S/semkoff-sheyne-rokhl.htm	Sheyne Rokhl Semkoff	True
+temp_16901	איסר סענדיק	yt/lex/S/sendik-iser.htm	Iser Sendik	True
+temp_16951	יענטע (רייבּמאַן) סערדאַצקי	yt/lex/S/serdatski-yenta.htm	Yenta Serdatski	True
+temp_16961	מוּני (חיים זילבּערראַנד) סערעבּראָוו	yt/lex/S/serebrov-muni.htm	Muni Serebrov	True
+temp_16971	בּ. (דוב סרילאָוויטען) סערעני	yt/lex/S/sereny-b.htm	B. Sereny	True
+temp_16681	הערמאַן סיעראָצקי	yt/lex/S/serotsky-herman.htm	Herman Serotsky	True
+temp_16881	פּאַסטאָר) סעווילאַ (בּת-שרה זיגלער	yt/lex/S/sevilla.htm	Sevilla	True
+temp_16891	מעקס (מרדכי) סעיגער	yt/lex/S/seyger-max.htm	Max Seyger	True
+temp_22891	געניאַ שאַפּיראָ	moyt/lex/S/shapira-genya-V5.htm	Genya Shapira	True
+temp_22881	אַננאַ (עני) שאַפּיראָ	yt/lex/S/shapiro-anna-V8.htm	Anna Shapiro	True
+temp_22911	טשאַרלז שאַפּיראָ	yt/lex/S/shapiro-charles-V6.htm	Charles Shapiro	True
+temp_22941	פיאמע שאַפּיראָ	moyt/lex/S/shapiro-fime-V5.htm	Fime Shapiro	True
+temp_22921	ליזאַ שאַפּיראָ	yt/lex/S/shapiro-liza.htm	Liza Shapiro	True
+temp_24101	משה שפּיראָ	yt/lex/S/shapiro-moshe.htm	Moshe Shapiro	True
+temp_22951	פּנחס שאַפּיראָ	yt/lex/S/shapiro-pinchas.htm	Pinchas Shapiro	True
+temp_22931	סאָני (נתנאל-דוד) שאַפּיראָ	yt/lex/S/shapiro-sani.htm	Sani Shapiro	True
+temp_23051	דוד שאַראַוונער	yt/lex/S/sharavner-david.htm	David Sharavner	True
+temp_23061	סאָניאַ (סאָפיאַ ווינער) שאַראַוונער	yt/lex/S/sharavner-sonia.htm	Sonia Sharavner	True
+temp_23071	יעקב שאַרגעל	yt/lex/S/shargel-jacob.htm	Jacob Shargel	True
+temp_22801	יהודה-הערש שאיאק	yt/lex/S/shayak-yehuda-hersh.htm	Yehuda Hersh Shayak	True
+temp_22811	דינה (איזעלסקיאַ) שאַיעוויטש	moyt/lex/S/shayevitsh-dina-V5.htm	Dina Shayevitsh	True
+temp_22821	ישראל שאַיעוויטש	moyt/lex/S/shayevitsh-israel-V5.htm	Israel Shayevitsh	True
+temp_22961	אסתר שאפנער	yt/lex/S/shefner-ester.htm	Ester Shefner	True
+temp_22981	מלכה שאפנער	yt/lex/S/shefner-malka.htm	Malka Shefner	True
+temp_22991	שמואל שאפנער	yt/lex/S/shefner-shmuel.htm	Shmuel Shefner	True
+temp_22971	יעקב שאפנער	moyt/lex/S/shefner-yakov-V5.htm	Yakov Shefner	True
+temp_24031	שמואל שעפטל	moyt/lex/S/sheftel-shmuel-V5.htm	Shmuel Sheftel	True
+temp_23591	דזשעק שייקעוויטש	yt/lex/S/sheikevitz-jack.htm	Jack Sheikevitz	True
+temp_23601	נינאַ שייקעוויטש	yt/lex/S/sheikevitz-nina.htm	Nina Sheikevitz	True
+temp_23971	אהרן שעכטער	moyt/lex/S/shekhter-aaron-V5.htm	Aaron Shekhter	True
+temp_23961	מאַנועל שעכטמאַן	moyt/lex/S/shekhtman-manuel-V5.htm	Manuel Shekhtman	True
+temp_23801	משה שמש	yt/lex/S/shemesh-moshe.htm	Moshe Shemesh	True
+temp_24001	דוד ]?[ שענקמאַן	yt/lex/S/shenkman-dovid.htm	Dovid [?] Shenkman	True
+temp_24021	יאָסעלע שענקמאַן	moyt/lex/S/shenkman-yosele-V5.htm	Yosele Shenkman	True
+temp_24011	זיגמונד (זיינוול) שענקמאַן	yt/lex/S/shenkman-zigmund.htm	Zigmund Shenkman	True
+temp_24091	איזאַ שערף	yt/lex/S/sherf-iza.htm	Iza Sherf	True
+temp_24041	אסתר שער-גרין	yt/lex/S/sher-grin-ester.htm	Ester Sher-Grin	True
+temp_24061	דוד שערמאַן	moyt/lex/S/sherman-david-V5.htm	David Sherman	True
+temp_24081	פנחס (שוכמאַכער) שערמאַן	yt/lex/S/sherman-pinchas.htm	Pinchas Sherman	True
+temp_23641	רבקה (בּוזגאַן שילער	yt/lex/S/shiller-rivka.htm	Rivka Shiller	True
+temp_23651	אברהם-שמואל שימאַנסקי (סיימאָן)	yt/lex/S/shimansky-simon-avraham-shmuel.htm	Shimansky	True
+temp_23661	שימעלע דער הייזעריקער (שמאיעלע)	yt/lex/S/shimele-der-heyzeriker.htm	Shimele der Heyzeriker	True
+temp_24111	שקליאר	moyt/lex/S/shkliar-V5.htm	Shkliar	True
+temp_23711	שלמה שלאַקמאַן	moyt/lex/S/shlakman-shlomo-V5.htm	Shlomo Shlakman	True
+temp_23761	אַדאַלף שליפערשטיין	yt/lex/S/shliferstein-adolf.htm	Adolf Shliferstein	True
+temp_23861	מאַרקוס שנעק	yt/lex/S/shneck-markus.htm	Markus Shneck	True
+temp_23881	בעני שעהנגאָלד	yt/lex/S/shoengold-benny.htm	Benny Shoengold	True
+temp_23901	קלאַראַ שעהנגאָלד	yt/lex/S/shoengold-clara.htm	Clara Shoengold	True
+temp_22841	אברהם שאָמער	yt/lex/S/shomer-abraham.htm	Abraham S. Shomer	True
+temp_23351	ר. שושנה	yt/lex/S/shoshana-rose.htm	Rose Shoshana	True
+temp_23271	אוגוסטאַ (לויפער) שוידער	yt/lex/S/shoyder-augusta.htm	Augusta Shoyder	True
+temp_24131	אַדאָלף (נפתלי-יהושע) שראַגע	yt/lex/S/shrage-adolph.htm	Adolph Shrage	True
+temp_24121	כ. שראגע	moyt/lex/S/shrage-kh-V5.htm	Kh. Shrage	True
+temp_23371	משה שטאַבזיב	moyt/lex/S/shtabziv-moshe-V5.htm	Moshe Shtabziv	True
+temp_23411	פערדינאַנד שטויב	yt/lex/S/shtoyb-ferdinand.htm	Ferdinand Shtoyb	True
+temp_23091	ליובּאַ שובּ	moyt/lex/S/shub-lyuba-V5.htm	Lyuba Shub	True
+temp_23281	משה שולווייס	yt/lex/S/shulweis-moshe.htm	Moshe Shulweis	True
+temp_23301	וואָלף שומסקי	yt/lex/S/shumsky-wolf.htm	Wolf Shumsky	True
+temp_23201	דוד שוואַרצבּאַרד	yt/lex/S/shvartsbard-dovid.htm	Dovid Shvartsbard	True
+temp_23191	גוסטאַוו שוואַרצבּאַרד	yt/lex/S/shvartsbard-gustav.htm	Gustav Shvartsbard	True
+temp_23211	רעגינאַ שוואַרצבּאַרד	yt/lex/S/shvartsbard-regina.htm	Regina Shvartsbard	True
+temp_23261	איסאַק שוועץ	moyt/lex/S/shvets-isak-V5.htm	Isak Shvets	True
+temp_23251	משה שווייליך	yt/lex/S/shveylikh-moshe.htm	Moshe Shveylikh	True
+temp_16521	נינאַ סיבּירצעוואַ	yt/lex/S/silbirtseva-nina.htm	Nina Sibirtseva	True
+temp_16551	סידעלסקאַ	yt/lex/S/sidelska.htm	Sidelska	True
+temp_16541	סאַלי סיגעל	yt/lex/S/siegel-sally.htm	Sally Siegel	True
+temp_16691	אַלבּערטינאַ סיפצער	yt/lex/S/siftser-albertina.htm	Albertina Siftser	True
+temp_16701	פּאַוּלינאַ סיפצער	yt/lex/S/siftser-paulina.htm	Paulina Siftser	True
+temp_9851	סעם (איתמר) זילבּערבּוש	yt/lex/S/silberbush-sam.htm	Sam Silberbush	True
+temp_9911	יעקב (קוליש) זילבּערט	yt/lex/S/silbert-jacob.htm	Jacob Silbert	True
+temp_9921	ליזאַ זילבּערט	yt/lex/S/silbert-liza.htm	Liza Silbert	True
+temp_9931	ראָזאַ זילבּערט	yt/lex/S/silbert-rosa.htm	Rosa Silbert	True
+temp_9901	טעאָדאָר-הערצל זילבּערט	yt/lex/S/silbert-teodor-herzl.htm	Teodor-Herzl Silbert	True
+temp_16561	סיימאָן	yt/lex/S/simon.htm	Simon	True
+temp_16571	מעי סיימאָן	yt/lex/S/simon-mae.htm	Mae Simon	True
+temp_16581	פרוי (מישקינד) סיימאָן	yt/lex/S/simon-mrs.htm	Mrs. Simon	True
+temp_16631	בּעטי סימאָנאָף	yt/lex/S/simonoff-betty.htm	Betty Simonoff	True
+temp_16641	משה סימאָנאָף	yt/lex/S/simonoff-moshe.htm	Moshe Simonoff	True
+temp_16601	אברהם סימאָוויטש	yt/lex/S/simovitsh-avraham.htm	Avraham Simovitsh	True
+temp_16611	רעגינאַ (קובּאַוויטש) סימאָוויטש	yt/lex/S/simovitsh-regina.htm	Regina Simovitsh	True
+temp_16661	אייבּ סינקאָף	yt/lex/S/sincoff-abe.htm	Abe Sincoff	True
+temp_16671	פרענצים (שאַפּיראָ) סינקאָף	yt/lex/S/sincoff-frances.htm	Frances Sincoff	True
+temp_10131	ישראל-יהושע זינגער	yt/lex/S/singer-israel-joshua.htm	Israel Joshua Singer	True
+temp_16711	לוּאיס סירקין	yt/lex/S/sirkin-louis.htm	Louis Sirkin	True
+temp_17051	זלמן סקאַרבניק	moyt/lex/S/skarbnik-zalmen-V5.htm	Zalmen Skarbnik	True
+temp_17071	שרה (קוטנער) סקוּלניק	yt/lex/S/skulnik-sarah.htm	Sarah Skulnik	True
+temp_16751	מאַדאַם (שטערן) סלאָנימסקי	yt/lex/S/slonimski-madam.htm	Madam Slonimski	True
+temp_16741	חיים סלאַוועס	yt/lex/S/sloves-chaim.htm	Chaim Sloves	True
+temp_16761	רפאל (שמאַרגאָן) סמאַרגאָנסקי	moyt/lex/S/smargonsky-rafael-V5.htm	Rafael Smargonski	True
+temp_16781	דוד (שמידל) סמיטה	yt/lex/S/smith-david.htm	David Smith	True
+temp_16331	אהרן סאָפפא	yt/lex/S/soffe-aaron.htm	Aaron Soffe	True
+temp_16341	מוישע סאָקאָל	yt/lex/S/sokol-moyshe.htm	Moyshe Sokol	True
+temp_16351	ליפּמאַן (סאָקאָלאָווסקי) סאָקאָלאָוו	yt/lex/S/sokolov-lipman.htm	Lipman Sokolov	True
+temp_16141	אסתר סאָלאָמאָן	yt/lex/S/solomon-esther.htm	Esther Solomon	True
+temp_16161	נעלי (אזארא) סאָלאָמאָנעסקאָ	yt/lex/S/solomonesco-nellie.htm	Nellie Solomonesco	True
+temp_16151	אָסקאַר סאָלאָמאָנעסקאָ	yt/lex/S/solomonesco-oscar.htm	Oscar Solomonesco	True
+temp_9311	איזידאָר (יצחק) זאָלאָטאַרעפסקי	yt/lex/S/solotorefsky-isidore.htm	Isidore Solotorefsky	True
+temp_16131	ראַאיסא סאלאָוויאָוואַ	yt/lex/S/solovyova-raisa.htm	Raisa Solovyova	True
+temp_17021	בּעטי (מאַגידאָוו) ספּעקטאָר	yt/lex/S/spector-betty.htm	Betty Spector	True
+temp_17031	לעאָן ספּעקטאָר	yt/lex/S/spector-leon.htm	Leon Spector	True
+temp_17041	הערש ספּעקטאַראָוו	yt/lex/S/spektarov-hersh.htm	Hersh Spektarov	True
+temp_24161	לייבּוש שפּיטאַלניק	yt/lex/S/spitalnik-leybush.htm	Leybush Spitalnik	True
+temp_16981	יונה (רומעניע) ספּיוואַק	yt/lex/S/spivak-jonah.htm	Jonah Spivak	True
+temp_17001	יעקב ספּיוואַקאָווסקי	yt/lex/S/spivakowski-yakov.htm	Yakov Spivakowski	True
+temp_16261	מאַטילדאַ סאָן-קלעיר	yt/lex/S/stclaire-mathilda.htm	Mathilda St. Claire	True
+temp_16451	סטארקעוויטש	moyt/lex/S/starkevitsh-V5.htm	Starkevitsh	True
+temp_16441	הערי סטאַר	yt/lex/S/starr-harry.htm	Harry Starr	True
+temp_23421	אַדאָלף (אברהם) שטיין	moyt/lex/S/stein-adolf-V5.htm	Adolf Stein	True
+temp_23471	שלמה שטיינבּערג	yt/lex/S/steinberg-shlomo.htm	Shlomo Steinberg	True
+temp_23511	העראָלד שטערנבערג	yt/lex/S/sternberg-harold-V6.htm	Harold Sternberg	True
+temp_16421	אברהם סטאבער	moyt/lex/S/stober-avraham-V5.htm	Avraham Stober	True
+temp_23531	משה שטראַסבערג	yt/lex/S/strassberg-morris.htm	Morris Strassberg	True
+temp_16511	סאָניע (סאָפיע) סטרעלסקאַ	yt/lex/S/strelska-sonia.htm	Sonia Strelska	True
+temp_16501	אברהם סטריזאָווער	yt/lex/S/strizover-avraham.htm	Avraham Strizover	True
+temp_16471	חנה סטראַמבערג	yt/lex/S/stromberg-chana.htm	Chana Stromberg	True
+temp_16461	נחום (סטוּטשקאָ) סטוּטשקאָוו	yt/lex/S/stutchkoff-nakhum.htm	Nakhum Stutchkoff	True
+temp_16411	ראָזע-לאה (לעוויאוס) סוריץ	moyt/lex/S/surits-rosa-leah-V5.htm	Rosa Leah Surits	True
+temp_16401	סוּזאַן (צירל גאָלדענבּערג)	yt/lex/S/susan.htm	Susan	True
+temp_16381	נתן סווערדלין	yt/lex/S/swerdlin-nathan.htm	Nathan Swerdlin	True
+temp_16391	יצחק סווערדלאָוו	yt/lex/S/swerdlow-isaac.htm	Isaac Swerdlow	True
+temp_16591	סאַראַ (גאָלדשטיין) סילוויאַ	yt/lex/S/sylvia-sara.htm	Sara Sylvia	True
+temp_10341	אברהם טאַבּאַק	yt/lex/T/tabak-avraham.htm	Avraham Tabak	True
+temp_10361	מ.י. טאַבּאַקשיידער	yt/lex/T/tabakschneider-m-i.htm	M.I. Tabakschneider	True
+temp_10381	אהרן טאַגער	yt/lex/T/tager-aaron.htm	Aaron Tager	True
+temp_10561	סאַמוּאיל טאַקסא	yt/lex/T/taksa-samuel.htm	Samuel Taksa	True
+temp_10401	כ. טאמארקין	moyt/lex/T/tamarkin-kh-V5.htm	Kh. Tamarkin	True
+temp_10501	דוד טאַנענצאפּ	yt/lex/T/tanentsap-david.htm	David Tanentsap	True
+temp_10491	שלום (טאַנקוּס) טאַנין	yt/lex/T/tanin-sholom.htm	Sholom Tanin	True
+temp_10541	טאַנקעל	moyt/lex/T/tankel-V5.htm	[?] Tankel	True
+temp_10481	טאַנטשוּק (?)	yt/lex/T/tantshuk.htm	[?] Tantshuk	True
+temp_10511	אברהם-יצחק טאַנצמאַן	yt/lex/T/tanzman-avraham-itzhak.htm	Avraham Itzhak Tanzman	True
+temp_10521	בּערטאַ (בּערלין) טאַנצמאַן	yt/lex/T/tanzman-berta.htm	Berta Tanzman	True
+temp_10531	יאַזעף טאַנצמאַן	yt/lex/T/tanzman-joseph.htm	Joseph Tanzman	True
+temp_10581	הענרי טאַרלאָ	yt/lex/T/tarlo-henry.htm	Henry Tarlo	True
+temp_10591	משה טאַרלאָווסקי	yt/lex/T/tarlowsky-moshe.htm	Moshe Tarlowsky	True
+temp_10571	רות (רייזל טוּכמאַכער) טאַרי	yt/lex/T/taru-ruth.htm	Ruth Taru	True
+temp_10391	אוירווינג טאוב	yt/lex/T/taub-irving.htm	Irving Taub	True
+temp_10931	אַדאָלף טעפנער	yt/lex/T/tefner-adolf.htm	Adolf Tefner	True
+temp_10941	וואָלף טעפנער	moyt/lex/T/tefner-wolf-V5.htm	Wolf Tefner	True
+temp_10901	אליהוּ טענענהאָלץ	yt/lex/T/tenenholtz-elihu.htm	Elihu Tenenholtz	True
+temp_10921	קלמן (קאָליאַ) טעפּער	yt/lex/T/tepper-kalman.htm	Kalman Tepper	True
+temp_10951	יעקב טער	yt/lex/T/terr-jacob.htm	Jacob Terr	True
+temp_10841	משה טייך-גאַזניק	yt/lex/T/teykh-ganzik-moshe.htm	Moshe Teykh-Ganzik	True
+temp_10851	משה טיימאַן	yt/lex/T/teyman-moshe.htm	Moshe Teyman	True
+temp_10831	משה טייטש	yt/lex/T/teytsh-moshe.htm	Moshe Teytsh	True
+temp_10611	סידי (סאַלי בּירקענטאַל) טהאל	yt/lex/T/thal-sidy.htm	Sidy Thal	True
+temp_10451	עני טאָמאַשעווסקי	yt/lex/T/thomashefsky-annie.htm	Annie Thomashefsky	True
+temp_10411	בּאָריס (בּרוך-אהרן) טאָמאַשעוו]פ[סקי	yt/lex/T/thomashefsky-boris.htm	Boris Thomashefsky	True
+temp_10431	הערי (הערש-יונה) טאָמאַשעווסקי	yt/lex/T/thomashefsky-harry.htm	Harry Thomashefsky	True
+temp_10441	מייק (מרדכי) טאָמאַשעווסקי	yt/lex/T/thomashefsky-mike.htm	Mike Thomashefsky	True
+temp_10461	פּנחס טאָמאַשעווסקי	yt/lex/T/thomashefsky-pincas.htm	Pincas Thomashefsky	True
+temp_10621	מאַטיאַס (מתּתיהוּ) טהוּר	yt/lex/T/thur-matias.htm	Matias Thur	True
+temp_10871	יעקב טיקמאַן	yt/lex/T/tikman-yakov-V7.htm	Yakov Tikman	True
+temp_10861	אַדאָלף (טימיאַנקאָ) טימיאַנאָף	yt/lex/T/timianoff-adolf.htm	Adolf Timianoff	True
+temp_10791	מרדכי-חיים טיטעלמאַן	yt/lex/T/titelman-mordechai-chaim.htm	Mordechai-Chaim Titelman	True
+temp_10351	אַננאַ טאַבּאַק	yt/lex/T/toback-anna.htm	Anna Toback	True
+temp_10551	אַלעקסאַנדער טאָקמאַן	moyt/lex/T/tokman-aleksander-V5.htm	Aleksander Tokman	True
+temp_10471	ג.וו. טאָמבּאַק	yt/lex/T/tombak-g-v.htm	G.V. Tombak	True
+temp_10601	סעמיועל (שמוּאל) טאָרנבּערג	yt/lex/T/tornberg-samuel.htm	Samuel Tornberg	True
+temp_10641	חיים טויבּער	yt/lex/T/towber-chaim.htm	Chaim Towber	True
+temp_10631	חיים טויבּענשלאַג	yt/lex/T/toybenshlag-chaim.htm	Chaim Toybenshlag	True
+temp_11051	אַרטוּר טרייסי	yt/lex/T/tracy-arthur.htm	Arthur Tracy	True
+temp_10961	יעקב-שמוּאל טראַכטמאַן	yt/lex/T/trakhtman-yakov-shmuel.htm	Yakov Shmuel Trakhtman	True
+temp_11081	צאַליק טרעגער	moyt/lex/T/treger-tsalik-V5.htm	Tsalik Treger	True
+temp_11041	נאָסען (נאכעמיע) טרייסטמאַן	yt/lex/T/treystman-nosen.htm	Nosen Treystman	True
+temp_11061	איליאַ (סימאָן) טרילינג	yt/lex/T/trilling-illya.htm	Ilya Trilling	True
+temp_11071	מאַניע (מרים) טרילינג	yt/lex/T/trilling-manya.htm	Manya Trilling	True
+temp_10981	חיה טראָקינער	moyt/lex/T/trokiner-chaya-V5.htm	Chaya Trokiner	True
+temp_10971	לייבל טראָיאַנאָווסקי	moyt/lex/T/troyanovski-leybl-V5.htm	Leybl Troyanovski	True
+temp_10991	חנה (קאַץ) טרוימאַן	yt/lex/T/troyman-chana.htm	Chana Troyman	True
+temp_20131	רינאַ (זעליגסאָן) צעלזאַר	moyt/lex/T/tselzar-rina-V5.htm	Rina Tselzar	True
+temp_15541	אווראם משעטשילניצקי	moyt/lex/T/tshetshelnitski-avram-V5.htm	Avram Tshetshelnitski	True
+temp_10651	מאָריס טוּכבּאַנד	yt/lex/T/tuchband-morris.htm	Morris Tuchband	True
+temp_10661	ליזאַ (קיידאַן) טוּכמאַן	yt/lex/T/tuchman-lisa.htm	Lisa Tuchman	True
+temp_10711	מרים (פּאקענטרעגער) טוּפמאַן	yt/lex/T/tufman-miriam.htm	Miriam Tufman	True
+temp_10701	יהושע טוּפמאַן	yt/lex/T/tufman-yehoshua.htm	Yehoshua Tufman	True
+temp_10671	דזשאָדזש (זלמן טאָלער) טוּללער	yt/lex/T/tuller-george.htm	George Tuller	True
+temp_10681	הערמאַן (חיים-הערש אַווענד) טוּניס	yt/lex/T/tunis-herman.htm	Herman Tunis	True
+temp_10691	דער (יוסף טוּנקעל) טוּנקעלער	yt/lex/T/tunkeler-der.htm	Der Tunkeler	True
+temp_10741	דאוויד טורעווסקי	moyt/lex/T/turevski-david-V5.htm	David Turevski	True
+temp_10761	יאָנאַס טוּרקאָוו	yt/lex/T/turkow-jonas.htm	Jonas Turkow	True
+temp_10771	מאַרק טוּרקאָוו	yt/lex/T/turkow-mark.htm	Mark Turkow	True
+temp_10751	זיגמוּנט טוּרקאָוו	yt/lex/T/turkow-zygmunt.htm	Zygmunt Turkow	True
+temp_10721	יעקב טוּראָווסקי	yt/lex/T/torovsky-yakov.htm	Yakov Turovsky	True
+temp_10781	בּ. טוּרש	yt/lex/T/tursh-b.htm	B. Tursh	True
+temp_531	אולריך	moyt/lex/U/ulrich-V5.htm	Ulrich	True
+temp_561	פּעפּי (פּערל) אוריך	moyt/lex/U/urich-pepi-V5.htm	Pepi Urich	True
+temp_7881	יוסף וואַכטעל	yt/lex/V/vakhtel-yosef.htm	Yosef Vakhtel	True
+temp_8111	בערל וואַקסמאַן	moyt/lex/V/vaksman-berl-V5.htm	Berl Vaksman	True
+temp_8101	אסתר וואַקסמאַן	yt/lex/V/vaksman-ester.htm	Ester Vaksman	True
+temp_8121	מאָריס (משה דוד) וואַקסמאַן	yt/lex/V/vaksman-morris.htm	Morris Vaksman	True
+temp_8141	ראָזאַ (רחל דינטענפאס) וואַקסמאַן	yt/lex/V/vaksman-roza.htm	Roza Vaksman	True
+temp_8181	דוד (ראָזענפעלד) וואַרדי	yt/lex/V/vardi-david.htm	David Vardi	True
+temp_8211	? וואַרמאַן	yt/lex/V/varman.htm	[?] Varman	True
+temp_8171	ליזאַ וואַראָן	yt/lex/V/varon-liza.htm	Liza Varon	True
+temp_8251	משה וואַרשע	yt/lex/V/varshe-moshe.htm	Moshe Varshe	True
+temp_8091	מישע וואַסערייך	moyt/lex/V/vaysereykh-misha-V5.htm	Mishe Vasereykh	True
+temp_8441	סאלטשע (שרה ליכט) וויינבּערג	yt/lex/V/vaynberg-saltshe.htm	Saltshe Vaynberg	True
+temp_8451	שמואל וויינבּערג	moyt/lex/V/vaynberg-shmuel-V5.htm	Shmuel Vaynberg	True
+temp_8631	בּרוך וויינשעל	yt/lex/V/vaynshel-barukh.htm	Barukh Vaynshel	True
+temp_8591	? וויינשטיין	yt/lex/V/vaynshteyn.htm	[?] Vaynshteyn	True
+temp_8601	איטע וויינשטיין	yt/lex/V/vaynshteyn-ita.htm	Ita Vaynshteyn	True
+temp_8571	סאָפיע (פרידמאַן) וויינשטאָק	yt/lex/V/vaynshtok-sophia.htm	Sophia Vaynshtok	True
+temp_8671	ענריקאָ ווייס	yt/lex/V/vays-enrico.htm	Enrico Vays	True
+temp_8661	מאַרסעלאַ (לעווין) ווייס	yt/lex/V/vays-marsela.htm	Marsela Vays	True
+temp_8681	פּאולינאַ ווייס	yt/lex/V/vays-paulina.htm	Paulina Vays	True
+temp_8721	פייוול ווייסבּערג	yt/lex/V/vaysberg-feivl.htm	Feivl Vaysberg	True
+temp_8711	סעם ווייסבּערג	yt/lex/V/vaysberg-sam.htm	Sam Vaysberg	True
+temp_8691	חיים ווייסבּיין	moyt/lex/V/vaysbeyn-chaim-V5.htm	Chaim Vaysbeyn	True
+temp_8821	יצחק-מאיר ווייסענבּערג	yt/lex/V/vaysenberg-yitzhok-meir.htm	Yitzhok-Meir Vaysenberg	True
+temp_8801	מאָריס ווייסמאַן	yt/lex/V/vaysman-morris.htm	Morris Vaysman	True
+temp_9101	העלענאַ (אינווענטאַרזש) וועליש	yt/lex/V/velish-helena.htm	Helena Velish	True
+temp_8271	סאָניאַ ווידאָוו	yt/lex/V/vidov-sonya.htm	Sonya Vidov	True
+temp_9061	וויטיא (אַביגדור) וויקטאָראָוו	moyt/lex/V/viktorov-vitya-V5.htm	Vitya Viktorov	True
+temp_8941	בּעטי ווינאָוויטש	yt/lex/V/vinovits-betty.htm	Betty Vinovits	True
+temp_8261	פרידא (לאַפּין) וויאַלין	moyt/lex/V/vitalina-frida-V5.htm	Frida Vitalina	True
+temp_9081	בּ. (ברוך-נחמן טשאַרני) וולאַדעק	yt/lex/V/vladeck-b.htm	B. Vladeck	True
+temp_9071	וועלוול וולאדיר	moyt/lex/V/vladir-velvl-V5.htm	Velvl Vladir	True
+temp_8031	פּעסיע וואָלפינע	yt/lex/V/volfine-pesye.htm	Pesye Volfine	True
+temp_7901	מ. וואָלגעשאַפען	yt/lex/V/volgeshafen-m.htm	M. Volgeshafen	True
+temp_9091	דוד וועטשטיין	yt/lex/V/volkenshteyn-david.htm	David Volkenshteyn	True
+temp_9011	ליובּאַ (שאָסקין) וויעסיאָלאַיאַ	yt/lex/V/vyesyolaya-lyuba.htm	Lyuba Vyesyolaya	True
+temp_9021	אידאַ וויסאָצקי	yt/lex/V/vysotsky-ida.htm	Ida Vysotsky	True
+temp_7821	בּן-ציון וואַגנער	yt/lex/W/wagner-ben-zion.htm	Ben Zion Wagner	True
+temp_7951	בּעני וואַלערשטיין	yt/lex/W/wallerstein-benny.htm	Benny Wallerstein	True
+temp_7981	עלאַ (געשפּאַס) וואַלערשטיין	yt/lex/W/wallerstein-ella.htm	Ella Wallerstein	True
+temp_7941	אסתר (גאָלדשטיין) וואַלערשטיין	yt/lex/W/wallerstein-esther.htm	Esther Wallerstein	True
+temp_7931	דזשעני וואַליער	yt/lex/W/wallerstein-hymie.htm	Hymie Wallerstein	True
+temp_7991	ראָזאַ וואַלערשטיין	yt/lex/W/wallerstein-rose.htm	Rose Wallerstein	True
+temp_7921	פּאָליאַ (שריידער) וואַלטער	yt/lex/W/walter-pola.htm	Pola Walter	True
+temp_8241	פייל (איסעראָווסקי) וואַרשאַווסקי	yt/lex/W/warshavsky-feivl.htm	Feivl Warshavsky	True
+temp_8391	מיכאל ווייכערט	yt/lex/W/weichert-michael-dr.htm	Michael Weichert	True
+temp_8331	מרים (וויידענפעלד) וויידע	yt/lex/W/weide-miriam.htm	Miriam Weide	True
+temp_8341	משה וויידע	moyt/lex/W/weide-moshe-V5.htm	Moshe Weide	True
+temp_8431	ישעיהו-דניאל (ס.ד.) וויינבּערג	yt/lex/W/weinberg-sd.htm	Yeshayahu Daniel Weinberg	True
+temp_8401	טשאַרלס (קלמן) וויינבּלאַט	yt/lex/W/weinblatt-charles.htm	Charles Weinblatt	True
+temp_8411	ישראל (וואורצל) וויינבּלאַט	yt/lex/W/weinblatt-israel.htm	Israel Weinblatt	True
+temp_8511	בּאָריס וויינער	yt/lex/W/weiner-boris.htm	Boris Weiner	True
+temp_8541	מאַקס וויינרייך	yt/lex/W/weinreich-max-dr.htm	Max Weinreich	True
+temp_8611	בּערנאַרד וויינשטיין	yt/lex/W/weinstein-bernard.htm	Bernard Weinstein	True
+temp_8561	יוסף וויינשטאָק	yt/lex/W/weinstock-joseph.htm	Joseph Weinstock	True
+temp_8581	שמחה וויינשטאָק	moyt/lex/W/weinstock-simcha-V5.htm	Simcha Weinstock	True
+temp_8481	פרענציס (פייגע) וויינטרויבּ	yt/lex/W/weintraub-frances.htm	Frances Weintraub	True
+temp_8471	מילטאָן וויינטרויבּ	yt/lex/W/weintraub-milton.htm	Milton Weintraub	True
+temp_8491	רבקה (פוספעלד) וויינטרויבּ	yt/lex/W/weintraub-rebecca.htm	Rebecca Weintraub	True
+temp_8461	זיגמונט וויינטרויבּ	yt/lex/W/weintraub-sigmund.htm	Sigmund Weintraub	True
+temp_8501	שמחה וויינטרויבּ	yt/lex/W/weintraub-simcha.htm	Simcha Weintraub	True
+temp_8281	לעאָן וויזענפעלד	yt/lex/W/weisenfeld-leon.htm	Leon Weisenfeld	True
+temp_8351	מוני (משולם-מאיר) ווייזענפריינד	yt/lex/W/weisenfreund-muni.htm	Muni Weisenfreund	True
+temp_8371	פיליפּ (נחום-פייוול) ווייזענפריינד	yt/lex/W/weisenfreund-phillip.htm	Phillip Weisenfreund	True
+temp_8731	אברהם-יעקב ווייסליץ	yt/lex/W/weislitz-avraham-yakov.htm	Avraham-Yakov Weislitz	True
+temp_8741	יוכבד (פּראָוויזאָר) ווייסליץ	yt/lex/W/weislitz-yocheved.htm	Yocheved Weislitz	True
+temp_8751	אהרן ווייסמאַן	yt/lex/W/weisman-aaron.htm	Aaron Weisman	True
+temp_8771	בּערנאַרדאָ ווייסמאַן	yt/lex/W/weisman-bernardo.htm	Bernardo Weisman	True
+temp_8651	לואיס (לוי) ווייס	yt/lex/W/weiss-louis.htm	Louis Weiss	True
+temp_8701	לואיס ווייסבּערג	yt/lex/W/weissberg-louis.htm	Louis Weissberg	True
+temp_8761	בּעסי ווייסמאַן	yt/lex/W/weissman-bessie.htm	Bessie Weissman	True
+temp_8811	ראובן ווייסמאַן	yt/lex/W/weissman-reuben.htm	Reuben Weissman	True
+temp_9041	בּתיה וויערניק	yt/lex/W/wiernik-batya.htm	Batya Wiernik	True
+temp_9051	יצחק וויערניק	yt/lex/W/wiernik-yitzhak.htm	Yitzhak Wiernik	True
+temp_8871	בּערנאַרד ווילענסקי	yt/lex/W/wilensky-bernard.htm	Bernard Wilensky	True
+temp_8881	יוליאַן ווילענסקי	yt/lex/W/wilensky-julian.htm	Julian Wilensky	True
+temp_8901	מערי (מרים קאץ) ווילענסקי	yt/lex/W/wilensky-mary.htm	Mary Wilensky	True
+temp_8891	מייקל (מיכאל) ווילענסקי	yt/lex/W/wilensky-michael.htm	Michael Wilensky	True
+temp_8861	מאַקס ווילנער	yt/lex/W/wilner-max.htm	Max Wilner	True
+temp_8521	לייבּ וויינער	yt/lex/W/winer-leyb.htm	Leyb Winer	True
+temp_8931	יוסף (וויינשטיין) ווינאָגראַדאָוו	yt/lex/W/winogradoff-joseph.htm	Joseph Winogradoff	True
+temp_8301	בן-ציון וויטלער	yt/lex/W/witler-benzion.htm	Benzion Witler	True
+temp_7831	הערמאַן (צבי) וואָהל	yt/lex/W/wohl-herman.htm	Herman Wohl	True
+temp_7851	ישראל-מעיר וואָהלמאַן	yt/lex/W/wohlman-israel-meir.htm	Israel Meir Wohlman	True
+temp_7841	יהודה-לייבּ וואָהלמאַן	yt/lex/W/wohlman-yehuda-leib.htm	Yehuda-Leib Wohlman	True
+temp_8001	אַרטהור וואָלף	yt/lex/W/wolf-arthur.htm	Arthur Wolf	True
+temp_7861	סיימאָן (שמחה) וואולף	yt/lex/W/wolf-simon.htm	Simon Wolf	True
+temp_8041	אהרן וואָלפסזאָהן האַללע	yt/lex/W/wolfsohn-halle-aaron.htm	Aaron Wolfsohn-Halle	True
+temp_8061	חנא וואָלפסטאַל	yt/lex/W/wolfstal-chona.htm	Chona Wolfstal	True
+temp_8051	אברהם וואָלפסטאַט	moyt/lex/W/wolfstat-avraham-V5.htm	Avraham Wolfstat	True
+temp_8021	יעקב-מרדכי וואָלפזאָהן	yt/lex/W/wolfzon-yakov-mordechai.htm	Yakov-Mordechai Wolfzon	True
+temp_7911	איטע וואָלהענדלער-קרויזע	yt/lex/W/wolhendler-krause-ita.htm	Ita Wolhendler-Krause	True
+temp_8221	מ. וואַרקעל	yt/lex/W/workel-m.htm	M. Workel	True
+temp_8201	יחזקאל וואָרטסמאַן	yt/lex/W/wortsman-yekhezkel-dr.htm	Yekhezkel Wortsman	True
+temp_11281	חיים (יאַבּלאָניק) יאַבּלאָקאָוו	yt/lex/Y/yablokoff-chaim.htm	Chaim Yablokoff	True
+temp_11691	מרדכי יחסן	yt/lex/Y/yachson-mordechai.htm	Mordechai Yachson	True
+temp_11291	זאַכאַר יאַגאָדאַ	yt/lex/Y/yagoda-zakhar.htm	Zakhar Yagoda	True
+temp_11351	זלמן יאַכנעס	yt/lex/Y/yakhnes-zalmen.htm	Zalmen Yakhnes	True
+temp_11481	מאָזעס (משה-יעקב) יאַקאָבּ	yt/lex/Y/yakob-mozes.htm	Mozes Yakob	True
+temp_11501	יאקב בּה’ יחזקאל מפּוזנן	yt/lex/Y/yakov-ben-yekhezkel-from-poznan.htm	Yakov ben Yekhezkel from Posnan	True
+temp_11511	א. ל. יאַקובּאָוויטש	yt/lex/Y/yakubovitsh-a-l.htm	A.L. Yakubovitsh	True
+temp_11571	לייזער יאַקובּאָוויטש	yt/lex/Y/yakubovitsh-leyzer.htm	Leyzer Yakubovitsh	True
+temp_11551	לאָלאַ (סאלפיש) יאַקובּאָוויטש	yt/lex/Y/yakubovitsh-lola.htm	Lola Yakubovitsh	True
+temp_11561	ליאָשאַ יאַקובּאָוויטש	yt/lex/Y/yakubovitsh-lyosha.htm	Lyosha Yakubovitsh	True
+temp_11531	יעקב יאַקובאָוויטש	moyt/lex/Y/yakubovitsh-yaakov-V5.htm	Yaakov Yakubovitsh	True
+temp_11581	]?[ יאַקוּבּזאָן	yt/lex/Y/yakubzon.htm	[?] Yakubzon	True
+temp_11431	יאַשאַ (מעיטעס) יאַנקאָ	yt/lex/Y/yanka-yasha.htm	Yasha Yanka	True
+temp_11371	דוד יאַנאָווער	yt/lex/Y/yanover-david.htm	David Yanover	True
+temp_11361	שאוּל-יוסף יאַנאָווסקי	yt/lex/Y/yanovsky-saul-yosef.htm	Saul Yosef Yanovsky	True
+temp_11891	מרדכי (מאָטל שערמאַן) ירדני	yt/lex/Y/yardeini-mordechai.htm	Mordechai Yardeini	True
+temp_11601	אליהו-זלמן יאַריכאָווסקי	yt/lex/Y/yarikhovski-elihu-zalmen.htm	Elihu Zalmen Yarikhovski	True
+temp_11591	זלאַטע יאַראָסלאַווסקאַ	yt/lex/Y/yaroslavska-zlata.htm	Zlata Yaroslavska	True
+temp_11871	הערש יעדוואַבּ	yt/lex/Y/yedvab-hersh.htm	Hersh Yedvab	True
+temp_11861	ראָזעטאַ (פּאגעט) יעגער	yt/lex/Y/yeger-rosetta.htm	Rosetta Yeger	True
+temp_11451	חוה (גרינשפּאַן) יאָעליט	yt/lex/Y/yoelit-chava.htm	Chava Yoelit	True
+temp_11471	משה (מאָאיסיי) יאָפע	moyt/lex/Y/yofe-moshe-V5.htm	Moshe Yofe	True
+temp_11461	יאקוב יאָפע	moyt/lex/Y/yofe-yakov-V5.htm	Yakov Yofe	True
+temp_11411	נייט. (נחן) יאָנגעלסאָן	yt/lex/Y/yongelson-nate.htm	Nate Yongelson	True
+temp_11401	דזשייקאָבּ (יעקב יוּנקמאַן) יאָנגמאַן	yt/lex/Y/yongman-jacob.htm	Jacob Yongman	True
+temp_11441	חיים יאָסיליס	yt/lex/Y/yosilis-chaim.htm	Chaim Yosilis	True
+temp_11381	בּערנאַרד (בּועז יונגוויץ) יאָנג	yt/lex/Y/young-bernard.htm	Bernard Young	True
+temp_11631	שלמה יוּדסאָן	yt/lex/Y/yudson-shlomo.htm	Shlomo Yudson	True
+temp_11651	יהוּדה (עטמאַן) יוּלין	yt/lex/Y/yulin-yehuda.htm	Yehuda Yulin	True
+temp_11681	סעמיאָן יוּשקעוויטש	yt/lex/Y/yushkevich-semyon.htm	Semyon Yushkevich	True
+temp_11321	בּ. (משה יוּסטמאַן) יאוּשזאָן	yt/lex/Y/yushzon-b.htm	B. Yushzon	True
+temp_9191	משה זאַבּלאָצקי	yt/lex/Z/zablotsky-moshe.htm	Moshe Zablotsky	True
+temp_9211	נח זאַבּלודאָווסקי	yt/lex/Z/zabludovski-noach.htm	Noach Zabludovski	True
+temp_9181	יוסף זאַבּאָלינסקי	yt/lex/Z/zabolinski-yosef.htm	Yosef Zabolinski	True
+temp_9231	פרידאַ זאַגאַר	yt/lex/Z/zagar-frida.htm	Frida Zagar	True
+temp_9221	מאָריץ זאגאר	yt/lex/Z/zagar-moritz.htm	Moritz Zagar	True
+temp_9241	זלמן זאַגאָרין	moyt/lex/Z/zagorin-zalmen-V5.htm	Zalmen Zagorin	True
+temp_9251	רוט זאַהאַוואַ	yt/lex/Z/zahava-ruth.htm	Ruth Zahava	True
+temp_9261	דוד זאַהיק	yt/lex/Z/zahik-david.htm	David Zahik	True
+temp_9471	אברהם זאַק	yt/lex/Z/zak-abraham.htm	Abraham Zak	True
+temp_9481	מאיר זאַקאָזשאַנסקי	yt/lex/Z/zakozhanski-meir.htm	Meir Zakozhanski	True
+temp_9491	ראָיע זאַקס	yt/lex/Z/zaks-roye.htm	Roye[?] Zaks	True
+temp_9331	אליהו זאַלודקאָווסקי	yt/lex/Z/zaludkowski-eliyahu.htm	Eliyahu Zaludkowski	True
+temp_9341	איזי זאלוזניאק	moyt/lex/Z/zaluzniak-izzy-V5.htm	Izzy Zaluzniak	True
+temp_9371	קאָראָלינאַ זאַמלער	yt/lex/Z/zamler-karolina.htm	Karolina Zamler	True
+temp_9361	פּלטיאל זאַמאָשטשין	yt/lex/Z/zamoshtshin-paltiel.htm	Paltiel Zamoshtshin	True
+temp_9411	צעשא (ראַדאָלניק) זאַנדבּערג	moyt/lex/Z/zandberg-tseshiya-V5.htm	Tseshiya Zandberg	True
+temp_9401	יצחק זאַנדבּערג	yt/lex/Z/zandberg-yitzhak.htm	Yitzhak Zandberg	True
+temp_10121	יעקב זינגער	yt/lex/Z/zanger-jacob.htm	Jacob Zanger	True
+temp_9501	הערי (גבריאל זארשעווסקי) זאַר	yt/lex/Z/zar-harry.htm	Harry Zar	True
+temp_9521	גיטל (ליפשיץ-זעליגער) זאַריצקא	yt/lex/Z/zaritska-gitl.htm	Gitl Zaritska	True
+temp_9531	פּאולינאַ (קעלער) זאַרשעווסקי	yt/lex/Z/zarzhevska-paulina.htm	Paulina Zarzhevska	True
+temp_9421	בּערטאַ (בּאַסיע לעווין) זאַסלאַווסקאַ	yt/lex/Z/zaslavska-berta.htm	Berta Zaslavska	True
+temp_9431	ווויעראַ זאַסלאַווסקאַיאַ	yt/lex/Z/zaslavskaya-vera.htm	Vera Zaslavskaya	True
+temp_9441	רודאָלף (ראובן-לייב) זאַסלאַווסקי	yt/lex/Z/zaslavsky-rudolf.htm	Rudolf Zaslavsky	True
+temp_9771	דוד זיידערמאַן	yt/lex/Z/zayderman-david.htm	David Zayderman	True
+temp_9781	האַרי זיידערמאַן	moyt/lex/Z/zayderman-harry-V5.htm	Harry Zayderman	True
+temp_9711	מאָריס זיידמאַן	yt/lex/Z/zeidman-morris.htm	Morris Zeidman	True
+temp_9811	משה זייפערט	yt/lex/Z/zeifert-moshe.htm	Moshe Zeifert	True
+temp_20041	אהרן (אליעזר) צייטלין	yt/lex/Z/zeitlin-aaron.htm	Aaron Zeitlin	True
+temp_20061	לעוו (אהרון-לייבּ) צייטלין	yt/lex/Z/zeitlin-lev.htm	Lev Zeitlin	True
+temp_20071	שפרה צייטלין	yt/lex/Z/zeitlin-shifra.htm	Shifra Zeitlin	True
+temp_9721	חוה זיידע	moyt/lex/Z/zeyde-chava-V5.htm	Chava Zeyde	True
+temp_9761	? זיידערמאַן	yt/lex/Z/zeyderman.htm	[?] Zeyderman	True
+temp_9791	משה זיידערמאַן	moyt/lex/Z/zeyderman-moshe-V5.htm	Moshe Zeyderman	True
+temp_10261	לייזער (זשעלאַזני) זשעלאַזא	yt/lex/Z/zhelazo-leyzer.htm	Leyzer Zhelazo	True
+temp_10251	פּינקע זשילבערט	moyt/lex/Z/zhilbert-pinke-V5.htm	Pinke Zhilbert	True
+temp_10241	וולאַדעק זשיטקאָווסקי	yt/lex/Z/zhitkovski-vladek.htm	Vladek Zhitkovski	True
+temp_10231	יוסף זשיטאָמירסקי	yt/lex/Z/zhitomirski-yosef.htm	Yosef Zhitomirski	True
+temp_10211	? זשופּניק	yt/lex/Z/zhopnik.htm	[?] Zhopnik	True
+temp_9601	עלאַ זיבּעל	yt/lex/Z/zibel-ela.htm	Ela Zibel	True
+temp_9611	פרידאַ (זשאַרטאָווסקי) זיבּעל	yt/lex/Z/zibel-frida.htm	Frida Zibel	True
+temp_9591	נחמן זיבּעל	yt/lex/Z/zibel-nachman.htm	Nachman Zibel	True
+temp_9651	נאַאים זיגעל	moyt/lex/Z/zigel-naum-V5.htm	Naum Zigel	True
+temp_9681	וויליאַם (וואָלף) זיגענלויבּ	yt/lex/Z/zigenlaub-william.htm	Willliam Zigenlaub	True
+temp_9841	קאַרל (חיים) זילבּער	yt/lex/Z/zilber-karl.htm	Karl Zilber	True
+temp_9881	סעמועל זילבּערבּערג	yt/lex/Z/zilberberg-samuel.htm	Samuel Zilberberg	True
+temp_9871	וואָלף זילבּערבּערג	yt/lex/Z/zilberberg-wolf.htm	Wolf Zilberberg	True
+temp_9861	זלמן זילבּערבּלאַט	yt/lex/Z/zilberblat-zalman.htm	Zalman Zilberblat	True
+temp_9951	מאָריס זילבּערמאַן	yt/lex/Z/zilberman-morris-dr.htm	Morris Zilberman	True
+temp_9941	אסתר זילבּערמאַן	yt/lex/Z/zilberman-esther.htm	Esther Zilberman	True
+temp_9981	קאַרל זילבּערמאַן	yt/lex/Z/zilberman-karl.htm	Karl Zilberman	True
+temp_9961	משה זילבּערמאַן	yt/lex/Z/zilberman-moshe.htm	Moshe Zilberman	True
+temp_10021	ביינוש זילבּערשטיין	moyt/lex/Z/zilbershteyn-beynish-V5.htm	Beynish Zilbershtayn	True
+temp_10031	משה זילבּערשטיין	yt/lex/Z/zilbershteyn-moshe.htm	Moshe Zilbershteyn	True
+temp_10041	שמעון זילבּערשטיין	yt/lex/Z/zilbershteyn-shimon.htm	Shimon Zilbershteyn	True
+temp_20081	קאַרל (עקיבא) צימבאַליסט	moyt/lex/Z/zimbalist-karl-V5.htm	Karl Zimbalist	True
+temp_10061	איווא (חוה-אסתר שטייסל) זימאָנד	yt/lex/Z/zimond-eva.htm	Eva Zimond	True
+temp_10081	אַדעלאַ זינגער	yt/lex/Z/zinger-adela.htm	Adela Zinger	True
+temp_10111	יוסף זינגער	yt/lex/Z/zinger-yosef.htm	Yosef Zinger	True
+temp_10151	בּערטאַ זינגערמאַן	yt/lex/Z/zingerman-berta.htm	Berta Zingerman	True
+temp_10071	קלמן זינגמאַן	yt/lex/Z/zingman-kalman.htm	Kalman Zingman	True
+temp_10161	שלמה זינשטיין	yt/lex/Z/zinshteyn-shlomo.htm	Shlomo Zinshteyn	True
+temp_10181	? זלאָטשעווסקי	yt/lex/Z/zlotshevski.htm	[?] Zlotshevski	True
+temp_9291	הלל זאָלאָטאַראָוו	yt/lex/Z/zolotarov-hilel-dr.htm	Hilel Zolotarov	True
+temp_9321	לעאָן זאָלאָטקאָף	yt/lex/Z/zolotkoff-leon.htm	Leon Zolotkoff	True
+temp_9551	ישראל זובּאק	moyt/lex/Z/zubak-israel-V5.htm	Israel Zubak	True
+temp_9561	סאַראַ זובּאק	moyt/lex/Z/zubak-sara-V5.htm	Sara Zubak	True
+temp_19981	רעגינאַ (שוואַרצשטיין) צוקער	moyt/lex/Z/zucker-regina-V5.htm	Regina Zucker	True
+temp_20001	הערשל צוקערבערג	yt/lex/Z/zuckerberg-hershel.htm	Hershel Zuckerberg	True
+temp_20011	לעאָן צוקערבערג	yt/lex/Z/zuckerberg-leon.htm	Leon Zuckerberg	True
+temp_20021	צילע צוקערבערג-זילבערצווייג	yt/lex/Z/zuckerberg-zylbercweig-celia.htm	Celia Zuckerberg-Zylbercweig	True
+temp_22861	מרים שאָמער-צונזער	yt/lex/Z/zunser-miriam-shomer.htm	Miriam Shomer Zunser	True
+temp_9581	בּנימין זוסקין	yt/lex/Z/zuskin-benjamin.htm	Benjamin Zuskin	True
+temp_9571	יוסף-אבּא זוסמאַן	yt/lex/Z/zusman-yosef-aba.htm	Yosef-Aba Zusman	True
+temp_19971	יעטאַ צווערלינג	yt/lex/Z/zwerling-yetta.htm	Yetta Zwerling	True
+temp_10001	נתן זילבּערצווייג	yt/lex/Z/zylbercweig-nathan.htm	Nathan Zylbercweig	True
+temp_9991	זלמן זילבּערצווייג	yt/lex/Z/zylbercweig-zalmen.htm	Zalmen Zylbercweig	True
+temp_9971	עלאַ (זיגלער) זילבּערמאַן	yt/lex/Z/zylberman-ela.htm	Ela Zylberman	True

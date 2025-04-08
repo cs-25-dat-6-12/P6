@@ -4,9 +4,10 @@ from sklearn import tree
 
 class Potential_matches():
     ids = []
-    distances = [[], [], [], [], [], [], [], [], [], [], [], []]
+    distances = [[], [], [], [], [], []]
     verdict = []
-    parts = ["primary-name", "given-name", "alternative-name", "surname", "patronymic", "middle-name", "acronym", "honorific", "appellation", "nisba", "professional-name", "salutation"]
+    parts = ["primary-name", "given-name", "alternative-name", "surname", "patronymic", "middle-name"]
+    # , "acronym", "honorific", "appellation", "nisba", "professional-name", "salutation"
 
 def example():
     iris = load_iris()
@@ -69,20 +70,15 @@ def find_name_parts():
     print(parts2)
 
 def find_distance(output_path):
-    # TODO Update correct matches
     zylbercweig = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv", sep="\t")
     laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
     table = Potential_matches()
+    match_ids = find_match_ids()
     for _, row in zylbercweig.iterrows():
         #if _ > 10:
             #continue
         if _ % 50 == 0 or _ == len(zylbercweig):
             print(str(_) + " out of " + str(len(zylbercweig)))
-        bool_table = zylbercweig.isna()
-        if not bool_table["geo_source"][_]:
-            source = row["geo_source"].replace("laski:", "")
-        else:
-            source = ""
         for _, row2 in laski.iterrows():
             id1 = row["id"]
             id2 = row2["id"]
@@ -92,7 +88,7 @@ def find_distance(output_path):
             name_parts_laski = row2["name_parts"].replace("\"", "").replace("{", "").replace("}", "").replace(" ", "")
             name_part_laski = name_parts_laski.split(",")
             distances_found = []
-            if source == id2:
+            if str(id1)+id2 in match_ids:
                 table.verdict.append(1)
             else:
                 table.verdict.append(-1)
@@ -116,12 +112,12 @@ def find_distance(output_path):
         "surname-dist": table.distances[3],
         "patronymic-dist": table.distances[4],
         "middle-name-dist": table.distances[5],
-        "acronym-dist": table.distances[6],
-        "honorific-dist": table.distances[7],
-        "appelation-dist": table.distances[8],
-        "nisba-dist": table.distances[9],
-        "professional-name-dist": table.distances[10],
-        "salutation-dist": table.distances[11],
+        #"acronym-dist": table.distances[6],
+        #"honorific-dist": table.distances[7],
+        #"appelation-dist": table.distances[8],
+        #"nisba-dist": table.distances[9],
+        #"professional-name-dist": table.distances[10],
+        #"salutation-dist": table.distances[11],
         "result": table.verdict
     })
     print("printing result")
@@ -148,12 +144,12 @@ def make_decision_tree(output_path):
         distancearray.append(row["surname-dist"])
         distancearray.append(row["patronymic-dist"])
         distancearray.append(row["middle-name-dist"])
-        distancearray.append(row["acronym-dist"])
-        distancearray.append(row["honorific-dist"])
-        distancearray.append(row["appelation-dist"])
-        distancearray.append(row["nisba-dist"])
-        distancearray.append(row["professional-name-dist"])
-        distancearray.append(row["salutation-dist"])
+        #distancearray.append(row["acronym-dist"])
+        #distancearray.append(row["honorific-dist"])
+        #distancearray.append(row["appelation-dist"])
+        #distancearray.append(row["nisba-dist"])
+        #distancearray.append(row["professional-name-dist"])
+        #distancearray.append(row["salutation-dist"])
         distances.append(distancearray)
         results.append(row["result"])
     print("training tree")
@@ -162,7 +158,15 @@ def make_decision_tree(output_path):
     f = open(output_path, "w")
     f.write(tree.export_text(clf, feature_names=Potential_matches.parts, max_depth=30, show_weights=True))
     f.close()
-    
+
+def find_match_ids():
+    matches = pd.read_csv("datasets/testset15-Zylbercweig-Laski/em.tsv", sep="\t")
+    ids = []
+    for _, row in matches.iterrows():
+        ids.append(str(row["id_1"]) + row["id_2"])
+    return ids
+
+
+
 if __name__ == "__main__":
-    find_distance("datasets/testset15-Zylbercweig-Laski/name_distances.csv")
     make_decision_tree("datasets/testset15-Zylbercweig-Laski/tree")
