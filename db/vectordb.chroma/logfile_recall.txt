@@ -1,0 +1,60 @@
+modelname: Zylbercweig-LASKIall-MiniLM-L6-v2
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.2901076371091748
+Recall zylbercweig: 0.3111225012813942
+Recall total: 0.3639159405433111
+
+modelname: Zylbercweig-LASKIall-MiniLM-L6-v2first-sur
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.22142491030240902
+Recall zylbercweig: 0.32086109687339825
+Recall total: 0.35776524859046643
+
+modelname: Zylbercweig-LASKIall-MiniLM-L12-v2
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.3157355202460277
+Recall zylbercweig: 0.3495643259866735
+Recall total: 0.40235776524859046
+
+modelname: Zylbercweig-LASKIall-MiniLM-L12-v2first-sur
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.2398769861609431
+Recall zylbercweig: 0.3649410558687852
+Recall total: 0.40133264992311635
+
+modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.3557150179395182
+Recall zylbercweig: 0.37826755509994875
+Recall total: 0.46694003075345974
+
+modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.28190671450538185
+Recall zylbercweig: 0.39876986160943106
+Recall total: 0.4654023577652486
+
+modelname: Zylbercweig-LASKIall-mpnet-base-v2
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.2788313685289595
+Recall zylbercweig: 0.3177857508969759
+Recall total: 0.380317785750897
+
+modelname: Zylbercweig-LASKIall-mpnet-base-v2first-sur
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.21014864172219375
+Recall zylbercweig: 0.3285494618144541
+Recall total: 0.37467965146078935
+
+modelname: Zylbercweig-LASKIall-roberta-large-v1
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.27626858021527423
+Recall zylbercweig: 0.32906201947719116
+Recall total: 0.3992824192721681
+
+modelname: Zylbercweig-LASKIall-roberta-large-v1first-sur
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.28908252178370064
+Recall zylbercweig: 0.35263967196309587
+Recall total: 0.415684264479754
+
