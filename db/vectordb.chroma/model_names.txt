@@ -1,0 +1,6 @@
+Zylbercweig-LASKI: all standard settings.
+Zylbercweig-LASKI-test: all standard settings, names are reduced to firstname and surname.
+Zylbercweig-LASKI{model_name}: uses the model_name embedding function.
+Zylbercweig-LASKI{model_name}first-sur: uses the model_name embedding function and all names only contain first and surnames.
+
+model_name can be any of: all-MiniLM-L6-v2, all-MiniLM-L12-v2, all-distilroberta-v1 or all-mpnet-base-v2
