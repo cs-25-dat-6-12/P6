@@ -1,0 +1,10 @@
+Jaccard similarity between Zylbercweig-LASKIall-MiniLM-L6-v2 and Zylbercweig-LASKIall-MiniLM-L6-v2first-sur: 661/748=0.8836898395721925
+
+Jaccard similarity between Zylbercweig-LASKIall-MiniLM-L12-v2 and Zylbercweig-LASKIall-MiniLM-L12-v2first-sur: 741/827=0.8960096735187424
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur: 857/962=0.8908523908523909
+
+Jaccard similarity between Zylbercweig-LASKIall-mpnet-base-v2 and Zylbercweig-LASKIall-mpnet-base-v2first-sur: 690/784=0.8801020408163265
+
+Jaccard similarity between Zylbercweig-LASKIall-roberta-large-v1 and Zylbercweig-LASKIall-roberta-large-v1first-sur: 725/865=0.838150289017341
+
