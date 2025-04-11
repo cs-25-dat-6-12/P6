@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+dedupe = ">=3.0.0"
+unidecode = "==0.4.16"
+requests = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
