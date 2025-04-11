@@ -1,4 +1,4 @@
 Zylbercweig-LASKI{model_name}: uses the model_name embedding function.
 Zylbercweig-LASKI{model_name}first-sur: uses the model_name embedding function and all names only contain first and surnames.
 
-model_name can be any of: all-MiniLM-L6-v2, all-MiniLM-L12-v2, all-distilroberta-v1, all-mpnet-base-v2, all-roberta-large-v1 or sentence-t5-xxl
+model_name can be any of: all-MiniLM-L6-v2, all-MiniLM-L12-v2, all-distilroberta-v1, all-mpnet-base-v2 or all-roberta-large-v1
