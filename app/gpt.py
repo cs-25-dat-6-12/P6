@@ -144,7 +144,7 @@ def test_on_dataset(filepath):
     # check answers
     print("Checking...")
     answer_mask = ["True" in item for item in answer.split("\n")]
-    correct_answers_mask = answer_mask and df["match"].to_list()
+    correct_answers_mask = [x == y for x, y in zip(answer_mask, df["match"].to_list())]
     print(answer_mask)
     print(df["match"].to_list())
     print(correct_answers_mask)
