@@ -149,6 +149,18 @@ def test_on_dataset(filepath):
     print(df["match"].to_list())
     print(correct_answers_mask)
 
+    true_positives = [
+        x and y for x, y in zip(answer_mask, df["match"].to_list())
+    ].count(True)
+
+    # true positives/total positives
+    precision = true_positives / answer_mask.count(True)
+    print(precision)
+
+    # true positives/total true
+    recall = true_positives / df["match"].to_list().count(True)
+    print(recall)
+
 
 if __name__ == "__main__":
     test_on_dataset("datasets\zeroShot\proofOfConcept.csv")
