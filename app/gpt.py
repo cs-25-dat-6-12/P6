@@ -119,6 +119,7 @@ def test_on_dataset(filepath):
     df["name_parts_roman"] = (
         df["name_parts_roman"].apply(json.loads).apply(name_from_name_parts)
     )
+
     print("Writing prompt...")
     # compose name list
     name_list = ""
@@ -129,20 +130,31 @@ def test_on_dataset(filepath):
         name_list += "\n"
     name_list = name_list[:-1]
     developer_string = Developer_strings.developer_string6
-    # prompt the model
-    print("Prompting...")
-    with open("secrets.json", "r") as file:
-        secrets = json.load(file)
-    client = OpenAI(
-        organization=secrets["organization"],
-        project=secrets["project"],
-        api_key=secrets["api_key"],
-    )
-    answer = prompt(client, developer_string, name_list, 200)
+    answer = ""
+
+    try:
+        print("Retrieving last answer...")
+        with open("app\lastAnswer.txt") as file:
+            answer = file.read()
+    except OSError:  # NOTE we only prompt if the last answer can't be found!
+        print("Found nothing.")
+        # prompt the model
+        print("Prompting...")
+        with open("secrets.json", "r") as file:
+            secrets = json.load(file)
+        client = OpenAI(
+            organization=secrets["organization"],
+            project=secrets["project"],
+            api_key=secrets["api_key"],
+        )
+        answer = prompt(client, developer_string, name_list, 200)
+        with open("app\lastAnswer.txt", "w") as file:
+            file.write(answer)
+
     print(f"Developer:\n{developer_string}\nUser:\n{name_list}\nAnswer:\n{answer}")
 
     # check answers
-    print("Checking...")
+    print("Checking answer...")
     answer_mask = ["True" in item for item in answer.split("\n")]
     correct_answers_mask = [x == y for x, y in zip(answer_mask, df["match"].to_list())]
     print(answer_mask)
@@ -155,11 +167,11 @@ def test_on_dataset(filepath):
 
     # true positives/total positives
     precision = true_positives / answer_mask.count(True)
-    print(precision)
+    print(f"Precision: {precision}")
 
     # true positives/total true
     recall = true_positives / df["match"].to_list().count(True)
-    print(recall)
+    print(f"Recall: {recall}")
 
 
 if __name__ == "__main__":
