@@ -2,3 +2,4 @@ pandas>=2.2.3
 pytest>=8.3.5
 chromadb>=1.0.3
 sentence_transformers>=4.0.2
+hf_xet>=1.0.3

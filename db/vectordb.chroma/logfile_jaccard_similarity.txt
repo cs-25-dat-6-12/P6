@@ -1,10 +1,42 @@
-Jaccard similarity between Zylbercweig-LASKIall-MiniLM-L6-v2 and Zylbercweig-LASKIall-MiniLM-L6-v2first-sur: 661/748=0.8836898395721925
+Jaccard similarity between Zylbercweig-LASKIall-MiniLM-L6-v2 and Zylbercweig-LASKIall-MiniLM-L6-v2first-sur with 5 candidates per query: 661/748=0.8837
 
-Jaccard similarity between Zylbercweig-LASKIall-MiniLM-L12-v2 and Zylbercweig-LASKIall-MiniLM-L12-v2first-sur: 741/827=0.8960096735187424
+Jaccard similarity between Zylbercweig-LASKIall-MiniLM-L12-v2 and Zylbercweig-LASKIall-MiniLM-L12-v2first-sur with 5 candidates per query: 741/827=0.8960
 
-Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur: 857/962=0.8908523908523909
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 5 candidates per query: 857/962=0.8909
 
-Jaccard similarity between Zylbercweig-LASKIall-mpnet-base-v2 and Zylbercweig-LASKIall-mpnet-base-v2first-sur: 690/784=0.8801020408163265
+Jaccard similarity between Zylbercweig-LASKIall-mpnet-base-v2 and Zylbercweig-LASKIall-mpnet-base-v2first-sur with 5 candidates per query: 690/784=0.8801
 
-Jaccard similarity between Zylbercweig-LASKIall-roberta-large-v1 and Zylbercweig-LASKIall-roberta-large-v1first-sur: 725/865=0.838150289017341
+Jaccard similarity between Zylbercweig-LASKIall-roberta-large-v1 and Zylbercweig-LASKIall-roberta-large-v1first-sur with 5 candidates per query: 725/865=0.8382
+
+Jaccard similarity between Zylbercweig-LASKIdistiluse-base-multilingual-cased-v1 and Zylbercweig-LASKIdistiluse-base-multilingual-cased-v1first-sur with 5 candidates per query: 126/176=0.7159
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 6 candidates per query: 883/989=0.8928
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 7 candidates per query: 910/1024=0.888671875
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 8 candidates per query: 936/1044=0.896551724137931
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 9 candidates per query: 952/1066=0.8931
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 10 candidates per query: 968/1092=0.8864
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 11 candidates per query: 978/1098=0.8907
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 12 candidates per query: 996/1114=0.8941
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 13 candidates per query: 1006/1126=0.8934
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 14 candidates per query: 1023/1138=0.8989
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 15 candidates per query: 1025/1148=0.8929
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 16 candidates per query: 1041/1155=0.9013
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 17 candidates per query: 1051/1165=0.9021
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 18 candidates per query: 1064/1178=0.9032
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 19 candidates per query: 1074/1186=0.9056
+
+Jaccard similarity between Zylbercweig-LASKIall-distilroberta-v1 and Zylbercweig-LASKIall-distilroberta-v1first-sur with 20 candidates per query: 1081/1199=0.9016
 
