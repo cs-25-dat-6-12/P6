@@ -1,6 +1,6 @@
 import json
 import pandas as pd
-import strsimpy
+from strsimpy.jaro_winkler import JaroWinkler
 
 
 def load_data(filepath1, filepath2, matches_path):
@@ -35,15 +35,18 @@ def create_parts_dictionary(df):
 # print(df.iloc[2475])  <- indexes dataframes by integer value
 
 
-def create_blocks(df, name_parts_indexes, similarity_threshold=0.85):
+def create_blocks(df, name_parts_indexes, similarity_threshold=0.60):
     # given a dataset which *wasn't* used to create name_parts_indexes, blocks for each record
     # unfortunately, since transliteration doesn't produce the exact equivalent names, we can't just lookup our name parts the name_parts_indexes,
     # so we iterate over the keys and test for similarity instead.
     # this will take a while, but that's fine: Blocks only have to be made once.
     blocks = {}
+    block_size_sum = 0
+    block_count = 0
     for index, row in df.iterrows():
         # a block is an index of a record and a set of all the indexes of records that it might match with
-        print(f"Blocking record {index}")
+        block_count += 1
+        print(f"Blocking record {index}. Avg block size: {block_size_sum/block_count}")
         blocks.update({index: set()})
         name_parts = []
         try:
@@ -53,13 +56,11 @@ def create_blocks(df, name_parts_indexes, similarity_threshold=0.85):
             continue
         for name_part in name_parts:
             for key in name_parts_indexes:
-                if (
-                    strsimpy.NormalizedLevenshtein().distance(name_part, key)
-                    >= similarity_threshold
-                ):
+                if JaroWinkler().similarity(name_part, key) >= similarity_threshold:
                     # if the name_part is close enough to the key, union the current block with the new possible matches
                     possible_matches = name_parts_indexes[key]
                     blocks.update({index: (blocks.get(index)).union(possible_matches)})
+        block_size_sum += len(blocks[index])
     return blocks
 
 
