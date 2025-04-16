@@ -75,7 +75,18 @@ if __name__ == "__main__":
         f"Biggest set size: {max([len(item) for item in name_parts_indexes.values()])}"
     )
 
-    blocks = create_blocks(df2, name_parts_indexes)
+    blocks = {}
+    try:
+        with open(r"app\blocks.json") as file:
+            print("Retrieving blocks...")
+            blocks = json.load(file)
+            blocks = {k: set(v) for k, v in blocks.items()}
+    except OSError:  # NOTE we only do blocking if a blocks.json file doesn't exist!
+        blocks = create_blocks(df2, name_parts_indexes)
+        # when we're done blocking, write the blocks to blocks.json. Note that we must store our sets as lists due to the format
+        blocks = {k: list(v) for k, v in blocks.items()}
+        with open(r"app\blocks.json", "w", encoding="utf-8") as file:
+            json.dump(blocks, file, ensure_ascii=False, indent=4)
 
     print(f"Biggest block size: {max([len(item) for item in blocks.values()])}")
     print(f"Smallest block size: {min([len(item) for item in blocks.values()])}")
