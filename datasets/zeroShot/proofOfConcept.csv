@@ -1,0 +1,13 @@
+name_parts_LASKI   name_parts_roman   match
+"{""given-name"": ""Abdul""}"	"{""primary-name"": ""avdui""}"	True
+"{""given-name"": ""Rosa"", ""surname"": ""Schilling""}"	"{""given-name"": ""shmkhh"", ""alternative-name"": ""sem"", ""surname"": ""shyiyng""}"	False
+"{""given-name"": ""Yitzhak"",  ""middle-name"": ""Dov"", ""surname"": ""Berkowitz""}"	"{""given-name"": ""ytskhk-dub"", ""surname"": ""berkovytsh""}"	True
+"{""given-name"": ""Charles"", ""surname"": ""Nathanson""}"	"{""given-name"": ""yuiyus"", ""alternative-name"": ""dzhuiyus"", ""surname"": ""natansun""}"	False
+"{""given-name"": ""Yakov"", ""surname"": ""Pekerov""}"	"{""given-name"": ""ytskhk"", ""surname"": ""erkof""}"	False
+"{""surname"": ""Ehrlich""}"	"{""primary-name"": ""ehriykh"", ""surname"": ""ehriykh""}"	True
+"{""given-name"": ""Louis"", ""surname"": ""Freiman""}"	"{""given-name"": ""iuys"", ""alternative-name"": ""ieyzer"", ""surname"": ""reyman"", ""matronymic"": ""genyuk""}"	True
+"{""given-name"": ""Ben"", ""surname"": ""Basenko"", ""patronymic"": ""Ben-Basenko""}"	"{""given-name"": ""shmkhh"", ""surname"": ""bergman""}"	False
+"{""given-name"": ""Harry"", ""middle-name"": ""A."", ""surname"": ""Dell""}"	"{""given-name"": ""marku"", ""alternative-name"": ""mrk"", ""surname"": ""myiner""}"	False
+"{""given-name"": ""Emil"", ""surname"": ""Frides""}"	"{""given-name"": ""emyi"", ""alternative-name"": ""iyhu"", ""surname"": ""rydes""}"	True
+"{""given-name"": ""Adolph"", ""surname"": ""Abrams""}"	"{""given-name"": ""roze"", ""surname"": ""rnshteyn""}"	False
+"{""given-name"": ""Chaim"", ""surname"": ""Vaysbeyn""}"	"{""given-name"": ""kheym"", ""surname"": ""veysveyn""}"	True
