@@ -35,7 +35,7 @@ def create_parts_dictionary(df):
 # print(df.iloc[2475])  <- indexes dataframes by integer value
 
 
-def create_blocks(df, name_parts_indexes, similarity_threshold=0.60):
+def create_blocks(df, name_parts_indexes, similarity_threshold=0.55):
     # given a dataset which *wasn't* used to create name_parts_indexes, blocks for each record
     # unfortunately, since transliteration doesn't produce the exact equivalent names, we can't just lookup our name parts the name_parts_indexes,
     # so we iterate over the keys and test for similarity instead.
@@ -46,13 +46,18 @@ def create_blocks(df, name_parts_indexes, similarity_threshold=0.60):
     for index, row in df.iterrows():
         # a block is an index of a record and a set of all the indexes of records that it might match with
         block_count += 1
-        print(f"Blocking record {index}. Avg block size: {block_size_sum/block_count}")
+        print(
+            f"Blocking record {index}. Avg block size: {block_size_sum/block_count}",
+            end="\r",
+        )
         blocks.update({index: set()})
         name_parts = []
         try:
             name_parts = json.loads(row["name_parts"]).values()
         except json.JSONDecodeError:
-            print("Error decoding name parts. Skipping.")
+            print(
+                f"Skipped record {index} due to bad name parts.                                "
+            )
             continue
         for name_part in name_parts:
             for key in name_parts_indexes:
@@ -61,6 +66,7 @@ def create_blocks(df, name_parts_indexes, similarity_threshold=0.60):
                     possible_matches = name_parts_indexes[key]
                     blocks.update({index: (blocks.get(index)).union(possible_matches)})
         block_size_sum += len(blocks[index])
+    print("\n")
     return blocks
 
 
@@ -72,7 +78,7 @@ def calculate_recall(blocks, df1, df2, matches):
     found_matches = 0
     current_block = 0
     for df2_index, set in blocks.items():
-        print(f"Finding recall for block {current_block}")
+        print(f"Finding recall for block {current_block}", end="\r")
         current_block += 1
         for df1_index in set:
             df1_name_parts = df1.iloc[df1_index]["name_parts"]
@@ -90,6 +96,7 @@ def calculate_recall(blocks, df1, df2, matches):
                 # NOTE did you know that there's a match that occurs twice? Look for "David Davidov" and "dvyd davydov" in transliterated_em.csv. That's why we add the sum and not just 1
                 found_matches += sum
     recall = found_matches / total_matches
+    print("\n")
     return recall
 
 
@@ -105,7 +112,7 @@ if __name__ == "__main__":
 
     # Note that the size of a set is equivalent to the support of the name_part that maps to it, as defined in the Yad Vashem-paper
     print(
-        f"Biggest set size: {max([len(item) for item in name_parts_indexes.values()])}"
+        f"Biggest set size: {max([len(item) for item in name_parts_indexes.values()])}\n"
     )
 
     blocks = {}
@@ -122,7 +129,7 @@ if __name__ == "__main__":
             json.dump(blocks, file, ensure_ascii=False, indent=4)
 
     print(f"Biggest block size: {max([len(item) for item in blocks.values()])}")
-    print(f"Smallest block size: {min([len(item) for item in blocks.values()])}")
+    print(f"Smallest block size: {min([len(item) for item in blocks.values()])}\n")
 
     recall = calculate_recall(blocks, df1, df2, matches)
     print(f"Recall: {recall}")
