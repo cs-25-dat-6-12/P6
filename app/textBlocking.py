@@ -146,16 +146,20 @@ def create_blocks_with_normalized_scores(
             continue
         # scoreboard will map records to scores which we use to find out what to include in our blocks
         scoreboard = {}
+        # comparisons will map records to the number of comparisons we did to find the record's score
+        comparisons = {}
         for name_part in name_parts:
             for key in name_parts_indexes:
                 score = JaroWinkler().similarity(name_part, key)
                 for record in name_parts_indexes[key]:
                     # only update the scoreboard if the new score is greater than the score that was there already
                     scoreboard.update({record: (scoreboard.get(record, 0) + score)})
+                    comparisons.update({record: (comparisons.get(record, 0) + 1)})
         # we've filled out the scoreboard, so now we normalize it
         for record in scoreboard:
             max_score = 0
-            for record_name_part in json.loads(blocks_df.iloc[record]["name_parts"]):
+            # for record_name_part in json.loads(blocks_df.iloc[record]["name_parts"]).values():
+            for _ in range(comparisons[record]):
                 max_score += 1  # NOTE this is where the maximum possible score for each name part goes!
             scoreboard.update({record: (scoreboard.get(record) / max_score)})
 
