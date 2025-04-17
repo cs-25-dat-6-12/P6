@@ -29,17 +29,24 @@ def create_parts_dictionary(df):
             name_parts_indexes.update(
                 {name_part: (name_parts_indexes.get(name_part, set()).union({index}))}
             )
+    # Note that the size of a set is equivalent to the support of the name_part that maps to it, as defined in the Yad Vashem-paper
+    print(
+        f"Biggest set size: {max([len(item) for item in name_parts_indexes.values()])}"
+    )
     return name_parts_indexes
 
 
 # print(df.iloc[2475])  <- indexes dataframes by integer value
 
 
-def create_blocks_with_set_union(df, name_parts_indexes, similarity_threshold=0.55):
-    # given a dataset which *wasn't* used to create name_parts_indexes, blocks for each record
+def create_blocks_with_set_union(df, blocks_df, similarity_threshold=0.55):
+    # given a dataset df to create blocks for, a dataset blocks_df to create blocks from, create blocks for each record in df
     # unfortunately, since transliteration doesn't produce the exact equivalent names, we can't just lookup our name parts the name_parts_indexes,
     # so we iterate over the keys and test for similarity instead.
     # this will take a while, but that's fine: Blocks only have to be made once.
+
+    name_parts_indexes = create_parts_dictionary(blocks_df)
+
     blocks = {}
     block_size_sum = 0
     block_count = 0
@@ -70,7 +77,12 @@ def create_blocks_with_set_union(df, name_parts_indexes, similarity_threshold=0.
     return blocks
 
 
-def create_blocks_with_part_scores(df, name_parts_indexes, block_size=400):
+def create_blocks_with_part_scores(df, blocks_df, block_size=400):
+    # instead of using a set union, assign a score to each record based on the most similar (or least distant) name part from some target record,
+    # and then place the n records with the best score in the block for the target record, with n = block_size.
+
+    name_parts_indexes = create_parts_dictionary(blocks_df)
+
     blocks = {}
 
     for index, row in df.iterrows():
@@ -110,10 +122,12 @@ def create_blocks_with_normalized_scores(
     # and then normalize all the scores afterwards based on the maximum possible score for each name part
     # the maximum score for a name part defaults to 1 but in the future, a callable could be used to calculate a max score dynamically
     df,
-    name_parts_indexes,
-    blocks_df,  # working title. This is the df from which name_parts_indexes was created from i.e. the one to make blocks from
+    blocks_df,
     block_size=200,
 ):
+
+    name_parts_indexes = create_parts_dictionary(blocks_df)
+
     blocks = {}
 
     for index, row in df.iterrows():
@@ -193,13 +207,6 @@ if __name__ == "__main__":
     )
     # df1 is LASKI, df2 is Zylbercweig
 
-    name_parts_indexes = create_parts_dictionary(df1)
-
-    # Note that the size of a set is equivalent to the support of the name_part that maps to it, as defined in the Yad Vashem-paper
-    print(
-        f"Biggest set size: {max([len(item) for item in name_parts_indexes.values()])}\n"
-    )
-
     blocks = {}
     try:
         with open(r"app\blocks.json") as file:
@@ -207,7 +214,7 @@ if __name__ == "__main__":
             blocks = json.load(file)
             blocks = {int(k): set(v) for k, v in blocks.items()}
     except OSError:  # NOTE we only do blocking if a blocks.json file doesn't exist!
-        blocks = create_blocks_with_normalized_scores(df2, name_parts_indexes, df1)
+        blocks = create_blocks_with_normalized_scores(df2, df1)
         # when we're done blocking, write the blocks to blocks.json. We must store our sets as lists due to the format
         blocks = {k: list(v) for k, v in blocks.items()}
         with open(r"app\blocks.json", "w", encoding="utf-8") as file:
