@@ -70,7 +70,7 @@ def create_blocks_with_set_union(df, name_parts_indexes, similarity_threshold=0.
     return blocks
 
 
-def create_blocks_with_part_scores(df, name_parts_indexes, block_size=200):
+def create_blocks_with_part_scores(df, name_parts_indexes, block_size=400):
     blocks = {}
 
     for index, row in df.iterrows():
@@ -95,6 +95,56 @@ def create_blocks_with_part_scores(df, name_parts_indexes, block_size=200):
                 for record in name_parts_indexes[key]:
                     # only update the scoreboard if the new score is greater than the score that was there already
                     scoreboard.update({record: max(scoreboard.get(record, 0), score)})
+        # now sort the scoreboard records by score and put the n best records in the block with n = block_size
+        # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
+        best_records = sorted(
+            scoreboard, key=lambda record: scoreboard[record], reverse=True
+        )[:block_size]
+        blocks.update({index: set(best_records)})
+    print("\n")
+    return blocks
+
+
+def create_blocks_with_normalized_scores(
+    # the same idea as create_blocks_with_part_scores, except we add the score instead of taking the max of the new and current score,
+    # and then normalize all the scores afterwards based on the maximum possible score for each name part
+    # the maximum score for a name part defaults to 1 but in the future, a callable could be used to calculate a max score dynamically
+    df,
+    name_parts_indexes,
+    blocks_df,  # working title. This is the df from which name_parts_indexes was created from i.e. the one to make blocks from
+    block_size=200,
+):
+    blocks = {}
+
+    for index, row in df.iterrows():
+        # a block is an index of a record and a set of all the indexes of records that it might match with
+        print(
+            f"Blocking record {index}",
+            end="\r",
+        )
+        name_parts = []
+        try:
+            name_parts = json.loads(row["name_parts"]).values()
+        except json.JSONDecodeError:
+            print(
+                f"Skipped record {index} due to bad name parts.                                "
+            )
+            continue
+        # scoreboard will map records to scores which we use to find out what to include in our blocks
+        scoreboard = {}
+        for name_part in name_parts:
+            for key in name_parts_indexes:
+                score = JaroWinkler().similarity(name_part, key)
+                for record in name_parts_indexes[key]:
+                    # only update the scoreboard if the new score is greater than the score that was there already
+                    scoreboard.update({record: (scoreboard.get(record, 0) + score)})
+        # we've filled out the scoreboard, so now we normalize it
+        for record in scoreboard:
+            max_score = 0
+            for record_name_part in json.loads(blocks_df.iloc[record]["name_parts"]):
+                max_score += 1  # NOTE this is where the maximum possible score for each name part goes!
+            scoreboard.update({record: (scoreboard.get(record) / max_score)})
+
         # now sort the scoreboard records by score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
@@ -157,7 +207,7 @@ if __name__ == "__main__":
             blocks = json.load(file)
             blocks = {int(k): set(v) for k, v in blocks.items()}
     except OSError:  # NOTE we only do blocking if a blocks.json file doesn't exist!
-        blocks = create_blocks_with_part_scores(df2, name_parts_indexes)
+        blocks = create_blocks_with_normalized_scores(df2, name_parts_indexes, df1)
         # when we're done blocking, write the blocks to blocks.json. We must store our sets as lists due to the format
         blocks = {k: list(v) for k, v in blocks.items()}
         with open(r"app\blocks.json", "w", encoding="utf-8") as file:
