@@ -35,7 +35,7 @@ def create_parts_dictionary(df):
 # print(df.iloc[2475])  <- indexes dataframes by integer value
 
 
-def create_blocks(df, name_parts_indexes, similarity_threshold=0.55):
+def create_blocks_with_set_union(df, name_parts_indexes, similarity_threshold=0.55):
     # given a dataset which *wasn't* used to create name_parts_indexes, blocks for each record
     # unfortunately, since transliteration doesn't produce the exact equivalent names, we can't just lookup our name parts the name_parts_indexes,
     # so we iterate over the keys and test for similarity instead.
@@ -66,6 +66,41 @@ def create_blocks(df, name_parts_indexes, similarity_threshold=0.55):
                     possible_matches = name_parts_indexes[key]
                     blocks.update({index: (blocks.get(index)).union(possible_matches)})
         block_size_sum += len(blocks[index])
+    print("\n")
+    return blocks
+
+
+def create_blocks_with_part_scores(df, name_parts_indexes, block_size=200):
+    blocks = {}
+
+    for index, row in df.iterrows():
+        # a block is an index of a record and a set of all the indexes of records that it might match with
+        print(
+            f"Blocking record {index}",
+            end="\r",
+        )
+        name_parts = []
+        try:
+            name_parts = json.loads(row["name_parts"]).values()
+        except json.JSONDecodeError:
+            print(
+                f"Skipped record {index} due to bad name parts.                                "
+            )
+            continue
+        # scoreboard will map records to scores which we use to find out what to include in our blocks
+        scoreboard = {}
+        for name_part in name_parts:
+            for key in name_parts_indexes:
+                score = JaroWinkler().similarity(name_part, key)
+                for record in name_parts_indexes[key]:
+                    # only update the scoreboard if the new score is greater than the score that was there already
+                    scoreboard.update({record: max(scoreboard.get(record, 0), score)})
+        # now sort the scoreboard records by score and put the n best records in the block with n = block_size
+        # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
+        best_records = sorted(
+            scoreboard, key=lambda record: scoreboard[record], reverse=True
+        )[:block_size]
+        blocks.update({index: set(best_records)})
     print("\n")
     return blocks
 
@@ -122,7 +157,7 @@ if __name__ == "__main__":
             blocks = json.load(file)
             blocks = {int(k): set(v) for k, v in blocks.items()}
     except OSError:  # NOTE we only do blocking if a blocks.json file doesn't exist!
-        blocks = create_blocks(df2, name_parts_indexes)
+        blocks = create_blocks_with_part_scores(df2, name_parts_indexes)
         # when we're done blocking, write the blocks to blocks.json. We must store our sets as lists due to the format
         blocks = {k: list(v) for k, v in blocks.items()}
         with open(r"app\blocks.json", "w", encoding="utf-8") as file:
