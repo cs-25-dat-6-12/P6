@@ -166,17 +166,31 @@ def write_transliterated_em(output_path):
     yiddish = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t")
     laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
     # fmt: on
+    # the name parts from records in the respective datasets, stored in the order they should appear
     name_parts_roman = []
     name_parts_LASKI = []
-    for i, row in em.iterrows():
+    # the indexes from records in the respective datasets, stored in the order they should appear
+    indexes_roman = []
+    indexes_LASKI = []
+    for _, row in em.iterrows():
         # get the name parts for the two people that match
         # fmt: off
+        
+        yiddish_mask = (yiddish["title"] == row["Zylbercweig Name"]).idxmax()
         name_parts_roman.append(
-            yiddish["name_parts"][(yiddish["title"] == row["Zylbercweig Name"]).idxmax()]
+            yiddish["name_parts"][yiddish_mask]
         )
         # NOTE: .idxmax() is used to make sure we only get a single element out
+        indexes_roman.append(
+            yiddish.index[yiddish_mask]
+        )
+        
+        laski_mask = (laski["title"] == row["title"]).idxmax()
         name_parts_LASKI.append(
-            laski["name_parts"][(laski["title"] == row["title"]).idxmax()]
+            laski["name_parts"][laski_mask]
+        )
+        indexes_LASKI.append(
+            laski.index[laski_mask]
         )
         # fmt: on
     name_parts_roman = pd.Series(name_parts_roman).apply(transliterate_name_parts)
@@ -184,6 +198,12 @@ def write_transliterated_em(output_path):
 
     name_parts_LASKI = pd.Series(name_parts_LASKI)
     em.insert(loc=0, column="name_parts_LASKI", value=name_parts_LASKI)
+
+    indexes_roman = pd.Series(indexes_roman)
+    em.insert(loc=0, column="index_roman", value=indexes_roman)
+
+    indexes_LASKI = pd.Series(indexes_LASKI)
+    em.insert(loc=0, column="index_LASKI", value=indexes_LASKI)
 
     em.to_csv(output_path, sep="\t")
 
