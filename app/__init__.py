@@ -185,7 +185,7 @@ def write_transliterated_em(output_path):
             yiddish.index[yiddish_mask]
         )
         
-        laski_mask = (laski["title"] == row["title"]).idxmax()
+        laski_mask = (laski["id"] == row["id"]).idxmax()
         name_parts_LASKI.append(
             laski["name_parts"][laski_mask]
         )
