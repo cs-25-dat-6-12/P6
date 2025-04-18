@@ -224,9 +224,12 @@ def calculate_recall_better(blocks, matches):
 
     for record in blocks:
         print(f"Finding recall for block {record}", end="\r")
-        for matching_record in match_blocks[record]:
-            if matching_record in blocks[record]:
-                found_matches += 1
+        try:
+            for matching_record in match_blocks[record]:
+                if matching_record in blocks[record]:
+                    found_matches += 1
+        except KeyError:
+            continue
     recall = found_matches / total_matches
     print("\n")
     return recall
