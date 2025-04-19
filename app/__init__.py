@@ -208,6 +208,28 @@ def write_transliterated_em(output_path):
     em.to_csv(output_path, sep="\t")
 
 
+def write_indexed_italy_em(output_path):
+    # this method will write the indexes of the records in matching pairs into the corresponding match and write the updated data to a file
+    em = pd.read_csv(r"datasets\testset13-YadVAshemItaly\em.tsv", sep="\t")
+    italy = pd.read_csv(r"datasets\testset13-YadVAshemItaly\yv_italy.tsv", sep="\t")
+    # the indexes from records in the respective datasets, stored in the order they should appear
+    indexes_1 = []
+    indexes_2 = []
+    for _, row in em.iterrows():
+        mask_1 = (italy["id"] == row["id_1"]).idxmax()
+        mask_2 = (italy["id"] == row["id_2"]).idxmax()
+        indexes_1.append(italy.index[mask_1])
+        indexes_2.append(italy.index[mask_2])
+
+    indexes_1 = pd.Series(indexes_1)
+    indexes_2 = pd.Series(indexes_2)
+
+    em.insert(loc=0, column="index_2", value=indexes_2)
+    em.insert(loc=0, column="index_1", value=indexes_1)
+
+    em.to_csv(output_path, sep="\t")
+
+
 def write_transliterated_matches(output_path):
     yiddish = pd.read_csv(
         "datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t"
@@ -260,6 +282,10 @@ if __name__ == "__main__":
     #    "datasets/testset15-Zylbercweig-Laski/Transliterated_matches.csv"
     # )
 
-    write_transliterated_em(
-        "datasets/testset15-Zylbercweig-Laski/transliterated_em.csv"
+    # write_transliterated_em(
+    #    "datasets/testset15-Zylbercweig-Laski/transliterated_em.csv"
+    # )
+
+    write_indexed_italy_em(
+        r"datasets\testset13-YadVAshemItaly\em_indexes.tsv",
     )

@@ -1,5 +1,6 @@
 import json
 import pandas as pd
+import winsound
 from strsimpy.jaro_winkler import JaroWinkler
 
 
@@ -39,7 +40,7 @@ def create_parts_dictionary(df):
 # print(df.iloc[2475])  <- indexes dataframes by integer value
 
 
-def create_blocks_with_set_union(df, blocks_df, similarity_threshold=0.60):
+def create_blocks_with_set_union(df, blocks_df, similarity_threshold=1):
     # given a dataset df to create blocks for, a dataset blocks_df to create blocks from, create blocks for each record in df
     # unfortunately, since transliteration doesn't produce the exact equivalent names, we can't just lookup our name parts the name_parts_indexes,
     # so we iterate over the keys and test for similarity instead.
@@ -77,9 +78,10 @@ def create_blocks_with_set_union(df, blocks_df, similarity_threshold=0.60):
     return blocks
 
 
-def create_blocks_with_part_scores(df, blocks_df, block_size=200):
+def create_blocks_with_part_scores(df, blocks_df, block_size=200, is_same_df=True):
     # instead of using a set union, assign a score to each record based on the most similar (or least distant) name part from some target record,
     # and then place the n records with the best score in the block for the target record, with n = block_size.
+    # if the two datasets are the same, we remove any mapping from an index to the same index, since that's a trivial match
 
     name_parts_indexes = create_parts_dictionary(blocks_df)
 
@@ -94,6 +96,11 @@ def create_blocks_with_part_scores(df, blocks_df, block_size=200):
         name_parts = []
         try:
             name_parts = json.loads(row["name_parts"]).values()
+            if len(name_parts) < 1:
+                print(
+                    f"Skipped record {index} due to missing name parts.                                "
+                )
+                continue
         except json.JSONDecodeError:
             print(
                 f"Skipped record {index} due to bad name parts.                                "
@@ -107,6 +114,9 @@ def create_blocks_with_part_scores(df, blocks_df, block_size=200):
                 for record in name_parts_indexes[key]:
                     # only update the scoreboard if the new score is greater than the score that was there already
                     scoreboard.update({record: max(scoreboard.get(record, 0), score)})
+        # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
+        if is_same_df:
+            del scoreboard[index]
         # now sort the scoreboard records by score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
@@ -118,13 +128,15 @@ def create_blocks_with_part_scores(df, blocks_df, block_size=200):
 
 
 def create_blocks_with_normalized_scores(
+    df,
+    blocks_df,
+    block_size=400,
+    is_same_df=True,
+):
     # the same idea as create_blocks_with_part_scores, except we add the score instead of taking the max of the new and current score,
     # and then normalize all the scores afterwards based on the maximum possible score for each name part
     # the maximum score for a name part defaults to 1 but in the future, a callable could be used to calculate a max score dynamically
-    df,
-    blocks_df,
-    block_size=300,
-):
+    # if the two datasets are the same, we remove any mapping from an index to the same index, since that's a trivial match
 
     name_parts_indexes = create_parts_dictionary(blocks_df)
 
@@ -139,6 +151,11 @@ def create_blocks_with_normalized_scores(
         name_parts = []
         try:
             name_parts = json.loads(row["name_parts"]).values()
+            if len(name_parts) < 1:
+                print(
+                    f"Skipped record {index} due to missing name parts.                                "
+                )
+                continue
         except json.JSONDecodeError:
             print(
                 f"Skipped record {index} due to bad name parts.                                "
@@ -162,7 +179,9 @@ def create_blocks_with_normalized_scores(
             for _ in range(comparisons[record]):
                 max_score += 1  # NOTE this is where the maximum possible score for each name part goes!
             scoreboard.update({record: (scoreboard.get(record) / max_score)})
-
+        # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
+        if is_same_df:
+            del scoreboard[index]
         # now sort the scoreboard records by score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
@@ -218,9 +237,9 @@ def calculate_recall_better(blocks, matches):
         # FIXME hardcoded column names isn't the greatest
         match_blocks.update(
             {
-                match["index_LASKI"]: match_blocks.get(
-                    match["index_LASKI"], set()
-                ).union({match["index_roman"]})
+                match["index_1"]: match_blocks.get(match["index_1"], set()).union(
+                    {match["index_2"]}
+                )
             }
         )
 
@@ -246,6 +265,14 @@ if __name__ == "__main__":
     )
     # df2 is LASKI, df1 is Zylbercweig
 
+    df2, df1, matches = load_data(
+        r"datasets\testset13-YadVAshemItaly\yv_italy.tsv",
+        r"datasets\testset13-YadVAshemItaly\yv_italy.tsv",
+        r"datasets\testset13-YadVAshemItaly\em_indexes.tsv",
+    )
+    # df2 is Italy, df1 is Italy
+    assert df2.equals(df1)
+
     blocks = {}
     try:
         with open(r"app\blocks.json") as file:
@@ -253,12 +280,18 @@ if __name__ == "__main__":
             blocks = json.load(file)
             blocks = {int(k): set(v) for k, v in blocks.items()}
     except OSError:  # NOTE we only do blocking if a blocks.json file doesn't exist!
-        blocks = create_blocks_with_part_scores(df2, df1)
+        try:
+            blocks = create_blocks_with_set_union(df2, df1)
+        except Exception as e:
+            # beep with frequency 1000 for 1000 ms if something goes wrong during blocking
+            winsound.Beep(1000, 1000)
+            raise e
         # when we're done blocking, write the blocks to blocks.json. We must store our sets as lists due to the format
         blocks = {k: list(v) for k, v in blocks.items()}
         with open(r"app\blocks.json", "w", encoding="utf-8") as file:
             json.dump(blocks, file, ensure_ascii=False, indent=4)
-
+        # beep with frequency 2500 for 1000 ms when blocking is done
+        winsound.Beep(2500, 1000)
     print(f"Biggest block size: {max([len(item) for item in blocks.values()])}")
     print(f"Smallest block size: {min([len(item) for item in blocks.values()])}\n")
 
