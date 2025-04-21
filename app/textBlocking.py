@@ -37,7 +37,13 @@ def create_parts_dictionary(df):
     return name_parts_indexes
 
 
-# print(df.iloc[2475])  <- indexes dataframes by integer value
+def create_parts_count_dictionary(name_parts_indexes):
+    # given the dictionary created by create_parts_dictionary, returns a dictionary that maps records to the number of name parts in them
+    parts_count = {}
+    for name_part in name_parts_indexes:
+        for record in name_parts_indexes[name_part]:
+            parts_count.update({record: parts_count.get(record, 0) + 1})
+    return parts_count
 
 
 def create_blocks_with_set_union(df, blocks_df, similarity_threshold=1):
@@ -49,13 +55,10 @@ def create_blocks_with_set_union(df, blocks_df, similarity_threshold=1):
     name_parts_indexes = create_parts_dictionary(blocks_df)
 
     blocks = {}
-    block_size_sum = 0
-    block_count = 0
     for index, row in df.iterrows():
         # a block is an index of a record and a set of all the indexes of records that it might match with
-        block_count += 1
         print(
-            f"Blocking record {index}. Avg block size: {block_size_sum/block_count}",
+            f"Blocking record {index}",
             end="\r",
         )
         blocks.update({index: set()})
@@ -73,15 +76,13 @@ def create_blocks_with_set_union(df, blocks_df, similarity_threshold=1):
                     # if the name_part is close enough to the key, union the current block with the new possible matches
                     possible_matches = name_parts_indexes[key]
                     blocks.update({index: (blocks.get(index)).union(possible_matches)})
-        block_size_sum += len(blocks[index])
     print("\n")
     return blocks
 
 
-def create_blocks_with_part_scores(df, blocks_df, block_size=200, is_same_df=True):
+def create_blocks_with_part_scores(df, blocks_df, block_size=400, is_same_df=False):
     # instead of using a set union, assign a score to each record based on the most similar (or least distant) name part from some target record,
     # and then place the n records with the best score in the block for the target record, with n = block_size.
-    # if the two datasets are the same, we remove any mapping from an index to the same index, since that's a trivial match
 
     name_parts_indexes = create_parts_dictionary(blocks_df)
 
@@ -96,11 +97,6 @@ def create_blocks_with_part_scores(df, blocks_df, block_size=200, is_same_df=Tru
         name_parts = []
         try:
             name_parts = json.loads(row["name_parts"]).values()
-            if len(name_parts) < 1:
-                print(
-                    f"Skipped record {index} due to missing name parts.                                "
-                )
-                continue
         except json.JSONDecodeError:
             print(
                 f"Skipped record {index} due to bad name parts.                                "
@@ -116,7 +112,7 @@ def create_blocks_with_part_scores(df, blocks_df, block_size=200, is_same_df=Tru
                     scoreboard.update({record: max(scoreboard.get(record, 0), score)})
         # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
         if is_same_df:
-            del scoreboard[index]
+            scoreboard.pop(index, None)
         # now sort the scoreboard records by score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
@@ -128,15 +124,11 @@ def create_blocks_with_part_scores(df, blocks_df, block_size=200, is_same_df=Tru
 
 
 def create_blocks_with_normalized_scores(
-    df,
-    blocks_df,
-    block_size=400,
-    is_same_df=True,
+    df, blocks_df, block_size=400, is_same_df=False
 ):
     # the same idea as create_blocks_with_part_scores, except we add the score instead of taking the max of the new and current score,
     # and then normalize all the scores afterwards based on the maximum possible score for each name part
     # the maximum score for a name part defaults to 1 but in the future, a callable could be used to calculate a max score dynamically
-    # if the two datasets are the same, we remove any mapping from an index to the same index, since that's a trivial match
 
     name_parts_indexes = create_parts_dictionary(blocks_df)
 
@@ -151,11 +143,6 @@ def create_blocks_with_normalized_scores(
         name_parts = []
         try:
             name_parts = json.loads(row["name_parts"]).values()
-            if len(name_parts) < 1:
-                print(
-                    f"Skipped record {index} due to missing name parts.                                "
-                )
-                continue
         except json.JSONDecodeError:
             print(
                 f"Skipped record {index} due to bad name parts.                                "
@@ -181,7 +168,7 @@ def create_blocks_with_normalized_scores(
             scoreboard.update({record: (scoreboard.get(record) / max_score)})
         # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
         if is_same_df:
-            del scoreboard[index]
+            scoreboard.pop(index, None)
         # now sort the scoreboard records by score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
@@ -192,38 +179,62 @@ def create_blocks_with_normalized_scores(
     return blocks
 
 
-def calculate_recall(blocks, df1, df2, matches):
-    # given blocks as a dictionary in the form generated by create_blocks(),
-    # where record IDs from df2 map to sets of record IDs from df1,
-    # and a dataset that shows the matches between df1 and df2, calculate recall.
-    total_matches = len(matches)
-    found_matches = 0
-    current_block = 0
-    for df2_index, set in blocks.items():
-        print(f"Finding recall for block {current_block}", end="\r")
-        current_block += 1
-        for df1_index in set:
-            df1_name_parts = df1.iloc[df1_index]["name_parts"]
-            df2_name_parts = df2.iloc[df2_index]["name_parts"]
+def create_blocks_with_threshold_scores(
+    df, blocks_df, block_size=400, similarity_threshold=0.7, is_same_df=False
+):
+    # the same idea as create_blocks_with_set_union, except we add a point to the relevant records instead of joining them with the block
+    # afterwards we normalize the scores by dividing each record's score with the number of name parts in the records
+    # and then place the n records with the best score in the block for the target record, with n = block_size.
+    # if the two datasets are the same, we remove any mapping from an index to the same index, since that's a trivial match
 
-            # FIXME hardcoding the columns here. Beware!
-            is_match = (
-                matches[matches["name_parts_roman"] == df1_name_parts][
-                    "name_parts_LASKI"
-                ]
-                == df2_name_parts
+    name_parts_indexes = create_parts_dictionary(blocks_df)
+    parts_count = create_parts_count_dictionary(name_parts_indexes)
+
+    blocks = {}
+
+    for index, row in df.iterrows():
+        # a block is an index of a record and a set of all the indexes of records that it might match with
+        print(
+            f"Blocking record {index}",
+            end="\r",
+        )
+        blocks.update({index: set()})
+        name_parts = []
+        try:
+            name_parts = json.loads(row["name_parts"]).values()
+        except json.JSONDecodeError:
+            blocks.update({index: set()})
+            print(
+                f"Skipped record {index} due to bad name parts.                                "
             )
-            sum = is_match.sum()
-            if sum > 0:
-                # NOTE did you know that there's a match that occurs twice? Look for "David Davidov" and "dvyd davydov" in transliterated_em.csv. That's why we add the sum and not just 1
-                found_matches += sum
-    recall = found_matches / total_matches
+            continue
+        # scoreboard will map records to scores which we use to find out what to include in our blocks
+        scoreboard = {}
+        for name_part in name_parts:
+            for key in name_parts_indexes:
+                if JaroWinkler().similarity(name_part, key) >= similarity_threshold:
+                    # if the name_part is close enough to the key, union the current block with the new possible matches
+                    for record in name_parts_indexes[key]:
+                        scoreboard.update({record: scoreboard.get(record, 0) + 1})
+        # NOTE we reuse parts_count to make sure all records have a score, which will guarantee the required block size
+        for record in parts_count:
+            scoreboard.update({record: scoreboard.get(record, 0)})
+        # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
+        if is_same_df:
+            scoreboard.pop(index, None)
+        # now sort the scoreboard records by normalized score and put the n best records in the block with n = block_size
+        # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
+        best_records = sorted(
+            scoreboard,
+            key=lambda record: (scoreboard[record] / parts_count[record]),
+            reverse=True,
+        )[:block_size]
+
+        blocks.update({index: set(best_records)})
     print("\n")
-    return recall
+    return blocks
 
 
-# TODO this alternative recall-finding method should be a lot faster, but it requires the matches-dataset to keep track of the IDs of the matching records instead of just their name parts!
-# REVIEW this method gives a better recall than the other one. This one seems like it's correct, so maybe there's a mistake in the other method?
 def calculate_recall_better(blocks, matches):
     # given blocks as a dictionary in the form generated by create_blocks(),
     # where record IDs from df2 map to sets of record IDs from df1,
@@ -237,9 +248,9 @@ def calculate_recall_better(blocks, matches):
         # FIXME hardcoded column names isn't the greatest
         match_blocks.update(
             {
-                match["index_1"]: match_blocks.get(match["index_1"], set()).union(
-                    {match["index_2"]}
-                )
+                match["index_LASKI"]: match_blocks.get(
+                    match["index_LASKI"], set()
+                ).union({match["index_roman"]})
             }
         )
 
@@ -263,15 +274,6 @@ if __name__ == "__main__":
         r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
         r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
     )
-    # df2 is LASKI, df1 is Zylbercweig
-
-    df2, df1, matches = load_data(
-        r"datasets\testset13-YadVAshemItaly\yv_italy.tsv",
-        r"datasets\testset13-YadVAshemItaly\yv_italy.tsv",
-        r"datasets\testset13-YadVAshemItaly\em_indexes.tsv",
-    )
-    # df2 is Italy, df1 is Italy
-    assert df2.equals(df1)
 
     blocks = {}
     try:
@@ -281,7 +283,7 @@ if __name__ == "__main__":
             blocks = {int(k): set(v) for k, v in blocks.items()}
     except OSError:  # NOTE we only do blocking if a blocks.json file doesn't exist!
         try:
-            blocks = create_blocks_with_set_union(df2, df1)
+            blocks = create_blocks_with_threshold_scores(df2, df1)
         except Exception as e:
             # beep with frequency 1000 for 1000 ms if something goes wrong during blocking
             winsound.Beep(1000, 1000)
