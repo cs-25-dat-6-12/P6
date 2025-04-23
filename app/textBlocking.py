@@ -1,6 +1,8 @@
 import json
 import pandas as pd
 import winsound
+import numpy as np
+from scipy.optimize import linear_sum_assignment
 from strsimpy.jaro_winkler import JaroWinkler
 
 
@@ -179,6 +181,72 @@ def create_blocks_with_normalized_scores(
     return blocks
 
 
+def create_blocks_with_normalized_scores_revised(
+    df, blocks_df, block_size=100, is_same_df=False
+):
+    # a revision of create_blocks_with_normalized_scores with the intention of getting closer to the original idea: Instead of summing up the maximum score for each name part,
+    # we try to find the maximum score possible for disjoint pairs of name parts i.e. if we have "Emil Larsen" and "Emilie Larson",
+    # then we only sum up the similarity of the pair "Emil" and "Emilie" and the pair "Larsen" and "Larson" (since those pairs maximize the sum of pairs' similarities),
+    # and then divide by the number of pairs to normalize the score. Thus, we essentially have to solve an "Assignment Problem" for each pair of records from df and blocks_df.
+
+    name_parts_indexes = create_parts_dictionary(blocks_df)
+    parts_count = create_parts_count_dictionary(name_parts_indexes)
+
+    blocks = {}
+
+    for index, row in df.iterrows():
+        # a block is an index of a record and a set of all the indexes of records that it might match with
+        print(
+            f"Blocking record {index}",
+            end="\r",
+        )
+        name_parts = []
+        try:
+            name_parts = json.loads(row["name_parts"]).values()
+        except json.JSONDecodeError:
+            print(
+                f"Skipped record {index} due to bad name parts.                                "
+            )
+            continue
+        # scoreboard will map records to scores which we use to find out what to include in our blocks
+        scoreboard = {}
+        # similarities will map records to an list of similarity scores which we concatenate as we find them.
+        # If len(name_parts) = n and there are m name parts in a record, then the list can be turned into a matrix of shape n x m
+        similarities = {}
+        for name_part in name_parts:
+            for key in name_parts_indexes:
+                score = JaroWinkler().similarity(name_part, key)
+                for record in name_parts_indexes[key]:
+                    # append the score to the list
+                    similarities.update(
+                        {record: similarities.get(record, list()) + [score]}
+                    )
+        # with all the similarities lists filled out, we find the best combination of name part pairs and calculate a score for each record
+        for record in similarities:
+            if len(name_parts) > 0 and parts_count[record] > 0:
+                array = np.array(similarities[record])
+                matrix = array.reshape(len(name_parts), parts_count[record])
+                row_indexes, col_indexes = linear_sum_assignment(matrix, maximize=True)
+                # a record's score is the sum of the matrix elements that maximize the Assignment Problem value divided by the number of elements chosen
+                scoreboard.update(
+                    {record: matrix[row_indexes, col_indexes].sum() / len(row_indexes)}
+                )
+            else:
+                scoreboard.update({record: 0})
+
+        # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
+        if is_same_df:
+            scoreboard.pop(index, None)
+        # now sort the scoreboard records by score and put the n best records in the block with n = block_size
+        # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
+        best_records = sorted(
+            scoreboard, key=lambda record: scoreboard[record], reverse=True
+        )[:block_size]
+        blocks.update({index: set(best_records)})
+    print("\n")
+    return blocks
+
+
 def create_blocks_with_threshold_scores(
     df, blocks_df, block_size=400, similarity_threshold=0.7, is_same_df=False
 ):
@@ -283,7 +351,7 @@ if __name__ == "__main__":
             blocks = {int(k): set(v) for k, v in blocks.items()}
     except OSError:  # NOTE we only do blocking if a blocks.json file doesn't exist!
         try:
-            blocks = create_blocks_with_threshold_scores(df2, df1)
+            blocks = create_blocks_with_normalized_scores_revised(df2, df1)
         except Exception as e:
             # beep with frequency 1000 for 1000 ms if something goes wrong during blocking
             winsound.Beep(1000, 1000)
@@ -293,7 +361,7 @@ if __name__ == "__main__":
         with open(r"app\blocks.json", "w", encoding="utf-8") as file:
             json.dump(blocks, file, ensure_ascii=False, indent=4)
         # beep with frequency 2500 for 1000 ms when blocking is done
-        winsound.Beep(2500, 1000)
+        winsound.Beep(1500, 1000)
     print(f"Biggest block size: {max([len(item) for item in blocks.values()])}")
     print(f"Smallest block size: {min([len(item) for item in blocks.values()])}\n")
 
