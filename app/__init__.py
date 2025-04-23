@@ -113,5 +113,134 @@ def writefunction(text):
         "text": list
     })
     out.to_csv("test", sep="\t")
+
+
+def write_transliterated_em(output_path):
+    # fmt: off
+    em = pd.read_csv("datasets/testset15-Zylbercweig-Laski/em_new.tsv", sep="\t")
+    yiddish = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t")
+    laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
+    # fmt: on
+    # the name parts from records in the respective datasets, stored in the order they should appear
+    name_parts_roman = []
+    name_parts_LASKI = []
+    # the indexes from records in the respective datasets, stored in the order they should appear
+    indexes_roman = []
+    indexes_LASKI = []
+    for _, row in em.iterrows():
+        # get the name parts for the two people that match
+        # fmt: off
+        
+        yiddish_mask = (yiddish["title"] == row["Zylbercweig Name"]).idxmax()
+        name_parts_roman.append(
+            yiddish["name_parts"][yiddish_mask]
+        )
+        # NOTE: .idxmax() is used to make sure we only get a single element out
+        indexes_roman.append(
+            yiddish.index[yiddish_mask]
+        )
+        
+        laski_mask = (laski["id"] == row["id"]).idxmax()
+        name_parts_LASKI.append(
+            laski["name_parts"][laski_mask]
+        )
+        indexes_LASKI.append(
+            laski.index[laski_mask]
+        )
+        # fmt: on
+    name_parts_roman = pd.Series(name_parts_roman).apply(transliterate_name_parts)
+    em.insert(loc=0, column="name_parts_roman", value=name_parts_roman)
+
+    name_parts_LASKI = pd.Series(name_parts_LASKI)
+    em.insert(loc=0, column="name_parts_LASKI", value=name_parts_LASKI)
+
+    indexes_roman = pd.Series(indexes_roman)
+    em.insert(loc=0, column="index_roman", value=indexes_roman)
+
+    indexes_LASKI = pd.Series(indexes_LASKI)
+    em.insert(loc=0, column="index_LASKI", value=indexes_LASKI)
+
+    em.to_csv(output_path, sep="\t")
+
+
+def write_indexed_italy_em(output_path):
+    # this method will write the indexes of the records in matching pairs into the corresponding match and write the updated data to a file
+    em = pd.read_csv(r"datasets\testset13-YadVAshemItaly\em.tsv", sep="\t")
+    italy = pd.read_csv(r"datasets\testset13-YadVAshemItaly\yv_italy.tsv", sep="\t")
+    # the indexes from records in the respective datasets, stored in the order they should appear
+    indexes_1 = []
+    indexes_2 = []
+    for _, row in em.iterrows():
+        mask_1 = (italy["id"] == row["id_1"]).idxmax()
+        mask_2 = (italy["id"] == row["id_2"]).idxmax()
+        indexes_1.append(italy.index[mask_1])
+        indexes_2.append(italy.index[mask_2])
+
+    indexes_1 = pd.Series(indexes_1)
+    indexes_2 = pd.Series(indexes_2)
+
+    em.insert(loc=0, column="index_2", value=indexes_2)
+    em.insert(loc=0, column="index_1", value=indexes_1)
+
+    em.to_csv(output_path, sep="\t")
+
+
+def write_transliterated_matches(output_path):
+    yiddish = pd.read_csv(
+        "datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t"
+    )
+    roman = pd.read_csv(
+        "datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv", sep="\t"
+    )
+    laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
+    (
+        id,
+        title_yiddish,
+        title_roman,
+        title_LASKI,
+        name_parts_yiddish,
+        name_parts_roman,
+        name_parts_LASKI,
+    ) = ([], [], [], [], [], [], [])
+    bool_table = yiddish.isna()
+    for i, row in yiddish.iterrows():
+        if not bool_table["geo_source"][i]:
+            source_string = row["geo_source"].replace("laski:", "")
+            for j, row2 in laski.iterrows():
+                if row2["id"] == source_string:
+                    id.append(row["id"])
+                    title_yiddish.append(row["title"])
+                    title_roman.append(roman["title"][i])
+                    title_LASKI.append(row2["title"])
+                    name_parts_yiddish.append(row["name_parts"])
+                    name_parts_roman.append(roman["name_parts"][i])
+                    name_parts_LASKI.append(row2["name_parts"])
+    output = pd.DataFrame(
+        {
+            "id": id,
+            "title_yiddish": title_yiddish,
+            "title_roman": title_roman,
+            "title_LASKI": title_LASKI,
+            "name_parts_yiddish": name_parts_yiddish,
+            "name_parts_roman": name_parts_roman,
+            "name_parts_LASKI": name_parts_LASKI,
+        }
+    )
+    output.to_csv(output_path, sep="\t")
+
+
 if __name__ == "__main__":
-    transliterate_zylbercweig("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv")
+    # transliterate_zylbercweig(
+    #    "datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv"
+    # )
+    # write_transliterated_matches(
+    #    "datasets/testset15-Zylbercweig-Laski/Transliterated_matches.csv"
+    # )
+
+    # write_transliterated_em(
+    #    "datasets/testset15-Zylbercweig-Laski/transliterated_em.csv"
+    # )
+
+    write_indexed_italy_em(
+        r"datasets\testset13-YadVAshemItaly\em_indexes.tsv",
+    )
