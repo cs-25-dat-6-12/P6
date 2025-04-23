@@ -112,6 +112,10 @@ def create_blocks_with_part_scores(df, blocks_df, block_size=400, is_same_df=Fal
                 for record in name_parts_indexes[key]:
                     # only update the scoreboard if the new score is greater than the score that was there already
                     scoreboard.update({record: max(scoreboard.get(record, 0), score)})
+        # make sure all records have a score in the scoreboard in order to guarantee block size
+        for record in list(blocks_df.index):
+            if scoreboard.get(record, None) == None:
+                scoreboard.update({record: 0})
         # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
         if is_same_df:
             scoreboard.pop(index, None)
@@ -161,6 +165,10 @@ def create_blocks_with_normalized_scores(
                     # only update the scoreboard if the new score is greater than the score that was there already
                     scoreboard.update({record: (scoreboard.get(record, 0) + score)})
                     comparisons.update({record: (comparisons.get(record, 0) + 1)})
+        # make sure all records have a score in the scoreboard in order to guarantee block size
+        for record in list(blocks_df.index):
+            if scoreboard.get(record, None) == None:
+                scoreboard.update({record: 0})
         # we've filled out the scoreboard, so now we normalize it
         for record in scoreboard:
             max_score = 0
@@ -182,7 +190,7 @@ def create_blocks_with_normalized_scores(
 
 
 def create_blocks_with_normalized_scores_revised(
-    df, blocks_df, block_size=100, is_same_df=False
+    df, blocks_df, block_size=100, is_same_df=True
 ):
     # a revision of create_blocks_with_normalized_scores with the intention of getting closer to the original idea: Instead of summing up the maximum score for each name part,
     # we try to find the maximum score possible for disjoint pairs of name parts i.e. if we have "Emil Larsen" and "Emilie Larson",
@@ -233,7 +241,10 @@ def create_blocks_with_normalized_scores_revised(
                 )
             else:
                 scoreboard.update({record: 0})
-
+        # make sure all records have a score in the scoreboard in order to guarantee block size
+        for record in list(blocks_df.index):
+            if scoreboard.get(record, None) == None:
+                scoreboard.update({record: 0})
         # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
         if is_same_df:
             scoreboard.pop(index, None)
@@ -284,9 +295,10 @@ def create_blocks_with_threshold_scores(
                     # if the name_part is close enough to the key, union the current block with the new possible matches
                     for record in name_parts_indexes[key]:
                         scoreboard.update({record: scoreboard.get(record, 0) + 1})
-        # NOTE we reuse parts_count to make sure all records have a score, which will guarantee the required block size
-        for record in parts_count:
-            scoreboard.update({record: scoreboard.get(record, 0)})
+        # make sure all records have a score in the scoreboard in order to guarantee block size
+        for record in blocks_df.index():
+            if scoreboard.get(record, None) == None:
+                scoreboard.update({record: 0})
         # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
         if is_same_df:
             scoreboard.pop(index, None)
@@ -316,9 +328,9 @@ def calculate_recall_better(blocks, matches):
         # FIXME hardcoded column names isn't the greatest
         match_blocks.update(
             {
-                match["index_LASKI"]: match_blocks.get(
-                    match["index_LASKI"], set()
-                ).union({match["index_roman"]})
+                match["index_2"]: match_blocks.get(match["index_2"], set()).union(
+                    {match["index_1"]}
+                )
             }
         )
 
@@ -338,9 +350,9 @@ def calculate_recall_better(blocks, matches):
 
 if __name__ == "__main__":
     df2, df1, matches = load_data(
-        r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv",
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
-        r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
+        r"datasets\testset13-YadVAshemItaly\yv_italy.tsv",
+        r"datasets\testset13-YadVAshemItaly\yv_italy.tsv",
+        r"datasets\testset13-YadVAshemItaly\em_indexes.tsv",
     )
 
     blocks = {}
