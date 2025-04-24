@@ -344,25 +344,30 @@ def run_experiments(candidates):
     dataframe = pd.DataFrame({
         "model_1": name1_list,
         "model_2": name2_list,
-        #"match_ids": matches,
         "recall": recall
     })
     dataframe.to_csv(f"datasets/testset15-Zylbercweig-Laski/experiment_results_{candidates}.csv", sep="\t")
 
 
-def run_blocking(name_list_1, name_list_2, candidates=200, model="Zylbercweig-LASKIall-distilroberta-v1"):
+def run_blocking_multiple_dataset(name_list_1, name_list_2, candidates=200, dataset_1_source="Zylbercweig", dataset_2_source="LASKI", model="Zylbercweig-LASKIall-distilroberta-v1"):
     collection = get_db(model)
     results_1, results_2 = [], []
     for name in name_list_1:
-        results_1.append(query_db_by_name(collection, name, "LASKI", candidates))
+        results_1.append(query_db_by_name(collection, name, dataset_2_source, candidates))
     for name in name_list_2:
-        results_2.append(query_db_by_name(collection, name, "Zylbercweig", candidates))
-    print(results_1[0]["documents"][0])
+        results_2.append(query_db_by_name(collection, name, dataset_1_source, candidates))
     return results_1, results_2
+
+def run_blocking_singular_dataset(name_list, candidates=200, model="Zylbercweig-LASKIall-distilroberta-v1"):
+    collection = get_db(model)
+    results = []
+    for name in name_list:
+        results.append(query_db_by_name(collection=collection, name=name, results_amount=candidates))
+    return results
 
 
 if __name__ == "__main__":
-    result_1, result_2 = run_blocking(["mads"], ["mads"])
+    result_1, result_2 = run_blocking_multiple_dataset(["mads"], ["mads"])
     print(result_1[0]["documents"][0])
     print(result_1[0]["distances"][0])
     print(result_1[0]["ids"][0])
