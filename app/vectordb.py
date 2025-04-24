@@ -42,7 +42,7 @@ def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name =
     return collection
 
 def add_name_to_db(collection, name, source, id):
-    collection.upsert(documents=name, ids=id, metadatas=[{"source": source}])
+    collection.upsert(documents=name, ids=id, metadatas=[{"source": source, "id": id}])
     
 def add_embedding_to_db(collection, embedding, name, source, id):
     collection.upsert(embeddings=embedding ,documents=name, ids=id, metadatas=[{"source": source}])
@@ -58,6 +58,9 @@ def query_db_by_embedding(collection, embedding, source="n/a", results_amount=3,
         return collection.query(query_embeddings=embedding, n_results=results_amount, where={"source": source}, include=include)
     else:
         return collection.query(query_embeddings=embedding, n_results=results_amount, include=include)
+
+def query_db_by_name_singular_dataset(collection, name, id, results_amount=3, include=["documents", "distances"]):
+    return collection.query(query_texts=name, n_results=results_amount, where={"id": {"$ne": id}}, include=include)
     
 def first_sur(name):
     name_parts = []
@@ -358,11 +361,11 @@ def run_blocking_multiple_dataset(name_list_1, name_list_2, candidates=200, data
         results_2.append(query_db_by_name(collection, name, dataset_1_source, candidates))
     return results_1, results_2
 
-def run_blocking_singular_dataset(name_list, candidates=200, model="Zylbercweig-LASKIall-distilroberta-v1"):
+def run_blocking_singular_dataset(name_list, id_list, candidates=200, model="Zylbercweig-LASKIall-distilroberta-v1"):
     collection = get_db(model)
     results = []
-    for name in name_list:
-        results.append(query_db_by_name(collection=collection, name=name, results_amount=candidates))
+    for i, name in enumerate(name_list):
+        results.append(query_db_by_name_singular_dataset(collection, name, id_list[i], candidates))
     return results
 
 
