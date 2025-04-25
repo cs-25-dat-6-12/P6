@@ -13,7 +13,7 @@ def get_db(name):
     collection = db_client.get_collection(name=name)
     return collection
 
-def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name = "all-MiniLM-L6-v2", pre_process=False, print_progress=False, transliterate=True):
+def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name = "all-distilroberta-v1", pre_process=False, print_progress=False, transliterate=True):
     db_client = chromadb.PersistentClient(path="./db/vectordb.chroma")
     embedding_function = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=embedding_model_name)
     collection = db_client.get_or_create_collection(name=name, embedding_function=embedding_function)
@@ -39,6 +39,22 @@ def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name =
         name = row["title"]
         id = row["id"]
         add_name_to_db(collection, name, "LASKI", id)
+    return collection
+
+def create_db_yad_vashem(name="Yad_Vashem", embedding_model_name="all-distilroberta-v1", print_progress=False):
+    db_client = chromadb.PersistentClient(path="./db/vectordb.chroma")
+    embedding_function = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=embedding_model_name)
+    collection = db_client.get_or_create_collection(name=name, embedding_function=embedding_function)
+    dataset = pd.read_csv("datasets/testset13-YadVAshemitaly/yv_italy.tsv", sep="\t")
+    bool = dataset.isna()
+    for i, row in dataset.iterrows():
+        if print_progress and i%100 == 0:
+            print("Yad Vashem", i)
+        name = row["title"]
+        id = str(row["id"])
+        if not (bool["id"][i] or bool["title"][i]):
+            add_name_to_db(collection, name, "Yad Vashem", id)
+    print("finished")
     return collection
 
 def add_name_to_db(collection, name, source, id):
@@ -79,7 +95,7 @@ def first_sur(name):
         name = name.replace("(", "").replace(")", "")
     return name
     
-def calc_db_recall(collection, matches_path="datasets/testset15-Zylbercweig-Laski/Transliterated_matches.csv",
+def calc_db_recall_multiple_datasets(collection, matches_path="datasets/testset15-Zylbercweig-Laski/Transliterated_matches.csv",
                    candidates=5, pre_process=False, print_progress=False, logging=False, transliterate=True):
     print(f'Starting recall calculations on the {collection.name} model, with {candidates} canditates per match and first/surname == {pre_process}')
     t = time.time()
@@ -144,11 +160,46 @@ def calc_db_recall(collection, matches_path="datasets/testset15-Zylbercweig-Lask
     print(f'finished in {time.time()-t} seconds')
     return id_table, id_laski, id_zylbercweig, dist_laski, dist_zylbercweig, dists_laski, dists_zylbercweig
 
+def calc_db_recall_singular_dataset(collection, matches_path="datasets/testset13-YadVAshemitaly/em.tsv", candidates=5, print_progress=False, logging=False):
+    print(f'Starting recall calculations on the {collection.name} model, with {candidates} canditates per match')
+    t = time.time()
+    dataset = pd.read_csv(matches_path, sep="\t")
+    matches = 0
+    for i, row in dataset.iterrows():
+        if print_progress and i % 50 == 0:
+            print(i, "out of:", len(dataset))
+        name_1 = row["title_1"]
+        name_2 = row["title_2"]
+        id_1 = row["id_1"]
+        id_2 = row["id_2"]
+        query_1 = query_db_by_name_singular_dataset(collection, name_1, id_1, candidates)
+        query_2 = query_db_by_name_singular_dataset(collection, name_2, id_2, candidates)
+        match = False
+        for name in query_1["documents"][0]:
+            if name == name_2:
+                match = True
+                break
+        if match == False:
+            for name in query_2["documents"][0]:
+                if name == name_1:
+                    match = True
+        if match == True:
+            matches += 1
+    recall = matches/len(dataset)
+    log_string = f'Modelname: {collection.name}\n' + f'Total matches checked: {len(dataset)} with {candidates} candidates per match\n' + f'Recall: {recall:.4f}'
+    if logging:
+        f = open("db/vectordb.chroma/logfile_recall.txt", "a")
+        f.write(log_string + "\n\n")
+        f.close()
+    else:
+        print(log_string)
+    print(f'finished in {time.time()-t} seconds')
+
 def find_model_similarity(model1, model2, candidates=5 ,model1_pre_process=False, model2_pre_process=False, print_progress=False, logging_similarity=False,
                           logging_recall=False, em_path="datasets/testset15-Zylbercweig-Laski/Transliterated_matches.csv", transliterate=True):
     # Calculates the Jaccard similarity between 2 models
-    id_table1 = calc_db_recall(model1, em_path, candidates=candidates, pre_process=model1_pre_process, print_progress=print_progress, logging=logging_recall, transliterate=transliterate)
-    id_table2 = calc_db_recall(model2, em_path, candidates=candidates, pre_process=model2_pre_process, print_progress=print_progress, logging=logging_recall, transliterate=transliterate)
+    id_table1 = calc_db_recall_multiple_datasets(model1, em_path, candidates=candidates, pre_process=model1_pre_process, print_progress=print_progress, logging=logging_recall, transliterate=transliterate)
+    id_table2 = calc_db_recall_multiple_datasets(model2, em_path, candidates=candidates, pre_process=model2_pre_process, print_progress=print_progress, logging=logging_recall, transliterate=transliterate)
     matches = 0
     for id in id_table1:
         if id in id_table2:
@@ -370,7 +421,10 @@ def run_blocking_singular_dataset(name_list, id_list, candidates=200, model="Zyl
 
 
 if __name__ == "__main__":
-    result_1, result_2 = run_blocking_multiple_dataset(["mads"], ["mads"])
-    print(result_1[0]["documents"][0])
-    print(result_1[0]["distances"][0])
-    print(result_1[0]["ids"][0])
+    #create_db_yad_vashem("Yad_Vashemall-distilroberta-v1", print_progress=True)
+    model = "Yad_Vashemall-distilroberta-v1"
+    collection = get_db(model)
+    calc_db_recall_singular_dataset(collection, "datasets/testset13-YadVAshemitaly/em.tsv", 10, print_progress=True, logging=True)
+    calc_db_recall_singular_dataset(collection, "datasets/testset13-YadVAshemitaly/em.tsv", 20, print_progress=True, logging=True)
+    calc_db_recall_singular_dataset(collection, "datasets/testset13-YadVAshemitaly/em.tsv", 50, print_progress=True, logging=True)
+    calc_db_recall_singular_dataset(collection, "datasets/testset13-YadVAshemitaly/em.tsv", 100, print_progress=True, logging=True)
