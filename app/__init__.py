@@ -1,20 +1,14 @@
 import pandas as pd
 
-
-# fmt: off
 class Alphabet():
     yiddish = ["א", "אַַ", "אָָ", "ב", "בֿ", "ג", "ד", "ה", "ו", "וּ", "ז", "ח", "ט", "י", "כ", "כּ", "ך", "ל", "מ", "ם", "נ", "ן", "ס", "ע", "פּ", "פֿ", "ף", "צ", "ץ", "ק", "ר", "ש", "שׂ", "ת", "תּ", "פ", " ", "(", ")", "-", "\"", "{", "}", "ײ"]
-    roman = ["", "a", "o", "b", "v", "g", "d", "h", "u", "u", "z", "kh", "t", "y", "kh", "k", "kh", "i", "m", "m", "n", "n", "s", "e", "p", "f", "f", "ts", "ts", "k", "r", "sh", "s", "s", "t", "", " ", "(", ")", "-", "\"", "{", "}", '"',",",".",":","l"]
+    roman = ["", "a", "o", "b", "v", "g", "d", "h", "u", "u", "z", "kh", "t", "y", "kh", "k", "kh", "i", "m", "m", "n", "n", "s", "e", "p", "f", "f", "ts", "ts", "k", "r", "sh", "s", "s", "t", "", " ", "(", ")", "-", "\"", "{", "}", ""]
     cases_yiddish = ["וו", "דזש", "זש", "טש", "וי", "יי", "ײַ"]
     cases_roman = ["v", "dzh", "zh", "tsh", "oy", "ey", "ay"]
-# fmt: on
+
 def transliterate_zylbercweig(output_path):
-    zylbercweig = pd.read_csv(
-        "datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t"
-    )
-    # fmt: off
-    id, lon, geo_id, geowkt, lat, title, geo_source, title_source, name_parts = [],[],[],[],[],[],[],[],[]
-    # fmt: on
+    zylbercweig = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t")
+    id, lon, geo_id, geowkt, lat, title, geo_source, title_source, name_parts = [], [], [], [], [], [], [], [], []
     for _, row in zylbercweig.iterrows():
         id.append(row["id"].replace("temp_", ""))
         lon.append(row["lon"])
@@ -25,21 +19,18 @@ def transliterate_zylbercweig(output_path):
         geo_source.append(row["geo_source"])
         title_source.append(row["title_source"])
         name_parts.append(transliterate_name_parts(row["name_parts"]))
-    output = pd.DataFrame(
-        {
-            "id": id,
-            "lon": lon,
-            "geo_id": geo_id,
-            "geowkt": geowkt,
-            "lat": lat,
-            "title": title,
-            "geo_source": geo_source,
-            "title_source": title_source,
-            "name_parts": name_parts,
-        }
-    )
+    output = pd.DataFrame({
+        "id": id,
+        "lon": lon,
+        "geo_id": geo_id,
+        "geowkt": geowkt,
+        "lat": lat,
+        "title": title,
+        "geo_source": geo_source,
+        "title_source": title_source,
+        "name_parts": name_parts
+    })
     output.to_csv(output_path, sep="\t")
-
 
 def transliterate_yiddish(input_string):
     transliterated_string = ""
@@ -48,89 +39,52 @@ def transliterate_yiddish(input_string):
         if skip > 0:
             skip = skip - 1
             continue
-        # keep roman characters
-        if input_string[i] in Alphabet.roman:
-            transliterated_string = transliterated_string + input_string[i]
-            continue
         for j, _ in enumerate(Alphabet.yiddish):
             if input_string[i] == Alphabet.yiddish[j]:
-                if i < len(input_string) - 1:
+                if i < len(input_string)-1:
                     # testing for diacritics
-                    if j == 0 and input_string[i + 1] == "ַ":
-                        transliterated_string = (
-                            transliterated_string + Alphabet.roman[1]
-                        )
-                        break
-                    elif j == 0 and input_string[i + 1] == "ָ":
-                        transliterated_string = (
-                            transliterated_string + Alphabet.roman[2]
-                        )
-                        break
-                    elif j == 3 and (
-                        input_string[i + 1] == "ֿ" or input_string[i + 1] == "ּ"
-                    ):
-                        transliterated_string = (
-                            transliterated_string + Alphabet.roman[4]
-                        )
-                        break
-                    elif j == 8 and input_string[i + 1] == "ּ":
-                        transliterated_string = (
-                            transliterated_string + Alphabet.roman[9]
-                        )
-                        break
-                    elif j == 14 and input_string[i + 1] == "ּ":
-                        transliterated_string = (
-                            transliterated_string + Alphabet.roman[15]
-                        )
-                        break
-                    elif j == 35 and input_string[i + 1] == "ּ":
-                        transliterated_string = (
-                            transliterated_string + Alphabet.roman[24]
-                        )
-                        break
-                    elif j == 35 and input_string[i + 1] == "ֿ":
-                        transliterated_string = (
-                            transliterated_string + Alphabet.roman[25]
-                        )
-                        break
-                    elif j == 31 and input_string[i + 1] == "ׂ":
-                        transliterated_string = (
-                            transliterated_string + Alphabet.roman[32]
-                        )
-                        break
-                    elif j == 33 and input_string[i + 1] == "ּ":
-                        transliterated_string = (
-                            transliterated_string + Alphabet.roman[34]
-                        )
-                        break
-
+                    if j == 0 and input_string[i+1] == "ַ":
+                        transliterated_string = transliterated_string + Alphabet.roman[1]
+                        continue
+                    elif j == 0 and input_string[i+1] == "ָ":
+                        transliterated_string = transliterated_string + Alphabet.roman[2]
+                        continue
+                    elif j == 3 and (input_string[i+1] == "ֿ"or input_string[i+1] == "ּ"):
+                        transliterated_string = transliterated_string + Alphabet.roman[4]
+                        continue
+                    elif j == 8 and input_string[i+1] == "ּ":
+                        transliterated_string = transliterated_string + Alphabet.roman[9]
+                        continue
+                    elif j == 14 and input_string[i+1] == "ּ":
+                        transliterated_string = transliterated_string + Alphabet.roman[15]
+                        continue
+                    elif j == 35 and input_string[i+1] == "ּ":
+                        transliterated_string = transliterated_string + Alphabet.roman[24]
+                        continue
+                    elif j == 35 and input_string[i+1] == "ֿ":
+                        transliterated_string = transliterated_string + Alphabet.roman[25]
+                        continue
+                    elif j == 31 and input_string[i+1] == "ׂ":
+                        transliterated_string = transliterated_string + Alphabet.roman[32]
+                        continue
+                    elif j == 33 and input_string[i+1] == "ּ":
+                        transliterated_string = transliterated_string + Alphabet.roman[34]
+                        continue
+                    
                     # special cases
                     for k, _ in enumerate(Alphabet.cases_yiddish):
-                        if (
-                            Alphabet.yiddish[j] == Alphabet.cases_yiddish[k][0]
-                            and input_string[i + 1] == Alphabet.cases_yiddish[k][1]
-                        ):
+                        if Alphabet.yiddish[j] == Alphabet.cases_yiddish[k][0] and input_string[i+1] == Alphabet.cases_yiddish[k][1]:
                             if k != 1:
-                                transliterated_string = (
-                                    transliterated_string + Alphabet.cases_roman[k]
-                                )
+                                transliterated_string = transliterated_string + Alphabet.cases_roman[k]
                                 skip = 1
-                            elif (
-                                i < len(input_string) - 2
-                                and input_string[i + 2] == Alphabet.cases_yiddish[k][2]
-                            ):
-                                transliterated_string = (
-                                    transliterated_string + Alphabet.cases_roman[k]
-                                )
+                            elif i < len(input_string)-2 and input_string[i+2] == Alphabet.cases_yiddish[k][2]:
+                                transliterated_string = transliterated_string + Alphabet.cases_roman[k]
                                 skip = 2
                     if skip == 0:
-                        transliterated_string = (
-                            transliterated_string + Alphabet.roman[j]
-                        )
+                        transliterated_string = transliterated_string + Alphabet.roman[j]
                 else:
                     transliterated_string = transliterated_string + Alphabet.roman[j]
     return transliterated_string
-
 
 def transliterate_name_parts(input_string):
     commaseplist = input_string.split(", ")
@@ -151,12 +105,13 @@ def transliterate_name_parts(input_string):
                 return_string = return_string + ", "
     return return_string
 
-
 def writefunction(text):
     list = []
     for char in text:
         list.append(char)
-    out = pd.DataFrame({"text": list})
+    out = pd.DataFrame({
+        "text": list
+    })
     out.to_csv("test", sep="\t")
 
 
