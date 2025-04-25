@@ -171,3 +171,4 @@ finetune_dataset_demo.jsonl
 finetune_dataset_demo1.jsonl
 app\lastAnswer.txt
 app\blocks.json
+app\batchfile.jsonl
