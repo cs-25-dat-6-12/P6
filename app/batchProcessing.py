@@ -101,7 +101,7 @@ def check_batch_status(batch_job_id):
     )
 
 
-def retrieve_batch_results(batch_job_id, filepath):
+def retrieve_batch_results(batch_job_id):
     print("Retrieving results...")
     batch_job = client.batches.retrieve(batch_job_id)
     result_file_id = batch_job.output_file_id
