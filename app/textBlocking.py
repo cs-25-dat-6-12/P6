@@ -346,6 +346,7 @@ def calculate_recall_better(blocks, matches):
     total_matches = len(matches)
     found_matches = 0
     match_blocks = create_match_blocks(matches)
+    missed_matches = {}
     # match_blocks maps records from one dataset to the records from the other dataset they have a confirmed match with
     # in the same "order" as the blocks i.e. we want to map records from the dataset we made blocks for to records from the dataset we made blocks with
 
@@ -357,10 +358,18 @@ def calculate_recall_better(blocks, matches):
             )
             if actual_match in blocks[matched_record]:
                 found_matches += 1
+            else:
+                missed_matches.update(
+                    {
+                        matched_record: missed_matches.get(matched_record, set()).union(
+                            {actual_match}
+                        )
+                    }
+                )
 
     recall = found_matches / total_matches
     print(f"\nFound {found_matches}/{total_matches} matches.\n")
-    return recall
+    return recall, missed_matches
 
 
 def calculate_precision(blocks, matches):
@@ -432,7 +441,17 @@ if __name__ == "__main__":
     print(f"Biggest block size: {max([len(item) for item in blocks.values()])}")
     print(f"Smallest block size: {min([len(item) for item in blocks.values()])}\n")
 
-    recall = calculate_recall_better(blocks, matches)
+    recall, missed_matches = calculate_recall_better(blocks, matches)
     print(f"Recall: {recall}")
     reduction_ration = calculate_reduction_ratio(blocks, df1, df2)
     print(f"Reduction ratio: {reduction_ration}")
+
+    with open(r"app\missed_matches.tsv", "w") as file:
+        file.write("df2_title\tdf2_name_parts\tdf1_title\tdf1_name_parts\n")
+        for record in missed_matches:
+            for missed_match in missed_matches[record]:
+                df2_row = df2.iloc[record]
+                df1_row = df1.iloc[missed_match]
+                file.write(
+                    f"{df2_row["title"]}\t{df2_row["name_parts"]}\t{df1_row["title"]}\t{df1_row["name_parts"]}\n"
+                )
