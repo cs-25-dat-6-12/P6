@@ -2,7 +2,7 @@ import time
 import openai
 import json
 import pandas as pd
-import datetime
+from datetime import datetime
 
 # template
 # {"custom_id": "request-1", "method": "POST", "url": "/v1/chat/completions", "body": {"model": "gpt-3.5-turbo-0125", "messages": [{"role": "system", "content": "You are a helpful assistant."},{"role": "user", "content": "Hello world!"}],"max_tokens": 1000}}
@@ -10,7 +10,7 @@ import datetime
 
 def update_history(string):
     with open(r"app\openAiBatchHistory.txt", "a") as history:
-        history.write(f"{datetime.datetime.now()}\t\t" + string + "\n\n")
+        history.write(f"{datetime.now()}\t\t" + string + "\n\n")
 
 
 def create_name_list(block, blocks_df):
@@ -127,7 +127,7 @@ def list_uploaded_files():
     print("Found the following files:")
     for file in files:
         print(
-            f"ID: {file.id}\t Filename: {file.filename}\t Created at: {file.created_at}\t Purpose: {file.purpose}"
+            f"ID: {file.id} \tFilename: {file.filename} \tCreated at: {datetime.fromtimestamp(file.created_at)} \tPurpose: {file.purpose}"
         )
 
 
@@ -151,7 +151,7 @@ def list_batch_jobs():
     print("Found the following batch jobs:")
     for job in jobs:
         print(
-            f"ID: {job.id}\t Input file: {job.input_file_id}\t Created at: {job.created_at}\t Status: {job.status}"
+            f"ID: {job.id} \tInput file: {job.input_file_id} \tCreated at: {datetime.fromtimestamp(job.created_at)} \tStatus: {job.status}"
         )
 
 
@@ -164,8 +164,12 @@ def cancel_batch_job(batch_job_id):
         try:
             job = client.batches.cancel(batch_job_id)
             print(f"Job status is {job.status}.")
+            update_history(f"\nBatch job with ID {batch_job_id} cancelled.")
         except openai.ConflictError:
             print("Job could not be cancelled.")
+            update_history(
+                f"\nBatch job with ID {batch_job_id} could not be cancelled."
+            )
 
 
 if __name__ == "__main__":
