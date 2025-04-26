@@ -101,23 +101,15 @@ def check_batch_status(batch_job_id):
     )
 
 
-def retrieve_batch_results(batch_job_id):
-    print("Retrieving results...")
-    batch_job = client.batches.retrieve(batch_job_id)
-    result_file_id = batch_job.output_file_id
-    if result_file_id == None:
-        print(f"Batch job is not complete. Status is {batch_job.status}")
-        update_history(
-            f"\nSaving of result of job with ID {batch_job_id} attempted. Status was {batch_job.status}:\n{batch_job}"
-        )
-        return
-    result = client.files.content(result_file_id).content
-    print("Enter filepath of output file:")
+def retrieve_file_content(file_object_id):
+    print("Retrieving file contents...")
+    content = client.files.content(file_object_id).content
+    print("Enter filepath to save at:")
     filepath = input()
     with open(filepath, "wb") as file:
-        file.write(result)
+        file.write(content)
     update_history(
-        f"\nSaving of result of job with ID {batch_job_id} completed.\nContent of result file with ID {result_file_id} saved to: {filepath}"
+        f"\nSaving of file with ID {file_object_id} completed.\nContents saved to: {filepath}"
     )
 
 
@@ -151,7 +143,7 @@ def list_batch_jobs():
     print("Found the following batch jobs:")
     for job in jobs:
         print(
-            f"ID: {job.id} \tInput file: {job.input_file_id} \tCreated at: {datetime.fromtimestamp(job.created_at)} \tStatus: {job.status}"
+            f"ID: {job.id} \tInput file: {job.input_file_id} \t Output file: {job.output_file_id}\tCreated at: {datetime.fromtimestamp(job.created_at)} \tStatus: {job.status}"
         )
 
 
@@ -200,7 +192,7 @@ if __name__ == "__main__":
     choice = ""
     while choice != "exit":
         print(
-            'Type "exit" to quit.\nType "write" to create a new batch file.\nType "upload" to upload a batch file (.jsonl).\nType "create" to create a new batch job with an uploaded file.\nType "check" for detailed information on an existing batch job.\nType "save" to save the results of a completed batch job locally.\nType "files" to view all available files.\nType "delete" to delete a file.\nType "jobs" to view all batch jobs.\nType "cancel" to cancel a batch job in progress.'
+            'Type "exit" to quit.\nType "write" to create a new batch file.\nType "upload" to upload a batch file (.jsonl).\nType "create" to create a new batch job with an uploaded file.\nType "check" for detailed information on an existing batch job.\nType "save" to save the contents of a file locally.\nType "files" to view all available files.\nType "delete" to delete a file.\nType "jobs" to view all batch jobs.\nType "cancel" to cancel a batch job in progress.'
         )
         choice = input()
         match choice:
@@ -236,9 +228,9 @@ if __name__ == "__main__":
 
             case "save":
                 print("SAVE selected.")
-                print("Enter ID of batch job:")
-                batch_job_id = input()
-                retrieve_batch_results(batch_job_id)
+                print("Enter ID of file to save:")
+                file_object_id = input()
+                retrieve_file_content(file_object_id)
 
             case "files":
                 print("FILES selected.")
