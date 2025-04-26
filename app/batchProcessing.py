@@ -1,5 +1,5 @@
 import time
-from openai import OpenAI
+import openai
 import json
 import pandas as pd
 import datetime
@@ -72,7 +72,7 @@ def prepare_batch_file(
 
 def upload_batch_file(filepath):
     print(
-        f'Are you sure you want to upload the file {filepath}?\nType "upload" to upload the file.'
+        f'Are you sure you want to upload the file {filepath}?\nType "upload" to upload the file:'
     )
     if input() == "upload":
         print("Uploading...")
@@ -121,6 +121,53 @@ def retrieve_batch_results(batch_job_id):
     )
 
 
+def list_uploaded_files():
+    print("Retrieving files...")
+    files = client.files.list()
+    print("Found the following files:")
+    for file in files:
+        print(
+            f"ID: {file.id}\t Filename: {file.filename}\t Created at: {file.created_at}\t Purpose: {file.purpose}"
+        )
+
+
+def delete_file(file_object_id):
+    print(
+        'Are you sure you want to delete this file?\nType "delete" to delete the file:'
+    )
+    if input() == "delete":
+        response = client.files.delete(file_object_id)
+        if response.deleted:
+            print("File deleted successfully.")
+            update_history(f"\nDeletion of file with ID {file_object_id} succeeded.")
+        else:
+            print("File could not be deleted.")
+            update_history(f"\nDeletion of file with ID {file_object_id} failed.")
+
+
+def list_batch_jobs():
+    print("Retrieving batch jobs...")
+    jobs = client.batches.list()
+    print("Found the following batch jobs:")
+    for job in jobs:
+        print(
+            f"ID: {job.id}\t Input file: {job.input_file_id}\t Created at: {job.created_at}\t Status: {job.status}"
+        )
+
+
+def cancel_batch_job(batch_job_id):
+    print(
+        'Are you sure you want to cancel this batch job?\nType "cancel" to cancel the job:'
+    )
+    if input() == "cancel":
+        print("Cancelling batch job...")
+        try:
+            job = client.batches.cancel(batch_job_id)
+            print(f"Job status is {job.status}.")
+        except openai.ConflictError:
+            print("Job could not be cancelled.")
+
+
 if __name__ == "__main__":
     df = pd.read_csv(
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
@@ -140,7 +187,7 @@ if __name__ == "__main__":
     with open("secrets.json", "r") as file:
         secrets = json.load(file)
         global client
-        client = OpenAI(
+        client = openai.OpenAI(
             organization=secrets["organization"],
             project=secrets["project"],
             api_key=secrets["api_key"],
@@ -149,7 +196,7 @@ if __name__ == "__main__":
     choice = ""
     while choice != "exit":
         print(
-            'Type "exit" to quit.\nType "write" to create a new batch file.\nType "upload" to upload a batch file (.jsonl).\nType "create" to create a new batch job with an uploaded file.\nType "check" to check the status of an existing batch job.\nType "save" to save the results of a completed batch job locally.'
+            'Type "exit" to quit.\nType "write" to create a new batch file.\nType "upload" to upload a batch file (.jsonl).\nType "create" to create a new batch job with an uploaded file.\nType "check" for detailed information on an existing batch job.\nType "save" to save the results of a completed batch job locally.\nType "files" to view all available files.\nType "delete" to delete a file.\nType "jobs" to view all batch jobs.\nType "cancel" to cancel a batch job in progress.'
         )
         choice = input()
         match choice:
@@ -188,3 +235,24 @@ if __name__ == "__main__":
                 print("Enter ID of batch job:")
                 batch_job_id = input()
                 retrieve_batch_results(batch_job_id)
+
+            case "files":
+                print("FILES selected.")
+                list_uploaded_files()
+
+            case "delete":
+                print("DELETE selected.")
+
+                print("Enter ID of file to delete:")
+                file_object_id = input()
+                delete_file(file_object_id)
+
+            case "jobs":
+                print("JOBS selected.")
+                list_batch_jobs()
+
+            case "cancel":
+                print("CANCEL selected.")
+                print("Enter ID of batch job:")
+                batch_job_id = input()
+                cancel_batch_job(batch_job_id)
