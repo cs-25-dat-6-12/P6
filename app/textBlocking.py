@@ -320,16 +320,19 @@ def create_blocks_with_threshold_scores(
 
 def create_match_blocks(matches):
     # given a dataset with confirmed matching name pairs, create the smallest possible blocks to contain these pairs.
-    # In other words: create blocks that only contain matches
+    # In other words: create blocks that only contain matches (or any other kind of pair given some column names)
+    keys_column = "index_LASKI"
+    values_column = "index_roman"
     match_blocks = {}
+    # match_blocks will be a dict where values from the "keys_column" will map to values from the "values_column"
 
     for _, match in matches.iterrows():
         # FIXME hardcoded column names isn't the greatest
         match_blocks.update(
             {
-                match["index_LASKI"]: match_blocks.get(
-                    match["index_LASKI"], set()
-                ).union({match["index_roman"]})
+                match[keys_column]: match_blocks.get(match[keys_column], set()).union(
+                    {match[values_column]}
+                )
             }
         )
 
