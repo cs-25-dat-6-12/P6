@@ -394,6 +394,9 @@ def calculate_precision(blocks, matches):
     for block in blocks.values():
         possible_matches += len(block)
 
+    if possible_matches == 0:
+        # this prevents a division by zero in case possible_matches is zero
+        return 0
     precision = found_matches / possible_matches
     print(f"\n{found_matches}/{possible_matches} identified matches are correct.\n")
     return precision

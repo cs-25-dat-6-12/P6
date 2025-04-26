@@ -54,6 +54,8 @@ if __name__ == "__main__":
             header=0,
         )
         precision = calculate_precision(output_blocks, matches)
-        recall = calculate_recall_better(output_blocks, matches)
-        f1 = 2 * (precision * recall) / (precision + recall)
+        recall, missed_matches = calculate_recall_better(output_blocks, matches)
+        f1 = 0
+        if (precision + recall) != 0:
+            f1 = 2 * (precision * recall) / (precision + recall)
         print(f"Precision: {precision}\nRecall: {recall}\nF1: {f1}")
