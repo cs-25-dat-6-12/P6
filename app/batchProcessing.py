@@ -177,7 +177,8 @@ if __name__ == "__main__":
     with open(r"app\blocks.json") as file:
         print("Retrieving blocks...")
         blocks = json.load(file)
-        blocks = {int(k): set(v) for k, v in blocks.items()}
+        # NOTE outside of textFiltering, blocks are lists, not sets!
+        blocks = {int(k): list(v) for k, v in blocks.items()}
 
     # setup the client as a global variable
     with open("secrets.json", "r") as file:

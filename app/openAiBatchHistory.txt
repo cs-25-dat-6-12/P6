@@ -53,3 +53,8 @@ Batch(id='batch_680b8b7bce5c8190b9277f219d8f5eca', completion_window='24h', crea
 2025-04-25 18:36:05.910220		
 Batch job with ID batch_680b8b7bce5c8190b9277f219d8f5eca checked. Status was completed:
 Batch(id='batch_680b8b7bce5c8190b9277f219d8f5eca', completion_window='24h', created_at=1745587067, endpoint='/v1/chat/completions', input_file_id='file-P4fGXBx6ZBrizg8Q45e7me', object='batch', status='completed', cancelled_at=None, cancelling_at=None, completed_at=1745588941, error_file_id=None, errors=None, expired_at=None, expires_at=1745673467, failed_at=None, finalizing_at=1745588940, in_progress_at=1745587069, metadata=None, output_file_id='file-VFpmGN2UpghXFJM4xMQHMk', request_counts=BatchRequestCounts(completed=3, failed=0, total=3))
+
+2025-04-26 17:41:18.204851		
+Saving of file with ID file-VFpmGN2UpghXFJM4xMQHMk completed.
+Contents saved to: app/batchfile3test_output.jsonl
+
