@@ -1,7 +1,7 @@
 import json
 
 import pandas as pd
-from textBlocking import calculate_recall_better, calculate_precision
+from textFiltering import calculate_recall_better, calculate_precision
 
 
 def load_response_booleans(output_filepath):
