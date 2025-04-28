@@ -58,3 +58,24 @@ Batch(id='batch_680b8b7bce5c8190b9277f219d8f5eca', completion_window='24h', crea
 Saving of file with ID file-VFpmGN2UpghXFJM4xMQHMk completed.
 Contents saved to: app/batchfile3test_output.jsonl
 
+2025-04-28 14:01:46.410549		
+Deletion of file with ID file-3eD7jyciqMuDJ3Mu0nqGaMJS succeeded.
+
+2025-04-28 14:02:01.154173		
+Deletion of file with ID file-hRV6yZSxBCdvCggrdXmk9uW7 succeeded.
+
+2025-04-28 14:02:12.303781		
+Deletion of file with ID file-aCycXmduUfpGnNFfy0697u3R succeeded.
+
+2025-04-28 14:02:43.750670		
+Batch file at app\batchfilePairsTest.jsonl uploaded:
+FileObject(id='file-EKeKuoL4oyGEkDjf7fogwy', bytes=774014, created_at=1745841763, filename='batchfilePairsTest.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-28 14:04:58.186433		
+Batch job for file ID file-EKeKuoL4oyGEkDjf7fogwy created:
+Batch(id='batch_680f6ee9e4348190822399ac09b4636e', completion_window='24h', created_at=1745841897, endpoint='/v1/chat/completions', input_file_id='file-EKeKuoL4oyGEkDjf7fogwy', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1745928297, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-28 14:18:30.177419		
+Saving of file with ID file-EhwedTAn9AMvoBGK6tLShb completed.
+Contents saved to: app/batchfilePairsTestOutput.jsonl
+
