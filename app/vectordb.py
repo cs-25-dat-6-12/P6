@@ -30,7 +30,7 @@ def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name =
         if pre_process:
             name = first_sur(name)
         id = row["id"]
-        add_name_to_db(collection, name, "Zylbercweig", str(id))
+        add_name_to_db(collection, name, "Zylbercweig", str(id), _)
     for i, row in laski.iterrows():
         if laski_bool["id"][i]:
             continue
@@ -38,7 +38,7 @@ def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name =
             print("LASKI", i)
         name = row["title"]
         id = row["id"]
-        add_name_to_db(collection, name, "LASKI", id)
+        add_name_to_db(collection, name, "LASKI", id, _)
     return collection
 
 def create_db_yad_vashem(name="Yad_Vashem", embedding_model_name="all-distilroberta-v1", print_progress=False):
@@ -53,12 +53,12 @@ def create_db_yad_vashem(name="Yad_Vashem", embedding_model_name="all-distilrobe
         name = row["title"]
         id = str(row["id"])
         if not (bool["id"][i] or bool["title"][i]):
-            add_name_to_db(collection, name, "Yad Vashem", id)
+            add_name_to_db(collection, name, "Yad Vashem", id, i)
     print("finished")
     return collection
 
-def add_name_to_db(collection, name, source, id):
-    collection.upsert(documents=name, ids=id, metadatas=[{"source": source, "id": id}])
+def add_name_to_db(collection, name, source, id, index):
+    collection.upsert(documents=name, ids=id, metadatas=[{"source": source, "id": id, "index": index}])
     
 def add_embedding_to_db(collection, embedding, name, source, id):
     collection.upsert(embeddings=embedding ,documents=name, ids=id, metadatas=[{"source": source}])
@@ -421,10 +421,7 @@ def run_blocking_singular_dataset(name_list, id_list, candidates=200, model="Zyl
 
 
 if __name__ == "__main__":
-    #create_db_yad_vashem("Yad_Vashemall-distilroberta-v1", print_progress=True)
-    model = "Yad_Vashemall-distilroberta-v1"
-    collection = get_db(model)
-    calc_db_recall_singular_dataset(collection, "datasets/testset13-YadVAshemitaly/em.tsv", 10, print_progress=True, logging=True)
-    calc_db_recall_singular_dataset(collection, "datasets/testset13-YadVAshemitaly/em.tsv", 20, print_progress=True, logging=True)
-    calc_db_recall_singular_dataset(collection, "datasets/testset13-YadVAshemitaly/em.tsv", 50, print_progress=True, logging=True)
-    calc_db_recall_singular_dataset(collection, "datasets/testset13-YadVAshemitaly/em.tsv", 100, print_progress=True, logging=True)
+    for model in Embedding_function_names.names:
+        create_db_zylbercweig_laski("Zylbercweig-LASKI" + model)
+        create_db_zylbercweig_laski("Zylbercweig-LASKI" + model + "first-sur")
+    create_db_yad_vashem("Zylbercweig-LASKI" + "all-distilroberta-v1")
