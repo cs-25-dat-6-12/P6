@@ -172,3 +172,4 @@ finetune_dataset_demo1.jsonl
 datasets/testset15-Zylbercweig-Laski/embeddings_text-embedding-3-small.csv
 app\lastAnswer.txt
 app\blocks.json
+app\batchfile.jsonl

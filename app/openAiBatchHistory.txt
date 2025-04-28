@@ -1,0 +1,55 @@
+2025-04-25 14:56:34.784852		
+Batch file at app\batchfile2test.jsonl uploaded:
+FileObject(id='file-TkCSraZ12EKYvuHdz6s8qU', bytes=503, created_at=1745585794, filename='batchfile2test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-25 14:56:48.076095		
+Batch job for file ID file-TkCSraZ12EKYvuHdz6s8qU created:
+Batch(id='batch_680b868fca148190be96df361a8f1ec7', completion_window='24h', created_at=1745585807, endpoint='/v1/chat/completions', input_file_id='file-TkCSraZ12EKYvuHdz6s8qU', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1745672207, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-25 14:56:54.222559		
+Batch job with ID batch_680b868fca148190be96df361a8f1ec7 checked. Status was in_progress:
+Batch(id='batch_680b868fca148190be96df361a8f1ec7', completion_window='24h', created_at=1745585807, endpoint='/v1/chat/completions', input_file_id='file-TkCSraZ12EKYvuHdz6s8qU', object='batch', status='in_progress', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1745672207, failed_at=None, finalizing_at=None, in_progress_at=1745585808, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=2))
+
+2025-04-25 14:58:55.628366		
+Batch file at app\batchfile3test.jsonl uploaded:
+FileObject(id='file-F4y1Sf3WiHGokQGdj6f6JZ', bytes=24745, created_at=1745585934, filename='batchfile3test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-25 14:59:04.875529		
+Batch job for file ID file-F4y1Sf3WiHGokQGdj6f6JZ created:
+Batch(id='batch_680b871885b48190b238ca8e8615a987', completion_window='24h', created_at=1745585944, endpoint='/v1/chat/completions', input_file_id='file-F4y1Sf3WiHGokQGdj6f6JZ', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1745672344, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-25 14:59:14.291537		
+Batch job with ID batch_680b871885b48190b238ca8e8615a987 checked. Status was in_progress:
+Batch(id='batch_680b871885b48190b238ca8e8615a987', completion_window='24h', created_at=1745585944, endpoint='/v1/chat/completions', input_file_id='file-F4y1Sf3WiHGokQGdj6f6JZ', object='batch', status='in_progress', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1745672344, failed_at=None, finalizing_at=None, in_progress_at=1745585945, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=3))
+
+2025-04-25 15:11:07.446057		
+Batch job with ID batch_680b871885b48190b238ca8e8615a987 checked. Status was completed:
+Batch(id='batch_680b871885b48190b238ca8e8615a987', completion_window='24h', created_at=1745585944, endpoint='/v1/chat/completions', input_file_id='file-F4y1Sf3WiHGokQGdj6f6JZ', object='batch', status='completed', cancelled_at=None, cancelling_at=None, completed_at=1745586151, error_file_id=None, errors=None, expired_at=None, expires_at=1745672344, failed_at=None, finalizing_at=1745586150, in_progress_at=1745585945, metadata=None, output_file_id='file-GvLP4QpKNZNseWRL6YBNKc', request_counts=BatchRequestCounts(completed=3, failed=0, total=3))
+
+2025-04-25 15:11:50.679969		
+Saving of result of job with ID batch_680b871885b48190b238ca8e8615a987 completed. 
+Content of result file with ID file-GvLP4QpKNZNseWRL6YBNKc saved to app\batchjob3testResult.txt
+
+2025-04-25 15:17:23.192595		
+Batch file at app\batchfile3test.jsonl uploaded:
+FileObject(id='file-P4fGXBx6ZBrizg8Q45e7me', bytes=24748, created_at=1745587042, filename='batchfile3test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-25 15:17:48.141495		
+Batch job for file ID file-P4fGXBx6ZBrizg8Q45e7me created:
+Batch(id='batch_680b8b7bce5c8190b9277f219d8f5eca', completion_window='24h', created_at=1745587067, endpoint='/v1/chat/completions', input_file_id='file-P4fGXBx6ZBrizg8Q45e7me', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1745673467, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-25 15:17:56.364430		
+Batch job with ID batch_680b8b7bce5c8190b9277f219d8f5eca checked. Status was in_progress:
+Batch(id='batch_680b8b7bce5c8190b9277f219d8f5eca', completion_window='24h', created_at=1745587067, endpoint='/v1/chat/completions', input_file_id='file-P4fGXBx6ZBrizg8Q45e7me', object='batch', status='in_progress', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1745673467, failed_at=None, finalizing_at=None, in_progress_at=1745587069, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=3))
+
+2025-04-25 15:27:01.228574		
+Saving of result of job with ID batch_680b8b7bce5c8190b9277f219d8f5eca attempted. Status was in_progress:
+Batch(id='batch_680b8b7bce5c8190b9277f219d8f5eca', completion_window='24h', created_at=1745587067, endpoint='/v1/chat/completions', input_file_id='file-P4fGXBx6ZBrizg8Q45e7me', object='batch', status='in_progress', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1745673467, failed_at=None, finalizing_at=None, in_progress_at=1745587069, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=3))
+
+2025-04-25 15:29:47.577532		
+Batch job with ID batch_680b8b7bce5c8190b9277f219d8f5eca checked. Status was in_progress:
+Batch(id='batch_680b8b7bce5c8190b9277f219d8f5eca', completion_window='24h', created_at=1745587067, endpoint='/v1/chat/completions', input_file_id='file-P4fGXBx6ZBrizg8Q45e7me', object='batch', status='in_progress', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1745673467, failed_at=None, finalizing_at=None, in_progress_at=1745587069, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=3))
+
+2025-04-25 18:36:05.910220		
+Batch job with ID batch_680b8b7bce5c8190b9277f219d8f5eca checked. Status was completed:
+Batch(id='batch_680b8b7bce5c8190b9277f219d8f5eca', completion_window='24h', created_at=1745587067, endpoint='/v1/chat/completions', input_file_id='file-P4fGXBx6ZBrizg8Q45e7me', object='batch', status='completed', cancelled_at=None, cancelling_at=None, completed_at=1745588941, error_file_id=None, errors=None, expired_at=None, expires_at=1745673467, failed_at=None, finalizing_at=1745588940, in_progress_at=1745587069, metadata=None, output_file_id='file-VFpmGN2UpghXFJM4xMQHMk', request_counts=BatchRequestCounts(completed=3, failed=0, total=3))

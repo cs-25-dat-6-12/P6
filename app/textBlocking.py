@@ -331,9 +331,9 @@ def calculate_recall_better(blocks, matches):
         # FIXME hardcoded column names isn't the greatest
         match_blocks.update(
             {
-                match["index_2"]: match_blocks.get(match["index_2"], set()).union(
-                    {match["index_1"]}
-                )
+                match["index_LASKI"]: match_blocks.get(
+                    match["index_LASKI"], set()
+                ).union({match["index_roman"]})
             }
         )
 
@@ -402,9 +402,9 @@ def calculate_reduction_ratio(blocks, df1, df2):
 
 if __name__ == "__main__":
     df2, df1, matches = load_data(
-        r"datasets\testset13-YadVAshemItaly\yv_italy.tsv",
-        r"datasets\testset13-YadVAshemItaly\yv_italy.tsv",
-        r"datasets\testset13-YadVAshemItaly\em_indexes.tsv",
+        r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv",
+        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
+        r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
     )
 
     blocks = {}
@@ -415,7 +415,7 @@ if __name__ == "__main__":
             blocks = {int(k): set(v) for k, v in blocks.items()}
     except OSError:  # NOTE we only do blocking if a blocks.json file doesn't exist!
         try:
-            blocks = create_blocks_with_threshold_scores(df2, df1)
+            blocks = create_blocks_with_part_scores(df2, df1)
         except Exception as e:
             # beep with frequency 1000 for 1000 ms if something goes wrong during blocking
             winsound.Beep(1000, 1000)
