@@ -88,6 +88,9 @@ def prepare_batch_file_individual_pairs(
 
     with open(filepath, "w", encoding="utf-8") as file:
         for record in blocks:
+            if record > 2:
+                # FIXME This if-statement is only for testing
+                break
             for possible_match in blocks[record]:
                 print(
                     f"Writing request for pair {record}#{possible_match}     ",
@@ -102,11 +105,11 @@ def prepare_batch_file_individual_pairs(
                         "messages": [
                             {
                                 "role": "developer",
-                                "content": f'You will be given a pair of jewish names. Your tasks is to determine whether or not the names refer to the same person. One of the names has been transliterated from the hebrew alphabet and may be different from the other name even if the names refer to the same person. Respond with "True" if the names refer to the same person and "False" if not.',
+                                "content": f'This is an entity resolution task. You will be given a pair of names that have been filtered from a larger dataset and are very likely to refer to the same person. The names may be very different from the other name even if the names refer to the same person. Respond only with "True" or "False". Justify your answer in 20 words or less.',
                             },
                             {
                                 "role": "user",
-                                "content": f'Do the names "{df.iloc[record]["title"]}" and "{blocks_df.iloc[possible_match]["title"]}" refer to the same person?',
+                                "content": f'"{df.iloc[record]["title"]}", "{blocks_df.iloc[possible_match]["title"]}"',
                             },
                         ],
                         "max_tokens": max_tokens_per_request,
