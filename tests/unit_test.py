@@ -5,7 +5,7 @@ import pandas as pd
 sys.path.append(os.path.dirname(os.path.abspath(__file__)).replace("\\tests", ""))
 sys.path.append(os.path.dirname(os.path.abspath(__file__)).replace("/tests", ""))
 import app
-from app.vectordb import get_db, query_db_by_name_singular_dataset
+from app.vectordb import get_db, query_db_by_name_singular_dataset, get_db, query_db_by_name, run_blocking_multiple_dataset, create_dict_from_block
 
 class Test_transliterate_yiddish():
     def test_individual_letter(self):
@@ -20,10 +20,16 @@ class Test_transliterate_yiddish():
         assert app.transliterate_yiddish("אַּבבּדול") == "abvdui"
 
 class Test_vectordb():
+    def test_get_and_query_db(self):
+        collection = get_db("Zylbercweig-LASKIall-distilroberta-v1")
+        result = query_db_by_name(collection, "test")
+        print(len(result["documents"][0]))
+        assert len(result["documents"][0]) == 3
+
     def test_match_itself_Yad_Vashem(self):
         model = "Yad_Vashemall-distilroberta-v1"
         collection = get_db(model)
-        dataset = pd.read_csv("datasets/testset13-YadVAshemitaly/yv_italy.tsv", sep="\t")
+        dataset = pd.read_csv("datasets\\testset13-YadVAshemitaly\\yv_italy.tsv", sep="\t")
         bool = dataset.isna()
         for i, row in dataset.iterrows():
             name = row["title"]
@@ -33,3 +39,8 @@ class Test_vectordb():
             query = query_db_by_name_singular_dataset(collection, name, id, 10)
             for id_temp in query["ids"][0]:
                 assert id_temp != id
+    
+    def test_create_dict(self):
+        result1, result2 = run_blocking_multiple_dataset(["test"], ["test"], 5)
+        assert create_dict_from_block(result1)
+        

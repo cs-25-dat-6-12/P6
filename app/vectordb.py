@@ -23,14 +23,14 @@ def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name =
         zylbercweig = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t")
     laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
     laski_bool = laski.isna()
-    for _, row in zylbercweig.iterrows():
-        if print_progress and _%100 == 0:
-            print("Zylbercweig", _)
+    for i, row in zylbercweig.iterrows():
+        if print_progress and i%100 == 0:
+            print("Zylbercweig", i)
         name = row["title"]
         if pre_process:
             name = first_sur(name)
         id = row["id"]
-        add_name_to_db(collection, name, "Zylbercweig", str(id), _)
+        add_name_to_db(collection, name, "Zylbercweig", str(id), i)
     for i, row in laski.iterrows():
         if laski_bool["id"][i]:
             continue
@@ -38,7 +38,7 @@ def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name =
             print("LASKI", i)
         name = row["title"]
         id = row["id"]
-        add_name_to_db(collection, name, "LASKI", id, _)
+        add_name_to_db(collection, name, "LASKI", id, i)
     return collection
 
 def create_db_yad_vashem(name="Yad_Vashem", embedding_model_name="all-distilroberta-v1", print_progress=False):
@@ -63,19 +63,19 @@ def add_name_to_db(collection, name, source, id, index):
 def add_embedding_to_db(collection, embedding, name, source, id):
     collection.upsert(embeddings=embedding ,documents=name, ids=id, metadatas=[{"source": source}])
 
-def query_db_by_name(collection, name, source="n/a", results_amount=3, include=["documents", "distances"]):
+def query_db_by_name(collection, name, source="n/a", results_amount=3, include=["documents", "distances", "metadatas"]):
     if not source == "n/a":
         return collection.query(query_texts=name, n_results=results_amount, where={"source": source}, include=include)
     else:
         return collection.query(query_texts=name, n_results=results_amount, include=include)
 
-def query_db_by_embedding(collection, embedding, source="n/a", results_amount=3, include=["documents", "distances"]):
+def query_db_by_embedding(collection, embedding, source="n/a", results_amount=3, include=["documents", "distances", "metadatas"]):
     if not source == "n/a":
         return collection.query(query_embeddings=embedding, n_results=results_amount, where={"source": source}, include=include)
     else:
         return collection.query(query_embeddings=embedding, n_results=results_amount, include=include)
 
-def query_db_by_name_singular_dataset(collection, name, id, results_amount=3, include=["documents", "distances"]):
+def query_db_by_name_singular_dataset(collection, name, id, results_amount=3, include=["documents", "distances", "metadatas"]):
     return collection.query(query_texts=name, n_results=results_amount, where={"id": {"$ne": id}}, include=include)
     
 def first_sur(name):
@@ -403,25 +403,53 @@ def run_experiments(candidates):
     dataframe.to_csv(f"datasets/testset15-Zylbercweig-Laski/experiment_results_{candidates}.csv", sep="\t")
 
 
-def run_blocking_multiple_dataset(name_list_1, name_list_2, candidates=200, dataset_1_source="Zylbercweig", dataset_2_source="LASKI", model="Zylbercweig-LASKIall-distilroberta-v1"):
+def run_blocking_multiple_dataset(name_list_1, name_list_2, candidates=200, dataset_1_source="Zylbercweig", dataset_2_source="LASKI", model="Zylbercweig-LASKIall-distilroberta-v1", print_progress=False):
     collection = get_db(model)
     results_1, results_2 = [], []
-    for name in name_list_1:
+    for i, name in enumerate(name_list_1):
+        if print_progress and i%100 == 0:
+            print("list 1:", i, "out of", len(name_list_1))
         results_1.append(query_db_by_name(collection, name, dataset_2_source, candidates))
-    for name in name_list_2:
+    for i, name in enumerate(name_list_2):
+        if print_progress and i%100 == 0:
+            print("list 2:", i, "out of", len(name_list_1))
         results_2.append(query_db_by_name(collection, name, dataset_1_source, candidates))
     return results_1, results_2
 
-def run_blocking_singular_dataset(name_list, id_list, candidates=200, model="Zylbercweig-LASKIall-distilroberta-v1"):
+def run_blocking_singular_dataset(name_list, id_list, candidates=200, model="Zylbercweig-LASKIall-distilroberta-v1", print_progress=False):
     collection = get_db(model)
     results = []
     for i, name in enumerate(name_list):
+        if print_progress and i%100 == 0:
+            print(i, "out of", len(name_list))
         results.append(query_db_by_name_singular_dataset(collection, name, id_list[i], candidates))
     return results
 
+def create_dict_from_block(block, file_name="n/a"):
+    dict = {}
+    for i, singular_block in enumerate(block):
+        table = []
+        for metadata in singular_block["metadatas"][0]:
+            table.append(metadata["index"])
+        dict.update({i:table})
+    if file_name != "n/a":
+        with open(f"datasets/testset15-Zylbercweig-Laski/dicts/{file_name}.json", "w") as f:
+            f.write(json.JSONEncoder().encode(dict).replace(", \"", ", \n\""))
+            #.replace(", ", ", \n").replace(": ", ": \n").replace("[", "[\n").replace("]", "\n]")
+    return dict
 
 if __name__ == "__main__":
-    for model in Embedding_function_names.names:
-        create_db_zylbercweig_laski("Zylbercweig-LASKI" + model)
-        create_db_zylbercweig_laski("Zylbercweig-LASKI" + model + "first-sur")
-    create_db_yad_vashem("Zylbercweig-LASKI" + "all-distilroberta-v1")
+    #for model in Embedding_function_names.names:
+        #create_db_zylbercweig_laski("Zylbercweig-LASKI" + model, print_progress=True)
+        #create_db_zylbercweig_laski("Zylbercweig-LASKI" + model + "first-sur", print_progress=True)
+    #create_db_yad_vashem("Zylbercweig-LASKI" + "all-distilroberta-v1", print_progress=True)
+    zylbercweig = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv", sep="\t")
+    laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
+    zyl_list, laski_list = [], []
+    for i, row in zylbercweig.iterrows():
+        zyl_list.append(row["title"])
+    for i, row in laski.iterrows():
+        laski_list.append(row["title"])
+    result1, result2 = run_blocking_multiple_dataset(zyl_list, laski_list, 100, print_progress=True)
+    create_dict_from_block(result1, "dict_Zylbercweig")
+    create_dict_from_block(result2, "dict_LASKI")
