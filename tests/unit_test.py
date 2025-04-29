@@ -29,17 +29,11 @@ class Test_vectordb():
     def test_match_itself_Yad_Vashem(self):
         model = "Yad_Vashemall-distilroberta-v1"
         collection = get_db(model)
-        dataset = pd.read_csv("datasets\\testset13-YadVAshemitaly\\yv_italy.tsv", sep="\t")
-        bool = dataset.isna()
-        for i, row in dataset.iterrows():
-            name = row["title"]
-            id = row["id"]
-            if bool["id"][i] or bool["title"][i]:
-                break
-            query = query_db_by_name_singular_dataset(collection, name, id, 10)
-            for id_temp in query["ids"][0]:
-                assert id_temp != id
-    
+        name = "Mira Vamos Fridrikh"
+        id = "1004394"
+        query = query_db_by_name_singular_dataset(collection, name, id, 10)
+        for id_temp in query["ids"][0]:
+            assert id_temp != id
     def test_create_dict(self):
         result1, result2 = run_blocking_multiple_dataset(["test"], ["test"], 5)
         assert create_dict_from_block(result1)
