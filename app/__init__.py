@@ -260,45 +260,48 @@ def write_transliterated_em(output_path):
     yiddish = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t")
     laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
     # fmt: on
-    # the name parts from records in the respective datasets, stored in the order they should appear
-    name_parts_roman = []
-    name_parts_LASKI = []
-    # the indexes from records in the respective datasets, stored in the order they should appear
-    indexes_roman = []
-    indexes_LASKI = []
-    for _, row in em.iterrows():
-        # get the name parts for the two people that match
+
+    # the indexes of the matches we should drop because we can't find their corresponding entries in Zylbercweig and/or LASKI
+    matches_to_drop = []
+
+    # add the new columns to the dataframe
+    em["index_roman"] = pd.Series()
+    em["index_LASKI"] = pd.Series()
+    em["name_parts_roman"] = pd.Series()
+    em["name_parts_LASKI"] = pd.Series()
+
+    for index, row in em.iterrows():
+        # for every row in the matches file, find the entries it's made of in Zylbercweig and LASKI and add their indexes to the match row
+
+        yiddish_mask = yiddish["title"] == row["Zylbercweig Name"]
+        laski_mask = laski["id"] == row["id"]
+
+        if laski_mask.sum() == 0 or yiddish_mask.sum() == 0:
+            print(
+                f"Dropping match with key {row["key"]}: Missing entry in LASKI or Zylbercweig."
+            )
+            matches_to_drop.append(index)
+            continue
+        if laski_mask.sum() + yiddish_mask.sum() > 2:
+            print(
+                f"Dropping match with key {row["key"]}: LASKI entries with same ID: {laski_mask.sum()}. Zylbercweig entries with same name: {yiddish_mask.sum()}"
+            )
+            matches_to_drop.append(index)
+            continue
+
+        # NOTE: .idxmax() is used to make sure we only get a single element out, which is fine since there should be at most 1
+        yiddish_index = yiddish_mask.idxmax()
+        laski_index = laski_mask.idxmax()
+
         # fmt: off
-        
-        yiddish_mask = (yiddish["title"] == row["Zylbercweig Name"]).idxmax()
-        name_parts_roman.append(
-            yiddish["name_parts"][yiddish_mask]
-        )
-        # NOTE: .idxmax() is used to make sure we only get a single element out
-        indexes_roman.append(
-            yiddish.index[yiddish_mask]
-        )
-        
-        laski_mask = (laski["id"] == row["id"]).idxmax()
-        name_parts_LASKI.append(
-            laski["name_parts"][laski_mask]
-        )
-        indexes_LASKI.append(
-            laski.index[laski_mask]
-        )
+        em["index_roman"].iat[index] = yiddish.index[yiddish_index]
+        em["index_LASKI"].iat[index] = laski.index[laski_index]
+        em["name_parts_roman"].iat[index] = transliterate_name_parts(yiddish["name_parts"][yiddish_index])
+        em["name_parts_LASKI"].iat[index] = laski["name_parts"][laski_index]
         # fmt: on
-    name_parts_roman = pd.Series(name_parts_roman).apply(transliterate_name_parts)
-    em.insert(loc=0, column="name_parts_roman", value=name_parts_roman)
 
-    name_parts_LASKI = pd.Series(name_parts_LASKI)
-    em.insert(loc=0, column="name_parts_LASKI", value=name_parts_LASKI)
-
-    indexes_roman = pd.Series(indexes_roman)
-    em.insert(loc=0, column="index_roman", value=indexes_roman)
-
-    indexes_LASKI = pd.Series(indexes_LASKI)
-    em.insert(loc=0, column="index_LASKI", value=indexes_LASKI)
-
+    # transliterate, drop the matches we couldn't find entries for, and write to the output_path
+    em = em.drop(index=matches_to_drop)
     em.to_csv(output_path, sep="\t")
 
 
