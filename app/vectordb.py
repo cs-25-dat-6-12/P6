@@ -13,7 +13,7 @@ def get_db(name):
     collection = db_client.get_collection(name=name)
     return collection
 
-def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name = "all-MiniLM-L6-v2", pre_process=False, print_progress=False, transliterate=True):
+def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name = "all-distilroberta-v1", pre_process=False, print_progress=False, transliterate=True):
     db_client = chromadb.PersistentClient(path="./db/vectordb.chroma")
     embedding_function = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=embedding_model_name)
     collection = db_client.get_or_create_collection(name=name, embedding_function=embedding_function)
@@ -23,14 +23,14 @@ def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name =
         zylbercweig = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t")
     laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
     laski_bool = laski.isna()
-    for _, row in zylbercweig.iterrows():
-        if print_progress and _%100 == 0:
-            print("Zylbercweig", _)
+    for i, row in zylbercweig.iterrows():
+        if print_progress and i%100 == 0:
+            print("Zylbercweig", i)
         name = row["title"]
         if pre_process:
             name = first_sur(name)
         id = row["id"]
-        add_name_to_db(collection, name, "Zylbercweig", str(id))
+        add_name_to_db(collection, name, "Zylbercweig", str(id), i)
     for i, row in laski.iterrows():
         if laski_bool["id"][i]:
             continue
@@ -38,28 +38,44 @@ def create_db_zylbercweig_laski(name="Zylbercweig-LASKI", embedding_model_name =
             print("LASKI", i)
         name = row["title"]
         id = row["id"]
-        add_name_to_db(collection, name, "LASKI", id)
+        add_name_to_db(collection, name, "LASKI", id, i)
     return collection
 
-def add_name_to_db(collection, name, source, id):
-    collection.upsert(documents=name, ids=id, metadatas=[{"source": source, "id": id}])
+def create_db_yad_vashem(name="Yad_Vashem", embedding_model_name="all-distilroberta-v1", print_progress=False):
+    db_client = chromadb.PersistentClient(path="./db/vectordb.chroma")
+    embedding_function = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=embedding_model_name)
+    collection = db_client.get_or_create_collection(name=name, embedding_function=embedding_function)
+    dataset = pd.read_csv("datasets/testset13-YadVAshemitaly/yv_italy.tsv", sep="\t")
+    bool = dataset.isna()
+    for i, row in dataset.iterrows():
+        if print_progress and i%100 == 0:
+            print("Yad Vashem", i)
+        name = row["title"]
+        id = str(row["id"])
+        if not (bool["id"][i] or bool["title"][i]):
+            add_name_to_db(collection, name, "Yad Vashem", id, i)
+    print("finished")
+    return collection
+
+def add_name_to_db(collection, name, source, id, index):
+    collection.upsert(documents=name, ids=id, metadatas=[{"source": source, "id": id, "index": index}])
     
 def add_embedding_to_db(collection, embedding, name, source, id):
     collection.upsert(embeddings=embedding ,documents=name, ids=id, metadatas=[{"source": source}])
 
-def query_db_by_name(collection, name, source="n/a", results_amount=3, include=["documents", "distances"]):
+def query_db_by_name(collection, name, source="n/a", results_amount=3, include=["documents", "distances", "metadatas"]):
     if not source == "n/a":
         return collection.query(query_texts=name, n_results=results_amount, where={"source": source}, include=include)
     else:
         return collection.query(query_texts=name, n_results=results_amount, include=include)
 
-def query_db_by_embedding(collection, embedding, source="n/a", results_amount=3, include=["documents", "distances"]):
+def query_db_by_embedding(collection, embedding, source="n/a", results_amount=3, include=["documents", "distances", "metadatas"]):
     if not source == "n/a":
         return collection.query(query_embeddings=embedding, n_results=results_amount, where={"source": source}, include=include)
     else:
         return collection.query(query_embeddings=embedding, n_results=results_amount, include=include)
 
-def query_db_by_name_singular_dataset(collection, name, id, results_amount=3, include=["documents", "distances"]):
+def query_db_by_name_singular_dataset(collection, name, id, results_amount=3, include=["documents", "distances", "metadatas"]):
     return collection.query(query_texts=name, n_results=results_amount, where={"id": {"$ne": id}}, include=include)
     
 def first_sur(name):
@@ -79,7 +95,7 @@ def first_sur(name):
         name = name.replace("(", "").replace(")", "")
     return name
     
-def calc_db_recall(collection, matches_path="datasets/testset15-Zylbercweig-Laski/Transliterated_matches.csv",
+def calc_db_recall_multiple_datasets(collection, matches_path="datasets/testset15-Zylbercweig-Laski/Transliterated_matches.csv",
                    candidates=5, pre_process=False, print_progress=False, logging=False, transliterate=True):
     print(f'Starting recall calculations on the {collection.name} model, with {candidates} canditates per match and first/surname == {pre_process}')
     t = time.time()
@@ -144,11 +160,46 @@ def calc_db_recall(collection, matches_path="datasets/testset15-Zylbercweig-Lask
     print(f'finished in {time.time()-t} seconds')
     return id_table, id_laski, id_zylbercweig, dist_laski, dist_zylbercweig, dists_laski, dists_zylbercweig
 
+def calc_db_recall_singular_dataset(collection, matches_path="datasets/testset13-YadVAshemitaly/em.tsv", candidates=5, print_progress=False, logging=False):
+    print(f'Starting recall calculations on the {collection.name} model, with {candidates} canditates per match')
+    t = time.time()
+    dataset = pd.read_csv(matches_path, sep="\t")
+    matches = 0
+    for i, row in dataset.iterrows():
+        if print_progress and i % 50 == 0:
+            print(i, "out of:", len(dataset))
+        name_1 = row["title_1"]
+        name_2 = row["title_2"]
+        id_1 = row["id_1"]
+        id_2 = row["id_2"]
+        query_1 = query_db_by_name_singular_dataset(collection, name_1, id_1, candidates)
+        query_2 = query_db_by_name_singular_dataset(collection, name_2, id_2, candidates)
+        match = False
+        for name in query_1["documents"][0]:
+            if name == name_2:
+                match = True
+                break
+        if match == False:
+            for name in query_2["documents"][0]:
+                if name == name_1:
+                    match = True
+        if match == True:
+            matches += 1
+    recall = matches/len(dataset)
+    log_string = f'Modelname: {collection.name}\n' + f'Total matches checked: {len(dataset)} with {candidates} candidates per match\n' + f'Recall: {recall:.4f}'
+    if logging:
+        f = open("db/vectordb.chroma/logfile_recall.txt", "a")
+        f.write(log_string + "\n\n")
+        f.close()
+    else:
+        print(log_string)
+    print(f'finished in {time.time()-t} seconds')
+
 def find_model_similarity(model1, model2, candidates=5 ,model1_pre_process=False, model2_pre_process=False, print_progress=False, logging_similarity=False,
                           logging_recall=False, em_path="datasets/testset15-Zylbercweig-Laski/Transliterated_matches.csv", transliterate=True):
     # Calculates the Jaccard similarity between 2 models
-    id_table1 = calc_db_recall(model1, em_path, candidates=candidates, pre_process=model1_pre_process, print_progress=print_progress, logging=logging_recall, transliterate=transliterate)
-    id_table2 = calc_db_recall(model2, em_path, candidates=candidates, pre_process=model2_pre_process, print_progress=print_progress, logging=logging_recall, transliterate=transliterate)
+    id_table1 = calc_db_recall_multiple_datasets(model1, em_path, candidates=candidates, pre_process=model1_pre_process, print_progress=print_progress, logging=logging_recall, transliterate=transliterate)
+    id_table2 = calc_db_recall_multiple_datasets(model2, em_path, candidates=candidates, pre_process=model2_pre_process, print_progress=print_progress, logging=logging_recall, transliterate=transliterate)
     matches = 0
     for id in id_table1:
         if id in id_table2:
@@ -352,25 +403,53 @@ def run_experiments(candidates):
     dataframe.to_csv(f"datasets/testset15-Zylbercweig-Laski/experiment_results_{candidates}.csv", sep="\t")
 
 
-def run_blocking_multiple_dataset(name_list_1, name_list_2, candidates=200, dataset_1_source="Zylbercweig", dataset_2_source="LASKI", model="Zylbercweig-LASKIall-distilroberta-v1"):
+def run_blocking_multiple_dataset(name_list_1, name_list_2, candidates=200, dataset_1_source="Zylbercweig", dataset_2_source="LASKI", model="Zylbercweig-LASKIall-distilroberta-v1", print_progress=False):
     collection = get_db(model)
     results_1, results_2 = [], []
-    for name in name_list_1:
+    for i, name in enumerate(name_list_1):
+        if print_progress and i%100 == 0:
+            print("list 1:", i, "out of", len(name_list_1))
         results_1.append(query_db_by_name(collection, name, dataset_2_source, candidates))
-    for name in name_list_2:
+    for i, name in enumerate(name_list_2):
+        if print_progress and i%100 == 0:
+            print("list 2:", i, "out of", len(name_list_1))
         results_2.append(query_db_by_name(collection, name, dataset_1_source, candidates))
     return results_1, results_2
 
-def run_blocking_singular_dataset(name_list, id_list, candidates=200, model="Zylbercweig-LASKIall-distilroberta-v1"):
+def run_blocking_singular_dataset(name_list, id_list, candidates=200, model="Zylbercweig-LASKIall-distilroberta-v1", print_progress=False):
     collection = get_db(model)
     results = []
     for i, name in enumerate(name_list):
+        if print_progress and i%100 == 0:
+            print(i, "out of", len(name_list))
         results.append(query_db_by_name_singular_dataset(collection, name, id_list[i], candidates))
     return results
 
+def create_dict_from_block(block, file_name="n/a"):
+    dict = {}
+    for i, singular_block in enumerate(block):
+        table = []
+        for metadata in singular_block["metadatas"][0]:
+            table.append(metadata["index"])
+        dict.update({i:table})
+    if file_name != "n/a":
+        with open(f"datasets/testset15-Zylbercweig-Laski/dicts/{file_name}.json", "w") as f:
+            f.write(json.JSONEncoder().encode(dict).replace(", \"", ", \n\""))
+            #.replace(", ", ", \n").replace(": ", ": \n").replace("[", "[\n").replace("]", "\n]")
+    return dict
 
 if __name__ == "__main__":
-    result_1, result_2 = run_blocking_multiple_dataset(["mads"], ["mads"])
-    print(result_1[0]["documents"][0])
-    print(result_1[0]["distances"][0])
-    print(result_1[0]["ids"][0])
+    #for model in Embedding_function_names.names:
+        #create_db_zylbercweig_laski("Zylbercweig-LASKI" + model, print_progress=True)
+        #create_db_zylbercweig_laski("Zylbercweig-LASKI" + model + "first-sur", print_progress=True)
+    #create_db_yad_vashem("Zylbercweig-LASKI" + "all-distilroberta-v1", print_progress=True)
+    zylbercweig = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv", sep="\t")
+    laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
+    zyl_list, laski_list = [], []
+    for i, row in zylbercweig.iterrows():
+        zyl_list.append(row["title"])
+    for i, row in laski.iterrows():
+        laski_list.append(row["title"])
+    result1, result2 = run_blocking_multiple_dataset(zyl_list, laski_list, 100, print_progress=True)
+    create_dict_from_block(result1, "dict_Zylbercweig")
+    create_dict_from_block(result2, "dict_LASKI")
