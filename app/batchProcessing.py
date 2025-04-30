@@ -22,6 +22,16 @@ def create_name_list(block, blocks_df):
     return name_list
 
 
+def create_name_pair_list(record, df, block, blocks_df):
+    # given a record and a set of record indexes, fetch each name from their dataframe and write a string where each name pair is on a new line
+    name_list = ""
+    for index in block:
+        name_list += df.iloc[record]["title"] + ", "
+        name_list += blocks_df.iloc[index]["title"] + "\n"
+    name_list = name_list[:-1]
+    return name_list
+
+
 def prepare_batch_file(
     blocks,
     df,
@@ -40,6 +50,9 @@ def prepare_batch_file(
 
     with open(filepath, "w", encoding="utf-8") as file:
         for record in blocks:
+            if record > 2:
+                # FIXME This if-statement is only for testing
+                break
             print(
                 f"Writing request for block {record}     ",
                 end="\r",
@@ -53,11 +66,13 @@ def prepare_batch_file(
                     "messages": [
                         {
                             "role": "developer",
-                            "content": f'You will be given a list of jewish names with one name on each line of the input. For each name you must determine if it refers to the same person as the target name "{df.iloc[record]["title"]}". The names have been transliterated from the hebrew alphabet and may be different from the target name even if the names refer to the same person. For each name, replace it with "True" or "False" depending on whether or not the names refer to the same person. You must provide an answer for all {len(blocks[record])} names.',
+                            "content": f'You will be given a list of jewish name pairs with one pair on each line of the input. For each pair of names you must determine if they refer to the same person. The second name in each pair name has been transliterated from the hebrew alphabet and may be different from the first name even if the names refer to the same person. For each pair, replace it with "True" or "False" depending on whether or not the names refer to the same person. You provide an answer for all {len(blocks[record])} pairs.',
                         },
                         {
                             "role": "user",
-                            "content": create_name_list(blocks[record], blocks_df),
+                            "content": create_name_pair_list(
+                                record, df, blocks[record], blocks_df
+                            ),
                         },
                     ],
                     "max_tokens": max_tokens_per_request,
@@ -86,7 +101,7 @@ def prepare_batch_file_individual_pairs(
         print(f"You have {10-i} seconds to cancel! ", end="\r")
         time.sleep(1)
 
-    with open(filepath, "w", encoding="utf-8") as file:
+    with open(filepath, "w") as file:
         for record in blocks:
             if record > 2:
                 # FIXME This if-statement is only for testing
@@ -105,7 +120,7 @@ def prepare_batch_file_individual_pairs(
                         "messages": [
                             {
                                 "role": "developer",
-                                "content": f'This is an entity resolution task. You will be given a pair of names that have been filtered from a larger dataset and are very likely to refer to the same person. The names may be very different from the other name even if the names refer to the same person. Respond only with "True" or "False". Justify your answer in 20 words or less.',
+                                "content": f'This is an entity resolution task. You will be given a pair of names that have been filtered from a larger dataset and are very likely to refer to the same person. The first name is written with the Roman alphabet and the second name is written with the Hebrew alphabet. Respond with "True" if the names refer to the same person and "False" otherwise. Justify your answer in 20 words or less.',
                             },
                             {
                                 "role": "user",
@@ -221,7 +236,7 @@ if __name__ == "__main__":
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
     )
     blocks_df = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
+        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig.tsv",
         sep="\t",
         header=0,
     )

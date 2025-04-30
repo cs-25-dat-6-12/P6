@@ -305,3 +305,93 @@ Batch(id='batch_680fb75df7448190966eef07d4312c6b', completion_window='24h', crea
 Batch job for file ID file-9nHjTVbm7G7S7UX9AsdMA1 created:
 Batch(id='batch_6810aae182e08190adc96f763c51c9eb', completion_window='24h', created_at=1745922785, endpoint='/v1/chat/completions', input_file_id='file-9nHjTVbm7G7S7UX9AsdMA1', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1746009185, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
 
+2025-04-29 16:18:01.926561		
+Saving of file with ID file-GWy1fchSHTXwzHyoquq7bv completed.
+Contents saved to: app\pairs7output.jsonl
+
+2025-04-29 16:20:38.196172		New batch file written at app/pairs8test.jsonl
+
+2025-04-29 16:21:05.349284		
+Batch file at app\pairs8test.jsonl uploaded:
+FileObject(id='file-FPDwxgpukeZrmKNpX7DFoy', bytes=769214, created_at=1745936463, filename='pairs8test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-29 16:21:13.758777		
+Batch job for file ID file-FPDwxgpukeZrmKNpX7DFoy created:
+Batch(id='batch_6810e058c7248190ac8a237bf579aaad', completion_window='24h', created_at=1745936472, endpoint='/v1/chat/completions', input_file_id='file-FPDwxgpukeZrmKNpX7DFoy', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1746022872, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-29 16:29:19.717254		
+Saving of file with ID file-4vpDUWYeEGXAnGxoZBCm8a completed.
+Contents saved to: app\pairs8output.jsonl
+
+2025-04-29 16:31:02.797270		New batch file written at app/pairs9test.jsonl
+
+2025-04-29 16:31:35.388212		
+Batch file at app\pairs9test.jsonl uploaded:
+FileObject(id='file-TdWQqP1Xcmb3CxEw8ZdQhi', bytes=777614, created_at=1745937094, filename='pairs9test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-29 16:31:42.236945		
+Batch job for file ID file-TdWQqP1Xcmb3CxEw8ZdQhi created:
+Batch(id='batch_6810e2cd18e081909f6772ca2821346e', completion_window='24h', created_at=1745937101, endpoint='/v1/chat/completions', input_file_id='file-TdWQqP1Xcmb3CxEw8ZdQhi', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1746023501, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-29 16:41:57.437908		
+Saving of file with ID file-W1VeA6thWhiHU1zKGVHE9v completed.
+Contents saved to: app\pairs9output.jsonl
+
+2025-04-29 16:44:09.338555		New batch file written at app/pairs10test.jsonl
+
+2025-04-29 16:44:49.051942		
+Batch file at app\pairs10test.jsonl uploaded:
+FileObject(id='file-RLvPFUkqoxK9uF5e3HaZyz', bytes=799214, created_at=1745937887, filename='pairs10test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-29 16:44:54.772061		
+Batch job for file ID file-RLvPFUkqoxK9uF5e3HaZyz created:
+Batch(id='batch_6810e5e5d3c08190ac515bd242f6b8f1', completion_window='24h', created_at=1745937893, endpoint='/v1/chat/completions', input_file_id='file-RLvPFUkqoxK9uF5e3HaZyz', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1746024293, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-29 17:11:15.162457		
+Saving of file with ID file-5we7gFkhJVjt9T9yfM8j2S completed.
+Contents saved to: app\pairs10test.jsonl
+
+2025-04-29 17:43:32.917376		New batch file written at app/list11test.jsonl
+
+2025-04-29 17:46:15.752543		
+Batch file at app\list11test.jsonl uploaded:
+FileObject(id='file-Ltrdknr1XBugadejXyczAd', bytes=41144, created_at=1745941574, filename='list11test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-29 17:46:21.506077		
+Batch job for file ID file-Ltrdknr1XBugadejXyczAd created:
+Batch(id='batch_6810f44c20408190a6ccd56e6e3251eb', completion_window='24h', created_at=1745941580, endpoint='/v1/chat/completions', input_file_id='file-Ltrdknr1XBugadejXyczAd', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1746027980, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-29 18:24:00.016922		New batch file written at app/scorePairs12test.jsonl
+
+2025-04-29 18:24:16.761411		
+Batch file at app\scorePairs12test.jsonl uploaded:
+FileObject(id='file-TtKFKKMgDEwozzLSNPv3Ez', bytes=981614, created_at=1745943855, filename='scorePairs12test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-29 18:24:23.632869		
+Batch job for file ID file-TtKFKKMgDEwozzLSNPv3Ez created:
+Batch(id='batch_6810fd3673b081909b060be51b4a4c52', completion_window='24h', created_at=1745943862, endpoint='/v1/chat/completions', input_file_id='file-TtKFKKMgDEwozzLSNPv3Ez', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1746030262, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-29 18:24:47.293296		
+Saving of file with ID file-XWVQq3psd8RfhPisqE8JUS completed.
+Contents saved to: app\list11output.jsonl
+
+2025-04-29 18:47:48.259637		
+Saving of file with ID file-JHtnSXENNprCjDAdWp9B6p completed.
+Contents saved to: scorePairs12output.jsonl
+
+2025-04-30 09:30:06.273384		New batch file written at app/hebrew13test.jsonl
+
+2025-04-30 09:33:21.235307		New batch file written at app/hebrew13test.jsonl
+
+2025-04-30 09:34:33.057968		
+Batch file at app\hebrew13test.jsonl uploaded:
+FileObject(id='file-DUXtcjoUgBdb7UdhCLrjqs', bytes=879895, created_at=1745998472, filename='hebrew13test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-30 09:34:38.215839		
+Batch job for file ID file-DUXtcjoUgBdb7UdhCLrjqs created:
+Batch(id='batch_6811d28e0758819097e27dc6dec97577', completion_window='24h', created_at=1745998478, endpoint='/v1/chat/completions', input_file_id='file-DUXtcjoUgBdb7UdhCLrjqs', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1746084878, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-30 10:13:25.567730		
+Saving of file with ID file-YLff1vKE8sqTTWk74qNouf completed.
+Contents saved to: app\hebrew13output.jsonl
+
