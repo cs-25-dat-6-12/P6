@@ -395,3 +395,61 @@ Batch(id='batch_6811d28e0758819097e27dc6dec97577', completion_window='24h', crea
 Saving of file with ID file-YLff1vKE8sqTTWk74qNouf completed.
 Contents saved to: app\hebrew13output.jsonl
 
+2025-04-30 14:55:49.765166		New batch file written at app/hebrew14test.jsonl
+
+2025-04-30 14:56:51.127764		New batch file written at app/hebrew14test.jsonl
+
+2025-04-30 14:57:36.138318		New batch file written at app/hebrew14test.jsonl
+
+2025-04-30 14:57:51.801645		
+Batch file at app\hebrew14test.jsonl uploaded:
+FileObject(id='file-4u1AKFT2ZCiuUmcAxw3h7P', bytes=764695, created_at=1746017870, filename='hebrew14test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-30 14:57:57.621209		
+Batch job for file ID file-4u1AKFT2ZCiuUmcAxw3h7P created:
+Batch(id='batch_68121e5526148190a281841ff65a0362', completion_window='24h', created_at=1746017877, endpoint='/v1/chat/completions', input_file_id='file-4u1AKFT2ZCiuUmcAxw3h7P', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1746104277, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-30 15:07:30.389957		New batch file written at app/matchesOnly15test.jsonl
+
+2025-04-30 15:08:13.054409		New batch file written at app/matchesOnly15test.jsonl
+
+2025-04-30 15:08:43.981127		
+Batch file at app\matchesOnly15test.jsonl uploaded:
+FileObject(id='file-5Ty2SuACcYrrCPXV6233C5', bytes=1145960, created_at=1746018522, filename='matchesOnly15test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-04-30 15:08:51.153946		
+Batch job for file ID file-5Ty2SuACcYrrCPXV6233C5 created:
+Batch(id='batch_681220e282748190b9e085f39a851e8b', completion_window='24h', created_at=1746018530, endpoint='/v1/chat/completions', input_file_id='file-5Ty2SuACcYrrCPXV6233C5', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1746104930, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-04-30 15:09:19.516145		
+Saving of file with ID file-NndRTnJdSoqPhFA6biedyT completed.
+Contents saved to: hebrew14output.jsonl
+
+2025-05-01 10:12:08.334577		
+Saving of file with ID file-FRqWH9y27MMjy49S7FTTnh completed.
+Contents saved to: app\matchesOnly15output.jsonl
+
+2025-05-01 10:23:53.068257		New batch file written at app/matchesOnly16test.jsonl
+
+2025-05-01 10:24:55.990860		
+Batch file at app\matchesOnly16test.jsonl uploaded:
+FileObject(id='file-HASneAHojaVofUBzM4hYpa', bytes=1072119, created_at=1746087895, filename='matchesOnly16test.jsonl', object='file', purpose='batch', status='processed', expires_at=None, status_details=None)
+
+2025-05-01 10:25:08.585374		
+Batch job for file ID file-HASneAHojaVofUBzM4hYpa created:
+Batch(id='batch_68132fe47e848190a63728096343136d', completion_window='24h', created_at=1746087908, endpoint='/v1/chat/completions', input_file_id='file-HASneAHojaVofUBzM4hYpa', object='batch', status='validating', cancelled_at=None, cancelling_at=None, completed_at=None, error_file_id=None, errors=None, expired_at=None, expires_at=1746174308, failed_at=None, finalizing_at=None, in_progress_at=None, metadata=None, output_file_id=None, request_counts=BatchRequestCounts(completed=0, failed=0, total=0))
+
+2025-05-01 10:33:55.122827		
+Saving of file with ID file-K2Na7MS8ynKsRVxvcT8W8D completed.
+Contents saved to: app\matchesOnly16output.jsonl
+
+2025-05-01 10:50:44.987129		New batch file written at app/partScores400batch.jsonl
+
+2025-05-01 11:21:42.955533		
+Saving of file with ID file-HASneAHojaVofUBzM4hYpa completed.
+Contents saved to: app\matchesOnly16test.jsonl
+
+2025-05-01 11:22:09.540810		
+Saving of file with ID file-K2Na7MS8ynKsRVxvcT8W8D completed.
+Contents saved to: app\matchesOnly16output.jsonl
+

@@ -3,6 +3,7 @@ import openai
 import json
 import pandas as pd
 from datetime import datetime
+from textFiltering import create_match_blocks
 
 # template
 # {"custom_id": "request-1", "method": "POST", "url": "/v1/chat/completions", "body": {"model": "gpt-3.5-turbo-0125", "messages": [{"role": "system", "content": "You are a helpful assistant."},{"role": "user", "content": "Hello world!"}],"max_tokens": 1000}}
@@ -103,9 +104,9 @@ def prepare_batch_file_individual_pairs(
 
     with open(filepath, "w") as file:
         for record in blocks:
-            if record > 2:
-                # FIXME This if-statement is only for testing
-                break
+            # if record > 99999:
+            # FIXME This if-statement is only for testing
+            # break
             for possible_match in blocks[record]:
                 print(
                     f"Writing request for pair {record}#{possible_match}     ",
@@ -120,11 +121,11 @@ def prepare_batch_file_individual_pairs(
                         "messages": [
                             {
                                 "role": "developer",
-                                "content": f'This is an entity resolution task. You will be given a pair of names that have been filtered from a larger dataset and are very likely to refer to the same person. The first name is written with the Roman alphabet and the second name is written with the Hebrew alphabet. Respond with "True" if the names refer to the same person and "False" otherwise. Justify your answer in 20 words or less.',
+                                "content": f'You will be given two names. The first name is written in the hebrew alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
                             },
                             {
                                 "role": "user",
-                                "content": f'"{df.iloc[record]["title"]}", "{blocks_df.iloc[possible_match]["title"]}"',
+                                "content": f'"{blocks_df.iloc[possible_match]["title"]}", "{df.iloc[record]["title"]}"',
                             },
                         ],
                         "max_tokens": max_tokens_per_request,
@@ -269,7 +270,10 @@ if __name__ == "__main__":
                 print("Enter filename for new .jsonl file:")
                 filename = input()
                 prepare_batch_file_individual_pairs(
-                    blocks, df, blocks_df, "app/" + filename + ".jsonl"
+                    blocks,
+                    df,
+                    blocks_df,
+                    "app/" + filename + ".jsonl",
                 )
 
             case "upload":
