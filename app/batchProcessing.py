@@ -104,9 +104,9 @@ def prepare_batch_file_individual_pairs(
 
     with open(filepath, "w") as file:
         for record in blocks:
-            if record > 99999:
-                # FIXME This if-statement is only for testing
-                break
+            # if record > 99999:
+            # FIXME This if-statement is only for testing
+            # break
             for possible_match in blocks[record]:
                 print(
                     f"Writing request for pair {record}#{possible_match}     ",
@@ -270,13 +270,7 @@ if __name__ == "__main__":
                 print("Enter filename for new .jsonl file:")
                 filename = input()
                 prepare_batch_file_individual_pairs(
-                    create_match_blocks(
-                        pd.read_csv(
-                            r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
-                            sep="\t",
-                            header=0,
-                        )
-                    ),
+                    blocks,
                     df,
                     blocks_df,
                     "app/" + filename + ".jsonl",
