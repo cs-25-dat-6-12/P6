@@ -216,10 +216,11 @@ def combine_jsonl(dst_filepath, src_directory):
                 for line in output_subfile:
                     line_count += 1
                     print(
-                        f"Writing line {line_count}/{len(output_subfile)} of {jsonl} to output file.",
+                        f"Writing line {line_count} of {jsonl} to output file.     ",
                         end="\r",
                     )
                     output_file.write(line)
+        print("\nAll done and ready for post-processing!")
 
 
 if __name__ == "__main__":
