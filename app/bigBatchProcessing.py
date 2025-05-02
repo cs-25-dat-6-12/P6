@@ -58,6 +58,9 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
                 f"Writing line {request_count} in file {subfiles_count}     ", end="\r"
             )
             current_subfile.write(line)
+    winsound.Beep(1000, 300)
+    winsound.Beep(2000, 300)
+    winsound.Beep(2500, 300)
 
 
 def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=16):
@@ -221,6 +224,9 @@ def combine_jsonl(dst_filepath, src_directory):
                     )
                     output_file.write(line)
         print("\nAll done and ready for post-processing!")
+    winsound.Beep(1000, 300)
+    winsound.Beep(2000, 300)
+    winsound.Beep(2500, 300)
 
 
 if __name__ == "__main__":
