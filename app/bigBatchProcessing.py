@@ -62,57 +62,86 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
 
 def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=16):
     # given a directory of jsonl-files, create a batch job for each file and write the batch IDs at the given filepath.
+    directory_content = os.listdir(src_directory)
+    directory_jsonl_files = filter(lambda x: x.endswith(".jsonl"), directory_content)
 
-    with open(dst_filepath, "w") as tracking_file:
-        tracking_file.write(
-            "Batch ID,Filename,Input File ID,Status,Started,Downloaded\n"
-        )
-        directory_content = os.listdir(src_directory)
+    # if the tracking file already exists, don't write a new one
+    if not os.path.isfile(dst_filepath):
+        with open(dst_filepath, "w") as tracking_file:
+            tracking_file.write(
+                "Batch ID,Filename,Input File ID,Status,Started,Downloaded\n"
+            )
+            for jsonl in directory_jsonl_files:
+                tracking_file.write(f"{None},{jsonl},{None},{None},{False},{False}\n")
 
-        # get the files that exist on the client before we start working
-        available_files = client.files.list()
-        available_files_names = [item.filename for item in available_files]
+    # get the files that exist on the client before we start working
+    available_files = client.files.list()
+    available_files_names = [item.filename for item in available_files]
 
-        for jsonl in filter(lambda x: x.endswith(".jsonl"), directory_content):
-            batch_started = False
-            sleep_time = initial_sleep_time
-            # upload the file
-            # NOTE we check if the file has already been uploaded and only upload if it hasn't!
-            if jsonl not in available_files_names:
-                path = src_directory + jsonl
-                batch_file = client.files.create(file=open(path, "rb"), purpose="batch")
-            else:
-                batch_file = available_files[available_files_names.index(jsonl)]
-            while not batch_started:
-                winsound.Beep(1000, 500)
-                try:
-                    # start the batch job
-                    file_id = batch_file.id
-                    batch_job = client.batches.create(
-                        input_file_id=file_id,
-                        endpoint="/v1/chat/completions",
-                        completion_window="24h",
-                    )
+    # make a list of the names of the files we should upload and start batches for
+    tracking_file = open(dst_filepath, "r")
+    dict_reader = csv.DictReader(tracking_file)
+    tracked_jobs = list(dict_reader)
+    tracking_file.close()
+    jobs_to_start = []
+    for tracked_job in tracked_jobs:
+        if tracked_job["Started"] == "False":
+            jobs_to_start.append(tracked_job["Filename"])
 
-                    winsound.Beep(2000, 500)
-                    print(f"Created job for {jsonl}")
-                    tracking_file.write(
-                        f"{batch_job.id},{jsonl},{file_id},{batch_job.status},{True},{False}\n"
-                    )
-                    batch_started = True
-                except openai.RateLimitError:
-                    winsound.Beep(500, 500)
-                    for i in range(sleep_time):
-                        print(
-                            f"Rate limit hit! Waiting {sleep_time-i} seconds before trying to create a batch job for {jsonl}.     ",
-                            end="\r",
+    for jsonl in jobs_to_start:
+        batch_started = False
+        sleep_time = initial_sleep_time
+
+        # upload the file if it's not available already
+        if jsonl not in available_files_names:
+            path = src_directory + jsonl
+            batch_file = client.files.create(file=open(path, "rb"), purpose="batch")
+        else:
+            batch_file = available_files[available_files_names.index(jsonl)]
+        while not batch_started:
+            winsound.Beep(1000, 500)
+            try:
+                # start the batch job
+                file_id = batch_file.id
+                batch_job = client.batches.create(
+                    input_file_id=file_id,
+                    endpoint="/v1/chat/completions",
+                    completion_window="24h",
+                )
+                batch_started = True
+                winsound.Beep(2000, 500)
+                print(f"Created job for {jsonl}")
+                # we managed to create a batch job! Update the tracking file
+                for tracked_job in tracked_jobs:
+                    # find the tracked job with the right filename. # NOTE we assume there are no duplicate filenames
+                    if tracked_job["Filename"] == jsonl:
+                        tracked_job.update(
+                            {
+                                "Batch ID": batch_job.id,
+                                "Input File ID": file_id,
+                                "Status": batch_job.status,
+                                "Started": True,
+                            }
                         )
-                        time.sleep(1)
-                    sleep_time *= 2
-        # celebratory beeps to indicate that we're done
-        winsound.Beep(1000, 300)
-        winsound.Beep(2000, 300)
-        winsound.Beep(2500, 300)
+                        with open(dst_filepath, "w") as tracking_file:
+                            keys = tracked_jobs[0].keys()
+                            dict_writer = csv.DictWriter(tracking_file, keys)
+                            dict_writer.writeheader()
+                            dict_writer.writerows(tracked_jobs)
+                        break
+            except openai.RateLimitError:
+                winsound.Beep(500, 500)
+                for i in range(sleep_time):
+                    print(
+                        f"Rate limit hit! Waiting {sleep_time-i} seconds before trying to create a batch job for {jsonl}.     ",
+                        end="\r",
+                    )
+                    time.sleep(1)
+                sleep_time *= 2
+    # celebratory beeps to indicate that we're done
+    winsound.Beep(1000, 300)
+    winsound.Beep(2000, 300)
+    winsound.Beep(2500, 300)
 
 
 def track_batches(src_filepath, dst_directory):
