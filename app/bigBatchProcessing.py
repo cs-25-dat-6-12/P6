@@ -146,6 +146,11 @@ def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=16):
 
 def track_batches(src_filepath, dst_directory):
     # given the path to a file where each line is a batch ID, track their completeness and save the contents of completed batches to the given directory
+    # create the directory we need to put our subfiles into
+    try:
+        os.makedirs(dst_directory)
+    except FileExistsError:
+        print("Output directory already exists. Make sure you know what you're doing.")
     while True:
         winsound.Beep(1000, 200)
         winsound.Beep(1000, 200)
@@ -166,7 +171,7 @@ def track_batches(src_filepath, dst_directory):
                 # download completed batches (only once)
                 result = client.files.content(batch_job.output_file_id).content
                 path = dst_directory + tracked_job["Filename"]
-                with open(path, "w") as output_file:
+                with open(path, "wb") as output_file:
                     output_file.write(result)
                     print(
                         f"Result of batch for {tracked_job["Filename"]} saved to {path}"
