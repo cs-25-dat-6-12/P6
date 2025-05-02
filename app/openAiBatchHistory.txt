@@ -453,3 +453,5 @@ Contents saved to: app\matchesOnly16test.jsonl
 Saving of file with ID file-K2Na7MS8ynKsRVxvcT8W8D completed.
 Contents saved to: app\matchesOnly16output.jsonl
 
+2025-05-02 14:41:38.142655		New batch file written at app/partScores400.jsonl
+
