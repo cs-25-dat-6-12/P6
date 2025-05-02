@@ -157,6 +157,7 @@ def track_batches(src_filepath, dst_directory):
         tracker = open(src_filepath, "r")
         dict_reader = csv.DictReader(tracker)
         tracked_jobs = list(dict_reader)
+        tracker.close()
         downloaded_results = 0
         for tracked_job in tracked_jobs:
             batch_job = client.batches.retrieve(tracked_job["Batch ID"])
@@ -176,11 +177,10 @@ def track_batches(src_filepath, dst_directory):
                     print(
                         f"Result of batch for {tracked_job["Filename"]} saved to {path}"
                     )
-                    tracked_job.update({"Downloaded": True})
+                    tracked_job.update({"Downloaded": "True"})
+                    # NOTE we have to update with the string-version of "True" so it lines up with what we read from the tracking file
             downloaded_results += tracked_job["Downloaded"] == "True"
         # we've checked all the batches. Now we update the tracking file with what we know
-        tracker.close()
-        # NOTE we close the file to reopen it in write-mode
         tracker = open(src_filepath, "w", newline="")
         keys = tracked_jobs[0].keys()
         dict_writer = csv.DictWriter(tracker, keys)
