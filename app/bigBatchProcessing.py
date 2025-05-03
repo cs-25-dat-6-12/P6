@@ -5,6 +5,7 @@ import os
 import winsound
 import csv
 from datetime import datetime
+from pathlib import Path
 
 # process batch files that exceed the request or file size limits imposed by OpenAI
 # that's files that exceed 100MB or 50.000 requests.
@@ -97,10 +98,12 @@ def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=16):
 
         # upload the file if it's not available already
         if jsonl not in available_files_names:
+            print(f"{jsonl} not available. Uploading...")
             path = src_directory + jsonl
             batch_file = client.files.create(file=open(path, "rb"), purpose="batch")
         else:
-            batch_file = available_files[available_files_names.index(jsonl)]
+            index = available_files_names.index(jsonl)
+            batch_file = list(available_files)[index]
         while not batch_started:
             winsound.Beep(1000, 500)
             try:
@@ -123,10 +126,10 @@ def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=16):
                                 "Batch ID": batch_job.id,
                                 "Input File ID": file_id,
                                 "Status": batch_job.status,
-                                "Started": True,
+                                "Started": "True",
                             }
                         )
-                        with open(dst_filepath, "w") as tracking_file:
+                        with open(dst_filepath, "w", newline="") as tracking_file:
                             keys = tracked_jobs[0].keys()
                             dict_writer = csv.DictWriter(tracking_file, keys)
                             dict_writer.writeheader()
@@ -248,5 +251,5 @@ if __name__ == "__main__":
 
     # split_jsonl(main_file, subfiles_directory)
     # spawn_batch_jobs(tracking_file, subfiles_directory)
-    track_batches(tracking_file, output_directory)
-    combine_jsonl(output_file, output_directory)
+    # track_batches(tracking_file, output_directory)
+    # combine_jsonl(output_file, output_directory)
