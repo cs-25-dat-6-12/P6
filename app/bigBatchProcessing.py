@@ -52,6 +52,10 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
                     break
                 current_subfile.close()
                 subfiles_count += 1
+                # TESTING ONLY BELOW | REMOVE LATER
+                if subfiles_count > 2:
+                    break
+                # TESTING ONLY ABOVE | REMOVE LATER
                 subfile_path = (
                     dst_directory + src_filename + f"_part_{subfiles_count}.jsonl"
                 )
@@ -72,7 +76,7 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
     winsound.Beep(2500, 300)
 
 
-def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=16):
+def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=30):
     # given a directory of jsonl-files, create a batch job for each file and write the batch IDs at the given filepath.
     directory_content = os.listdir(src_directory)
     directory_jsonl_files = filter(lambda x: x.endswith(".jsonl"), directory_content)
@@ -122,10 +126,25 @@ def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=16):
                     endpoint="/v1/chat/completions",
                     completion_window="24h",
                 )
+
+                # NOTE the batch job might still fail here if it exceeds rate limits, so let's wait and see if it does
+                status = batch_job.status
+                while status != "in_progress" and status != "failed":
+                    for i in range(10):
+                        print(
+                            f'DO NOT TURN OFF THE PROGRAM. Waiting for confirmation: Status was "{status}" {i} seconds ago.     ',
+                            end="\r",
+                        )
+                        time.sleep(1)
+                    status = client.batches.retrieve(batch_job.id).status
+                if status == "failed":
+                    # FIXME not really the right exception to use since the job can fail for other reasons, but hitting the rate limit is the most likely culprit
+                    raise openai.RateLimitError
+
+                # we managed to create a working batch job! Update the tracking file and get ready for the next one
                 batch_started = True
                 winsound.Beep(2000, 500)
-                print(f"Created job for {jsonl}")
-                # we managed to create a batch job! Update the tracking file
+                print(f"\nCreated job for {jsonl}!")
                 for tracked_job in tracked_jobs:
                     # find the tracked job with the right filename. # NOTE we assume there are no duplicate filenames
                     if tracked_job["Filename"] == jsonl:
@@ -147,7 +166,7 @@ def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=16):
                 winsound.Beep(500, 500)
                 for i in range(sleep_time):
                     print(
-                        f"Rate limit hit! Waiting {sleep_time-i} seconds before trying to create a batch job for {jsonl}.     ",
+                        f"Batch job failed! Waiting {sleep_time-i} seconds before trying to create a batch job for {jsonl}.     ",
                         end="\r",
                     )
                     time.sleep(1)
