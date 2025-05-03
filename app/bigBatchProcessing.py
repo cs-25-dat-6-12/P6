@@ -37,8 +37,10 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
         current_subfile = open(subfile_path, "w")
         file_size = 0
         request_count = 1
+        total_request_count = 0
         for line in main_file:
             line_size = utf8len(line)
+            total_request_count += 1
 
             if (
                 request_count + 1 > request_limit
@@ -49,11 +51,11 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
                     )
                     break
                 current_subfile.close()
+                subfiles_count += 1
                 subfile_path = (
                     dst_directory + src_filename + f"_part_{subfiles_count}.jsonl"
                 )
                 current_subfile = open(subfile_path, "w")
-                subfiles_count += 1
                 file_size = line_size
                 request_count = 1
             else:
@@ -61,7 +63,8 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
                 request_count += 1
 
             print(
-                f"Writing line {request_count} in file {subfiles_count}     ", end="\r"
+                f"Writing request {total_request_count} at line {request_count} in file {subfiles_count}               ",
+                end="\r",
             )
             current_subfile.write(line)
     winsound.Beep(1000, 300)
