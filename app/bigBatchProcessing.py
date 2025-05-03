@@ -53,8 +53,8 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
                 current_subfile.close()
                 subfiles_count += 1
                 # TESTING ONLY BELOW | REMOVE LATER
-                if subfiles_count > 2:
-                    break
+                # if subfiles_count > 2:
+                #    break
                 # TESTING ONLY ABOVE | REMOVE LATER
                 subfile_path = (
                     dst_directory + src_filename + f"_part_{subfiles_count}.jsonl"
@@ -76,7 +76,7 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
     winsound.Beep(2500, 300)
 
 
-def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=30):
+def spawn_batch_jobs(dst_filepath, src_directory, initial_backoff_time=30):
     # given a directory of jsonl-files, create a batch job for each file and write the batch IDs at the given filepath.
     directory_content = os.listdir(src_directory)
     directory_jsonl_files = filter(lambda x: x.endswith(".jsonl"), directory_content)
@@ -106,7 +106,7 @@ def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=30):
 
     for jsonl in jobs_to_start:
         batch_started = False
-        sleep_time = initial_sleep_time
+        backoff_time = initial_backoff_time
 
         # upload the file if it's not available already
         if jsonl not in available_files_names:
@@ -164,13 +164,13 @@ def spawn_batch_jobs(dst_filepath, src_directory, initial_sleep_time=30):
                         break
             except openai.RateLimitError:
                 winsound.Beep(500, 500)
-                for i in range(sleep_time):
+                for i in range(backoff_time):
                     print(
-                        f"Batch job failed! Waiting {sleep_time-i} seconds before trying to create a batch job for {jsonl}.     ",
+                        f"Batch job failed! Waiting {backoff_time-i} seconds before trying to create a batch job for {jsonl}.     ",
                         end="\r",
                     )
                     time.sleep(1)
-                sleep_time *= 2
+                backoff_time *= 2
     # celebratory beeps to indicate that we're done
     winsound.Beep(1000, 300)
     winsound.Beep(2000, 300)
