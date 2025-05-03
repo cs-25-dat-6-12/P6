@@ -20,6 +20,9 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
     # given the path of a jsonl-file, split it according to the specified size limits and create a number of smaller jsonl-files in the given directory
     size_limit = size_limit_MB * 1000000  # convert MB to Bytes
 
+    # getting the filename for easier organization of experiments
+    src_filename = Path(src_filepath).stem
+
     with open(src_filepath, "r") as main_file:
         # create the directory we need to put our subfiles into
         try:
@@ -30,7 +33,7 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
             )
 
         subfiles_count = 1
-        subfile_path = dst_directory + "part_1.jsonl"
+        subfile_path = dst_directory + src_filename + "_part_1.jsonl"
         current_subfile = open(subfile_path, "w")
         file_size = 0
         request_count = 1
@@ -46,7 +49,9 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
                     )
                     break
                 current_subfile.close()
-                subfile_path = dst_directory + f"part_{subfiles_count}.jsonl"
+                subfile_path = (
+                    dst_directory + src_filename + f"_part_{subfiles_count}.jsonl"
+                )
                 current_subfile = open(subfile_path, "w")
                 subfiles_count += 1
                 file_size = line_size
@@ -177,7 +182,8 @@ def track_batches(src_filepath, dst_directory):
             if batch_job.status == "completed" and tracked_job["Downloaded"] == "False":
                 # download completed batches (only once)
                 result = client.files.content(batch_job.output_file_id).content
-                path = dst_directory + tracked_job["Filename"]
+                name, extension = os.path.splitext(tracked_job["Filename"])
+                path = dst_directory + name + "_output" + extension
                 with open(path, "wb") as output_file:
                     output_file.write(result)
                     print(
@@ -249,7 +255,7 @@ if __name__ == "__main__":
             api_key=secrets["api_key"],
         )
 
-    # split_jsonl(main_file, subfiles_directory)
-    # spawn_batch_jobs(tracking_file, subfiles_directory)
-    # track_batches(tracking_file, output_directory)
-    # combine_jsonl(output_file, output_directory)
+    split_jsonl(main_file, subfiles_directory)
+    spawn_batch_jobs(tracking_file, subfiles_directory)
+    track_batches(tracking_file, output_directory)
+    combine_jsonl(output_file, output_directory)
