@@ -175,3 +175,4 @@ app\blocks.json
 datasets/testset15-Zylbercweig-Laski/dicts/*
 app\missed_matches.tsv
 app\batchfile.jsonl
+app/partScores400.jsonl
