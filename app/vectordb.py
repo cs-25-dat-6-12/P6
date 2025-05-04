@@ -439,17 +439,10 @@ def create_dict_from_block(block, file_name="n/a"):
     return dict
 
 if __name__ == "__main__":
-    #for model in Embedding_function_names.names:
-        #create_db_zylbercweig_laski("Zylbercweig-LASKI" + model, print_progress=True)
-        #create_db_zylbercweig_laski("Zylbercweig-LASKI" + model + "first-sur", print_progress=True)
-    #create_db_yad_vashem("Zylbercweig-LASKI" + "all-distilroberta-v1", print_progress=True)
-    zylbercweig = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv", sep="\t")
-    laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
-    zyl_list, laski_list = [], []
-    for i, row in zylbercweig.iterrows():
-        zyl_list.append(row["title"])
-    for i, row in laski.iterrows():
-        laski_list.append(row["title"])
-    result1, result2 = run_blocking_multiple_dataset(zyl_list, laski_list, 100, print_progress=True)
-    create_dict_from_block(result1, "dict_Zylbercweig")
-    create_dict_from_block(result2, "dict_LASKI")
+    for i, model in enumerate(Embedding_function_names.names):
+        print(i*2+1)
+        create_db_zylbercweig_laski("Zylbercweig-LASKI" + model, print_progress=True)
+        print(i*2+2)
+        create_db_zylbercweig_laski("Zylbercweig-LASKI" + model + "first-sur", print_progress=True, pre_process=True)
+    print(9)
+    create_db_yad_vashem("Zylbercweig-LASKI" + "all-distilroberta-v1", print_progress=True) 
