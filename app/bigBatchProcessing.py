@@ -20,6 +20,23 @@ def utf8len(string):
     return len(string.encode("utf-8"))
 
 
+def dict_list_from_csv(filepath):
+    # given a csv file, create a list of dictionaries corresponding to each row with column names as keys
+    with open(filepath, "r") as file:
+        dict_reader = csv.DictReader(file)
+        return list(dict_reader)
+
+
+def dict_list_to_csv(filepath, dict_list):
+    # given a list of dictionaries of the format returned by dict_list_from_csv, write a csv with those dicts as rows
+    # assumes all dictionaries in the list have the same keys!
+    with open(filepath, "w", newline="") as file:
+        keys = dict_list[0].keys()
+        dict_writer = csv.DictWriter(file, keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(dict_list)
+
+
 def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50000):
     # given the path of a jsonl-file, split it according to the specified size limits and create a number of smaller jsonl-files in the given directory
     size_limit = size_limit_MB * 1000000  # convert MB to Bytes
