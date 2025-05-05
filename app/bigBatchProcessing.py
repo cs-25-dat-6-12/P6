@@ -37,6 +37,15 @@ def dict_list_to_csv(filepath, dict_list):
         dict_writer.writerows(dict_list)
 
 
+def ticker_string_sleep(prefix, duration, suffix):
+    # prints a string with a built-in countdown for the specified duration (in seconds)
+    for i in range(duration):
+        string = prefix + str(duration - i) + suffix + " "
+        print(string, end="\r")
+        time.sleep(0.1)
+    print("\n")
+
+
 def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50000):
     # given the path of a jsonl-file, split it according to the specified size limits and create a number of smaller jsonl-files in the given directory
     size_limit = size_limit_MB * 1000000  # convert MB to Bytes
@@ -123,8 +132,68 @@ def prepare_batch_jobs(dst_filepath, src_directory):
 
 
 # TODO a replacement for track_batches that will also start batch jobs
-def run_batch_jobs(src_filepath, dst_directory):
-    pass
+def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
+    tracked_jobs = dict_list_from_csv(src_filepath)
+    # looping for as long as jobs with undownloaded results exist
+    while len(list(filter(tracked_jobs, lambda job: job["Downloaded"] == "False"))) > 0:
+        # Spawning mode
+        pending_jobs = filter(tracked_jobs, lambda job: job["Started"] == "False")
+        for tracked_job in pending_jobs:
+            if job_budget < 1:
+                print("Budget depleted. Switch to tracking.")
+                break
+            # try to start a job
+            batch_job = client.batches.create(
+                input_file_id=tracked_job["Input File ID"],
+                endpoint="/v1/chat/completions",
+                completion_window="24h",
+            )
+            status = batch_job.status
+            while status == "validating":
+                ticker_string_sleep("Validating job. Checking status in", 20, ".")
+                status = client.batches.retrieve(batch_job.id).status
+            # job is done validating. Check if we succeeded in creating it
+            tracked_job.update({"Batch ID": batch_job.id, "Status": status})
+            if status == "failed":
+                print(
+                    f"Batch creation failed for {tracked_job["Filename"]}. Switch to tracking."
+                )
+                dict_list_to_csv(src_filepath, tracked_jobs)
+                job_budget = 0
+                break
+            else:
+                print(f"Batch successfully created for {tracked_job["Filename"]}!")
+                tracked_job.update({"Started": "True"})
+                dict_list_to_csv(src_filepath, tracked_jobs)
+                job_budget -= 1
+        # Tracking mode
+        running_jobs = filter(
+            tracked_jobs,
+            lambda job: job["Downloaded"] == "False" and job["Status"] == "in_progress",
+        )
+        while job_budget < 1 and len(list(running_jobs)) > 0:
+            for running_job in running_jobs:
+                status = client.batches.retrieve(running_job["Batch ID"]).status
+                if status != running_job["Status"]:
+                    running_job.update({"Status": status})
+                    dict_list_to_csv(src_filepath, tracked_jobs)
+                    print(
+                        f"Status update for {running_job["Filename"]} registered: {running_job["Status"]} -> {status}"
+                    )
+                if status == "completed":
+                    # download the output content of the completed job
+                    name, extension = os.path.splitext(running_job["Filename"])
+                    path = dst_directory + name + "_output" + extension
+                    with open(path, "wb") as output_file:
+                        result = client.files.content(batch_job.output_file_id).content
+                        output_file.write(result)
+                        print(
+                            f"Result of batch for {running_job["Filename"]} saved to {path}"
+                        )
+                    running_job.update({"Downloaded": "True"})
+                    job_budget += 1
+                dict_list_to_csv(src_filepath, tracked_jobs)
+            ticker_string_sleep("Checking for status updates in ", 300, ".")
 
 
 def spawn_batch_jobs(dst_filepath, src_directory, initial_backoff_time=600):
@@ -331,7 +400,7 @@ if __name__ == "__main__":
             api_key=secrets["api_key"],
         )
 
-    split_jsonl(main_file, subfiles_directory)
-    spawn_batch_jobs(tracking_file, subfiles_directory)
+    # split_jsonl(main_file, subfiles_directory)
+    # spawn_batch_jobs(tracking_file, subfiles_directory)
     track_batches(tracking_file, output_directory)
     combine_jsonl(output_file, output_directory)
