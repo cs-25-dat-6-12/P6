@@ -92,9 +92,14 @@ def test_with_name_pairs():
     precision = calculate_precision(output_blocks, matches)
     recall = calculate_recall_better(output_blocks, matches)
     f1 = 0
+    fB = 0
     if (precision + recall) != 0:
         f1 = 2 * (precision * recall) / (precision + recall)
-    print(f"Precision: {precision}\nRecall: {recall}\nF1: {f1}")
+        B = 5
+        # NOTE replace B with something else if you want recall to be considered more or less important
+        # fB = ((1 + B**2) * precision * recall) / (B**2 * precision) + recall
+        fB = (1 + B**2) / ((B**2 * recall**-1) + precision**-1)
+    print(f"Precision: {precision}\nRecall: {recall}\nF1: {f1}\nF{B}: {fB}")
 
 
 if __name__ == "__main__":
