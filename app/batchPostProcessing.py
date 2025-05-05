@@ -1,7 +1,11 @@
 import json
 
 import pandas as pd
-from textFiltering import calculate_recall_better, calculate_precision
+from textFiltering import (
+    calculate_recall_better,
+    calculate_precision,
+    find_missed_matches,
+)
 
 
 def load_response_booleans(output_filepath):
@@ -100,6 +104,30 @@ def test_with_name_pairs():
         # fB = ((1 + B**2) * precision * recall) / (B**2 * precision) + recall
         fB = (1 + B**2) / ((B**2 * recall**-1) + precision**-1)
     print(f"Precision: {precision}\nRecall: {recall}\nF1: {f1}\nF{B}: {fB}")
+    write_missed_matches(output_blocks, matches)
+
+
+def write_missed_matches(
+    output_blocks, matches, filepath=r"app\experiment_missed_matches.tsv"
+):
+    df2 = pd.read_csv(
+        r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
+    )
+    df1 = pd.read_csv(
+        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
+        sep="\t",
+        header=0,
+    )
+    missed_matches = find_missed_matches(output_blocks, matches)
+    with open(filepath, "w") as file:
+        file.write("df2_title\tdf2_name_parts\tdf1_title\tdf1_name_parts\n")
+        for record in missed_matches:
+            for missed_match in missed_matches[record]:
+                df2_row = df2.iloc[record]
+                df1_row = df1.iloc[missed_match]
+                file.write(
+                    f"{df2_row["title"]}\t{df2_row["name_parts"]}\t{df1_row["title"]}\t{df1_row["name_parts"]}\n"
+                )
 
 
 if __name__ == "__main__":
