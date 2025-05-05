@@ -93,6 +93,40 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
     winsound.Beep(2500, 300)
 
 
+# TODO the first part of spawn_batch_jobs: The part that uploads files and creates a tracking file
+def prepare_batch_jobs(dst_filepath, src_directory):
+    directory_content = os.listdir(src_directory)
+    directory_jsonl_files = filter(lambda x: x.endswith(".jsonl"), directory_content)
+
+    # if the tracking file does not exist, write it line by line
+    if not os.path.isfile(dst_filepath):
+        with open(dst_filepath, "w") as tracking_file:
+            tracking_file.write(
+                "Batch ID,Filename,Input File ID,Status,Started,Downloaded\n"
+            )
+            for jsonl in directory_jsonl_files:
+                tracking_file.write(f"{None},{jsonl},{None},{None},{False},{False}\n")
+
+    # upload the files that are missing file IDs in the tracking file and save those IDs to the file
+    tracked_jobs = dict_list_from_csv(dst_filepath)
+    for job in tracked_jobs:
+        if job["Input File ID"] == "None":
+            jsonl = job["Filename"]
+            print(f"Uploading {jsonl} and tracking ID...", end="\r")
+            path = src_directory + jsonl
+            uploaded_file = client.files.create(file=open(path, "rb"), purpose="batch")
+            job.update({"Input File ID": uploaded_file.id})
+            # NOTE we update the tracking file after every successful upload in case something goes wrong with a later upload
+            # REVIEW if we can find out which exceptions happen when a file creation goes wrong, this could be done only in a try-except and at the end
+            dict_list_to_csv(dst_filepath, tracked_jobs)
+            print(f"Uploaded {jsonl} successfully. Tracking file updated.")
+
+
+# TODO a replacement for track_batches that will also start batch jobs
+def run_batch_jobs(src_filepath, dst_directory):
+    pass
+
+
 def spawn_batch_jobs(dst_filepath, src_directory, initial_backoff_time=600):
     # given a directory of jsonl-files, create a batch job for each file and write the batch IDs at the given filepath.
     directory_content = os.listdir(src_directory)
