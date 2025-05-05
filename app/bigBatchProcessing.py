@@ -187,8 +187,10 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
             lambda job: job["Downloaded"] == "False" and job["Status"] == "in_progress",
             tracked_jobs,
         )
-        # stay tracking if the budget is less than 1 or if there are no jobs to start
-        while job_budget < 1 or len(list(pending_jobs)) == 0:
+        # stay tracking if the budget is less than 1 or if there are no jobs to start *and* at least one job is in progress
+        while (job_budget < 1 or len(list(pending_jobs)) == 0) and len(
+            list(running_jobs)
+        ) > 0:
             for running_job in running_jobs:
                 status = client.batches.retrieve(running_job["Batch ID"]).status
                 if status != running_job["Status"]:
