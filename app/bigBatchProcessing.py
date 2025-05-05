@@ -42,8 +42,7 @@ def ticker_string_sleep(prefix, duration, suffix):
     for i in range(duration):
         string = prefix + str(duration - i) + suffix + " "
         print(string, end="\r")
-        time.sleep(0.1)
-    print("\n")
+        time.sleep(1)
 
 
 def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50000):
@@ -58,9 +57,14 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
         try:
             os.makedirs(dst_directory)
         except FileExistsError:
-            print(
-                "Target directory already exists. Make sure you know what you're doing."
-            )
+            if os.listdir(dst_directory):
+                # NOTE to save time, we skip the splitting if there's already files at our destination, since we probably already split
+                print("Files present in target directory already. Skipping split step.")
+                return
+            else:
+                print(
+                    "Empty target directory already exists. Make sure you know what you're doing."
+                )
 
         subfiles_count = 1
         subfile_path = dst_directory + src_filename + "_part_1.jsonl"
@@ -102,8 +106,9 @@ def split_jsonl(src_filepath, dst_directory, size_limit_MB=100, request_limit=50
     winsound.Beep(2500, 300)
 
 
-# TODO the first part of spawn_batch_jobs: The part that uploads files and creates a tracking file
 def prepare_batch_jobs(dst_filepath, src_directory):
+    # given a src_directory containing jsonl-files, create a file at the dst_filepath to track them
+    # and upload each file, saving the returned file IDs in the tracking file
     directory_content = os.listdir(src_directory)
     directory_jsonl_files = filter(lambda x: x.endswith(".jsonl"), directory_content)
 
@@ -129,20 +134,30 @@ def prepare_batch_jobs(dst_filepath, src_directory):
             # REVIEW if we can find out which exceptions happen when a file creation goes wrong, this could be done only in a try-except and at the end
             dict_list_to_csv(dst_filepath, tracked_jobs)
             print(f"Uploaded {jsonl} successfully. Tracking file updated.")
+    winsound.Beep(1000, 300)
+    winsound.Beep(2000, 300)
+    winsound.Beep(2500, 300)
 
 
-# TODO a replacement for track_batches that will also start batch jobs
 def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
+    # given a tracking file containing file IDs, create a batch job for each file while trying not to hit the rate limit
+    # and download results of completed jobs to the dst_directory.
+    try:
+        os.makedirs(dst_directory)
+    except FileExistsError:
+        print("Output directory already exists. Make sure you know what you're doing.")
     tracked_jobs = dict_list_from_csv(src_filepath)
     # looping for as long as jobs with undownloaded results exist
-    while len(list(filter(tracked_jobs, lambda job: job["Downloaded"] == "False"))) > 0:
+    while len(list(filter(lambda job: job["Downloaded"] == "False", tracked_jobs))) > 0:
         # Spawning mode
-        pending_jobs = filter(tracked_jobs, lambda job: job["Started"] == "False")
+        print("Now spawning.")
+        pending_jobs = filter(lambda job: job["Started"] == "False", tracked_jobs)
         for tracked_job in pending_jobs:
             if job_budget < 1:
                 print("Budget depleted. Switch to tracking.")
                 break
             # try to start a job
+            print(f"Creating batch job for {tracked_job["Filename"]}")
             batch_job = client.batches.create(
                 input_file_id=tracked_job["Input File ID"],
                 endpoint="/v1/chat/completions",
@@ -150,7 +165,7 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
             )
             status = batch_job.status
             while status == "validating":
-                ticker_string_sleep("Validating job. Checking status in", 20, ".")
+                ticker_string_sleep("Validating job. Checking status in ", 20, ".")
                 status = client.batches.retrieve(batch_job.id).status
             # job is done validating. Check if we succeeded in creating it
             tracked_job.update({"Batch ID": batch_job.id, "Status": status})
@@ -167,11 +182,13 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
                 dict_list_to_csv(src_filepath, tracked_jobs)
                 job_budget -= 1
         # Tracking mode
+        print("Now tracking.")
         running_jobs = filter(
-            tracked_jobs,
             lambda job: job["Downloaded"] == "False" and job["Status"] == "in_progress",
+            tracked_jobs,
         )
-        while job_budget < 1 and len(list(running_jobs)) > 0:
+        # stay tracking if the budget is less than 1 or if there are no jobs to start
+        while job_budget < 1 or len(list(pending_jobs)) == 0:
             for running_job in running_jobs:
                 status = client.batches.retrieve(running_job["Batch ID"]).status
                 if status != running_job["Status"]:
@@ -194,6 +211,9 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
                     job_budget += 1
                 dict_list_to_csv(src_filepath, tracked_jobs)
             ticker_string_sleep("Checking for status updates in ", 300, ".")
+    winsound.Beep(1000, 300)
+    winsound.Beep(2000, 300)
+    winsound.Beep(2500, 300)
 
 
 def spawn_batch_jobs(dst_filepath, src_directory, initial_backoff_time=600):
@@ -385,11 +405,11 @@ def combine_jsonl(dst_filepath, src_directory):
 
 if __name__ == "__main__":
     # NOTE make sure all specified directories are empty before using them here!
-    main_file = "app/partScores400.jsonl"
-    subfiles_directory = "app/partScores400split/"
+    main_file = "experiments/partScores200/partScores200.jsonl"
+    subfiles_directory = "experiments/partScores200/partScores200split/"
     tracking_file = subfiles_directory + "tracker.csv"
-    output_directory = "app/partScores400splitOutput/"
-    output_file = "app/partScores400output.jsonl"
+    output_directory = "experiments/partScores200/partScores200splitOutput/"
+    output_file = "experiments/partScores200/partScores200output.jsonl"
 
     with open("secrets.json", "r") as file:
         secrets = json.load(file)
@@ -401,6 +421,6 @@ if __name__ == "__main__":
         )
 
     # split_jsonl(main_file, subfiles_directory)
-    # spawn_batch_jobs(tracking_file, subfiles_directory)
-    track_batches(tracking_file, output_directory)
+    prepare_batch_jobs(tracking_file, subfiles_directory)
+    run_batch_jobs(tracking_file, output_directory)
     combine_jsonl(output_file, output_directory)
