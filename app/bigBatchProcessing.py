@@ -151,7 +151,7 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
     while len(list(filter(lambda job: job["Downloaded"] == "False", tracked_jobs))) > 0:
         # Spawning mode
         print("Now spawning.")
-        pending_jobs = filter(lambda job: job["Started"] == "False", tracked_jobs)
+        pending_jobs = list(filter(lambda job: job["Started"] == "False", tracked_jobs))
         for tracked_job in pending_jobs:
             if job_budget < 1:
                 print("Budget depleted. Switch to tracking.")
@@ -183,22 +183,25 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
                 job_budget -= 1
         # Tracking mode
         print("Now tracking.")
-        running_jobs = filter(
-            lambda job: job["Downloaded"] == "False" and job["Status"] == "in_progress",
-            tracked_jobs,
+        running_jobs = list(
+            filter(
+                lambda job: job["Downloaded"] == "False"
+                and job["Status"] == "in_progress",
+                tracked_jobs,
+            )
         )
-        # stay tracking if the budget is less than 1 or if there are no jobs to start *and* at least one job is in progress
-        while (job_budget < 1 or len(list(pending_jobs)) == 0) and len(
-            list(running_jobs)
-        ) > 0:
+        # stay tracking if the budget is less than 1 or if there are no jobs to start *and* at least one job is in progress.
+        # NOTE this is "while True" because we negate the loop condition and use that to break the loop later
+        while True:
             for running_job in running_jobs:
-                status = client.batches.retrieve(running_job["Batch ID"]).status
+                batch_job = client.batches.retrieve(running_job["Batch ID"])
+                status = batch_job.status
                 if status != running_job["Status"]:
-                    running_job.update({"Status": status})
-                    dict_list_to_csv(src_filepath, tracked_jobs)
                     print(
                         f"Status update for {running_job["Filename"]} registered: {running_job["Status"]} -> {status}"
                     )
+                    running_job.update({"Status": status})
+                    dict_list_to_csv(src_filepath, tracked_jobs)
                 if status == "completed":
                     # download the output content of the completed job
                     name, extension = os.path.splitext(running_job["Filename"])
@@ -207,11 +210,21 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
                         result = client.files.content(batch_job.output_file_id).content
                         output_file.write(result)
                         print(
-                            f"Result of batch for {running_job["Filename"]} saved to {path}"
+                            f"Result of batch for {running_job["Filename"]} saved to\n{path}"
                         )
                     running_job.update({"Downloaded": "True"})
                     job_budget += 1
-                dict_list_to_csv(src_filepath, tracked_jobs)
+                    dict_list_to_csv(src_filepath, tracked_jobs)
+            # reevaluate how many jobs are currently running
+            running_jobs = list(
+                filter(
+                    lambda job: job["Downloaded"] == "False"
+                    and job["Status"] == "in_progress",
+                    tracked_jobs,
+                )
+            )
+            if not (job_budget < 1 or len(pending_jobs) == 0) and len(running_jobs) > 0:
+                break
             ticker_string_sleep("Checking for status updates in ", 300, ".")
     winsound.Beep(1000, 300)
     winsound.Beep(2000, 300)
@@ -422,7 +435,7 @@ if __name__ == "__main__":
             api_key=secrets["api_key"],
         )
 
-    # split_jsonl(main_file, subfiles_directory)
+    split_jsonl(main_file, subfiles_directory)
     prepare_batch_jobs(tracking_file, subfiles_directory)
     run_batch_jobs(tracking_file, output_directory)
     combine_jsonl(output_file, output_directory)
