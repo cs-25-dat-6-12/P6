@@ -1,60 +1,328 @@
-modelname: Zylbercweig-LASKIall-MiniLM-L6-v2
+Modelname: Zylbercweig-LASKIall-MiniLM-L6-v2
 Total matches checked: 1951 with 5 candidates per match
-Recall LASKI: 0.2901076371091748
-Recall zylbercweig: 0.3111225012813942
-Recall total: 0.3639159405433111
+Recall LASKI: 0.2901
+Recall zylbercweig: 0.3111
+Recall total: 0.3639
 
-modelname: Zylbercweig-LASKIall-MiniLM-L6-v2first-sur
+Modelname: Zylbercweig-LASKIall-MiniLM-L6-v2first-sur
 Total matches checked: 1951 with 5 candidates per match
-Recall LASKI: 0.22142491030240902
-Recall zylbercweig: 0.32086109687339825
-Recall total: 0.35776524859046643
+Recall LASKI: 0.2214
+Recall zylbercweig: 0.3209
+Recall total: 0.3578
 
-modelname: Zylbercweig-LASKIall-MiniLM-L12-v2
+Modelname: Zylbercweig-LASKIall-MiniLM-L12-v2
 Total matches checked: 1951 with 5 candidates per match
-Recall LASKI: 0.3157355202460277
-Recall zylbercweig: 0.3495643259866735
-Recall total: 0.40235776524859046
+Recall LASKI: 0.3157
+Recall zylbercweig: 0.3496
+Recall total: 0.4024
 
-modelname: Zylbercweig-LASKIall-MiniLM-L12-v2first-sur
+Modelname: Zylbercweig-LASKIall-MiniLM-L12-v2first-sur
 Total matches checked: 1951 with 5 candidates per match
-Recall LASKI: 0.2398769861609431
-Recall zylbercweig: 0.3649410558687852
-Recall total: 0.40133264992311635
+Recall LASKI: 0.2399
+Recall zylbercweig: 0.3649
+Recall total: 0.4013
 
-modelname: Zylbercweig-LASKIall-distilroberta-v1
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
 Total matches checked: 1951 with 5 candidates per match
-Recall LASKI: 0.3557150179395182
-Recall zylbercweig: 0.37826755509994875
-Recall total: 0.46694003075345974
+Recall LASKI: 0.3557
+Recall zylbercweig: 0.3783
+Recall total: 0.4669
 
-modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
 Total matches checked: 1951 with 5 candidates per match
-Recall LASKI: 0.28190671450538185
-Recall zylbercweig: 0.39876986160943106
-Recall total: 0.4654023577652486
+Recall LASKI: 0.2819
+Recall zylbercweig: 0.3988
+Recall total: 0.4654
 
-modelname: Zylbercweig-LASKIall-mpnet-base-v2
+Modelname: Zylbercweig-LASKIall-mpnet-base-v2
 Total matches checked: 1951 with 5 candidates per match
-Recall LASKI: 0.2788313685289595
-Recall zylbercweig: 0.3177857508969759
-Recall total: 0.380317785750897
+Recall LASKI: 0.2788
+Recall zylbercweig: 0.3178
+Recall total: 0.3803
 
-modelname: Zylbercweig-LASKIall-mpnet-base-v2first-sur
+Modelname: Zylbercweig-LASKIall-mpnet-base-v2first-sur
 Total matches checked: 1951 with 5 candidates per match
-Recall LASKI: 0.21014864172219375
-Recall zylbercweig: 0.3285494618144541
-Recall total: 0.37467965146078935
+Recall LASKI: 0.2101
+Recall zylbercweig: 0.3285
+Recall total: 0.3747
 
-modelname: Zylbercweig-LASKIall-roberta-large-v1
+Modelname: Zylbercweig-LASKIall-roberta-large-v1
 Total matches checked: 1951 with 5 candidates per match
-Recall LASKI: 0.27626858021527423
-Recall zylbercweig: 0.32906201947719116
-Recall total: 0.3992824192721681
+Recall LASKI: 0.2763
+Recall zylbercweig: 0.3291
+Recall total: 0.3993
 
-modelname: Zylbercweig-LASKIall-roberta-large-v1first-sur
+Modelname: Zylbercweig-LASKIall-roberta-large-v1first-sur
 Total matches checked: 1951 with 5 candidates per match
-Recall LASKI: 0.28908252178370064
-Recall zylbercweig: 0.35263967196309587
-Recall total: 0.415684264479754
+Recall LASKI: 0.2891
+Recall zylbercweig: 0.3526
+Recall total: 0.4157
+
+Modelname: Zylbercweig-LASKIdistiluse-base-multilingual-cased-v1
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.0543
+Recall zylbercweig: 0.0267
+Recall total: 0.0712
+
+Modelname: Zylbercweig-LASKIdistiluse-base-multilingual-cased-v1first-sur
+Total matches checked: 1951 with 5 candidates per match
+Recall LASKI: 0.0682
+Recall zylbercweig: 0.0261
+Recall total: 0.0835
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 6 candidates per match
+Recall LASKI: 0.3685
+Recall zylbercweig: 0.3957
+Recall total: 0.4813
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 6 candidates per match
+Recall LASKI: 0.2896
+Recall zylbercweig: 0.4152
+Recall total: 0.4782
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 7 candidates per match
+Recall LASKI: 0.3834
+Recall zylbercweig: 0.4075
+Recall total: 0.4956
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 7 candidates per match
+Recall LASKI: 0.3008
+Recall zylbercweig: 0.4285
+Recall total: 0.4956
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 8 candidates per match
+Recall LASKI: 0.3916
+Recall zylbercweig: 0.4203
+Recall total: 0.5064
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 8 candidates per match
+Recall LASKI: 0.3086
+Recall zylbercweig: 0.4428
+Recall total: 0.5085
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 9 candidates per match
+Recall LASKI: 0.4034
+Recall zylbercweig: 0.4275
+Recall total: 0.5172
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 9 candidates per match
+Recall LASKI: 0.3137
+Recall zylbercweig: 0.4505
+Recall total: 0.5172
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 10 candidates per match
+Recall LASKI: 0.4147
+Recall zylbercweig: 0.4387
+Recall total: 0.5284
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 10 candidates per match
+Recall LASKI: 0.3224
+Recall zylbercweig: 0.4598
+Recall total: 0.5274
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 11 candidates per match
+Recall LASKI: 0.4203
+Recall zylbercweig: 0.4495
+Recall total: 0.5346
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 11 candidates per match
+Recall LASKI: 0.3209
+Recall zylbercweig: 0.4695
+Recall total: 0.5295
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 12 candidates per match
+Recall LASKI: 0.4264
+Recall zylbercweig: 0.4572
+Recall total: 0.5418
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 12 candidates per match
+Recall LASKI: 0.3280
+Recall zylbercweig: 0.4792
+Recall total: 0.5397
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 13 candidates per match
+Recall LASKI: 0.4290
+Recall zylbercweig: 0.4654
+Recall total: 0.5484
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 13 candidates per match
+Recall LASKI: 0.3311
+Recall zylbercweig: 0.4839
+Recall total: 0.5443
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 14 candidates per match
+Recall LASKI: 0.4346
+Recall zylbercweig: 0.4726
+Recall total: 0.5551
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 14 candidates per match
+Recall LASKI: 0.3362
+Recall zylbercweig: 0.4900
+Recall total: 0.5525
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 15 candidates per match
+Recall LASKI: 0.4377
+Recall zylbercweig: 0.4782
+Recall total: 0.5592
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 15 candidates per match
+Recall LASKI: 0.3378
+Recall zylbercweig: 0.4941
+Recall total: 0.5546
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 16 candidates per match
+Recall LASKI: 0.4423
+Recall zylbercweig: 0.4833
+Recall total: 0.5659
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 16 candidates per match
+Recall LASKI: 0.3403
+Recall zylbercweig: 0.4982
+Recall total: 0.5597
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 17 candidates per match
+Recall LASKI: 0.4454
+Recall zylbercweig: 0.4900
+Recall total: 0.5720
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 17 candidates per match
+Recall LASKI: 0.3403
+Recall zylbercweig: 0.5049
+Recall total: 0.5638
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 18 candidates per match
+Recall LASKI: 0.4490
+Recall zylbercweig: 0.4977
+Recall total: 0.5787
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 18 candidates per match
+Recall LASKI: 0.3444
+Recall zylbercweig: 0.5115
+Recall total: 0.5705
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 19 candidates per match
+Recall LASKI: 0.4526
+Recall zylbercweig: 0.5018
+Recall total: 0.5848
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 19 candidates per match
+Recall LASKI: 0.3465
+Recall zylbercweig: 0.5131
+Recall total: 0.5736
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 20 candidates per match
+Recall LASKI: 0.4603
+Recall zylbercweig: 0.5064
+Recall total: 0.5905
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 20 candidates per match
+Recall LASKI: 0.3521
+Recall zylbercweig: 0.5161
+Recall total: 0.5782
+
+Modelname: Zylbercweig-LASKIall-MiniLM-L6-v2
+Total matches checked: 1951 with 50 candidates per match
+Recall LASKI: 0.4403
+Recall zylbercweig: 0.4751
+Recall total: 0.5305
+
+Modelname: Zylbercweig-LASKIall-MiniLM-L6-v2first-sur
+Total matches checked: 1951 with 50 candidates per match
+Recall LASKI: 0.3265
+Recall zylbercweig: 0.4987
+Recall total: 0.5356
+
+Modelname: Zylbercweig-LASKIall-MiniLM-L12-v2
+Total matches checked: 1951 with 50 candidates per match
+Recall LASKI: 0.4700
+Recall zylbercweig: 0.5259
+Recall total: 0.5741
+
+Modelname: Zylbercweig-LASKIall-MiniLM-L12-v2first-sur
+Total matches checked: 1951 with 50 candidates per match
+Recall LASKI: 0.3455
+Recall zylbercweig: 0.5423
+Recall total: 0.5777
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 50 candidates per match
+Recall LASKI: 0.5433
+Recall zylbercweig: 0.5976
+Recall total: 0.6843
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1first-sur
+Total matches checked: 1951 with 50 candidates per match
+Recall LASKI: 0.4013
+Recall zylbercweig: 0.6253
+Recall total: 0.6832
+
+Modelname: Zylbercweig-LASKIall-mpnet-base-v2
+Total matches checked: 1951 with 50 candidates per match
+Recall LASKI: 0.4459
+Recall zylbercweig: 0.4997
+Recall total: 0.5720
+
+Modelname: Zylbercweig-LASKIall-mpnet-base-v2first-sur
+Total matches checked: 1951 with 50 candidates per match
+Recall LASKI: 0.3178
+Recall zylbercweig: 0.5161
+Recall total: 0.5633
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 200 candidates per match
+Recall LASKI: 0.7089
+Recall zylbercweig: 0.7550
+Recall total: 0.8457
+
+Modelname: Zylbercweig-LASKIall-distilroberta-v1
+Total matches checked: 1951 with 400 candidates per match
+Recall LASKI: 0.7940
+Recall zylbercweig: 0.8416
+Recall total: 0.9144
+
+Modelname: Yad_Vashemall-distilroberta-v1
+Total matches checked: 5109 with 10 candidates per match
+Recall: 0.8763
+
+Modelname: Yad_Vashemall-distilroberta-v1
+Total matches checked: 5109 with 20 candidates per match
+Recall: 0.8982
+
+Modelname: Yad_Vashemall-distilroberta-v1
+Total matches checked: 5109 with 50 candidates per match
+Recall: 0.9288
+
+Modelname: Yad_Vashemall-distilroberta-v1
+Total matches checked: 5109 with 100 candidates per match
+Recall: 0.9546
 

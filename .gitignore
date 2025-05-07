@@ -169,4 +169,9 @@ demo_database.db
 database_name.db
 finetune_dataset_demo.jsonl
 finetune_dataset_demo1.jsonl
+datasets/testset15-Zylbercweig-Laski/embeddings_text-embedding-3-small.csv
 app\lastAnswer.txt
+app\blocks.json
+datasets/testset15-Zylbercweig-Laski/dicts/*
+app\missed_matches.tsv
+app\batchfile.jsonl
