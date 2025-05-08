@@ -56,10 +56,15 @@ def create_blocks_from_output_pairs(output_filepath):
             record_pair = line["custom_id"].split("#")
             record = int(record_pair[0])
             possible_match = int(record_pair[1])
+            print(
+                f"Adding ({record}, {possible_match}) to blocks.     ",
+                end="\r",
+            )
             output_blocks.update({record: output_blocks.get(record, list())})
             response = line["response"]["body"]["choices"][0]["message"]["content"]
             if "True" in response:
                 output_blocks.update({record: output_blocks[record] + [possible_match]})
+        print("")
         return output_blocks
 
 
@@ -87,7 +92,9 @@ def test_with_name_list():
 
 def test_with_name_pairs():
     print("Creating response blocks...")
-    output_blocks = create_blocks_from_output_pairs(r"app\partScores400output.jsonl")
+    output_blocks = create_blocks_from_output_pairs(
+        r"experiments/partScores200/partScores200output.jsonl"
+    )
     matches = pd.read_csv(
         r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
         sep="\t",

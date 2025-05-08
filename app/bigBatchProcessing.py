@@ -139,9 +139,11 @@ def prepare_batch_jobs(dst_filepath, src_directory):
     winsound.Beep(2500, 300)
 
 
-def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
+def run_batch_jobs(src_filepath, dst_directory, job_budget=10, update_frequency=600):
     # given a tracking file containing file IDs, create a batch job for each file while trying not to hit the rate limit
     # and download results of completed jobs to the dst_directory.
+    # keeps the number of active jobs to at most job_budget
+    # and checks for status updates every update_frequency seconds after starting as many jobs as permitted.
     try:
         os.makedirs(dst_directory)
     except FileExistsError:
@@ -150,7 +152,6 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
     # looping for as long as jobs with undownloaded results exist
     while len(list(filter(lambda job: job["Downloaded"] == "False", tracked_jobs))) > 0:
         # Spawning mode
-        print("Now spawning.")
         pending_jobs = list(filter(lambda job: job["Started"] == "False", tracked_jobs))
         for tracked_job in pending_jobs:
             if job_budget < 1:
@@ -182,11 +183,10 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
                 dict_list_to_csv(src_filepath, tracked_jobs)
                 job_budget -= 1
         # Tracking mode
-        print("Now tracking.")
         running_jobs = list(
             filter(
                 lambda job: job["Downloaded"] == "False"
-                and job["Status"] == "in_progress",
+                and job["Status"] in ["in_progress", "finalizing"],
                 tracked_jobs,
             )
         )
@@ -198,7 +198,7 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
                 status = batch_job.status
                 if status != running_job["Status"]:
                     print(
-                        f"Status update for {running_job["Filename"]} registered: {running_job["Status"]} -> {status}"
+                        f"{datetime.now()} \tStatus update for {running_job["Filename"]} registered: {running_job["Status"]} -> {status}"
                     )
                     running_job.update({"Status": status})
                     dict_list_to_csv(src_filepath, tracked_jobs)
@@ -215,17 +215,22 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10):
                     running_job.update({"Downloaded": "True"})
                     job_budget += 1
                     dict_list_to_csv(src_filepath, tracked_jobs)
+                    print("Budget available. Switch to spawning.")
             # reevaluate how many jobs are currently running
             running_jobs = list(
                 filter(
                     lambda job: job["Downloaded"] == "False"
-                    and job["Status"] == "in_progress",
+                    and job["Status"] in ["in_progress", "finalizing"],
                     tracked_jobs,
                 )
             )
-            if not (job_budget < 1 or len(pending_jobs) == 0) and len(running_jobs) > 0:
+            if not (
+                (job_budget < 1 or len(pending_jobs) == 0) and len(running_jobs) > 0
+            ):
                 break
-            ticker_string_sleep("Checking for status updates in ", 300, ".")
+            ticker_string_sleep(
+                "Checking for status updates in ", update_frequency, "."
+            )
     winsound.Beep(1000, 300)
     winsound.Beep(2000, 300)
     winsound.Beep(2500, 300)
