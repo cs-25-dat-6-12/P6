@@ -453,3 +453,174 @@ Contents saved to: app\matchesOnly16test.jsonl
 Saving of file with ID file-K2Na7MS8ynKsRVxvcT8W8D completed.
 Contents saved to: app\matchesOnly16output.jsonl
 
+2025-05-02 14:41:38.142655		New batch file written at app/partScores400.jsonl
+
+2025-05-03 15:20:25.631455		
+Deletion of file with ID file-JTNGiKBFo9sXt6yxvSJHeh succeeded.
+
+2025-05-03 15:20:35.726223		
+Deletion of file with ID file-8uHzt7AdCVfYttN7dkmn4H succeeded.
+
+2025-05-03 15:20:47.678284		
+Deletion of file with ID file-4vcQRbuWnTqrrZQaMnZgtu succeeded.
+
+2025-05-03 15:20:58.556838		
+Deletion of file with ID file-RgR7ak539FurimKovdP27P succeeded.
+
+2025-05-03 15:21:08.091156		
+Deletion of file with ID file-EqxqjKUEU3Ure6vXnskM7L succeeded.
+
+2025-05-03 15:32:23.218264		
+Batch job with ID batch_68161a0e108481908985a6bf46875ceb cancelled.
+
+2025-05-03 15:32:46.060679		
+Batch job with ID batch_68161a3c1974819086864e5208287813 cancelled.
+
+2025-05-03 15:33:10.043446		
+Batch job with ID batch_68161a1281308190a35a996cd39ac175 cancelled.
+
+2025-05-03 15:33:22.492481		
+Batch job with ID batch_68161a19966c819089b80e8a34663066 cancelled.
+
+2025-05-03 15:33:41.855218		
+Batch job with ID batch_68161a36a1588190ad455255c0c7d37c cancelled.
+
+2025-05-03 15:33:56.251108		
+Batch job with ID batch_68161a317a908190bd40f18bc618bf94 cancelled.
+
+2025-05-03 15:34:15.884074		
+Batch job with ID batch_68161a1e70848190b4c7cd2b8d32deff cancelled.
+
+2025-05-03 15:34:28.205990		
+Batch job with ID batch_68161a236bec8190b4004bfbf59f0182 cancelled.
+
+2025-05-03 15:34:43.296029		
+Batch job with ID batch_68161a2d035881908ed0d675577b3be0 cancelled.
+
+2025-05-03 15:34:52.403277		
+Batch job with ID batch_68161a236bec8190b4004bfbf59f0182 cancelled.
+
+2025-05-03 15:37:56.417597		
+Batch job with ID batch_68161a280eb481909e8bc3e1d6ebf463 cancelled.
+
+2025-05-03 15:51:33.738032		
+Deletion of file with ID file-QJF4zY1wZCmEQoumT78yTi succeeded.
+
+2025-05-03 15:51:44.230099		
+Deletion of file with ID file-9HnQm4Uze9Fd4ogJzf9KqF succeeded.
+
+2025-05-03 15:51:52.214967		
+Deletion of file with ID file-H8tnQ9oSjWNF1KVqTAGsEz succeeded.
+
+2025-05-03 15:52:22.998739		
+Deletion of file with ID file-SVCcarZ6PWb3McvQAmNU8V succeeded.
+
+2025-05-03 15:52:41.578508		
+Deletion of file with ID file-JDB5w15n1PNkQQw7tgJ1bU succeeded.
+
+2025-05-03 15:52:57.854982		
+Deletion of file with ID file-NX7C89ULkfWyt3q2N8XMuT succeeded.
+
+2025-05-03 15:53:43.613479		
+Deletion of file with ID file-7Hv1fDS8wieVgAgHk8YEM9 succeeded.
+
+2025-05-03 15:53:58.778757		
+Deletion of file with ID file-TDMpmBEumqCoGzaN22WT9N succeeded.
+
+2025-05-03 15:54:12.406895		
+Deletion of file with ID file-2iWzafdEn7rguUN4G8d5mZ succeeded.
+
+2025-05-03 15:54:23.488446		
+Deletion of file with ID file-Mvc5v3wC7sxV9aKFXfgfa5 succeeded.
+
+2025-05-03 15:54:32.772612		
+Deletion of file with ID file-XCDVqkKoYgkh8Ez2WHoKaP succeeded.
+
+2025-05-03 15:54:45.759848		
+Deletion of file with ID file-5cZ3knoYfc5AvrxB72m5Zv succeeded.
+
+2025-05-03 15:54:57.272350		
+Deletion of file with ID file-PpzjLKUmZ5NyfvfqVhSjFV succeeded.
+
+2025-05-03 15:55:20.539868		
+Deletion of file with ID file-RG5gp6JsKd1LoNzdPSWLAL succeeded.
+
+2025-05-03 15:55:28.428299		
+Deletion of file with ID file-PChopQtrM7URXnjb2DxULH succeeded.
+
+2025-05-03 15:55:39.909769		
+Deletion of file with ID file-2T9XkUeKhfWePBg7bGfEFN succeeded.
+
+2025-05-03 15:56:03.922254		
+Deletion of file with ID file-5pTBWH7oRQcqNXQ6Co4dKr succeeded.
+
+2025-05-03 15:56:11.491831		
+Deletion of file with ID file-AhLLe8uJmEtrrYW1Qou694 succeeded.
+
+2025-05-03 15:56:18.934470		
+Deletion of file with ID file-4ETcjnEUDhfaDVqzWWGCnY succeeded.
+
+2025-05-03 16:19:53.655589		
+Batch job with ID batch_681625aa95908190a885588266b54e40 cancelled.
+
+2025-05-03 16:20:07.915546		
+Batch job with ID batch_6816259070208190ada584ef30f8f2f3 cancelled.
+
+2025-05-03 16:20:27.185303		
+Deletion of file with ID file-EC3hxRxNtQMTA9bcsbSxu6 succeeded.
+
+2025-05-03 16:20:36.214567		
+Deletion of file with ID file-WcFNxSGNCqdfD34EYLDsLL succeeded.
+
+2025-05-04 19:18:02.931582		New batch file written at app/partScores400.jsonl
+
+2025-05-04 19:20:47.675489		
+Deletion of file with ID file-Cc9BHNPaJ8z29vnJ56FBh5 succeeded.
+
+2025-05-04 19:20:59.870159		
+Deletion of file with ID file-WLp7qFvDQBzaaa373gu6Vb succeeded.
+
+2025-05-04 19:21:09.859265		
+Deletion of file with ID file-AESznpL7tWKSWiHEoiq6TJ succeeded.
+
+2025-05-04 19:21:19.570681		
+Deletion of file with ID file-2BBanesPWsiNXnZVZZ8T49 succeeded.
+
+2025-05-04 19:21:28.204554		
+Deletion of file with ID file-ReqqqQbKuAm1UiskiTfGvc succeeded.
+
+2025-05-04 19:21:50.075727		
+Deletion of file with ID file-M71q8hFMnZHfkWWh2v9xgv succeeded.
+
+2025-05-04 19:21:58.011039		
+Deletion of file with ID file-S3J3YCAqF8Ax2bCBffQtnd succeeded.
+
+2025-05-04 19:22:05.169561		
+Deletion of file with ID file-XwifeGzpjnaFUZ3TQ2GeLT succeeded.
+
+2025-05-04 19:22:14.286386		
+Deletion of file with ID file-E9xBfz53QJ9SsgC2MiLmxL succeeded.
+
+2025-05-04 19:22:25.213514		
+Deletion of file with ID file-LLbzU9gfAUiFA2GdiJ8HRR succeeded.
+
+2025-05-04 19:22:34.726601		
+Deletion of file with ID file-VVzy2V2DwSq93DHKgYJAgm succeeded.
+
+2025-05-04 19:22:45.879266		
+Deletion of file with ID file-KywQ1VuYideDRXdSPMkGvy succeeded.
+
+2025-05-04 19:22:59.093616		
+Deletion of file with ID file-NspMsJbKH3eRB9riu9oBA8 succeeded.
+
+2025-05-04 19:23:07.403216		
+Deletion of file with ID file-1ez14gXZPBKjyE2EBoHAyJ succeeded.
+
+2025-05-04 19:23:22.033427		
+Deletion of file with ID file-TLZpNdxtRL4sMYi1k4XMuM succeeded.
+
+2025-05-04 19:23:32.152278		
+Deletion of file with ID file-URV3omJkPwrjvSeP6UYv7Y succeeded.
+
+2025-05-05 14:42:26.917613		New batch file written at app/partScores200.jsonl
+
