@@ -115,7 +115,7 @@ def prepare_batch_file_individual_pairs(
                         "messages": [
                             {
                                 "role": "developer",
-                                "content": f'You will be given two names. The first name is written in the hebrew alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
+                                "content": f'You will be given two names. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
                             },
                             {
                                 "role": "user",
