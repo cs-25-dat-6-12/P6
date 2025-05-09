@@ -51,9 +51,6 @@ def prepare_batch_file(
 
     with open(filepath, "w", encoding="utf-8") as file:
         for record in blocks:
-            if record > 2:
-                # FIXME This if-statement is only for testing
-                break
             print(
                 f"Writing request for block {record}     ",
                 end="\r",
@@ -104,9 +101,6 @@ def prepare_batch_file_individual_pairs(
 
     with open(filepath, "w") as file:
         for record in blocks:
-            # if record > 99999:
-            # FIXME This if-statement is only for testing
-            # break
             for possible_match in blocks[record]:
                 print(
                     f"Writing request for pair {record}#{possible_match}     ",
@@ -247,6 +241,15 @@ if __name__ == "__main__":
         blocks = json.load(file)
         # NOTE outside of textFiltering, blocks are lists, not sets!
         blocks = {int(k): list(v) for k, v in blocks.items()}
+
+    # FIXME for testing only!
+    blocks = create_match_blocks(
+        pd.read_csv(
+            r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
+            sep="\t",
+            header=0,
+        )
+    )
 
     # setup the client as a global variable
     with open("secrets.json", "r") as file:
