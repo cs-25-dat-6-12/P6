@@ -1,6 +1,8 @@
 from openai import OpenAI
 import json
 import pandas as pd
+import getData
+import g2p
 
 test_name_LASKI = '{"given-name": "Zigmund", "surname": "Ehrlich"}'
 test_name_Zylbercweig = '{"given-name": "Zygmund", "surname": "Ehriykh"}'
@@ -175,5 +177,22 @@ def test_on_dataset(filepath):
 
 
 if __name__ == "__main__":
-    test_on_dataset("datasets\zeroShot\proofOfConcept.csv")
-    # test_single_prompt()
+    """ test_on_dataset("datasets\zeroShot\proofOfConcept.csv")
+    # test_single_prompt() """
+    
+    # Use absolute paths for the files
+    Zylbercweig_file = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.csv")
+    LASKI_file = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.csv")
+
+    print(Zylbercweig_file.head())  # Check the data format
+    print(LASKI_file.head())        # Check the data format
+    
+    # Pass the DataFrame directly to readData function
+    Zylbercweig_file = getData.readData(Zylbercweig_file)
+    LASKI_file = getData.readData(LASKI_file)
+
+    # Convert to phonetic transcription and write to CSV
+    g2p.write_g2p(Zylbercweig_file, "Zylbercweig")
+    g2p.write_g2p(LASKI_file, "LASKI")
+
+    print("Data has been converted to phonetic and written to 'Zyl_Las_phonetic.csv'")

@@ -121,7 +121,7 @@ def write_g2p(data, name):
     data = prep_df(data)
     
 
-    output_file_path = f"../datasets/phonetic/{name}_phonetic.csv"
+    output_file_path = f"..\datasets\phonetic{name}_phonetic.csv"
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
 
     try:
