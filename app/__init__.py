@@ -1,3 +1,4 @@
+import json
 import pandas as pd
 
 
@@ -327,6 +328,18 @@ def write_indexed_italy_em(output_path):
     em.to_csv(output_path, sep="\t")
 
 
+def add_name_parts_from_title(input_filepath, output_filepath):
+    df = pd.read_csv(input_filepath, sep=",")
+    df["name_parts"] = pd.Series()
+    for i, row in df.iterrows():
+        df["name_parts"].iat[i] = json.dumps({
+            f"name_part_{index}": name_part
+            for index, name_part in enumerate(row["title"].split(" "))
+        })
+    df.to_csv(output_filepath, sep=",")
+
+
+# FIXME this is outdated and should probably be removed
 def write_transliterated_matches(output_path):
     yiddish = pd.read_csv(
         "datasets/testset15-Zylbercweig-Laski/Zylbercweig.tsv", sep="\t"
@@ -379,8 +392,13 @@ if __name__ == "__main__":
     #    "datasets/testset15-Zylbercweig-Laski/Transliterated_matches.csv"
     # )
 
-    write_transliterated_em(
-        "datasets/testset15-Zylbercweig-Laski/transliterated_em.csv"
+    # write_transliterated_em(
+    #    "datasets/testset15-Zylbercweig-Laski/transliterated_em.csv"
+    # )
+
+    add_name_parts_from_title(
+        "datasets/phonetic/phoneticZylbercweig_phonetic.csv",
+        "datasets/phonetic/phoneticZylbercweig_name_parts.csv",
     )
 
     # write_indexed_italy_em(
