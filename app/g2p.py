@@ -73,7 +73,7 @@ def prep_df(df: pd.DataFrame):
     Given a dataframe, prepares it for matching by transliterating it and removing vowels from the var_entries
     """
     # Force transliteration only (no phonemes)
-    config = {"trans_flag": True, "phonetic_flag": False, "extended_rules_flag": True, "remove_vowels_flag": False}
+    config = {"trans_flag": True, "phonetic_flag": True, "extended_rules_flag": True, "remove_vowels_flag": False}
     service = "https://mehdi-er-prep-snlwejaxvq-ez.a.run.app/process"
     prep_fields = ['title']
     optional_prep_fields = ['name_parts']
@@ -121,7 +121,7 @@ def write_g2p(data, name):
     data = prep_df(data)
     
 
-    output_file_path = f"..\datasets\phonetic{name}_phonetic.csv"
+    output_file_path = f"datasets/phonetic/{name}_phonetic.csv"
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
 
     try:
