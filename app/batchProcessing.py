@@ -33,6 +33,22 @@ def create_name_pair_list(record, df, block, blocks_df):
     return name_list
 
 
+def name_parts_to_string(name_parts):
+    # given a dictionary of name parts, convert it into a string
+    string = ""
+    for part in name_parts:
+        string += part + ": "
+        string += name_parts[part] + ", "
+    string = string[:-2]
+    return string
+
+
+def extract_output_string(line):
+    # given a line from a batch jsonl-file, extract the output string
+    line = json.loads(line)
+    return line["response"]["body"]["choices"][0]["message"]["content"]
+
+
 def prepare_batch_file(
     blocks,
     df,
@@ -115,11 +131,11 @@ def prepare_batch_file_individual_pairs(
                         "messages": [
                             {
                                 "role": "developer",
-                                "content": f'You will be given two names. The first name is written in the hebrew alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
+                                "content": f'You will be given the parts of two names. The first name is written in the hebrew alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
                             },
                             {
                                 "role": "user",
-                                "content": f'"{blocks_df.iloc[possible_match]["title"]}", "{df.iloc[record]["title"]}"',
+                                "content": f'"{name_parts_to_string(json.loads(blocks_df.iloc[possible_match]["name_parts"]))}", "{name_parts_to_string(json.loads(df.iloc[record]["name_parts"]))}"',
                             },
                         ],
                         "max_tokens": max_tokens_per_request,
