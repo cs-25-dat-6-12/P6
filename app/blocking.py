@@ -1,5 +1,6 @@
 import json
 import pandas as pd
+from textFiltering import calculate_recall_better, calculate_reduction_ratio
 
 
 def block_dataframe(df, callable):
@@ -57,10 +58,13 @@ def no_distinguishing(row):
 
 def name_part_presence(row):
     # return the types of name parts the name has, or "None" if it has none
-    name_parts = json.loads(row["name_parts"]).keys()
-    if len(name_parts) > 0:
-        return name_parts
-    else:
+    try:
+        name_parts = json.loads(row["name_parts"]).keys()
+        if len(name_parts) > 0:
+            return name_parts
+    except json.JSONDecodeError:
+        pass
+    finally:
         return ["None"]
 
 
@@ -83,6 +87,17 @@ if __name__ == "__main__":
 
     print("Preparing pairwise comparisons...")
     blocks = create_pairwise_comparison_blocks(dict_1, dict_2, is_same_df=False)
+
+    print("Evaluating blocks...\n")
+    matches = pd.read_csv(
+        r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
+        sep="\t",
+        header=0,
+    )
+    recall = calculate_recall_better(blocks, matches)
+    print(f"Recall: {recall}\n")
+    reduction_ration = calculate_reduction_ratio(blocks, df1, df2)
+    print(f"Reduction ratio: {reduction_ration}\n")
 
     print("Writing blocks to file...")
     blocks = {k: list(v) for k, v in blocks.items()}
