@@ -26,7 +26,11 @@ def create_pairwise_comparison_blocks(dict_1, dict_2, is_same_df=False):
         print(f'Creating comparison blocks from block "{label}"          ', end="\r")
         for record in dict_1[label]:
             comparison_blocks.update(
-                {record: comparison_blocks.get(record, set()).union(set(dict_2[label]))}
+                {
+                    record: comparison_blocks.get(record, set()).union(
+                        set(dict_2.get(label, list()))
+                    )
+                }
             )
     print("")
     if is_same_df:
@@ -68,17 +72,28 @@ def name_part_presence(row):
         return ["None"]
 
 
+def name_length(row, slack=4):
+    title = row["title"]
+    length = len(title)
+    labels = []
+    # the labels are the length and all the integers within the slack
+    # (we add +1 to the end of the range because range doesn't include the end)
+    for i in range(length - slack, length + slack + 1):
+        labels += [i]
+    return labels
+
+
 if __name__ == "__main__":
     df1 = pd.read_csv(
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
     )
     df2 = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
+        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig.tsv",
         sep="\t",
         header=0,
     )
 
-    labeler = no_distinguishing
+    labeler = name_length
 
     print("Blocking first dataset...")
     dict_1 = block_dataframe(df1, labeler)
