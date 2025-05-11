@@ -139,7 +139,7 @@ def filter_with_part_scores(blocks, df, blocks_df, block_size=200):
     return filtered_blocks
 
 
-def filter_with_normalized_scores_revised(df, blocks_df, block_size=100):
+def filter_with_normalized_scores_revised(blocks, df, blocks_df, block_size=100):
     # a revision of filter_with_normalized_scores with the intention of getting closer to the original idea: Instead of summing up the maximum score for each name part,
     # we try to find the maximum score possible for disjoint pairs of name parts i.e. if we have "Emil Larsen" and "Emilie Larson",
     # then we only sum up the similarity of the pair "Emil" and "Emilie" and the pair "Larsen" and "Larson" (since those pairs maximize the sum of pairs' similarities),
@@ -193,6 +193,12 @@ def filter_with_normalized_scores_revised(df, blocks_df, block_size=100):
         for record in list(blocks_df.index):
             if scoreboard.get(record, None) == None:
                 scoreboard.update({record: 0})
+        # remove from the scoreboard any records that are not in the comparison block for the current record
+        scoreboard = {
+            record: scoreboard[record]
+            for record in scoreboard
+            if record in blocks[index]
+        }
         # now sort the scoreboard records by score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
@@ -203,7 +209,9 @@ def filter_with_normalized_scores_revised(df, blocks_df, block_size=100):
     return filtered_blocks
 
 
-def filter_with_threshold_scores(df, blocks_df, block_size=300, similarity_threshold=1):
+def filter_with_threshold_scores(
+    blocks, df, blocks_df, block_size=300, similarity_threshold=1
+):
     # the same idea as filter_with_set_union, except we add a point to the relevant records instead of joining them with the block
     # afterwards we normalize the scores by dividing each record's score with the number of name parts in the records
     # and then place the n records with the best score in the block for the target record, with n = block_size.
@@ -245,6 +253,12 @@ def filter_with_threshold_scores(df, blocks_df, block_size=300, similarity_thres
             # and remove records from the scoreboard if they have no name parts
             if parts_count.get(record, None) == None:
                 scoreboard.pop(record, None)
+        # remove from the scoreboard any records that are not in the comparison block for the current record
+        scoreboard = {
+            record: scoreboard[record]
+            for record in scoreboard
+            if record in blocks[index]
+        }
         # now sort the scoreboard records by normalized score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
