@@ -95,10 +95,10 @@ def filter_with_part_scores(df, blocks_df, block_size=200, is_same_df=False):
 
     name_parts_indexes = create_parts_dictionary(blocks_df)
 
-    blocks = {}
+    filtered_blocks = {}
 
     for index, row in df.iterrows():
-        # a block is an index of a record and a set of all the indexes of records that it might match with
+        # a comparison block is an index of a record and a set of all the indexes of records that it might match with
         print(
             f"Blocking record {index}",
             end="\r",
@@ -111,7 +111,7 @@ def filter_with_part_scores(df, blocks_df, block_size=200, is_same_df=False):
                 f"Skipped record {index} due to bad name parts.                                "
             )
             continue
-        # scoreboard will map records to scores which we use to find out what to include in our blocks
+        # scoreboard will map records to scores which we use to find out what to include in our filtered blocks
         scoreboard = {}
         for name_part in name_parts:
             for key in name_parts_indexes:
@@ -131,9 +131,9 @@ def filter_with_part_scores(df, blocks_df, block_size=200, is_same_df=False):
         best_records = sorted(
             scoreboard, key=lambda record: scoreboard[record], reverse=True
         )[:block_size]
-        blocks.update({index: set(best_records)})
+        filtered_blocks.update({index: set(best_records)})
     print("\n")
-    return blocks
+    return filtered_blocks
 
 
 def filter_with_normalized_scores_revised(
@@ -147,10 +147,10 @@ def filter_with_normalized_scores_revised(
     name_parts_indexes = create_parts_dictionary(blocks_df)
     parts_count = create_parts_count_dictionary(name_parts_indexes)
 
-    blocks = {}
+    filtered_blocks = {}
 
     for index, row in df.iterrows():
-        # a block is an index of a record and a set of all the indexes of records that it might match with
+        # a comparison block is an index of a record and a set of all the indexes of records that it might match with
         print(
             f"Blocking record {index}",
             end="\r",
@@ -163,7 +163,7 @@ def filter_with_normalized_scores_revised(
                 f"Skipped record {index} due to bad name parts.                                "
             )
             continue
-        # scoreboard will map records to scores which we use to find out what to include in our blocks
+        # scoreboard will map records to scores which we use to find out what to include in our filtered blocks
         scoreboard = {}
         # similarities will map records to an list of similarity scores which we concatenate as we find them.
         # If len(name_parts) = n and there are m name parts in a record, then the list can be turned into a matrix of shape n x m
@@ -200,9 +200,9 @@ def filter_with_normalized_scores_revised(
         best_records = sorted(
             scoreboard, key=lambda record: scoreboard[record], reverse=True
         )[:block_size]
-        blocks.update({index: set(best_records)})
+        filtered_blocks.update({index: set(best_records)})
     print("\n")
-    return blocks
+    return filtered_blocks
 
 
 def filter_with_threshold_scores(
@@ -216,30 +216,30 @@ def filter_with_threshold_scores(
     name_parts_indexes = create_parts_dictionary(blocks_df)
     parts_count = create_parts_count_dictionary(name_parts_indexes)
 
-    blocks = {}
+    filtered_blocks = {}
 
     for index, row in df.iterrows():
-        # a block is an index of a record and a set of all the indexes of records that it might match with
+        # a comparison block is an index of a record and a set of all the indexes of records that it might match with
         print(
             f"Blocking record {index}",
             end="\r",
         )
-        blocks.update({index: set()})
+        filtered_blocks.update({index: set()})
         name_parts = []
         try:
             name_parts = json.loads(row["name_parts"]).values()
         except json.JSONDecodeError:
-            blocks.update({index: set()})
+            filtered_blocks.update({index: set()})
             print(
                 f"Skipped record {index} due to bad name parts.                                "
             )
             continue
-        # scoreboard will map records to scores which we use to find out what to include in our blocks
+        # scoreboard will map records to scores which we use to find out what to include in our filtered blocks
         scoreboard = {}
         for name_part in name_parts:
             for key in name_parts_indexes:
                 if JaroWinkler().similarity(name_part, key) >= similarity_threshold:
-                    # if the name_part is close enough to the key, union the current block with the new possible matches
+                    # if the name_part is close enough to the key, add a point to all the records mapped to by that key
                     for record in name_parts_indexes[key]:
                         scoreboard.update({record: scoreboard.get(record, 0) + 1})
         # make sure all records have a score in the scoreboard in order to guarantee block size
@@ -260,9 +260,9 @@ def filter_with_threshold_scores(
             reverse=True,
         )[:block_size]
 
-        blocks.update({index: set(best_records)})
+        filtered_blocks.update({index: set(best_records)})
     print("\n")
-    return blocks
+    return filtered_blocks
 
 
 def create_match_blocks(matches):
