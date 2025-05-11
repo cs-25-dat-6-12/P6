@@ -93,7 +93,7 @@ if __name__ == "__main__":
         header=0,
     )
 
-    labeler = name_length
+    labeler = no_distinguishing
 
     print("Blocking first dataset...")
     dict_1 = block_dataframe(df1, labeler)

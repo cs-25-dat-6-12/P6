@@ -119,10 +119,16 @@ def filter_with_part_scores(blocks, df, blocks_df, block_size=200):
                 for record in name_parts_indexes[key]:
                     # only update the scoreboard if the new score is greater than the score that was there already
                     scoreboard.update({record: max(scoreboard.get(record, 0), score)})
-        # make sure all records have a score in the scoreboard in order to guarantee block size
+        # make sure all records have a score in the scoreboard in order to guarantee the specified number of pairwise comparisons (if the input block is large enough to support it)
         for record in list(blocks_df.index):
             if scoreboard.get(record, None) == None:
                 scoreboard.update({record: 0})
+        # remove from the scoreboard any records that are not in the comparison block for the current record
+        scoreboard = {
+            record: scoreboard[record]
+            for record in scoreboard
+            if record in blocks[index]
+        }
         # now sort the scoreboard records by score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
@@ -183,7 +189,7 @@ def filter_with_normalized_scores_revised(df, blocks_df, block_size=100):
                 )
             else:
                 scoreboard.update({record: 0})
-        # make sure all records have a score in the scoreboard in order to guarantee block size
+        # make sure all records have a score in the scoreboard in order to guarantee the specified number of pairwise comparisons (if the input block is large enough to support it)
         for record in list(blocks_df.index):
             if scoreboard.get(record, None) == None:
                 scoreboard.update({record: 0})
@@ -232,7 +238,7 @@ def filter_with_threshold_scores(df, blocks_df, block_size=300, similarity_thres
                     # if the name_part is close enough to the key, add a point to all the records mapped to by that key
                     for record in name_parts_indexes[key]:
                         scoreboard.update({record: scoreboard.get(record, 0) + 1})
-        # make sure all records have a score in the scoreboard in order to guarantee block size
+        # make sure all records have a score in the scoreboard in order to guarantee the specified number of pairwise comparisons (if the input block is large enough to support it)
         for record in list(blocks_df.index):
             if scoreboard.get(record, None) == None:
                 scoreboard.update({record: 0})
@@ -388,7 +394,7 @@ if __name__ == "__main__":
                 # load the blocks created in the blocking phase and make the lists into sets again
                 blocks = json.load(file)
                 blocks = {int(k): set(v) for k, v in blocks.items()}
-                filtered_blocks = filter_with_set_union(blocks, df2, df1)
+                filtered_blocks = filter_with_part_scores(blocks, df2, df1)
         except Exception as e:
             # beep with frequency 1000 for 1000 ms if something goes wrong during filtering
             winsound.Beep(1000, 1000)
