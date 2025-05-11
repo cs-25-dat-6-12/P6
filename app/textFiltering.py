@@ -100,7 +100,7 @@ def filter_with_part_scores(df, blocks_df, block_size=200, is_same_df=False):
     for index, row in df.iterrows():
         # a comparison block is an index of a record and a set of all the indexes of records that it might match with
         print(
-            f"Blocking record {index}",
+            f"Filtering record {index}",
             end="\r",
         )
         name_parts = []
@@ -152,7 +152,7 @@ def filter_with_normalized_scores_revised(
     for index, row in df.iterrows():
         # a comparison block is an index of a record and a set of all the indexes of records that it might match with
         print(
-            f"Blocking record {index}",
+            f"Filtering record {index}",
             end="\r",
         )
         name_parts = []
@@ -221,7 +221,7 @@ def filter_with_threshold_scores(
     for index, row in df.iterrows():
         # a comparison block is an index of a record and a set of all the indexes of records that it might match with
         print(
-            f"Blocking record {index}",
+            f"Filtering record {index}",
             end="\r",
         )
         filtered_blocks.update({index: set()})
