@@ -626,3 +626,7 @@ Deletion of file with ID file-URV3omJkPwrjvSeP6UYv7Y succeeded.
 
 2025-05-09 10:12:06.212206		New batch file written at app/prompt2matches.jsonl
 
+2025-05-09 15:01:41.547046		New batch file written at app/newTranliterationMatches.jsonl
+
+2025-05-09 15:43:02.353951		New batch file written at app/repromptTransliterationsMatches.jsonl
+

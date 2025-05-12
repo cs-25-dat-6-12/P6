@@ -115,7 +115,7 @@ def prepare_batch_file_individual_pairs(
                         "messages": [
                             {
                                 "role": "developer",
-                                "content": f'You will be given two names. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
+                                "content": f'You will be given two names. The first name is a yiddish name written in the roman alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
                             },
                             {
                                 "role": "user",
@@ -231,8 +231,8 @@ if __name__ == "__main__":
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
     )
     blocks_df = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig.tsv",
-        sep="\t",
+        r"datasets\phonetic\phoneticZylbercweig_name_parts.csv",
+        sep=",",
         header=0,
     )
     blocks = {}

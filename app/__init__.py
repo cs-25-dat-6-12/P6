@@ -397,8 +397,8 @@ if __name__ == "__main__":
     # )
 
     add_name_parts_from_title(
-        "datasets/phonetic/phoneticZylbercweig_phonetic.csv",
-        "datasets/phonetic/phoneticZylbercweig_name_parts.csv",
+        "datasets/phonetic/LASKI_phonetic.csv",
+        "datasets/phonetic/LASKI_phonetic_name_parts.csv",
     )
 
     # write_indexed_italy_em(
