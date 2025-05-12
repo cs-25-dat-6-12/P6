@@ -48,22 +48,22 @@ def create_parts_count_dictionary(name_parts_indexes):
     return parts_count
 
 
-def create_blocks_with_set_union(df, blocks_df, similarity_threshold=1):
-    # given a dataset df to create blocks for, a dataset blocks_df to create blocks from, create blocks for each record in df
-    # unfortunately, since transliteration doesn't produce the exact equivalent names, we can't just lookup our name parts the name_parts_indexes,
-    # so we iterate over the keys and test for similarity instead.
-    # this will take a while, but that's fine: Blocks only have to be made once.
+def filter_with_set_union(blocks, df, blocks_df, similarity_threshold=0.65):
+    # given pairwise comparison blocks which map records from a dataset df to records from a dataset blocks_df, create new pairwise comparison blocks:
+    # Since transliteration doesn't produce the exact equivalent names, we can't just lookup our name parts in other records,
+    # so we iterate over the keys in name_parts_indexes and test for similarity instead.
+    # When similarity is above a set threshold, add all records with that key to the comparison blocks for the current record
 
     name_parts_indexes = create_parts_dictionary(blocks_df)
 
-    blocks = {}
+    filtered_blocks = {}
     for index, row in df.iterrows():
-        # a block is an index of a record and a set of all the indexes of records that it might match with
+        # a comparison block is an index of a record and a set of all the indexes of records that it might match with
         print(
-            f"Blocking record {index}",
+            f"Filtering record {index}",
             end="\r",
         )
-        blocks.update({index: set()})
+        filtered_blocks.update({index: set()})
         name_parts = []
         try:
             name_parts = json.loads(row["name_parts"]).values()
@@ -75,25 +75,32 @@ def create_blocks_with_set_union(df, blocks_df, similarity_threshold=1):
         for name_part in name_parts:
             for key in name_parts_indexes:
                 if JaroWinkler().similarity(name_part, key) >= similarity_threshold:
-                    # if the name_part is close enough to the key, union the current block with the new possible matches
+                    # if the name_part is close enough to the key, union the current block with the new possible matches.
+                    # NOTE possible matches are only included if they're already in the record's block! Hence the intersection with blocks[index].
                     possible_matches = name_parts_indexes[key]
-                    blocks.update({index: (blocks.get(index)).union(possible_matches)})
+                    filtered_blocks.update(
+                        {
+                            index: (filtered_blocks.get(index)).union(
+                                possible_matches.intersection(blocks[index])
+                            )
+                        }
+                    )
     print("\n")
-    return blocks
+    return filtered_blocks
 
 
-def create_blocks_with_part_scores(df, blocks_df, block_size=200, is_same_df=False):
+def filter_with_part_scores(blocks, df, blocks_df, block_size=200):
     # instead of using a set union, assign a score to each record based on the most similar (or least distant) name part from some target record,
-    # and then place the n records with the best score in the block for the target record, with n = block_size.
+    # and then place the n records (that intersect with the input block for the target record) with the best score in the block for the target record, with n = block_size.
 
     name_parts_indexes = create_parts_dictionary(blocks_df)
 
-    blocks = {}
+    filtered_blocks = {}
 
     for index, row in df.iterrows():
-        # a block is an index of a record and a set of all the indexes of records that it might match with
+        # a comparison block is an index of a record and a set of all the indexes of records that it might match with
         print(
-            f"Blocking record {index}",
+            f"Filtering record {index}",
             end="\r",
         )
         name_parts = []
@@ -104,7 +111,7 @@ def create_blocks_with_part_scores(df, blocks_df, block_size=200, is_same_df=Fal
                 f"Skipped record {index} due to bad name parts.                                "
             )
             continue
-        # scoreboard will map records to scores which we use to find out what to include in our blocks
+        # scoreboard will map records to scores which we use to find out what to include in our filtered blocks
         scoreboard = {}
         for name_part in name_parts:
             for key in name_parts_indexes:
@@ -112,87 +119,28 @@ def create_blocks_with_part_scores(df, blocks_df, block_size=200, is_same_df=Fal
                 for record in name_parts_indexes[key]:
                     # only update the scoreboard if the new score is greater than the score that was there already
                     scoreboard.update({record: max(scoreboard.get(record, 0), score)})
-        # make sure all records have a score in the scoreboard in order to guarantee block size
+        # make sure all records have a score in the scoreboard in order to guarantee the specified number of pairwise comparisons (if the input block is large enough to support it)
         for record in list(blocks_df.index):
             if scoreboard.get(record, None) == None:
                 scoreboard.update({record: 0})
-        # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
-        if is_same_df:
-            scoreboard.pop(index, None)
+        # remove from the scoreboard any records that are not in the comparison block for the current record
+        scoreboard = {
+            record: scoreboard[record]
+            for record in scoreboard
+            if record in blocks[index]
+        }
         # now sort the scoreboard records by score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
             scoreboard, key=lambda record: scoreboard[record], reverse=True
         )[:block_size]
-        blocks.update({index: set(best_records)})
+        filtered_blocks.update({index: set(best_records)})
     print("\n")
-    return blocks
+    return filtered_blocks
 
 
-def create_blocks_with_normalized_scores(
-    df, blocks_df, block_size=400, is_same_df=False
-):
-    # the same idea as create_blocks_with_part_scores, except we add the score instead of taking the max of the new and current score,
-    # and then normalize all the scores afterwards based on the maximum possible score for each name part
-    # the maximum score for a name part defaults to 1 but in the future, a callable could be used to calculate a max score dynamically
-
-    name_parts_indexes = create_parts_dictionary(blocks_df)
-
-    blocks = {}
-
-    for index, row in df.iterrows():
-        # a block is an index of a record and a set of all the indexes of records that it might match with
-        print(
-            f"Blocking record {index}",
-            end="\r",
-        )
-        name_parts = []
-        try:
-            name_parts = json.loads(row["name_parts"]).values()
-        except json.JSONDecodeError:
-            print(
-                f"Skipped record {index} due to bad name parts.                                "
-            )
-            continue
-        # scoreboard will map records to scores which we use to find out what to include in our blocks
-        scoreboard = {}
-        # comparisons will map records to the number of comparisons we did to find the record's score
-        comparisons = {}
-        for name_part in name_parts:
-            for key in name_parts_indexes:
-                score = JaroWinkler().similarity(name_part, key)
-                for record in name_parts_indexes[key]:
-                    # only update the scoreboard if the new score is greater than the score that was there already
-                    scoreboard.update({record: (scoreboard.get(record, 0) + score)})
-                    comparisons.update({record: (comparisons.get(record, 0) + 1)})
-        # make sure all records have a score in the scoreboard in order to guarantee block size
-        for record in list(blocks_df.index):
-            if scoreboard.get(record, None) == None:
-                scoreboard.update({record: 0})
-        # we've filled out the scoreboard, so now we normalize it
-        for record in scoreboard:
-            max_score = 0
-            # for record_name_part in json.loads(blocks_df.iloc[record]["name_parts"]).values():
-            for _ in range(comparisons[record]):
-                max_score += 1  # NOTE this is where the maximum possible score for each name part goes!
-            scoreboard.update({record: (scoreboard.get(record) / max_score)})
-        # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
-        if is_same_df:
-            scoreboard.pop(index, None)
-        # now sort the scoreboard records by score and put the n best records in the block with n = block_size
-        # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
-        best_records = sorted(
-            scoreboard, key=lambda record: scoreboard[record], reverse=True
-        )[:block_size]
-        blocks.update({index: set(best_records)})
-    print("\n")
-    return blocks
-
-
-def create_blocks_with_normalized_scores_revised(
-    df, blocks_df, block_size=100, is_same_df=True
-):
-    # a revision of create_blocks_with_normalized_scores with the intention of getting closer to the original idea: Instead of summing up the maximum score for each name part,
+def filter_with_normalized_scores_revised(blocks, df, blocks_df, block_size=100):
+    # a revision of filter_with_normalized_scores with the intention of getting closer to the original idea: Instead of summing up the maximum score for each name part,
     # we try to find the maximum score possible for disjoint pairs of name parts i.e. if we have "Emil Larsen" and "Emilie Larson",
     # then we only sum up the similarity of the pair "Emil" and "Emilie" and the pair "Larsen" and "Larson" (since those pairs maximize the sum of pairs' similarities),
     # and then divide by the number of pairs to normalize the score. Thus, we essentially have to solve an "Assignment Problem" for each pair of records from df and blocks_df.
@@ -200,12 +148,12 @@ def create_blocks_with_normalized_scores_revised(
     name_parts_indexes = create_parts_dictionary(blocks_df)
     parts_count = create_parts_count_dictionary(name_parts_indexes)
 
-    blocks = {}
+    filtered_blocks = {}
 
     for index, row in df.iterrows():
-        # a block is an index of a record and a set of all the indexes of records that it might match with
+        # a comparison block is an index of a record and a set of all the indexes of records that it might match with
         print(
-            f"Blocking record {index}",
+            f"Filtering record {index}",
             end="\r",
         )
         name_parts = []
@@ -216,7 +164,7 @@ def create_blocks_with_normalized_scores_revised(
                 f"Skipped record {index} due to bad name parts.                                "
             )
             continue
-        # scoreboard will map records to scores which we use to find out what to include in our blocks
+        # scoreboard will map records to scores which we use to find out what to include in our filtered blocks
         scoreboard = {}
         # similarities will map records to an list of similarity scores which we concatenate as we find them.
         # If len(name_parts) = n and there are m name parts in a record, then the list can be turned into a matrix of shape n x m
@@ -241,27 +189,30 @@ def create_blocks_with_normalized_scores_revised(
                 )
             else:
                 scoreboard.update({record: 0})
-        # make sure all records have a score in the scoreboard in order to guarantee block size
+        # make sure all records have a score in the scoreboard in order to guarantee the specified number of pairwise comparisons (if the input block is large enough to support it)
         for record in list(blocks_df.index):
             if scoreboard.get(record, None) == None:
                 scoreboard.update({record: 0})
-        # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
-        if is_same_df:
-            scoreboard.pop(index, None)
+        # remove from the scoreboard any records that are not in the comparison block for the current record
+        scoreboard = {
+            record: scoreboard[record]
+            for record in scoreboard
+            if record in blocks[index]
+        }
         # now sort the scoreboard records by score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
             scoreboard, key=lambda record: scoreboard[record], reverse=True
         )[:block_size]
-        blocks.update({index: set(best_records)})
+        filtered_blocks.update({index: set(best_records)})
     print("\n")
-    return blocks
+    return filtered_blocks
 
 
-def create_blocks_with_threshold_scores(
-    df, blocks_df, block_size=300, similarity_threshold=1, is_same_df=True
+def filter_with_threshold_scores(
+    blocks, df, blocks_df, block_size=300, similarity_threshold=1
 ):
-    # the same idea as create_blocks_with_set_union, except we add a point to the relevant records instead of joining them with the block
+    # the same idea as filter_with_set_union, except we add a point to the relevant records instead of joining them with the block
     # afterwards we normalize the scores by dividing each record's score with the number of name parts in the records
     # and then place the n records with the best score in the block for the target record, with n = block_size.
     # if the two datasets are the same, we remove any mapping from an index to the same index, since that's a trivial match
@@ -269,42 +220,45 @@ def create_blocks_with_threshold_scores(
     name_parts_indexes = create_parts_dictionary(blocks_df)
     parts_count = create_parts_count_dictionary(name_parts_indexes)
 
-    blocks = {}
+    filtered_blocks = {}
 
     for index, row in df.iterrows():
-        # a block is an index of a record and a set of all the indexes of records that it might match with
+        # a comparison block is an index of a record and a set of all the indexes of records that it might match with
         print(
-            f"Blocking record {index}",
+            f"Filtering record {index}",
             end="\r",
         )
-        blocks.update({index: set()})
+        filtered_blocks.update({index: set()})
         name_parts = []
         try:
             name_parts = json.loads(row["name_parts"]).values()
         except json.JSONDecodeError:
-            blocks.update({index: set()})
+            filtered_blocks.update({index: set()})
             print(
                 f"Skipped record {index} due to bad name parts.                                "
             )
             continue
-        # scoreboard will map records to scores which we use to find out what to include in our blocks
+        # scoreboard will map records to scores which we use to find out what to include in our filtered blocks
         scoreboard = {}
         for name_part in name_parts:
             for key in name_parts_indexes:
                 if JaroWinkler().similarity(name_part, key) >= similarity_threshold:
-                    # if the name_part is close enough to the key, union the current block with the new possible matches
+                    # if the name_part is close enough to the key, add a point to all the records mapped to by that key
                     for record in name_parts_indexes[key]:
                         scoreboard.update({record: scoreboard.get(record, 0) + 1})
-        # make sure all records have a score in the scoreboard in order to guarantee block size
+        # make sure all records have a score in the scoreboard in order to guarantee the specified number of pairwise comparisons (if the input block is large enough to support it)
         for record in list(blocks_df.index):
             if scoreboard.get(record, None) == None:
                 scoreboard.update({record: 0})
             # and remove records from the scoreboard if they have no name parts
             if parts_count.get(record, None) == None:
                 scoreboard.pop(record, None)
-        # if the two datasets are the same, remove from the scoreboard the index of the record we are blocking for
-        if is_same_df:
-            scoreboard.pop(index, None)
+        # remove from the scoreboard any records that are not in the comparison block for the current record
+        scoreboard = {
+            record: scoreboard[record]
+            for record in scoreboard
+            if record in blocks[index]
+        }
         # now sort the scoreboard records by normalized score and put the n best records in the block with n = block_size
         # NOTE if distance is used as score instead of a similarity, simply let reverse=False instead of reverse=True
         best_records = sorted(
@@ -313,9 +267,9 @@ def create_blocks_with_threshold_scores(
             reverse=True,
         )[:block_size]
 
-        blocks.update({index: set(best_records)})
+        filtered_blocks.update({index: set(best_records)})
     print("\n")
-    return blocks
+    return filtered_blocks
 
 
 def create_match_blocks(matches):
@@ -359,7 +313,7 @@ def calculate_recall_better(blocks, matches):
                 found_matches += 1
 
     recall = found_matches / total_matches
-    print(f"\nFound {found_matches}/{total_matches} matches.\n")
+    print(f"\nFound {found_matches}/{total_matches} matches.")
     return recall
 
 
@@ -389,7 +343,7 @@ def calculate_precision(blocks, matches):
         # this prevents a division by zero in case possible_matches is zero
         return 0
     precision = found_matches / possible_matches
-    print(f"\n{found_matches}/{possible_matches} identified matches are correct.\n")
+    print(f"\n{found_matches}/{possible_matches} identified matches are correct.")
     return precision
 
 
@@ -440,35 +394,45 @@ if __name__ == "__main__":
         r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
     )
 
-    blocks = {}
+    filtered_blocks = {}
     try:
-        with open(r"app\blocks.json") as file:
-            print("Retrieving blocks...")
-            blocks = json.load(file)
-            blocks = {int(k): set(v) for k, v in blocks.items()}
-    except OSError:  # NOTE we only do blocking if a blocks.json file doesn't exist!
+        with open(r"app\filtered_blocks.json") as file:
+            print("Retrieving filtered blocks...")
+            filtered_blocks = json.load(file)
+            filtered_blocks = {int(k): set(v) for k, v in filtered_blocks.items()}
+    except (
+        OSError
+    ):  # NOTE we only do filtering if a filtered_blocks.json file doesn't exist!
         try:
-            blocks = create_blocks_with_part_scores(df2, df1)
+            with open(r"app\blocks.json") as file:
+                # load the blocks created in the blocking phase and make the lists into sets again
+                blocks = json.load(file)
+                blocks = {int(k): set(v) for k, v in blocks.items()}
+                filtered_blocks = filter_with_part_scores(blocks, df2, df1)
         except Exception as e:
-            # beep with frequency 1000 for 1000 ms if something goes wrong during blocking
+            # beep with frequency 1000 for 1000 ms if something goes wrong during filtering
             winsound.Beep(1000, 1000)
             raise e
-        # when we're done blocking, write the blocks to blocks.json. We must store our sets as lists due to the format
-        blocks = {k: list(v) for k, v in blocks.items()}
-        with open(r"app\blocks.json", "w", encoding="utf-8") as file:
-            json.dump(blocks, file, ensure_ascii=False, indent=4)
-        # beep with frequency 2500 for 1000 ms when blocking is done
+        # when we're done filtering, write the blocks to filtered_blocks.json. We must store our sets as lists due to the format
+        filtered_blocks = {k: list(v) for k, v in filtered_blocks.items()}
+        with open(r"app\filtered_blocks.json", "w", encoding="utf-8") as file:
+            json.dump(filtered_blocks, file, ensure_ascii=False, indent=4)
+        # beep with frequency 1500 for 1000 ms when blocking is done
         winsound.Beep(1500, 1000)
-    print(f"Biggest block size: {max([len(item) for item in blocks.values()])}")
-    print(f"Smallest block size: {min([len(item) for item in blocks.values()])}\n")
+    print(
+        f"Most pairwise comparisons for one name: {max([len(item) for item in filtered_blocks.values()])}"
+    )
+    print(
+        f"Fewest pairwise comparisons for one name: {min([len(item) for item in filtered_blocks.values()])}\n"
+    )
 
-    recall = calculate_recall_better(blocks, matches)
+    recall = calculate_recall_better(filtered_blocks, matches)
     print(f"Recall: {recall}")
-    reduction_ration = calculate_reduction_ratio(blocks, df1, df2)
+    reduction_ration = calculate_reduction_ratio(filtered_blocks, df1, df2)
     print(f"Reduction ratio: {reduction_ration}")
-    missed_matches = find_missed_matches(blocks, matches)
+    missed_matches = find_missed_matches(filtered_blocks, matches)
 
-    with open(r"app\missed_matches.tsv", "w") as file:
+    with open(r"app\filtering_missed_matches.tsv", "w") as file:
         file.write("df2_title\tdf2_name_parts\tdf1_title\tdf1_name_parts\n")
         for record in missed_matches:
             for missed_match in missed_matches[record]:
