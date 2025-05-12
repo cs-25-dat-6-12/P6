@@ -1,6 +1,9 @@
 import json
 import pandas as pd
 from textFiltering import calculate_recall_better, calculate_reduction_ratio
+from ipapy import is_valid_ipa
+from ipapy import UNICODE_TO_IPA
+from ipapy.ipachar import IPAConsonant
 
 
 def block_dataframe(df, callable):
@@ -17,21 +20,29 @@ def block_dataframe(df, callable):
     return blocks
 
 
-def create_pairwise_comparison_blocks(dict_1, dict_2, is_same_df=False):
+def create_pairwise_comparison_blocks(
+    dict_1, dict_2, is_same_df=False, ignore_lables=["None"]
+):
     # given dictionaries produced by block_dataframe, create blocks in the following format:
     # A record from dict_1 maps to a set of the records from dict_2 it shares at least one block label with.
     # If is_same_df is set to True, records will not map to themselves.
+    # ignore_lables is optional and contains a list of labels for which no pairwise comparisons should be created
     comparison_blocks = {}
     for label in dict_1:
-        print(f'Creating comparison blocks from block "{label}"          ', end="\r")
-        for record in dict_1[label]:
-            comparison_blocks.update(
-                {
-                    record: comparison_blocks.get(record, set()).union(
-                        set(dict_2.get(label, list()))
-                    )
-                }
-            )
+        print(f'Creating comparison blocks from block "{label}"          ', end="\n")
+        if label in ignore_lables:
+            # NOTE even if the label should be ignored, we make sure the records there have a block to prevent errors later
+            for record in dict_1[label]:
+                comparison_blocks.update({record: comparison_blocks.get(record, set())})
+        else:
+            for record in dict_1[label]:
+                comparison_blocks.update(
+                    {
+                        record: comparison_blocks.get(record, set()).union(
+                            set(dict_2.get(label, list()))
+                        )
+                    }
+                )
     print("")
     if is_same_df:
         # NOTE if the dicts come from the same place, then we don't want to waste time matching records with themselves
@@ -72,6 +83,38 @@ def name_part_presence(row):
         return ["None"]
 
 
+def phonetic_consonant_presence(row):
+    # return the IPA characters the row's phonetic encoding contains.
+    # Requires ipapy to be installed! Install it with "pip install ipapy".
+    phoneme = str(row["phoneme"])
+    labels = set()
+    if not is_valid_ipa(phoneme):
+        # FIXME find out how to handle * in phonetic encodings so we don't have to throw it out
+        phoneme = phoneme.replace("*", "")
+    assert is_valid_ipa(phoneme)
+    j = 0
+    char_found = False
+    ipa = ""
+    # find the longest possible IPA characters we can find
+    for i in range(len(phoneme)):
+        try:
+            ipa = UNICODE_TO_IPA[phoneme[j:i]]
+            char_found = True
+        except KeyError:
+            # UNICODE_TO_IPA will raise a KeyError if the unicode character is invalid.
+            # We use this to check whether or not the current IPA character is valid!
+            if char_found:
+                j = i
+                if type(ipa) == IPAConsonant:
+                    labels = labels.union({ipa})
+                char_found = False
+    if char_found and type(ipa) == IPAConsonant:
+        labels = labels.union({ipa})
+    if len(labels) < 1:
+        labels = ["None"]
+    return list(labels)
+
+
 def name_length(row, slack=4):
     title = row["title"]
     length = len(title)
@@ -84,16 +127,14 @@ def name_length(row, slack=4):
 
 
 if __name__ == "__main__":
-    df1 = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
-    )
+    df1 = pd.read_csv(r"datasets\phonetic\LASKI_phonetic.csv", sep=",", header=0)
     df2 = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig.tsv",
-        sep="\t",
+        r"datasets\phonetic\Zylbercweig_phonetic.csv",
+        sep=",",
         header=0,
     )
 
-    labeler = no_distinguishing
+    labeler = phonetic_consonant_presence
 
     print("Blocking first dataset...")
     dict_1 = block_dataframe(df1, labeler)
