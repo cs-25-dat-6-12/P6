@@ -82,7 +82,7 @@ def create_blocks_with_set_union(df, blocks_df, similarity_threshold=1):
     return blocks
 
 
-def create_blocks_with_part_scores(df, blocks_df, block_size=400, is_same_df=False):
+def create_blocks_with_part_scores(df, blocks_df, block_size=200, is_same_df=False):
     # instead of using a set union, assign a score to each record based on the most similar (or least distant) name part from some target record,
     # and then place the n records with the best score in the block for the target record, with n = block_size.
 

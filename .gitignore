@@ -174,4 +174,4 @@ app\lastAnswer.txt
 app\blocks.json
 datasets/testset15-Zylbercweig-Laski/dicts/*
 app\missed_matches.tsv
-app\batchfile.jsonl
+experiments/
