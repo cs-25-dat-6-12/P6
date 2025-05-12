@@ -78,6 +78,7 @@ def create_blocks_with_set_union(df, blocks_df, similarity_threshold=1):
                     # if the name_part is close enough to the key, union the current block with the new possible matches
                     possible_matches = name_parts_indexes[key]
                     blocks.update({index: (blocks.get(index)).union(possible_matches)})
+
     print("\n")
     return blocks
 
@@ -190,7 +191,7 @@ def create_blocks_with_normalized_scores(
 
 
 def create_blocks_with_normalized_scores_revised(
-    df, blocks_df, block_size=100, is_same_df=True
+    df, blocks_df, block_size=100, is_same_df=False
 ):
     # a revision of create_blocks_with_normalized_scores with the intention of getting closer to the original idea: Instead of summing up the maximum score for each name part,
     # we try to find the maximum score possible for disjoint pairs of name parts i.e. if we have "Emil Larsen" and "Emilie Larson",
@@ -448,7 +449,7 @@ if __name__ == "__main__":
             blocks = {int(k): set(v) for k, v in blocks.items()}
     except OSError:  # NOTE we only do blocking if a blocks.json file doesn't exist!
         try:
-            blocks = create_blocks_with_part_scores(df2, df1)
+            blocks = create_blocks_with_set_union(df2, df1, similarity_threshold=0.65)
         except Exception as e:
             # beep with frequency 1000 for 1000 ms if something goes wrong during blocking
             winsound.Beep(1000, 1000)
@@ -460,7 +461,10 @@ if __name__ == "__main__":
         # beep with frequency 2500 for 1000 ms when blocking is done
         winsound.Beep(1500, 1000)
     print(f"Biggest block size: {max([len(item) for item in blocks.values()])}")
-    print(f"Smallest block size: {min([len(item) for item in blocks.values()])}\n")
+    print(f"Smallest block size: {min([len(item) for item in blocks.values()])}")
+    print(
+        f"Average block size: {sum([len(item) for item in blocks.values()])/len(blocks)}\n"
+    )
 
     recall = calculate_recall_better(blocks, matches)
     print(f"Recall: {recall}")
