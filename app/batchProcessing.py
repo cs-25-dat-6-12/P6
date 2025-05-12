@@ -33,6 +33,22 @@ def create_name_pair_list(record, df, block, blocks_df):
     return name_list
 
 
+def name_parts_to_string(name_parts):
+    # given a dictionary of name parts, convert it into a string
+    string = ""
+    for part in name_parts:
+        string += part + ": "
+        string += name_parts[part] + ", "
+    string = string[:-2]
+    return string
+
+
+def extract_output_string(line):
+    # given a line from a batch jsonl-file, extract the output string
+    line = json.loads(line)
+    return line["response"]["body"]["choices"][0]["message"]["content"]
+
+
 def prepare_batch_file(
     blocks,
     df,
@@ -51,9 +67,6 @@ def prepare_batch_file(
 
     with open(filepath, "w", encoding="utf-8") as file:
         for record in blocks:
-            if record > 2:
-                # FIXME This if-statement is only for testing
-                break
             print(
                 f"Writing request for block {record}     ",
                 end="\r",
@@ -104,9 +117,6 @@ def prepare_batch_file_individual_pairs(
 
     with open(filepath, "w") as file:
         for record in blocks:
-            # if record > 99999:
-            # FIXME This if-statement is only for testing
-            # break
             for possible_match in blocks[record]:
                 print(
                     f"Writing request for pair {record}#{possible_match}     ",
@@ -121,11 +131,11 @@ def prepare_batch_file_individual_pairs(
                         "messages": [
                             {
                                 "role": "developer",
-                                "content": f'You will be given two names. The first name is written in the hebrew alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
+                                "content": f'You will be given two names. The first name is a yiddish name written in the roman alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
                             },
                             {
                                 "role": "user",
-                                "content": f'"{blocks_df.iloc[possible_match]["title"]}", "{df.iloc[record]["title"]}"',
+                                "content": f'"{name_parts_to_string(json.loads(blocks_df.iloc[possible_match]["name_parts"]))}", "{name_parts_to_string(json.loads(df.iloc[record]["name_parts"]))}"',
                             },
                         ],
                         "max_tokens": max_tokens_per_request,
@@ -237,8 +247,8 @@ if __name__ == "__main__":
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
     )
     blocks_df = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig.tsv",
-        sep="\t",
+        r"datasets\phonetic\phoneticZylbercweig_name_parts.csv",
+        sep=",",
         header=0,
     )
     blocks = {}
@@ -247,6 +257,15 @@ if __name__ == "__main__":
         blocks = json.load(file)
         # NOTE outside of textFiltering, blocks are lists, not sets!
         blocks = {int(k): list(v) for k, v in blocks.items()}
+
+    # FIXME for testing only!
+    blocks = create_match_blocks(
+        pd.read_csv(
+            r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
+            sep="\t",
+            header=0,
+        )
+    )
 
     # setup the client as a global variable
     with open("secrets.json", "r") as file:

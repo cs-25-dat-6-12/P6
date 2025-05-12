@@ -425,11 +425,11 @@ def combine_jsonl(dst_filepath, src_directory):
 
 if __name__ == "__main__":
     # NOTE make sure all specified directories are empty before using them here!
-    main_file = "experiments/partScores200/partScores200.jsonl"
-    subfiles_directory = "experiments/partScores200/partScores200split/"
+    main_file = "experiments/repromptTransliterationsMatches/repromptTransliterationsMatches.jsonl"
+    subfiles_directory = "experiments/repromptTransliterationsMatches/repromptTransliterationsMatchessplit/"
     tracking_file = subfiles_directory + "tracker.csv"
-    output_directory = "experiments/partScores200/partScores200splitOutput/"
-    output_file = "experiments/partScores200/partScores200output.jsonl"
+    output_directory = "experiments/repromptTransliterationsMatches/repromptTransliterationsMatchessplitOutput/"
+    output_file = "experiments/repromptTransliterationsMatches/repromptTransliterationsMatchesoutput.jsonl"
 
     with open("secrets.json", "r") as file:
         secrets = json.load(file)
