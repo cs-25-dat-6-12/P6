@@ -77,7 +77,7 @@ def readData(filenames):
         clean_row = {
             k: preProcess(v)
             for k, v in row.items()
-            if k not in ["", "start", "id", "geo_id", "geowkt", "geo_source", "title_source", "description", "lat", "lon", "title", "name_parts"]
+            if k not in ["", "start", "id", "geo_id", "geowkt", "geo_source", "title_source", "description", "lat", "lon"] #, "title", "name_parts"
         }
 
         clean_row["title"] = preProcess(row.get("title", ""))

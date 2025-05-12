@@ -1,18 +1,15 @@
 from io import StringIO
 import os
-import csv
 import math
 import sys
 from concurrent.futures import ThreadPoolExecutor
 import time
 import random
-
 import requests
 import pandas as pd
 import numpy as np
 from typing import Dict, Optional
 import json
-
 
 
 def send_data_to_service(df: pd.DataFrame, config: Dict, service_name: str) -> Optional[pd.DataFrame]:
@@ -65,40 +62,39 @@ def send_data_to_service(df: pd.DataFrame, config: Dict, service_name: str) -> O
                 print(f"Error occurred after {max_retries} attempts: {e}. Sending a warning and continuing...")
                 return None
 
-    return None  # In case all attempts fail
+    return None 
 
 
 def prep_df(df: pd.DataFrame):
     """
     Given a dataframe, prepares it for matching by transliterating it and removing vowels from the var_entries
     """
-    # Force transliteration only (no phonemes)
-    config = {"trans_flag": True, "phonetic_flag": True, "extended_rules_flag": True, "remove_vowels_flag": False}
+    config = {"trans_flag": False, "phonetic_flag": True, "extended_rules_flag": True, "remove_vowels_flag": False}
     service = "https://mehdi-er-prep-snlwejaxvq-ez.a.run.app/process"
     prep_fields = ['title']
     optional_prep_fields = ['name_parts']
 
+    # filter NaN id values and log a warning
     if df['id'].isnull().sum() > 0:
         print(f"Warning: {df['id'].isnull().sum()} NaN id values found in the dataframe. These will be removed.")
         df = df.dropna(subset=['id'])
 
-    # Check that the required fields exist in the DataFrame
     for field in prep_fields:
         if field not in df.columns:
             raise ValueError(f"Dataframe must contain the following fields: {prep_fields} and contains {df.columns}")
 
-    # Add the 'name_parts' field if it exists in the dataframe (even if it’s missing some rows)
+    # split the df into two where both contain the ID field and one contains the fields from the prep_fields list and the other contains the rest.
     for field in optional_prep_fields:
         if field in df.columns:
             prep_fields.append(field)
+    print(f"OPTIONAL_PREP_FIELDS: {optional_prep_fields} + PREP_FIELDS: {prep_fields}")
 
-    # Prepare the dataframe for service by splitting fields
     df_to_send = df[['id'] + prep_fields]
     df_to_merge = df.drop(prep_fields, axis=1)
 
     df_list = np.array_split(df_to_send, math.ceil(len(df) / 1000))
 
-    # Use ThreadPoolExecutor to send data in parallel
+    # create a ThreadPoolExecutor
     with ThreadPoolExecutor() as executor:
         futures = [executor.submit(send_data_to_service, df, config, service) for df in df_list]
         df_list = [future.result() for future in futures if future.result() is not None]
@@ -106,20 +102,22 @@ def prep_df(df: pd.DataFrame):
     if not df_list:
         raise RuntimeError("All requests to the preparation service failed.")
 
-    # Merge the response with the rest of the data
     merged_df = pd.concat(df_list)
-
-    # Debug print to verify the service's response
+    
     print("Returned columns from service:", merged_df.columns.tolist())
     merged_df = merged_df.merge(df_to_merge, on='id', how='left')
-
+    
     return merged_df
+
 
 
 def write_g2p(data, name):
     print(f"Preparing and saving G2P data for: {name}")
     data = prep_df(data)
     
+    """ if name == "LASKI":
+        columns = ['name_part_given-name', 'name_part_middle-name', 'name_part_surname' , 'name_part_salutation', 'name_part_patronymic', 'name_part_professional-name', 'name_part_maiden-surname', 'name_part_nisba','name_part_alternative-name', 'name_part_qualifier','name_part_honorific', 'acronym', 'maiden-surname', 'honorific', 'primary-name', 'professional-name', 'salutation', 'teknonym', 'patronymic', 'middle-name', 'qualifier', 'surname', 'given-name', 'alternative-name', 'appellation', 'matronymic', 'nisba']
+        data.drop(columns, inplace=True, axis=1) """
 
     output_file_path = f"datasets/phonetic/{name}_phonetic.csv"
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
