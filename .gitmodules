@@ -1,0 +1,3 @@
+[submodule "mehdie-er-service"]
+	path = mehdie-er-service
+	url = https://gitlab.com/m8417/mehdie-er-service.git

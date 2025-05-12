@@ -6,3 +6,4 @@ hf_xet>=1.0.3
 openai>=1.71.0
 strsimpy>=0.2.1
 scipy>=1.15.2
+translit-me
