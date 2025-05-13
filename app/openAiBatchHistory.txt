@@ -642,3 +642,9 @@ Contents saved to: experiments/prompt2matches/prompt2matches_output.jsonl
 
 2025-05-09 15:43:02.353951		New batch file written at app/repromptTransliterationsMatches.jsonl
 
+2025-05-13 13:06:24.044560		New batch file written at app/listsTest.jsonl
+
+2025-05-13 13:20:22.784791		New batch file written at app/listsTest.jsonl
+
+2025-05-13 13:25:27.792602		New batch file written at app/listsTest.jsonl
+
