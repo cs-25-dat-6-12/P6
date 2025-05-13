@@ -137,5 +137,41 @@ def write_missed_matches(
                 )
 
 
+def update_blocks_with_list_names(
+    output_filepath, blocks_filepath, leftover_blocks_filepath, blocks_df
+):
+    # given the path to an output file, the path to the blocks-file the input was created from, the dataset the blocks map to, and the path to the leftover blocks,
+    # updates the blocks-file. # NOTE This function was made to work with prepare_batch_file_filter_lists.
+    with open(output_filepath) as output_file, open(
+        blocks_filepath, "r+"
+    ) as blocks_file, open(leftover_blocks_filepath) as leftover_blocks_file:
+        # load the the blocks we started with and load the leftover blocks which will be the base of our new blocks
+        blocks = json.load(blocks_file)
+        new_blocks = json.load(leftover_blocks_file)
+        new_blocks = {int(k): set(v) for k, v in new_blocks.items()}
+        for line in output_file:
+            line = json.loads(line)
+            # get the response and the record we're trying to find a match for
+            response = line["response"]["body"]["choices"][0]["message"]["content"]
+            record = int(line["custom_id"].split("-")[0])
+            # find out which record in the block was chosen and add it to the new blocks
+            for possible_match in blocks[record]:
+                # FIXME hardcoded to use the title right now. If the names get a different format, this must be changed!
+                # NOTE we're checking if the name is in the response in case the response has other stuff in it too, like extra quotation marks or a prefix like "the most likely match is:"
+                if blocks_df.iloc[possible_match]["title"] in response:
+                    new_blocks[record].add(possible_match)
+                    break
+        # we're done building the new blocks, now we overwrite the old blocks so we can make a new request out of them
+        new_blocks = {k: list(v) for k, v in new_blocks.items()}
+        json.dump(new_blocks, blocks_file, ensure_ascii=False, indent=4)
+        # if each key maps to exactly one record, then we're ready for pairwise comparisons and should tell the user
+        if sum([len(x) for x in new_blocks.values()]) == len(new_blocks):
+            print(
+                "All records have one possible match. Ready for pairwise comparisons!"
+            )
+        else:
+            print("Blocks updated and ready for next iteration!")
+
+
 if __name__ == "__main__":
     test_with_name_pairs()
