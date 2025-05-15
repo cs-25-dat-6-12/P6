@@ -89,7 +89,7 @@ def filter_with_set_union(blocks, df, blocks_df, similarity_threshold=0.65):
     return filtered_blocks
 
 
-def filter_with_part_scores(blocks, df, blocks_df, block_size=301):
+def filter_with_part_scores(blocks, df, blocks_df, block_size=200):
     # instead of using a set union, assign a score to each record based on the most similar (or least distant) name part from some target record,
     # and then place the n records (that intersect with the input block for the target record) with the best score in the block for the target record, with n = block_size.
 

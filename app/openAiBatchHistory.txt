@@ -652,3 +652,28 @@ Contents saved to: experiments/prompt2matches/prompt2matches_output.jsonl
 
 2025-05-13 14:25:14.946001		New batch file written at app/listsTest.jsonl
 
+2025-05-14 14:44:58.649865		
+Batch job with ID batch_682457b65d8081909eefe6f5389fa6cd cancelled.
+
+2025-05-14 17:08:28.078518		New batch file written at app/listsTest.jsonl
+
+2025-05-14 17:25:30.820697		New batch file written at app/listsTest.jsonl
+
+2025-05-14 17:42:36.369905		New batch file written at app/listsTest.jsonl
+
+2025-05-14 17:43:20.322635		New batch file written at app/listsTest.jsonl
+
+2025-05-14 18:04:20.116596		New batch file written at app/listsTest.jsonl
+
+2025-05-14 18:27:20.041405		New batch file written at app/matchesOnlyConfScore.jsonl
+
+2025-05-14 19:23:44.990280		New batch file written at app/matchesOnlyConfScore2.jsonl
+
+2025-05-15 10:09:45.029477		New batch file written at app/partScores200ConfScore.jsonl
+
+2025-05-15 10:16:33.199092		New batch file written at app/partScores200ConfScore.jsonl
+
+2025-05-15 14:00:45.826328		New batch file written at app/listsTest.jsonl
+
+2025-05-15 14:02:51.975905		New batch file written at app/listsTest.jsonl
+
