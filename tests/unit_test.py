@@ -5,7 +5,7 @@ import pandas as pd
 sys.path.append(os.path.dirname(os.path.abspath(__file__)).replace("\\tests", ""))
 sys.path.append(os.path.dirname(os.path.abspath(__file__)).replace("/tests", ""))
 import app
-from app.vectordb import get_db, query_db_by_name_singular_dataset, get_db, query_db_by_name, run_blocking_multiple_dataset, create_dict_from_block, run_blocking_singular_dataset
+from app.vectordb import get_db, query_db_by_name_singular_dataset, get_db, query_db_by_name, run_filtering_multiple_dataset, create_dict_from_blocks, run_filtering_singular_dataset
 
 class Test_transliterate_yiddish():
     def test_individual_letter(self):
@@ -38,11 +38,11 @@ class Test_vectordb():
             assert id_temp != id
 
     def test_create_dict(self):
-        result1, result2 = run_blocking_multiple_dataset(["test1", "test2", "test3", "test4", "test5"], ["test6", "test7", "test8", "test9", "test10"], 5)
-        result3 = run_blocking_singular_dataset(["test11", "test12", "test13", "test14", "test15"], ["1", "2", "3", "4", "5"], 5)
-        dict1 = create_dict_from_block(result1)
-        dict2 = create_dict_from_block(result2)
-        dict3 = create_dict_from_block(result3)
+        result1, result2 = run_filtering_multiple_dataset(["test1", "test2", "test3", "test4", "test5"], ["test6", "test7", "test8", "test9", "test10"], 5)
+        result3 = run_filtering_singular_dataset(["test11", "test12", "test13", "test14", "test15"], ["1", "2", "3", "4", "5"], 5)
+        dict1 = create_dict_from_blocks(result1)
+        dict2 = create_dict_from_blocks(result2)
+        dict3 = create_dict_from_blocks(result3)
         dicts = [dict1, dict2, dict3]
         results = [result1, result2, result3]
         for i, result in enumerate(results):
