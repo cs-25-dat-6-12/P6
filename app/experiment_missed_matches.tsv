@@ -1,699 +1,479 @@
 df2_title	df2_name_parts	df1_title	df1_name_parts
 Abdul	{"given-name": "Abdul"}	abvdui	{"primary-name": "avdui"}
 Isaac Aberman	{"given-name": "Isaac", "surname": "Aberman"}	ytskhk (haver) averman	{"given-name": "ytskhk", "alternative-name": "haver", "surname": "avermn"}
+A. Abramov	{"given-name": "A.", "surname": "Abramov"}	 (brhm kagan) avramov	{"given-name": "brhm", "alternative-name": "kagan", "surname": "avamov", "acronym": ""}
 Adolf Abramov	{"given-name": "Adolf", "surname": "Abramov"}	adoif (brhm perkof) avramov	{"given-name": "adoif", "alternative-name": "brhm perkof", "surname": "avramov"}
-Max Abramovich	{"given-name": "Max", "surname": "Abramovich"}	maks (mendi) avramovytsh	{"primary-name": "avramovytsh", "given-name": "maks", "alternative-name": "mendi"}
-Ch.E. Abramovits	{"given-name": "Ch.E.", "surname": "Abramovits"}	kh e avramovyts	{"surname": "avramovyts", "honorific": "kh e"}
-Amelia Adler	{"given-name": "Amelia", "surname": "Adler"}	emyiye (shrh-myike shtang) adier	{"given-name": "emyiye", "alternative-name": "shrh-myike", "surname": "dier"}
-Frances Adler	{"given-name": "Frances", "surname": "Adler"}	rentsys adier	{"given-name": "rentsys", "surname": "dier"}
-Julia Adler	{"given-name": "Julia", "surname": "Adler"}	dzhuiy adier	{"given-name": "dzhuiy", "surname": "adier"}
+Bina Abramovich	{"given-name": "Bina", "surname": "Abramovich"}	vyne (uks) avramovytsh	{"given-name": "vyne", "alternative-name": "uks", "surname": "avramovytsh"}
+Chaim Abramovitsh	{"given-name": "Chaim", "surname": "Abramovitsh"}	kheym avramovytsh	{"given-name": "kheym", "surname": "brmubytsh"}
+David Abrams	{"given-name": "David", "surname": "Abrams"}	dud eyvrms	{"given-name": "dud", "surname": "eyvrms"}
+Benny Adler	{"given-name": "Benny", "surname": "Adler"}	veny adier	{"primary-name": "veny adir", "given-name": "veny", "surname": "adir"}
+Celia Adler	{"given-name": "Celia", "surname": "Adler"}	tsyie adier	{"given-name": "tsyie", "surname": "dir"}
+Esther Adler	{"given-name": "Esther", "surname": "Adler"}	ssr (shatsky) adier	{"given-name": "ssr", "alternative-name": "shatsky", "surname": "adier"}
+Israel Adler	{"given-name": "Israel", "surname": "Adler"}	yshri adier	{"given-name": "yshri", "surname": "adir"}
+Jacob P. Adler	{"given-name": "Jacob", "middle-name": "P.", "surname": "Adler"}	yekb p (yekb vn pnkhs) adier	{"given-name": "yekb", "alternative-name": "yekb", "surname": "adir", "patronymic": "bn nkhs"}
 Sam Adler	{"given-name": "Sam", "surname": "Adler"}	sem adier	{"given-name": "sem", "surname": "dir"}
 Stella Adler	{"given-name": "Stella", "surname": "Adler"}	steia adier	{"given-name": "steia", "surname": "dier"}
 Yuzhe Adler	{"given-name": "Yuzhe", "surname": "Adler"}	yuzhe adier	{"given-name": "yuzhe", "surname": "dier"}
-Adolfi	{"surname": "Adolfi"}	adoiy	{"given-name": "adoiy"}
 Nikolai Afrat	{"given-name": "Nikolai", "surname": "Afrat"}	nykoiey rs	{"primary-name": "nykey", "surname": "rs"}
+Aaron Aleksandrov	{"given-name": "Aaron", "surname": "Aleksandrov"}	hrn oieksandrov	{"given-name": "hrn", "surname": "oieksandrvi"}
 Ch. Aleksandrov	{"given-name": "Ch.", "surname": "Aleksandrov"}	kh (vyiyam myier) oieksandrov	{"given-name": "vyiyam", "alternative-name": "myier", "surname": "oieksandrov", "salutation": "kh"}
+Yehoshua Alkan	{"given-name": "Yehoshua", "surname": "Alkan"}	y (yhushe eikyn) aikon	{"given-name": "yhushe", "alternative-name": "eikyn", "acronym": "y"}
 A. Almi	{"given-name": "A.", "surname": "Almi"}	 (iyhu kheym sheps) imy	{"given-name": "iyhu", "alternative-name": "sheps", "middle-name": "kheym", "acronym": ""}
-Peter Amatin	{"given-name": "Peter", "surname": "Amatin"}	peter (pskh goidverg) amatyn	{"primary-name": "goidverg", "given-name": "pskh", "alternative-name": "peter", "surname": "amatyn"}
+Isak Alperovitsh	{"given-name": "Isak", "surname": "Alperovitsh"}	ysak aiperovytsh	{"given-name": "ysak", "surname": "aiperovytsh"}
+Boris Altman	{"given-name": "Boris", "surname": "Altman"}	vorys aitman	{"primary-name": "vorys an", "surname": "oitman"}
+Hersh Amasia	{"given-name": "Hersh", "surname": "Amasia"}	hersh amasya	{"primary-name": "hersh amasya"}
 Z.I. Ankhi	{"given-name": "Z.I.", "surname": "Ankhi"}	z y (zimn ytskhk aronson) nkhy	{"given-name": "zimn", "middle-name": "ytskhk", "surname": "aronson", "acronym": "z y", "appellation": "nkhy"}
-S. An-ski	{"given-name": "S.", "surname": "An-ski"}	sh (shimh-zanvi rapoport) an-sky	{"primary-name": "an-sky", "given-name": "shimh", "alternative-name": "zanvi", "surname": "rapopert", "acronym": "sh"}
-Isadore Appel	{"given-name": "Isadore", "surname": "Appel"}	yzydor (yapko) apei	{"primary-name": "aei", "given-name": "yzydor", "alternative-name": "ypko"}
-Sofia Apteiker	{"given-name": "Sofia", "surname": "Apteiker"}	soy (shrh reynd) apteyker	{"given-name": "shrh", "alternative-name": "soy", "surname": "apteyker"}
-Fritzi Arco	{"given-name": "Fritzi", "surname": "Arco"}	rytsy arko	{"primary-name": "rytsy arko", "given-name": "rytsy", "surname": "arko"}
+David Apotheker	{"given-name": "David", "surname": "Apotheker"}	dud apotheker	{"given-name": "dud", "surname": "apotheker"}
+Morris Appel	{"given-name": "Morris", "surname": "Appel"}	morys (apeioyg) apei	{"given-name": "morys", "alternative-name": "apeioyg", "surname": "apei"}
 Itzhak Arco	{"given-name": "Itzhak", "surname": "Arco"}	ytskhk rk	{"given-name": "ytskhk", "surname": "rk"}
-Manya Arco	{"given-name": "Manya", "surname": "Arco"}	manye (yshzon) arko	{"given-name": "manye", "alternative-name": "yshzon", "surname": "arko"}
-Feivl Arones	{"given-name": "Feivl", "surname": "Arones"}	eyvi arones	{"primary-name": "eyvi arones", "given-name": "eyvi", "surname": "arones"}
-Khayele Ash	{"given-name": "Khayele", "surname": "Ash"}	khyhie ash	{"given-name": "khyhie", "surname": "ash"}
+Rose Arnstein	{"given-name": "Rose", "surname": "Arnstein"}	roze rnshteyn	{"given-name": "roze", "surname": "rnshteyn"}
+Herman Aronovitsh	{"given-name": "Herman", "surname": "Aronovitsh"}	herman aronovytsh	{"primary-name": "herman", "surname": "aronovytsh"}
+Borukh Aronson	{"given-name": "Borukh", "surname": "Aronson"}	vrukh aronson	{"given-name": "brukh", "surname": "aronson"}
+Sholem Asch	{"given-name": "Sholem", "surname": "Asch"}	shium ash	{"given-name": "shium", "surname": "sh"}
+Izidor Aschkenazy	{"given-name": "Izidor", "surname": "Aschkenazy"}	yzydor (eyzyk) shkhnzy	{"primary-name": "yzydor", "alternative-name": "eyzyk", "surname": "shkhnzy"}
+Boruch Ass	{"given-name": "Boruch", "surname": "Ass"}	vrukh as	{"given-name": "brukh", "surname": "as"}
 Jennie Atlas	{"given-name": "Jennie", "surname": "Atlas"}	dzheny atias	{"primary-name": "dzheny atias", "given-name": "dzheny", "surname": " "}
-Annie Augenblick	{"given-name": "Annie", "surname": "Augenblick"}	eny (khnh soyver) oygenviyk	{"given-name": "khnh", "alternative-name": "eny", "surname": "oygenviyk", "matronymic": "soyver"}
-Aneta Axelrad	{"given-name": "Aneta", "surname": "Axelrad"}	aneta (prener) akseird	{"given-name": "aneta", "alternative-name": "prener", "surname": "akseird"}
-Alexander Azro	{"given-name": "Alexander", "surname": "Azro"}	aieksander (oriyuk) zra	{"primary-name": "aieksander", "alternative-name": "oriyuk", "surname": "zra"}
-Rose Shomer Bachelis	{"given-name": "Rose", "maiden-surname": "Shomer", "surname": "Bachelis"}	roze shomer-batsheies	{"given-name": "roze", "surname": "shomer-batsheies"}
-Ida Badanes	{"given-name": "Ida", "surname": "Badanes"}	eyd vadanes	{"primary-name": "eyd", "surname": "vadanes"}
+Ephraim Auerbach	{"given-name": "Ephraim", "surname": "Auerbach"}	rym oyervakh	{"given-name": "rym", "surname": "oyrvakh"}
+Sam Auerbach	{"given-name": "Sam", "surname": "Auerbach"}	sem oyervakh	{"given-name": "sem", "surname": "oyervakh"}
+Avraham Axelrad	{"given-name": "Avraham", "surname": "Axelrad"}	brhm (brhm ytskhk) akseird	{"primary-name": "brhm", "given-name": "brhm", "alternative-name": "brhm ytskhk", "surname": "aksird"}
+Minnie Axelrad	{"given-name": "Minnie", "surname": "Axelrad"}	myna (vieykhman) akseird	{"given-name": "myna", "alternative-name": "bieykhman", "surname": "akseird"}
+Rukhl Axelrad	{"given-name": "Rukhl", "surname": "Axelrad"}	rkhi (kohut) akseird	{"given-name": "rkhi", "alternative-name": "kohut", "surname": "akseird"}
 Simcha Bader	{"given-name": "Simcha", "surname": "Bader"}	shmkhh (nyedzhevyetsky) vder	{"primary-name": "shmkhh", "alternative-name": "nyedzhevyetsky", "surname": "bder"}
 Max Badin	{"given-name": "Max", "surname": "Badin"}	maks (muny vadyon) vadyn	{"given-name": "maks", "alternative-name": "muny", "surname": "vadyn", "patronymic": "vadyon"}
+Shlomo Badkhan	{"given-name": "Shlomo", "surname": "Badkhan"}	shimh (beiioy) vdkhn	{"given-name": "shimh", "alternative-name": "beiioy", "surname": "vdkhn"}
+Belle Baker	{"given-name": "Belle", "surname": "Baker"}	vei veyker	{"primary-name": "vei veyker"}
+Misha Bankov	{"given-name": "Misha", "surname": "Bankov"}	myshe vankov	{"primary-name": "myshe vankov", "given-name": "myshe", "surname": "vankov"}
 David Baratz	{"given-name": "David", "surname": "Baratz"}	dud varats	{"given-name": "dud", "surname": "varats"}
-Liza Barska-Fisher	{"given-name": "Liza", "maiden-surname": "Barska", "surname": "Fisher"}	iyz vrsk-ysher	{"primary-name": "iyz", "surname": "vrsk-ysher"}
-Wolfe Barzell	{"given-name": "Wolfe", "surname": "Barzell"}	voif varzei	{"given-name": "voif", "surname": "varzei"}
-Rosa Becker	{"given-name": "Rosa", "surname": "Becker"}	roz (zyivert) veker	{"given-name": "roz", "alternative-name": "zyivert", "surname": "veker"}
+Misha Basin	{"given-name": "Misha", "surname": "Basin"}	myshe vsyn	{"given-name": "myshe", "surname": "vsyn"}
+Avraham Baslavsky	{"given-name": "Avraham", "surname": "Baslavsky"}	brhm vasiavsky	{"given-name": "brhm", "surname": "vasiavsky"}
+Abraham Baum	{"given-name": "Abraham", "surname": "Baum"}	brhm voym	{"given-name": "brhm", "surname": "voym"}
 Moses Eliezer Beilinson	{"given-name": "Moses", "middle-name": "Eliezer", "surname": "Beilinson"}	mshh-iyezr (veyiynson) veiynson	{"given-name": "mshh-iyezr", "alternative-name": "veyiynson", "surname": "veiynson"}
-Max Bekler	{"given-name": "Max", "surname": "Bekler"}	maks vekier	{"given-name": "maks", "surname": "vekier"}
-Morris Belavsky	{"given-name": "Morris", "surname": "Belavsky"}	mrys vyeivsky	{"primary-name": "mrys vyeivsky", "surname": "vyeivsky"}
-Anna Belegolovska	{"given-name": "Anna", "surname": "Belegolovska"}	anna (khnh) veigivska	{"given-name": "anna", "alternative-name": "khnh", "surname": "veigivska"}
+Nachum Belezavski	{"given-name": "Nachum", "surname": "Belezavski"}	nkhum vazeiynsky	{"given-name": "nkhum", "surname": "vazeiynsky"}
 Bella Bellarina	{"given-name": "Bella", "surname": "Bellarina"}	vei (ruvyniykht) veieryn	{"primary-name": "vei", "alternative-name": "ruvyniykht", "surname": "veieryn"}
-Yasha Belzer	{"given-name": "Yasha", "surname": "Belzer"}	yasha (yekb veier) veitser	{"primary-name": "veitser", "given-name": "yekb", "alternative-name": "yash", "surname": "veier"}
 Ben-Ali	{"patronymic": "Ben-Ali"}	vn-iy (matyas grynverg)	{"given-name": "matyas", "surname": "grynverg", "patronymic": "bn-iy"}
-Leon Berger	{"given-name": "Leon", "surname": "Berger"}	ieon verger	{"given-name": "ieon", "surname": "verger"}
-Mina Bern	{"given-name": "Mina", "surname": "Bern"}	myna vern	{"given-name": "myna", "surname": "vern"}
-Helen Bernardi	{"given-name": "Helen", "surname": "Bernardi"}	heien (impei -- topf) vernardy	{"primary-name": "heien", "alternative-name": "impei", "surname": "bernardy"}
-Sally Beshtendig	{"given-name": "Sally", "surname": "Beshtendig"}	siy (shrh rbkh) veshtendyg	{"given-name": "siy", "alternative-name": "shrh rbkh", "surname": "beshtendyg"}
-Sophia Bey	{"given-name": "Sophia", "surname": "Bey"}	soya vey	{"given-name": "soya", "surname": "vey"}
-Roseta Bialis	{"given-name": "Roseta", "surname": "Bialis"}	rozet (vyisttsky) vyaiys	{"primary-name": "rozet", "alternative-name": "vyisttsky", "surname": "vyaiy"}
+Itsik Mendl Bergman	{"given-name": "Itsik", "middle-name": "Mendl", "surname": "Bergman"}	ytsyk-mendi vergman	{"given-name": "ytsyk", "middle-name": "mendi", "surname": "vergman"}
+Simcha Bergman	{"given-name": "Simcha", "surname": "Bergman"}	shmkhh vergman	{"given-name": "shmkhh", "surname": "bergman"}
+Yosef Berkovitsh	{"given-name": "Yosef", "surname": "Berkovitsh"}	yusf (yuzhbu) verkovytsh	{"given-name": "yusf", "alternative-name": "yuzhbu", "surname": "verkovytsh"}
+Henry Berman	{"given-name": "Henry", "surname": "Berman"}	henry (henekh veyiy) verman	{"given-name": "henry", "alternative-name": "henekh veyiy", "surname": "verman"}
+Herman Berman	{"given-name": "Herman", "surname": "Berman"}	hermn vermn	{"primary-name": "hermn vermn", "surname": "bermn"}
+Berl Bernstein	{"given-name": "Berl", "surname": "Bernstein"}	veri (vurshtyn) vernshteyn	{"given-name": "beri", "alternative-name": "burshtyn", "surname": "bernshteyn"}
+A.H. Bialin	{"given-name": "A.H.", "surname": "Bialin"}	 h vyaiyn	{"surname": "vyiyn", "acronym": " h"}
 Chana Bialkowicz	{"given-name": "Chana", "surname": "Bialkowicz"}	khnh (rozentsveyg) vyaikovytsh	{"given-name": "khnh", "alternative-name": "rozentsveyg", "surname": "vyaikovytsh"}
-Glika Bielavski	{"given-name": "Glika", "surname": "Bielavski"}	giyk (degenshteyn) vyeivsky	{"primary-name": "giyk", "alternative-name": "degenshteyn", "surname": "vyeivsky"}
+Izrael Bialkowicz	{"given-name": "Izrael", "surname": "Bialkowicz"}	yshri vyaikovytsh	{"given-name": "yshri", "surname": "vyaikovytsh"}
 L.S. Biely	{"given-name": "L.S.", "surname": "Biely"}	i s vyeiy	{"surname": "vyeiy", "acronym": "i s"}
-Fishl Bimko	{"given-name": "Fishl", "surname": "Bimko"}	yshi vymko	{"given-name": "yshi", "surname": "vymko"}
+Tsvi Bikels-Spitzer	{"given-name": "Tsvi", "surname": "Bikels-Spitzer"}	tsby vykeis-shpytser	{"primary-name": "vykeis-shpytser", "given-name": "tsby", "surname": "shpytser"}
+Shlomo Binder	{"given-name": "Shlomo", "surname": "Binder"}	shimh vynder	{"given-name": "shimh", "surname": "vynder"}
 David Birnbaum	{"given-name": "David", "surname": "Birnbaum"}	dud vyrnvoym	{"given-name": "dud", "surname": "byrnvoym"}
+Joseph Birnbaum	{"given-name": "Joseph", "surname": "Birnbaum"}	yusf vyrnvoym	{"given-name": "yusf", "surname": "byrnvoym"}
+Louis Birnbaum	{"given-name": "Louis", "surname": "Birnbaum"}	iuys (yekb ieyv) vyrnvoym	{"primary-name": "byrnvoym", "given-name": "yekb ieyv", "alternative-name": "iuys"}
 Minnie Birnbaum	{"given-name": "Minnie", "surname": "Birnbaum"}	myny (myndi pyipei) vyrnvoym	{"given-name": "myny", "alternative-name": "myndi", "surname": "byrnvoym"}
-Nathan Birnbaum	{"given-name": "Nathan", "surname": "Birnbaum"}	(nkhum) nsn vyrnvoym	{"given-name": "nsn", "alternative-name": "nkhum", "surname": "byrnvoym"}
-M. Birnboym	{"given-name": "M.", "surname": "Birnboym"}	m vyrnvoym	{"surname": "byrnboyym", "acronym": "m"}
+Rosa Birnbaum	{"given-name": "Rosa", "surname": "Birnbaum"}	roz vyrnvoym	{"given-name": "roz", "surname": "byrnvoym"}
+Jacob Birnberg	{"given-name": "Jacob", "surname": "Birnberg"}	yekb vyrnverg	{"given-name": "yekb", "surname": "byrnverg"}
 Fela Biro	{"given-name": "Fela", "surname": "Biro"}	ei vyr	{"primary-name": "ei vyr", "given-name": "ei", "surname": "byr"}
-Katie Blackman	{"given-name": "Katie", "surname": "Blackman"}	keydy (keyie meyerovytsh) viakhman	{"given-name": "keydy", "alternative-name": "keyie", "surname": "viakhman"}
 Leon Blank	{"given-name": "Leon", "surname": "Blank"}	ieon viank	{"given-name": "ieon", "surname": "viank"}
-Moshe Bleyshtift	{"given-name": "Moshe", "surname": "Bleyshtift"}	mshh vieyshtyt	{"given-name": "mshh", "surname": "bieyshtyt"}
-Lupus Bloomenfeld	{"given-name": "Lupus", "surname": "Bloomenfeld"}	iupus (zb) viumeneid	{"primary-name": "iupus", "alternative-name": "zb", "surname": "biumeneid"}
-Sam Blum	{"given-name": "Sam", "surname": "Blum"}	sem (aieksander) vium	{"given-name": "sem", "alternative-name": "aieksander", "surname": "vium"}
-Neytan Blumental	{"given-name": "Neytan", "surname": "Blumental"}	neytn viumentai	{"given-name": "neytn", "surname": "biument"}
-Feli Bokman	{"given-name": "Feli", "surname": "Bokman"}	eiy vokman	{"given-name": "eiy", "surname": "vokman"}
-Louis Bokshitzky	{"given-name": "Louis", "surname": "Bokshitzky"}	iuys (ieyv) vokshytsky	{"given-name": "iuys", "alternative-name": "ieyv", "surname": "vokshytsky"}
+Yekhiel Blank	{"given-name": "Yekhiel", "surname": "Blank"}	ykhyi viank	{"given-name": "ykhyi", "surname": "biank"}
+Jacob Bleichman	{"given-name": "Jacob", "surname": "Bleichman"}	yekb vieykhman	{"given-name": "yekb", "surname": "vieykhman"}
+Henry Blum	{"given-name": "Henry", "surname": "Blum"}	henry (heynrykh) vium	{"given-name": "henry", "alternative-name": "heynrykh", "surname": "bium"}
 Bontshe	{"given-name": "Bontshe"}	vontshe (abrhm rozeneid)	{"primary-name": "vontshe", "given-name": "abrhm", "alternative-name": "vontshe", "surname": "rozeneid"}
 Ben Bonus	{"given-name": "Ben", "surname": "Bonus", "patronymic": "Ben"}	ven vonus	{"primary-name": "ven vonus"}
-Borishev	{"surname": "Borishev"}	voryshev	{"primary-name": "voryshev", "nisba": "voryshev"}
-Frants Borits	{"given-name": "Frants", "surname": "Borits"}	rants (rym) voryts	{"primary-name": "rants", "given-name": "rym", "alternative-name": "rym", "surname": "voryts"}
-Sonya Borodkin	{"given-name": "Sonya", "surname": "Borodkin"}	sonya varodkyn	{"given-name": "sonya", "surname": "varodkyn"}
-Rafael Boyarsky-Bogart	{"given-name": "Rafael", "surname": "Boyarsky-Bogart"}	ri voyarsky-vogart	{"given-name": "ri", "surname": "voyarsky-vugrt"}
-Anna Boym	{"given-name": "Anna", "surname": "Boym"}	nna (khnh poiakovsk) voym	{"primary-name": "nna", "given-name": "khnh", "alternative-name": "nna", "surname": "voym", "nisba": "poiakvsk"}
-Max Bozyk	{"given-name": "Max", "surname": "Bozyk"}	maks vozhyk	{"given-name": "maks", "surname": "vozhyk"}
-Meyer Braff	{"given-name": "Meyer", "surname": "Braff"}	myr vraf	{"given-name": "myr", "surname": "vraf"}
-Chine Braginska	{"given-name": "Chine", "surname": "Braginska"}	khyne (yshzon) vragynska	{"given-name": "khyne", "alternative-name": "yshzon", "surname": "vragynska"}
-Saul Brandes	{"given-name": "Saul", "surname": "Brandes"}	shui vrandes	{"given-name": "shui", "surname": "brandes"}
-Joseph Brandesko	{"given-name": "Joseph", "surname": "Brandesko"}	yusf (smoinyk) vrandesko	{"given-name": "yusf", "alternative-name": "smoinyk", "surname": "vrandesko"}
-Egon Brecher	{"given-name": "Egon", "surname": "Brecher"}	egon vrekher	{"primary-name": "egon vrekher", "surname": "brekher", "honorific": "egon"}
+Leyzer Boyke	{"given-name": "Leyzer", "surname": "Boyke"}	ieyzer voyke	{"given-name": "ieyzer", "surname": "voyke"}
+Abraham Bren	{"given-name": "Abraham", "surname": "Bren"}	brhm vren	{"given-name": "brhm", "surname": "bren"}
+Yitzhak Brestovitsky	{"given-name": "Yitzhak", "surname": "Brestovitsky"}	ytskhk vrkstovytsky	{"given-name": "ytskhk", "surname": "brkstovytsky"}
 Roza Brin	{"given-name": "Roza", "surname": "Brin"}	roz (shkiyrzh) vryn	{"primary-name": "shkiyrzh", "given-name": "roz", "surname": "vryn"}
-Esther Bronstein	{"given-name": "Esther", "surname": "Bronstein"}	ssr (stirsky) vronshteyn	{"given-name": "ssr", "alternative-name": "stirsky", "surname": "bronshteyn"}
+Aaron Brodsky	{"given-name": "Aaron", "surname": "Brodsky"}	hrn vrodsky	{"given-name": "hrn", "surname": "vrodsky"}
 Katie Brown	{"given-name": "Katie", "surname": "Brown"}	keyty (gyti vakon) vraun	{"given-name": "keyty", "alternative-name": "gyti", "surname": "vraun", "matronymic": "vakon"}
-Rose Brown	{"given-name": "Rose", "surname": "Brown"}	roz (rkhi yzkson) vrun	{"given-name": "roz", "alternative-name": "rkhi", "surname": "vrun"}
 Simcha Broyde	{"given-name": "Simcha", "surname": "Broyde"}	shmkhh vroyde	{"given-name": "shmkhh", "surname": "broyde"}
-Bessie Budanov	{"given-name": "Bessie", "surname": "Budanov"}	vesy (vudnyk) vudanov	{"given-name": "vesy", "alternative-name": "budnyk", "surname": "budanu"}
-Celia Budkin	{"given-name": "Celia", "surname": "Budkin"}	tsyie (tsype mgyiner) vudkyn	{"given-name": "tsyie", "alternative-name": "tsype", "surname": "budkyn"}
-Max Bukanski	{"given-name": "Max", "surname": "Bukanski"}	maks vukansky	{"given-name": "maks", "surname": "bukansky"}
-Max Bulman	{"given-name": "Max", "surname": "Bulman"}	maks vuiman	{"primary-name": "maks vuiman", "given-name": "maks", "surname": "vuiman"}
+Abraham Buckstein	{"given-name": "Abraham", "surname": "Buckstein"}	brhm vukshteyn	{"given-name": "brhm", "surname": "bukshteyn"}
+Joseph Buksenboym	{"given-name": "Joseph", "surname": "Buksenboym"}	yusf vuksenvoym	{"given-name": "yusf", "surname": "buksenvoym"}
 Joseph Buloff	{"given-name": "Joseph", "surname": "Buloff"}	yusf (vuikyn) vuiov	{"given-name": "yusf", "alternative-name": "vuikyn", "surname": "vuiov"}
-Karl Burovik	{"given-name": "Karl", "surname": "Burovik"}	kari (vtsii) vurovyk	{"given-name": "kari", "alternative-name": "vtsii", "surname": "burovyk"}
-Mina Burshtin	{"given-name": "Mina", "surname": "Burshtin"}	myna (haipern) vurshtyn	{"given-name": "myna", "alternative-name": "haipern", "surname": "burshtyn"}
-Izidor Buzet	{"given-name": "Izidor", "surname": "Buzet"}	yzydor vuzet	{"given-name": "yzydor", "surname": "vuzet"}
-Byegun	{"given-name": "Byegun"}	vyegyn	{"primary-name": "vyegyn"}
-Leivik Chanukoff	{"given-name": "Leivik", "surname": "Chanukoff"}	ieyvyk khanukov	{"primary-name": "ieyvyk khanukov", "surname": "khanukov"}
-Leon Charaz	{"given-name": "Leon", "surname": "Charaz"}	ieon kharaz	{"primary-name": "ieon kharaz"}
+Kheykele Burshtin	{"given-name": "Kheykele", "surname": "Burshtin"}	kheykeie vurshtyn	{"given-name": "kheykeie", "surname": "burshtyn"}
+Moshe Burshtin	{"given-name": "Moshe", "surname": "Burshtin"}	mshh vurshtyn	{"given-name": "mshh", "surname": "burshtyn"}
+Chevel Buzgan	{"given-name": "Chevel", "surname": "Buzgan"}	khbi vuzgn	{"primary-name": "khbi vuzgn", "nisba": "vuzgn"}
+Izidore Casher	{"given-name": "Izidore", "surname": "Casher"}	yzydor keshyr	{"given-name": "yzydor", "surname": "keshyr"}
 Chaver-Paver	{"given-name": "Chaver", "surname": "Paver"}	khaver-paver (grshun eynvynder)	{"given-name": "grshun", "alternative-name": "khaver-paver", "surname": "eynvynder"}
 Cheplin	{"surname": "Cheplin"}	tshepiyn	{"primary-name": "tshepiyn"}
 Jack Cherish	{"given-name": "Jack", "surname": "Cherish"}	dzhek (ytskhk-yekb khrsh) tsherysh	{"given-name": "ytskhk-yekb", "alternative-name": "dzhek", "surname": "tsherysh", "patronymic": "khrsh"}
-Annie Cherniak	{"given-name": "Annie", "surname": "Cherniak"}	eny (eynman) tshernyak	{"primary-name": "tshernyak", "given-name": "eny", "alternative-name": "eynman"}
-Joseph Cherniavsky	{"given-name": "Joseph", "surname": "Cherniavsky"}	yusf tshernyavsky	{"given-name": "yusf", "surname": "tshernyavsky"}
-Alexander Chertov	{"given-name": "Alexander", "surname": "Chertov"}	aieks tshertov	{"given-name": "aieks", "surname": "tshertov"}
-Manya Chizhik	{"given-name": "Manya", "surname": "Chizhik"}	manya (yrshteneid) tshyzhyk	{"given-name": "manya", "alternative-name": "yrshteneid", "surname": "tshyzhyk"}
-Yosef Chizhik	{"given-name": "Yosef", "surname": "Chizhik"}	yusf tshyzhyk	{"given-name": "yusf", "surname": "tshyzhyk"}
-Emanuel Chizik	{"given-name": "Emanuel", "surname": "Chizik"}	emnui tshyzhyk	{"primary-name": "tshyzhyk", "given-name": "emnui"}
-G. Chorny	{"given-name": "G.", "surname": "Chorny"}	g tshorny	{"surname": "tshorny", "acronym": "g"}
-H.A. Condell	{"given-name": "H.A.", "surname": "Condell"}	h  (kohn) kandei	{"alternative-name": "kohn", "surname": "kandei", "honorific": "h "}
-Rosetta Conn	{"given-name": "Rosetta", "surname": "Conn"}	rozeta kohn	{"given-name": "rozeta", "surname": "kuhn"}
-William Conrad	{"given-name": "William", "surname": "Conrad"}	vyiyam kanrod	{"given-name": "vyiyam", "surname": "kanrod"}
-Wolf Darelin	{"given-name": "Wolf", "surname": "Darelin"}	voif (eyznshteyn) dreiyn	{"primary-name": "dreiyn", "given-name": "voif", "alternative-name": "eyznshteyn"}
-Adolf Dauber	{"given-name": "Adolf", "surname": "Dauber"}	adoif duber	{"primary-name": "adoif duber", "given-name": "adoif", "surname": "duber"}
-Efrayim Davidzon	{"given-name": "Efrayim", "surname": "Davidzon"}	rym davydzohn	{"given-name": "rym", "surname": "davydzohn"}
+Harry Cohen	{"given-name": "Harry", "surname": "Cohen"}	hery kohen	{"primary-name": "hery kohen", "surname": "kohen", "honorific": "hery"}
+S.H. Cohen	{"given-name": "S.", "middle-name": "H.", "surname": "Cohen"}	s h (nudeiman) kohn	{"given-name": "nudeiman", "surname": "kuhn", "honorific": "s h"}
+David Davidov	{"given-name": "David", "surname": "Davidov"}	dvyd davydov	{"given-name": "dvyd", "surname": "davydov"}
 Mikhl Davidzon	{"given-name": "Mikhl", "surname": "Davidzon"}	dud (ygnatovsky) ygnatov	{"given-name": "dud", "alternative-name": "ygnatvsky", "surname": "ygntv"}
-Sam Dayen	{"given-name": "Sam", "surname": "Dayen"}	sem dayen	{"primary-name": "sem dayen", "given-name": "sem", "professional-name": "dayen"}
-Volf Demont	{"given-name": "Volf", "surname": "Demont"}	voif demont	{"given-name": "voif", "surname": "demont"}
-Joseph Desser	{"given-name": "Joseph", "surname": "Desser"}	yozef (yusf-kheym) desser	{"primary-name": "yozef", "alternative-name": "yusf-kheym", "surname": "desser"}
-Minnie Deytsh	{"given-name": "Minnie", "surname": "Deytsh"}	myny (menkes) deytsh	{"given-name": "myny", "alternative-name": "menkes", "surname": "deytsh"}
-Sam Diamont	{"given-name": "Sam", "surname": "Diamont"}	sem (goiubak) deymnt	{"primary-name": "sem", "alternative-name": "goiubak", "surname": "deymnt"}
-Yozef Dibek	{"given-name": "Yozef", "surname": "Dibek"}	yozef dyvek	{"given-name": "yozef", "surname": "dyvek"}
+Chana Dayen-Dobrovinska	{"given-name": "Chana", "surname": "Dobrovinska", "patronymic": "Dayen"}	khnh dayen-dovrovyska	{"given-name": "khnh", "surname": "dayen-dovrooyska"}
+Isaac Meir Dick	{"given-name": "Isaac", "middle-name": "Meir", "surname": "Dick"}	eyzyk (ytskhk) myr dyk	{"given-name": "eyzyk", "alternative-name": "ytskhk", "middle-name": "myr", "surname": "dyk"}
 Jacob Dineson	{"given-name": "Jacob", "surname": "Dineson"}	yekb dynezon	{"given-name": "yekb", "surname": "dynezun"}
-Yitskhok Dogim	{"given-name": "Yitskhok", "surname": "Dogim"}	ytskhk dgym	{"given-name": "ytskhk", "surname": "dgym"}
-B. Doktorov	{"given-name": "B.", "surname": "Doktorov"}	v doktorov	{"given-name": "b", "professional-name": "doktorov"}
-Abe Dorf	{"given-name": "Abe", "surname": "Dorf"}	eyv dorf	{"primary-name": "eyv dorf", "given-name": "eyv", "surname": "dorf"}
+Moshe Dluznowsky	{"given-name": "Moshe", "surname": "Dluznowsky"}	mshh diuzhnovsky	{"given-name": "mshh", "surname": "diuzhnovsky"}
+Elza Dorf	{"given-name": "Elza", "surname": "Dorf"}	eiza dorf	{"primary-name": "eiza dorf"}
 Ethel Dorf	{"given-name": "Ethel", "surname": "Dorf"}	eti (epeibiat) dorf	{"primary-name": "eti", "alternative-name": "epeibiat", "surname": "dorf"}
-Joseph Drabkin	{"given-name": "Joseph", "surname": "Drabkin"}	dzhozef dravkyn	{"given-name": "dzhozef", "surname": "dravkyn"}
-Nathan Dranov	{"given-name": "Nathan", "surname": "Dranov"}	natan (nysn) dranov	{"primary-name": "dranu vu", "given-name": "ntan", "alternative-name": "nysn", "surname": "drnu"}
 Nadya Dranova	{"given-name": "Nadya", "surname": "Dranova"}	nadya (gresye meytus) dranov	{"given-name": "nadya", "alternative-name": "gresye", "surname": "dranov"}
 ? Drozdovitsh	{"given-name": "?", "surname": "Drozdovitsh"}	 drozdovytsh	{"primary-name": " drozdovytsh"}
-Dora Dubinska	{"given-name": "Dora", "surname": "Dubinska"}	dora (rabvryn) duvynska	{"given-name": "dora", "alternative-name": "rabvryn", "surname": "duvynska"}
-Wolf Durmashkin	{"given-name": "Wolf", "surname": "Durmashkin"}	voif durmshkyn	{"given-name": "voif", "surname": "durmshkyn"}
-Osip Dymow	{"given-name": "Osip", "surname": "Dymow"}	osyp (yusf periman) dymov	{"given-name": "osyp", "alternative-name": "yusf", "surname": "periman", "patronymic": "dymov"}
-Moritz Edelhofer	{"given-name": "Moritz", "surname": "Edelhofer"}	moryts (mshh) edeihoer	{"primary-name": "moryts", "given-name": "mshh", "alternative-name": "moryts", "surname": "edihoer"}
+Leib Drucker	{"given-name": "Leib", "surname": "Drucker"}	ieyb druker	{"given-name": "ieyb", "surname": "druker"}
+Reuben Dubinsky	{"given-name": "Reuben", "surname": "Dubinsky"}	rubn duvynsky	{"given-name": "rubn", "surname": "duvynsky"}
 Israel Edelman	{"given-name": "Israel", "surname": "Edelman"}	yuraei edeiman	{"given-name": "yuraei", "surname": "edeiman"}
-Sonia Edelman	{"given-name": "Sonia", "surname": "Edelman"}	sonye edeiman	{"given-name": "sonye", "surname": "edeiman"}
-Wolf Edelman	{"given-name": "Wolf", "surname": "Edelman"}	voif edeiman	{"given-name": "voif", "surname": "edeiman"}
-Joseph Edelstein	{"given-name": "Joseph", "surname": "Edelstein"}	yozef (yusf) edeishteyn	{"given-name": "yusf", "alternative-name": "yozef", "surname": "edeishteyn"}
 Pauline Edelstein	{"given-name": "Pauline", "surname": "Edelstein"}	pauiyna (ynkeishteyn) edeishteyn	{"given-name": "pauiyna", "alternative-name": "ynkeishteyn", "surname": "edeishteyn"}
-Tenakhum Edut	{"given-name": "Tenakhum", "surname": "Edut"}	tnkhum edus	{"primary-name": "tnkhum", "surname": "edus"}
-Eva Eisen-Orenstein	{"given-name": "Eva", "surname": "Eisen-Orenstein"}	ev eyzen-orenshteyn	{"primary-name": "ev eyzen-orenshteyn", "given-name": "ev", "surname": "orenshteyn"}
-Isidore Elgard	{"given-name": "Isidore", "surname": "Elgard"}	yzydor (ytskhk-ieyv) eigard	{"primary-name": "eigard", "given-name": "ytskhk-ieyv", "alternative-name": "yzydor"}
+Chaim Ehrenreich	{"given-name": "Chaim", "surname": "Ehrenreich"}	kheym e(h)renreykh	{"primary-name": "e(h)renreykh", "given-name": "kheym", "surname": "e(h)renreykh"}
+Hirsh Ehrenreich	{"given-name": "Hirsh", "surname": "Ehrenreich"}	hyrsh ehrenreykh	{"primary-name": "hyrsh ehrenreykh", "given-name": "hyrsh", "surname": "ehrenreykh"}
+Isidore Eksler	{"given-name": "Isidore", "surname": "Eksler"}	yzydor eksier	{"primary-name": "eyzydor eksier", "given-name": "yzydor", "surname": "ksier"}
+Moshe Elbaum	{"given-name": "Moshe", "surname": "Elbaum"}	mshh eivyum	{"given-name": "mshh", "surname": "eivyum"}
 Fernanda Eliscu	{"given-name": "Fernanda", "surname": "Eliscu"}	ernando aiesko	{"primary-name": "ernando", "surname": "iesko"}
 Elisheva	{"given-name": "Elisheva"}	eiysheva (sheva vokshteyn)	{"given-name": "eiysheva", "alternative-name": "sheva", "surname": "vokshteyn"}
-Rose Elving	{"given-name": "Rose", "surname": "Elving"}	roza eivyng	{"primary-name": "roza eivyng", "given-name": "roza", "surname": "eivyng"}
+Abraham Ellstein	{"given-name": "Abraham", "surname": "Ellstein"}	brhm eishteyn	{"given-name": "brhm", "surname": "eishteyn"}
+Bernard Elving	{"given-name": "Bernard", "surname": "Elving"}	vernard eivyng	{"primary-name": "bernard eivyng", "given-name": "bernard", "surname": "eivyng"}
 Lutsa Engelberg	{"given-name": "Lutsa", "surname": "Engelberg"}	iuts (ykhyi) engeiberg	{"given-name": "ykhyi", "alternative-name": "iuts", "surname": "egeiberg"}
-B. Eppelbaum	{"given-name": "B.", "surname": "Eppelbaum"}	v (mnkhm-verysh) epeivyum	{"given-name": "mnkhm", "alternative-name": "berysh", "surname": "epeivyum", "salutation": "v"}
-Grisha Epstein	{"given-name": "Grisha", "surname": "Epstein"}	grysha (yui) epshteyn	{"given-name": "yui", "alternative-name": "grysha", "surname": "epshteyn"}
-Hillel Leyb Epstein	{"given-name": "Hillel", "middle-name": "Leyb", "surname": "Epstein"}	hii-ieyv epshteyn	{"primary-name": "hii-iyv", "surname": "epshteyn"}
-M.B. Epstein	{"given-name": "M.", "middle-name": "B.", "surname": "Epstein"}	mb epshteyn	{"surname": "epshteyn", "acronym": "mb"}
-Shakhne Epstein	{"given-name": "Shakhne", "surname": "Epstein"}	shkhn epshteyn	{"given-name": "shkhn", "surname": "epshteyn"}
-Wiliam Epstein	{"given-name": "Wiliam", "surname": "Epstein"}	vyiyam (hii) epshteyn	{"given-name": "vyiyam", "alternative-name": "hii", "surname": "epshteyn"}
+Heshl Epelberg	{"given-name": "Heshl", "surname": "Epelberg"}	heshi ep(p)eiverg	{"primary-name": "heshi ep(p)eiverg"}
 Adolph Erber	{"given-name": "Adolph", "surname": "Erber"}	adoif erver	{"primary-name": "erver", "given-name": "adoif"}
 Annie Erber	{"given-name": "Annie", "surname": "Erber"}	eny (rankenverg) erver	{"primary-name": "eny", "alternative-name": "rankenverg", "surname": "erver"}
-Julius Erber	{"given-name": "Julius", "surname": "Erber"}	dzushiyus (ykhyi) erver	{"primary-name": "dzushiyus", "alternative-name": "ykhyi", "surname": "erver"}
-Sofia Erdi	{"given-name": "Sofia", "surname": "Erdi"}	soya (garynkei) erdy	{"given-name": "soya", "alternative-name": "garynkei", "surname": "erdy"}
-Yozef Eskreyz	{"given-name": "Yozef", "surname": "Eskreyz"}	yozef eskreyz	{"primary-name": "yozef eskreyz", "given-name": "yozef", "surname": "eskreyz"}
-Slava Estrin	{"given-name": "Slava", "surname": "Estrin"}	siava estryn	{"given-name": "siava", "surname": "estryn"}
-Eygenfeld	{"surname": "Eygenfeld"}	eygeneid (erver)	{"primary-name": "eygeneid", "alternative-name": "erver"}
-Bashe Eynhorn	{"given-name": "Bashe", "surname": "Eynhorn"}	vashe eynhorn	{"primary-name": "vashe eynhorn", "given-name": "vashe", "surname": "eynhorn"}
-David Fachler	{"given-name": "David", "surname": "Fachler"}	dud akhier	{"given-name": "dud", "surname": "fokhier"}
-Rosa Fachler	{"given-name": "Rosa", "surname": "Fachler"}	roza akhier	{"given-name": "roza", "surname": "akhier"}
-Joel Berish Falkowitz	{"given-name": "Joel", "middle-name": "Berish", "surname": "Falkowitz"}	yui-berysh aikovytsh	{"primary-name": "yui-berysh", "surname": "aikovytsh"}
-Ayzik Feder	{"given-name": "Ayzik", "surname": "Feder"}	eyzyk (edoresky) eder	{"given-name": "eyzyk", "alternative-name": "edoresky", "surname": "eder"}
-Dora Fein	{"given-name": "Dora", "surname": "Fein"}	dora eyn	{"given-name": "dora", "surname": "eyn"}
+Avraham Eyzenberg	{"given-name": "Avraham", "surname": "Eyzenberg"}	brhm eyzenverg	{"given-name": "brhm", "surname": "eyzenverg"}
+Leibl Eyzerman	{"given-name": "Leibl", "surname": "Eyzerman"}	ieyvi eyzerman	{"given-name": "ieyvi", "surname": "eyzerman"}
+Jacob Faller	{"given-name": "Jacob", "surname": "Faller"}	yekb aiier	{"given-name": "yekb", "surname": "aiier"}
 Ida Fein	{"given-name": "Ida", "surname": "Fein"}	eyda eyn	{"given-name": "eyda", "surname": "eyn"}
-Ignats Ferkauf	{"given-name": "Ignats", "surname": "Ferkauf"}	ygnats erkoyf	{"primary-name": "ygnats erkoyf", "given-name": "ygnats", "surname": "erkoyf"}
-Sam Ferkauf	{"given-name": "Sam", "surname": "Ferkauf"}	sem (shmui-beri) erkoyf	{"given-name": "shmui-beri", "alternative-name": "sem", "surname": "erkoyf"}
-Leybe Feyvishov	{"given-name": "Leybe", "surname": "Feyvishov"}	ieybe eyvyshov	{"given-name": "ieybe", "surname": "eyvyshov"}
-Filop	{"given-name": "Filop"}	yiop	{"given-name": "yiop"}
-Efrayim Fishl Fishelzon	{"given-name": "Efrayim", "middle-name": "Fishl", "surname": "Fishelzon"}	rym-yshi ysheizohn	{"given-name": "rym", "alternative-name": "yshi", "surname": "ysheizohn"}
-Samuel Fisher	{"given-name": "Samuel", "surname": "Fisher"}	samuei (shui-pnkhs) ysher	{"primary-name": "ysher", "given-name": "samui", "alternative-name": "shui-pnkhs"}
+Harris Feinberg	{"given-name": "Harris", "surname": "Feinberg"}	herys eynberg	{"primary-name": "herys eynberg", "surname": "eynberg"}
+Esther Field	{"given-name": "Esther", "surname": "Field"}	ssr yeid	{"given-name": "ssr", "surname": "yeid"}
+Yitskhok Fishelewitz	{"given-name": "Yitskhok", "surname": "Fishelewitz"}	ytskhk ysheievytsh	{"given-name": "ytskhk", "surname": "ysheievytsh"}
+Herman Fisher	{"given-name": "Herman", "surname": "Fisher"}	herman ysher	{"primary-name": "herman ysher", "given-name": "herman", "surname": "ysher"}
+Berta Fishler	{"given-name": "Berta", "surname": "Fishler"}	berta yshier	{"primary-name": "berta yshier", "given-name": "berta", "surname": "yshier"}
+Harry Fishman	{"given-name": "Harry", "surname": "Fishman"}	hery (hershi) yshman	{"given-name": "hery", "alternative-name": "hershi", "surname": "yshman"}
 [?] Fleisig	{"given-name": "?", "surname": "Fleisig"}	ieysyg ()	{"primary-name": "ieysyg", "surname": "ieysyg"}
-Andzha Foderman	{"given-name": "Andzha", "surname": "Foderman"}	andzha oderman	{"given-name": "andzha", "surname": "oderman"}
-L. Fogelman	{"given-name": "L.", "surname": "Fogelman"}	i ogeiman	{"given-name": "i", "surname": "ogeiman"}
-Feliks Fogelnest	{"given-name": "Feliks", "surname": "Fogelnest"}	eiyks ogeinest	{"primary-name": "eiyks oginest", "surname": "fogeinest"}
-Pauline Fogelnest	{"given-name": "Pauline", "surname": "Fogelnest"}	pouiyn ogeinest	{"given-name": "pouiyn", "surname": "ogeinest"}
-Sam Fogelnest	{"given-name": "Sam", "surname": "Fogelnest"}	sem ogeinest	{"primary-name": "ogeinest", "given-name": "sem"}
-Chana Frank	{"given-name": "Chana", "surname": "Frank"}	khnh (eynvynder) renk	{"primary-name": "khnh", "alternative-name": "eynvynder", "surname": "renk"}
+Abraham Frank	{"given-name": "Abraham", "surname": "Frank"}	brhm renk	{"given-name": "brhm", "surname": "renk"}
+Jacob Frank	{"given-name": "Jacob", "surname": "Frank"}	yekb renk	{"given-name": "yekb", "surname": "renk"}
 Nathan Frank	{"given-name": "Nathan", "surname": "Frank"}	neytan (hsiy) renk	{"given-name": "neytn", "alternative-name": "hsiy", "surname": "renk"}
 Adolph Freeman	{"given-name": "Adolph", "surname": "Freeman"}	adoif reyman	{"given-name": "duif", "surname": "reyman"}
-Anna Freeman	{"given-name": "Anna", "surname": "Freeman"}	anna (hokhverger) reyman	{"given-name": "anna", "alternative-name": "hokhverger", "surname": "reyman"}
-Flora Freiman	{"given-name": "Flora", "surname": "Freiman"}	iora reyman	{"given-name": "iora", "surname": "reyman"}
-Anita Freundlich-Sheff	{"given-name": "Anita", "surname": "Freundlich-Sheff"}	anyta reyntiekh-shef	{"given-name": "anyta", "surname": "reyntiekh", "professional-name": "shef"}
-Emil Frides	{"given-name": "Emil", "surname": "Frides"}	emyi (iyhu) rydes	{"given-name": "emyi", "alternative-name": "iyhu", "surname": "rydes"}
+Louis Freiman	{"given-name": "Louis", "surname": "Freiman"}	iuys (ieyzer genyuk) reyman	{"given-name": "iuys", "alternative-name": "ieyzer", "surname": "reyman", "matronymic": "genyuk"}
 [?] Fridman	{"given-name": "?", "surname": "Fridman"}	() rydman	{"surname": "rydman"}
-Feyvele Fridman	{"given-name": "Feyvele", "surname": "Fridman"}	eyveie rydman	{"primary-name": "eyveie rydman", "surname": "rydman"}
 Sara Fridman	{"given-name": "Sara", "surname": "Fridman"}	sara (shrh gievytska) rydman	{"given-name": "sara", "alternative-name": "shrh", "surname": "rydman", "matronymic": "gievytska"}
-Edward Friedlander	{"given-name": "Edward", "surname": "Friedlander"}	edvard rydiender	{"given-name": "edvard", "surname": "rydiender"}
-Lara Friedman	{"given-name": "Lara", "surname": "Friedman"}	iara (ih veyntroyv) rydman	{"given-name": "ih", "alternative-name": "iara", "surname": "rydman", "matronymic": "veyntroyv"}
+Y. Fried	{"given-name": "Y.", "surname": "Fried"}	y ryd	{"surname": "ryd", "acronym": "y"}
+Betsalel Friedman	{"given-name": "Betsalel", "surname": "Friedman"}	btsii rydman	{"given-name": "btsii", "surname": "rydman"}
+Yakov Fuchs	{"given-name": "Yakov", "surname": "Fuchs"}	yekb uks	{"given-name": "yekb", "surname": "uks"}
 Ari Fuhrman	{"given-name": "Ari", "surname": "Fuhrman"}	ary urman	{"given-name": "ary", "surname": "urmn"}
+Avraham Fuhrman	{"given-name": "Avraham", "surname": "Fuhrman"}	brhm urman	{"primary-name": "brhm urman", "given-name": "brhm", "surname": "urman"}
+Ruzha Fuks	{"given-name": "Ruzha", "surname": "Fuks"}	ruzh uks	{"given-name": "ruzh", "surname": "uks"}
 Max Gabel	{"given-name": "Max", "surname": "Gabel"}	maks (mnkhm-mendei gevyi	{"given-name": "mnkhm-mendei", "alternative-name": "maks", "surname": "gevyi"}
-Polia Galinski	{"given-name": "Polia", "surname": "Galinski"}	piy (shiugiyt) gaiynsky	{"primary-name": "gaiynsky", "given-name": "poiy", "alternative-name": "shiugiyt", "surname": "gaiynsky"}
-Esther Gamerov-Fogel	{"given-name": "Esther", "maiden-surname": "Gamerov", "surname": "Fogel"}	ssr gmerv (ogei)	{"given-name": "ssr", "alternative-name": "ogei", "surname": "gmerv"}
-Fela Garbazh	{"given-name": "Fela", "surname": "Garbazh"}	ei grbrzh	{"primary-name": "ei grbrzh", "given-name": "ei", "surname": "grbrzh"}
-Moshe Garbazh	{"given-name": "Moshe", "surname": "Garbazh"}	mshh grbrzh	{"given-name": "mshh", "surname": "grbrzh"}
-Genia Gelber	{"given-name": "Genia", "surname": "Gelber"}	genya geiber	{"primary-name": "genya geiber", "given-name": "genya", "surname": "geiber"}
-Solomon Genfer	{"given-name": "Solomon", "surname": "Genfer"}	soioman gener	{"given-name": "soioman", "surname": "gener"}
-Lucy German	{"given-name": "Lucy", "surname": "German"}	iusy (iosha kutner) german	{"given-name": "iosha", "alternative-name": "iusy", "surname": "german", "patronymic": "kutner"}
-Misha German	{"given-name": "Misha", "surname": "German"}	myshe (herman) german	{"given-name": "myshe", "alternative-name": "herman", "surname": "german"}
-M. Gershoy	{"given-name": "M.", "surname": "Gershoy"}	m (mshh gershoyg) gershoy	{"given-name": "mshh", "alternative-name": "gershoy", "surname": "gershoyg", "acronym": "m"}
-Sam Gertler	{"given-name": "Sam", "surname": "Gertler"}	sem (yshri) gertier	{"primary-name": "gertier", "given-name": "yshri", "alternative-name": "sem"}
-Adolf Gertner	{"given-name": "Adolf", "surname": "Gertner"}	adoif gertner	{"given-name": "adoif", "surname": "gertner"}
-Jennie Gertner	{"given-name": "Jennie", "surname": "Gertner"}	dzheny (sheyndi shtern) gertner	{"given-name": "dzheny", "alternative-name": "sheyndi", "surname": "gertner"}
-M. Gertz	{"given-name": "M.", "surname": "Gertz"}	m (moshkovytsh) gerts	{"alternative-name": "moshkovytsh", "surname": "gerts", "acronym": "m"}
+Asher Garfinkel	{"given-name": "Asher", "surname": "Garfinkel"}	shr grynkei	{"given-name": "shr", "surname": "grynkei"}
+Jacob Gartenstein	{"given-name": "Jacob", "surname": "Gartenstein"}	yekb (hrtenshteyn) gartensheeyn	{"given-name": "yekb", "alternative-name": "hrtenshteyn", "surname": "gartensheeyn"}
+Israel German	{"given-name": "Israel", "surname": "German"}	yshri german	{"given-name": "yshri", "surname": "german"}
 Jan Getsman	{"given-name": "Jan", "surname": "Getsman"}	zhan (shmui yekb) getsman	{"given-name": "shmui", "alternative-name": "zhan", "middle-name": "yekb", "surname": "getsman"}
 Louie Gilrod	{"given-name": "Louie", "surname": "Gilrod"}	iuy gyirod	{"given-name": "iuy", "surname": "gyirod"}
-Sara Ginter	{"given-name": "Sara", "surname": "Ginter"}	sara (meysterman) gynter	{"given-name": "sara", "alternative-name": "meysterman", "surname": "gynter"}
-Sonya Gintsburg	{"given-name": "Sonya", "surname": "Gintsburg"}	sonya (shrh tshereshnya) gyntsvurg	{"given-name": "sonya", "alternative-name": "shrh tshereshnya", "surname": "gyntsvurg"}
+Yaakov Ber Gimpel	{"given-name": "Yaakov", "middle-name": "Ber", "surname": "Gimpel"}	yekb-ver gympei	{"primary-name": "yekb-ver"}
 Morris Gisnet	{"given-name": "Morris", "surname": "Gisnet"}	morys gysnet	{"given-name": "morys", "surname": "gysnet"}
+Isaak Gladstone	{"given-name": "Isaak", "surname": "Gladstone"}	ysak giadston	{"primary-name": "giadstun", "given-name": "ysak", "surname": "giadstun"}
 Barukh Glazman	{"given-name": "Barukh", "surname": "Glazman"}	naum (nkhmn giazman) giazunov	{"primary-name": "naum", "alternative-name": "nkhmn giazman", "surname": "giazunov"}
-Betty Glazunov	{"given-name": "Betty", "surname": "Glazunov"}	vetye (buntse teykyn) giazunov	{"given-name": "vetye", "alternative-name": "buntse teykyn", "surname": "giazunov"}
-Ethel Glikman	{"given-name": "Ethel", "surname": "Glikman"}	eti (giyk) giykman	{"primary-name": "giykman", "given-name": "eti", "alternative-name": "giyk"}
-Stefanie Glimer	{"given-name": "Stefanie", "surname": "Glimer"}	steanye (shteyf) giymer	{"given-name": "steanye", "alternative-name": "shteyf", "surname": "giymer"}
-Herman Gold	{"given-name": "Herman", "surname": "Gold"}	herman (hii gurny) goid	{"primary-name": "herman", "alternative-name": "hii gurny", "surname": "goid"}
+Moshe Glazman	{"given-name": "Moshe", "surname": "Glazman"}	mshh giazman	{"given-name": "mshh", "surname": "giazman"}
+Esther Glickman	{"given-name": "Esther", "surname": "Glickman"}	ssr giykman	{"given-name": "ssr", "surname": "giykmn"}
 Leon Gold	{"given-name": "Leon", "surname": "Gold"}	ien (ieyveie goidvog) goid	{"given-name": "ieyveie", "alternative-name": "ien", "surname": "goid", "patronymic": "goidvog"}
-Nyusya Gold	{"given-name": "Nyusya", "surname": "Gold"}	nyusya (mysy doidberg) goid	{"given-name": "nyusya", "alternative-name": "mysy", "surname": "goid"}
 Stella Gold	{"given-name": "Stella", "surname": "Gold"}	steia (toitse shtoitsengoid) goid	{"given-name": "steia", "alternative-name": "toitse shtoitsengoid", "surname": "goid"}
-Diana Goldberg	{"given-name": "Diana", "surname": "Goldberg"}	dynh goidverg	{"given-name": "dynh", "surname": "goidverg"}
+Avraham Goldberg	{"given-name": "Avraham", "surname": "Goldberg"}	brhm goidverg	{"given-name": "brhm", "surname": "goidverg"}
+Hershl Goldberg	{"given-name": "Hershl", "surname": "Goldberg"}	hershi goidverg	{"primary-name": "hershi goidverg", "given-name": "hershi", "surname": "goidverg"}
 Jacob Goldberg	{"given-name": "Jacob", "surname": "Goldberg"}	yekb goidverg	{"given-name": "yekb", "surname": "goidverg"}
-Lili Goldberg	{"given-name": "Lili", "surname": "Goldberg"}	iyiy goidverg	{"given-name": "iyiy", "surname": "goidverg"}
-Louie Goldberg	{"given-name": "Louie", "surname": "Goldberg"}	iuy goidverg	{"given-name": "iuy", "surname": "goidverg"}
-Louis Goldberg	{"given-name": "Louis", "surname": "Goldberg"}	iuys (ieybush) goidverg	{"given-name": "iuys", "alternative-name": "ieybush", "surname": "goidverg"}
 Michael Goldberg	{"given-name": "Michael", "surname": "Goldberg"}	mykhi goidverg	{"given-name": "mykhi", "surname": "goidverg"}
-Morris Goldberg	{"given-name": "Morris", "surname": "Goldberg"}	morys goidverg	{"given-name": "morys", "surname": "goidverg"}
-Nathan Goldberg	{"given-name": "Nathan", "surname": "Goldberg"}	neytn goidverg	{"given-name": "neytn", "surname": "goidverg"}
-Itsikl Goldenberg	{"given-name": "Itsikl", "surname": "Goldenberg"}	ytsyki goidenvurg	{"given-name": "ytsyki", "surname": "goidenvurg"}
-Shifra Goldenberg	{"given-name": "Shifra", "surname": "Goldenberg"}	shrh (hazenberg) goidenvurg	{"given-name": "shrh", "alternative-name": "hazenberg", "surname": "goidenvurg"}
+Moshele Goldberg	{"given-name": "Moshele", "surname": "Goldberg"}	mshhie goidverg	{"given-name": "mshhie", "surname": "goidverg"}
+Rose Goldberg	{"given-name": "Rose", "surname": "Goldberg"}	roz (ynkenti) goidverg	{"primary-name": "goidverg", "given-name": "roz", "alternative-name": "ynkenti", "surname": "goidverg"}
+Sam Goldberg	{"given-name": "Sam", "surname": "Goldberg"}	sem goidverg	{"given-name": "sem", "surname": "goidverg"}
+Hershl Goldenberg	{"given-name": "Hershl", "surname": "Goldenberg"}	hershi (kaiygraf) goidenvurg	{"given-name": "hershi", "alternative-name": "kaiygraf", "surname": "goidenvurg"}
 Naftali Goldfaden	{"given-name": "Naftali", "surname": "Goldfaden"}	nsiy (goidenodym) goidaden	{"given-name": "nsiy", "alternative-name": "goidenodym", "surname": "goidaden"}
-Paulina Goldfaden	{"given-name": "Paulina", "surname": "Goldfaden"}	puiyne (poiye verbei) goidaden	{"primary-name": "goidaden", "given-name": "puiyne", "alternative-name": "poiye", "surname": "goidaden"}
-Shimi Goldfaden	{"given-name": "Shimi", "surname": "Goldfaden"}	shmeyh (goidenodym) goidaden	{"given-name": "shmeyh", "alternative-name": "goidenodym", "surname": "goidaden"}
-Wolf Goldfaden	{"given-name": "Wolf", "surname": "Goldfaden"}	voif goidaden	{"given-name": "voif", "surname": "goidaden"}
-Joseph Goldstein	{"given-name": "Joseph", "surname": "Goldstein"}	yusf goidshteyn	{"given-name": "yusf", "surname": "goidshteyn"}
-Viktor Golovtshiner	{"given-name": "Viktor", "surname": "Golovtshiner"}	vyktor goiovtshyner	{"given-name": "vyktor", "surname": "goiovtshyner"}
-Sonya Golubchik	{"given-name": "Sonya", "surname": "Golubchik"}	sonye (grenshtat) goiuvtshyk	{"given-name": "sonye", "alternative-name": "grenshtat", "surname": "goiuvtshyk"}
+David Goldman	{"given-name": "David", "surname": "Goldman"}	dud goidman	{"given-name": "dud", "surname": "goidman"}
+Goldman	{"surname": "Goldman"}	goidman	{"surname": "goidman"}
+Yechiel Goldsmith	{"given-name": "Yechiel", "surname": "Goldsmith"}	ykhyi voym	{"given-name": "ykhyi", "surname": "voym"}
 Anna Golubok	{"given-name": "Anna", "surname": "Golubok"}	anna (khnh rubynshteyn) goiuvok	{"given-name": "annh", "alternative-name": "khnh", "surname": "goiuvok"}
-Avraham Golubok	{"given-name": "Avraham", "surname": "Golubok"}	brhm goiuvok	{"given-name": "brhm", "surname": "goiuvok"}
 Leon Golubok	{"given-name": "Leon", "surname": "Golubok"}	ieon goiuvok	{"primary-name": "goiuvok", "given-name": "ieon"}
-Esther Gorelova-Kogan	{"given-name": "Esther", "maiden-surname": "Gorelova", "surname": "Kogan"}	ssr goreiova-kagan	{"given-name": "ssr", "surname": "goreiova-kagan"}
-B. Gorin	{"given-name": "B.", "surname": "Gorin"}	v (ytskhk goyd-hoyd) goryn	{"given-name": "ytskhk", "alternative-name": "goyd-hoyd", "surname": "goryn", "salutation": "v"}
-Zisl Gorlitska-Reinglass	{"given-name": "Zisl", "surname": "Gorlitska-Reinglass"}	zysi goriytska-reyngias	{"primary-name": "goriytska-reyngias", "given-name": "zysi", "surname": "goriytska-reyngias"}
-Friedrich Wilhelm Goter	{"given-name": "Friedrich", "middle-name": "Wilhelm", "surname": "Goter"}	ryedrykh vyiheim goter	{"primary-name": "ryedrykh vyiheim goter", "given-name": "vyiheim", "surname": "goter"}
-Eydel Gotfrid	{"given-name": "Eydel", "surname": "Gotfrid"}	eydi (eriykh) gotryd	{"given-name": "eydi", "alternative-name": "eriykh", "surname": "gotryd"}
-Chone Gottesfeld	{"given-name": "Chone", "surname": "Gottesfeld"}	khn goteseid	{"primary-name": "goteseid", "given-name": "khn"}
+Hershl Gordon	{"given-name": "Hershl", "surname": "Gordon"}	hershi gordon	{"primary-name": "hershi gordon", "given-name": "hershi", "surname": "gordon"}
+Hersh Leib Gordon	{"given-name": "Hersh", "middle-name": "Leib", "surname": "Gordon"}	hersh-ieyb gordon	{"primary-name": "hersh-ieyb gordon", "given-name": "hersh-ieyb", "surname": "gordon"}
 Clara Gottlieb	{"given-name": "Clara", "surname": "Gottlieb"}	kiara (gershovytsh) gotiyv	{"given-name": "kiara", "alternative-name": "gershovytsh", "surname": "gotiyv"}
 Leon Gottlieb	{"given-name": "Leon", "surname": "Gottlieb"}	ieon (ieybush-hrn) gotiyv	{"given-name": "ieon", "alternative-name": "ieybush-hrn", "surname": "gotiyv"}
 Louis Silo Gottlieb	{"given-name": "Louis", "middle-name": "Silo", "surname": "Gottlieb"}	iuys syi gotiyv	{"given-name": "iuys", "middle-name": "syi", "surname": "gotiyv"}
-Aneta Gradner	{"given-name": "Aneta", "surname": "Gradner"}	aneta gradner	{"given-name": "aneta", "surname": "gradner"}
-Israel Gradner	{"given-name": "Israel", "surname": "Gradner"}	yshri (rozeneid) gradner	{"primary-name": "yshri", "alternative-name": "rozeneid", "surname": "gradner"}
-Leon Graf	{"given-name": "Leon", "surname": "Graf"}	ieon graf	{"primary-name": "ieon graf", "surname": "graf"}
-Oscar Green	{"given-name": "Oscar", "surname": "Green"}	oskar gryn	{"given-name": "oskar", "surname": "gryn"}
+Avraham Ber Gottlober	{"given-name": "Avraham", "middle-name": "Ber", "surname": "Gottlober"}	brhm-ver gotiover	{"given-name": "brhm", "middle-name": "ver", "surname": "gotiover"}
+Alexander Granach	{"given-name": "Alexander", "surname": "Granach"}	aieksander grnkh	{"primary-name": "grnkh", "given-name": "aieksander", "surname": "grnkh"}
 Caesar Greenberg	{"given-name": "Caesar", "surname": "Greenberg"}	tsezr (vtsii) grynverg	{"given-name": "tsezr", "alternative-name": "vtsii", "surname": "grynverg"}
-Fannie Greenberg	{"given-name": "Fannie", "surname": "Greenberg"}	eny (tomashevsky) grynverg	{"given-name": "eny", "alternative-name": "tomashevsky", "surname": "grynverg"}
-Samuel Greenberg	{"given-name": "Samuel", "surname": "Greenberg"}	semyuei (shmkhh) grynverg	{"given-name": "shmkhh", "alternative-name": "semyuei", "surname": "grynverg"}
 Rose Greenfield	{"given-name": "Rose", "surname": "Greenfield"}	rz (treytier) gryneid	{"given-name": "rz", "alternative-name": "treytier", "surname": "grynit"}
-Yehuda Grinhoyz	{"given-name": "Yehuda", "surname": "Grinhoyz"}	yhudh grynhoyz	{"given-name": "yhudh", "surname": "grynhoyz"}
-Charles W. Groll	{"given-name": "Charles", "middle-name": "W.", "surname": "Groll"}	tsharis v groii	{"primary-name": "tsharis v groii", "given-name": "tsharis", "surname": "groii"}
-Ida Groper	{"given-name": "Ida", "surname": "Groper"}	eyda (bryh) groper	{"primary-name": "groper", "given-name": "eyda", "alternative-name": "bryh", "surname": "groper"}
+Khayim-Betsalel Grinberg	{"given-name": "Khayim-Betsalel", "surname": "Grinberg"}	kheym-btsii grynverg	{"given-name": "kheym", "middle-name": "btsii", "surname": "grynverg"}
+Sammy Gronemann	{"given-name": "Sammy", "surname": "Gronemann"}	samy groneman	{"given-name": "samy", "surname": "groneman"}
 Chana Grosberg	{"given-name": "Chana", "surname": "Grosberg"}	khnh (mandeitort) grosverg	{"given-name": "khnh", "alternative-name": "mandeitort", "surname": "grosverg"}
-Irving Grossman	{"given-name": "Irving", "surname": "Grossman"}	oyrvyng (ytskhk ieyv) grosman	{"primary-name": "grosman", "given-name": "ytskhk", "alternative-name": "oyrvyng", "middle-name": "ieyv"}
-V.M. Grossman	{"given-name": "V.", "middle-name": "M.", "surname": "Grossman"}	v m (dud voif) grosman	{"given-name": "dud", "alternative-name": "v m", "surname": "grosman"}
-Anna Grushkof	{"given-name": "Anna", "surname": "Grushkof"}	anna grushkof	{"given-name": "anna", "surname": "grushkof"}
-Moshe Gurvitsh	{"given-name": "Moshe", "surname": "Gurvitsh"}	mshh gurvytsh	{"given-name": "mshh", "surname": "gurvytsh"}
-Berta Gutentag	{"given-name": "Berta", "surname": "Gutentag"}	vert (akseirad) gutentag	{"primary-name": "vert", "alternative-name": "aksierad", "surname": "gutentag"}
-Milani Gutman	{"given-name": "Milani", "surname": "Gutman"}	myiny gutman	{"given-name": "myiny", "surname": "gutmn"}
-Clara Haberman	{"given-name": "Clara", "surname": "Haberman"}	kiara (reyman) haverman	{"primary-name": "haverman", "given-name": "kiara", "alternative-name": "reyman", "surname": "haverman"}
+Samuel B. Grossman	{"given-name": "Samuel", "middle-name": "B.", "surname": "Grossman"}	semuei v grosman	{"given-name": "semuei", "surname": "grosman", "acronym": "v"}
+Shlomo Grossman	{"given-name": "Shlomo", "surname": "Grossman"}	shimh grosman	{"given-name": "shimh", "surname": "grosman"}
+Berl Grudberg	{"given-name": "Berl", "surname": "Grudberg"}	veri grudverg	{"given-name": "veri", "surname": "grudverg"}
+Avraham Grushkov	{"given-name": "Avraham", "surname": "Grushkov"}	brhm (grushkovsky) grushkov	{"given-name": "brhm", "alternative-name": "grushkovsky", "surname": "grushkov"}
+Gedalya Gurman	{"given-name": "Gedalya", "surname": "Gurman"}	gdiyh gurmn	{"given-name": "gdiyh", "surname": "gurmn"}
+Mary Gutovitsh	{"given-name": "Mary", "surname": "Gutovitsh"}	mery (myiye tsypkus) gutovytsh	{"given-name": "myiye", "alternative-name": "mery", "surname": "gutovytsh"}
+? Haber	{"given-name": "?", "surname": "Haber"}	 hver	{"honorific": "hver"}
 Esther Hadassah	{"given-name": "Esther", "alternative-name": "Hadassah"}	ssr (veynroyb-haipern) hdsh	{"given-name": "ssr", "alternative-name": "veynroyb-haipern", "appellation": "hdsh"}
-Leo Halpern	{"given-name": "Leo", "surname": "Halpern"}	ieo haipern	{"given-name": "ieo", "surname": "haipern"}
-Neytan Hamburger	{"given-name": "Neytan", "surname": "Hamburger"}	neytan hamvurger	{"primary-name": "neytan hamvurager", "surname": "hamvurger"}
-Al. Harris	{"given-name": "Al", "surname": "Harris"}	ai herys	{"primary-name": "ai hhrys", "surname": "hhrys"}
+Yehonatan Halpern	{"given-name": "Yehonatan", "surname": "Halpern"}	yhunsn haipern	{"primary-name": "yhunsn haipern", "given-name": "yhunsn", "surname": "haipern"}
+Dovid Gedalyah Hamburger	{"given-name": "Dovid", "middle-name": "Gedalyah", "surname": "Hamburger"}	dud-gdiyh hamvurger	{"given-name": "dud-gdiyh", "surname": "hamvurger"}
+Moshe Harr	{"given-name": "Moshe", "surname": "Harr"}	mshh har	{"given-name": "mshh", "surname": "har"}
+Abe Hart	{"given-name": "Abe", "surname": "Hart"}	eyv (brhm hekht) hart	{"primary-name": "eyv", "given-name": "brhm", "alternative-name": "eyv", "surname": "hekht"}
+Bertha Hart	{"given-name": "Bertha", "surname": "Hart"}	vert (mahier) hart	{"primary-name": "vert", "alternative-name": "mahier", "surname": "hart"}
+Hersh Hart	{"given-name": "Hersh", "surname": "Hart"}	hersh hart	{"primary-name": "hersh hart"}
 Moshe Heine-Chaimovich	{"given-name": "Moshe", "middle-name": "Heine", "surname": "Chaimovich"}	mshh heyne-kheymovytsh	{"given-name": "mshh", "surname": "heyne-kheymovytsh"}
+Anna Held	{"given-name": "Anna", "surname": "Held"}	anna heid	{"given-name": "annh", "surname": "hid"}
+Itsik Heller	{"given-name": "Itsik", "surname": "Heller"}	ytsyk (hershkovytsh) heier	{"given-name": "ytsyk", "alternative-name": "hershkovytsh", "surname": "heier"}
+Sholem Hertsberg	{"given-name": "Sholem", "surname": "Hertsberg"}	shium hertsberg	{"primary-name": "shium hertsberg", "given-name": "shium", "surname": "hertsberg"}
 Regina Hertslikh	{"given-name": "Regina", "surname": "Hertslikh"}	regyne hertsiyn	{"primary-name": "regyne", "surname": "hertsiyn"}
-Voldemar Heyntze	{"given-name": "Voldemar", "surname": "Heyntze"}	voidemar heyntse	{"given-name": "voidemar", "surname": "heyntse"}
-Devora Hilsberg	{"given-name": "Devora", "surname": "Hilsberg"}	dburh (doreie) hyisverg	{"given-name": "dburh", "alternative-name": "doreie", "surname": "hyisverg"}
+Yosef Hertz	{"given-name": "Yosef", "surname": "Hertz"}	yusf herts	{"primary-name": "yusf herts", "given-name": "yusf", "surname": "herts"}
+Louis Heyman	{"given-name": "Louis", "surname": "Heyman"}	iuys (iuys herman) heyman	{"primary-name": "iuys herman", "given-name": "iuys", "alternative-name": "iuys", "surname": "heymn"}
+Abraham Hochban	{"given-name": "Abraham", "surname": "Hochban"}	brhm hokhvan	{"given-name": "brhm", "surname": "hokhvan"}
+Mordechai Hochberg	{"given-name": "Mordechai", "surname": "Hochberg"}	mrdkhy hokhverg	{"primary-name": "hokhverg", "given-name": "mrdkhy"}
+Rukhl Hochberg	{"given-name": "Rukhl", "surname": "Hochberg"}	rkhi (aryei) hokhverg	{"primary-name": "hokhverg", "given-name": "rkhi", "alternative-name": "aryei"}
 Shaul Hochberg	{"given-name": "Shaul", "surname": "Hochberg"}	shui hokhverg	{"primary-name": "hkhbrg", "given-name": "shui", "surname": "hkhbrg"}
 [?] Hoffman	{"given-name": "[?]", "surname": "Hoffman"}	homan ()	{"surname": "homan"}
 Leon Hoffman	{"given-name": "Leon", "surname": "Hoffman"}	ieon homan	{"given-name": "ieon", "surname": "homan"}
 Pauline Hoffman	{"given-name": "Pauline", "surname": "Hoffman"}	puiyn homan	{"given-name": "puiyn", "surname": "homan"}
-Leib Hollander	{"given-name": "Leib", "surname": "Hollander"}	ieyb hoiender	{"primary-name": "ieyb hoiender", "given-name": "ieyb", "surname": "hoiender"}
+Yosef Holder	{"given-name": "Yosef", "surname": "Holder"}	yusf hoider	{"given-name": "yusf", "surname": "haider"}
+Isidore Hollander	{"given-name": "Isidore", "surname": "Hollander"}	yzydor hoiender	{"primary-name": "yzydor hoiender", "given-name": "yzydor", "surname": "hoiender"}
+Rukhl Holtser	{"given-name": "Rukhl", "surname": "Holtser"}	rkhi hoitser	{"given-name": "rkhi", "surname": "hoitser"}
 Mitzi Hope	{"given-name": "Mitzi", "middle-name": "Hope"}	mytsy hope	{"primary-name": "mytsy hope"}
 Ruzha Horn	{"given-name": "Ruzha", "surname": "Horn"}	ruzha horn	{"primary-name": "ruzha horn"}
 Nathan H. Hornstein	{"given-name": "Nathan", "middle-name": "H.", "surname": "Hornstein"}	neytn h hornshteyn	{"given-name": "neytn"}
-Edith Horowitz-Silbermann	{"given-name": "Edith", "maiden-surname": "Horowitz", "surname": "Silbermann"}	edyt horovyts-zyiberman	{"primary-name": "horovyts-zyiberman", "given-name": "edyt", "surname": "horovyts", "patronymic": "zyiberman"}
-Charlotte Hurwitz	{"given-name": "Charlotte", "surname": "Hurwitz"}	shariote (shyre) hurvyts	{"primary-name": "shariote", "alternative-name": "shyre", "surname": "hurvyts"}
-Moshe Ish HaLevi Hurwitz	{"given-name": "Moshe", "surname": "Hurwitz", "patronymic": "Ish", "nisba": "HaLevi"}	proesor mshh ysh hioy	{"given-name": "mshh", "surname": "hioy", "matronymic": "ysh", "honorific": "proesor"}
-Itskhok Inventarzh	{"given-name": "Itskhok", "surname": "Inventarzh"}	ytskhk ynventarzh	{"given-name": "ytskhk", "surname": "ynventarzh"}
-Sonya Iris	{"given-name": "Sonya", "middle-name": "Iris"}	sonya (eidman) yrys	{"given-name": "sonya", "alternative-name": "yrys", "surname": "eidman"}
-Itkin	{"surname": "Itkin"}	ytkyn	{"surname": "ytkyn"}
-Linke Itum	{"given-name": "Linke", "surname": "Itum"}	iynke (iyve) ysum	{"primary-name": "iynke", "alternative-name": "iyve", "surname": "ysum"}
-Pinkus Izbesko	{"given-name": "Pinkus", "surname": "Izbesko"}	pynkus (pnkhs yzbesky) yzvesko	{"primary-name": "yzvesko", "given-name": "pynkus", "alternative-name": "pnkhs", "surname": "yzbesky"}
-Izmalyonna	{"given-name": "Izmalyonna"}	yzmaiyonna	{"primary-name": "yzmaiyonna"}
+Itsikl Horovits	{"given-name": "Itsikl", "surname": "Horovits"}	ytsyki horovyts	{"given-name": "ytsyki", "surname": "horovyts"}
 Sarah Hammer Jacklin	{"given-name": "Sarah", "surname": "Jacklin"}	shrh dzhakiyn-hamer	{"given-name": "shrh", "alternative-name": "dzhakiyn", "surname": "hamer"}
-Bessie Jacobson	{"given-name": "Bessie", "surname": "Jacobson"}	vety (beyie shur) dzheykovson	{"primary-name": "vety", "alternative-name": "beyie", "surname": "dzheykovsun"}
-Henrietta Jacobson	{"given-name": "Henrietta", "surname": "Jacobson"}	henryeta dzheykavson	{"primary-name": "henryeta dzheykavson", "surname": "dzheykavson"}
+Hyman Jacobowitz	{"given-name": "Hyman", "surname": "Jacobowitz"}	heyman (kheym-nsn) yakuvovytsh	{"given-name": "kheym-nsn", "surname": "ykububyts"}
+Betty Jacobs	{"given-name": "Betty", "surname": "Jacobs"}	vety (treyier) dzheykovs	{"given-name": "vety", "alternative-name": "treyier", "surname": "dzheykovs"}
 Hymie Jacobson	{"given-name": "Hymie", "surname": "Jacobson"}	heymy (kheym-mendi) dzheykavson	{"given-name": "kheym-mendi", "alternative-name": "heymy", "surname": "dzeykvsun"}
 Joseph Jacobson	{"given-name": "Joseph", "surname": "Jacobson"}	yusf (yakobzon) dzheykavson	{"given-name": "yusf", "alternative-name": "yakobzon", "surname": "dzheykavson"}
 Louie Josephson	{"given-name": "Louie", "surname": "Josephson"}	iuy yozezohn	{"given-name": "iuy", "surname": "yozezohn"}
 Sol Josephson	{"given-name": "Sol", "surname": "Josephson"}	saui yozezon	{"given-name": "saui", "surname": "yozezon"}
-Jeanne Juvelier	{"given-name": "Jeanne", "surname": "Juvelier"}	dzhyn (veia) yoveiyr	{"given-name": "dzhyn", "alternative-name": "veia", "surname": "yoveiyr"}
-Kalmen Juvelier	{"given-name": "Kalmen", "surname": "Juvelier"}	kimn yoveiyr	{"given-name": "kimn", "surname": "yoveiyr"}
-Mark Juwiler	{"given-name": "Mark", "surname": "Juwiler"}	mark yuvyier	{"given-name": "mark", "surname": "yuvyier"}
-Jenny Kaiser	{"given-name": "Jenny", "surname": "Kaiser"}	dzheny keyzer	{"given-name": "dzheny", "surname": "keyzer"}
+Tsvi Kahan	{"given-name": "Tsvi", "surname": "Kahan"}	tsby khn	{"given-name": "tsby", "surname": "khn"}
 Harry Kalmanowitz	{"given-name": "Harry", "surname": "Kalmanowitz"}	hery kaitsanovytsh	{"primary-name": "hery kaitsanvytsh", "surname": "kaitsanvytsh"}
-Ulrich Kalmus	{"given-name": "Ulrich", "surname": "Kalmus"}	uirykh kaimus	{"primary-name": "uirykh kaimus", "given-name": "uirykh", "surname": "kaimus"}
-Leopold Kanner	{"given-name": "Leopold", "surname": "Kanner"}	ieopoid (ieyv) kaner	{"primary-name": "ieopoid", "alternative-name": "ieyv", "surname": "kaner"}
-Sarah Kanner	{"given-name": "Sarah", "surname": "Kanner"}	shrh (ryiyng) kaner	{"given-name": "shrh", "alternative-name": "ryiyng", "surname": "kaner"}
-Misha Karlos	{"given-name": "Misha", "surname": "Karlos"}	myshe karios	{"given-name": "myshe", "surname": "karios"}
-Dora Karpinovitsh	{"given-name": "Dora", "surname": "Karpinovitsh"}	dora (dburh) krpynovytsh	{"given-name": "dora", "alternative-name": "dburh", "surname": "krpynovytsh"}
-Vadya Kasiakov	{"given-name": "Vadya", "surname": "Kasiakov"}	vdy kosykv	{"given-name": "vdy", "surname": "kusykv"}
-Morris Kenig	{"given-name": "Morris", "surname": "Kenig"}	morys (khiyvner) kenyg	{"given-name": "morys", "alternative-name": "khiyvner", "surname": "kenyg"}
+Israel Kamai	{"given-name": "Israel", "surname": "Kamai"}	yshri kmy	{"given-name": "yshri", "surname": "kmy"}
+Yitzhak Kaplan	{"given-name": "Yitzhak", "surname": "Kaplan"}	ytskhk kapian	{"given-name": "ytskhk", "surname": "kapian"}
+Sam Kasten	{"given-name": "Sam", "surname": "Kasten"}	sem kestyn	{"primary-name": "sem kestyn", "surname": "kestyn"}
+Isaac Katz	{"given-name": "Isaac", "surname": "Katz"}	yzak kts	{"primary-name": "yzak kts", "given-name": "yzak", "surname": "kts"}
+Michael Katz	{"given-name": "Michael", "surname": "Katz"}	mykhi kts	{"given-name": "mykhi", "surname": "kts"}
 Khaim-Yosef Keymon	{"given-name": "Khaim-Yosef", "surname": "Keymon"}	yusf (osyp) kamyen	{"given-name": "yusf", "alternative-name": "asyp", "surname": "kamyen"}
 Khaklai	{"given-name": "Khaklai"}	khkiy (eidman)	{"primary-name": "khkiy", "alternative-name": "eidman"}
-[?] Khalan-Khalanov	{"given-name": "[?]", "surname": "Khalan-Khalanov"}	 khaian-khaianov	{"given-name": "khaian", "surname": "khianuv"}
-A. Khalif	{"given-name": "A.", "surname": "Khalif"}	 khaiyf	{"surname": "khaiyf", "acronym": ""}
-Moshe Khashkes	{"given-name": "Moshe", "surname": "Khashkes"}	mshh khashkes	{"given-name": "mshh", "surname": "khashkes"}
-Max Kletter	{"given-name": "Max", "surname": "Kletter"}	maks kieter	{"primary-name": "kieter", "given-name": "maks"}
-Paulina Kobrin	{"given-name": "Paulina", "surname": "Kobrin"}	paiyna (segai) kobryn	{"given-name": "paiyna", "alternative-name": "segai", "surname": "kobryn"}
-Abe Kogut	{"given-name": "Abe", "surname": "Kogut"}	eyb kogut	{"primary-name": "eyb kogut", "given-name": "eyb", "surname": "kogut"}
-Leah Kompaneyets	{"given-name": "Leah", "surname": "Kompaneyets"}	ih (gotiyv) kompaneets	{"given-name": "ih", "alternative-name": "gotiyv", "surname": "kompaneets"}
+Misha Khasin	{"given-name": "Misha", "surname": "Khasin"}	mysh khsyn	{"primary-name": "mysh khsyn"}
+Jacob Kirschenbaum	{"given-name": "Jacob", "surname": "Kirschenbaum"}	yekb kyrshenboym	{"given-name": "yekb", "surname": "kyrshenboym"}
+Moshe Michal Kitai	{"given-name": "Moshe", "middle-name": "Michal", "surname": "Kitai"}	mshh-mykhi kytay	{"primary-name": "mshh-mykhi", "given-name": "mshh", "middle-name": "mykhi", "surname": "kytay"}
 Max Kompaneyets	{"given-name": "Max", "surname": "Kompaneyets"}	maks kompaneyets	{"given-name": "maks", "surname": "kompaneyets"}
-Louis Kopelman	{"given-name": "Louis", "surname": "Kopelman"}	iuys kapeiman	{"primary-name": "kapeiman", "given-name": "iuys"}
-Leo Kopp	{"given-name": "Leo", "surname": "Kopp"}	ie kop	{"primary-name": "ie kop"}
 [?] Kores	{"given-name": "?", "surname": "Kores"}	kares	{"primary-name": "kares"}
-Berta Kornfeld	{"given-name": "Berta", "surname": "Kornfeld"}	berta (bsyh kuryer) korneid	{"given-name": "berta", "alternative-name": "bsyh", "surname": "korneid", "matronymic": "bsyh"}
+Esther Kovalska	{"given-name": "Esther", "surname": "Kovalska"}	ssr kovaiska	{"given-name": "ssr", "surname": "kvoiveska"}
 Sarah Kranzfeld	{"given-name": "Sarah", "surname": "Kranzfeld"}	shrh krantseid	{"given-name": "shrh", "surname": "krantseid"}
-[?] Krastoshevsky	{"given-name": "?", "surname": "Krastoshevsky"}	 krastoshevsky	{"primary-name": "krastoshevsky", "surname": "krastoshevsky"}
+Solomon Krause	{"given-name": "Solomon", "surname": "Krause"}	shimh kroyze	{"given-name": "shimh", "surname": "kroyze"}
 Leah Krause-Miller	{"given-name": "Leah", "maiden-surname": "Krause", "surname": "Miller"}	ih (ioyiand) kroyze-myier	{"primary-name": "kroyze-myier", "given-name": "ih", "alternative-name": "ioyiand", "surname": "kroyze-myier"}
-Yasha Kreitzberg	{"given-name": "Yasha", "surname": "Kreitzberg"}	yasha (saksansky) kreytsnerg	{"primary-name": "kreytsnerg", "given-name": "yasha", "alternative-name": "saksansky", "surname": "kreytsnerg"}
-Max Kreshover	{"given-name": "Max", "surname": "Kreshover"}	maks kreshver	{"primary-name": "maks kreshver", "given-name": "maks", "surname": "kreshver"}
-Elka Krotshak	{"given-name": "Elka", "surname": "Krotshak"}	eika kratshak	{"primary-name": "eika kratshak", "given-name": "eika", "surname": "kratshak"}
-Krug	{"surname": "Krug"}	 krug	{"primary-name": " krug"}
-Godl Kurazh	{"given-name": "Godl", "surname": "Kurazh"}	godi  kurazh	{"primary-name": "kurazh", "given-name": "godi"}
-Leon Kusman	{"given-name": "Leon", "surname": "Kusman"}	ieon kusman	{"given-name": "ieon", "surname": "kusman"}
-Naya Lakernik	{"given-name": "Naya", "surname": "Lakernik"}	naye ikernyk	{"primary-name": "naye ikernyk", "given-name": "naye", "surname": "ikernyk"}
-Moshe Landau-Klekoy	{"given-name": "Moshe", "surname": "Landau-Klekoy"}	mshh iandoy-kiekoy	{"given-name": "mshh", "surname": "iandoy-kiekoy"}
-Leonard Landes	{"given-name": "Leonard", "surname": "Landes"}	iernard iandes	{"given-name": "iernard", "surname": "iandes"}
-Landman	{"surname": "Landman"}	dr iandman	{"surname": "iandman", "salutation": "dr"}
-Sarah Lando	{"given-name": "Sarah", "surname": "Lando"}	shrh iando	{"given-name": "shrh", "surname": "iando"}
-Henry Morris Landvorth	{"given-name": "Henry", "middle-name": "Morris", "surname": "Landvorth"}	henry morys iandvorth	{"primary-name": "henry morys iandvorth", "given-name": "henry", "middle-name": "morys", "surname": "iandvorth"}
-Clara Langsner	{"given-name": "Clara", "surname": "Langsner"}	kiara iangsner	{"given-name": "kiara", "surname": "iangsner"}
-Zokn Zarakh=Paltiel Lantsman	{"given-name": "Zokn", "alternative-name": "Zarakh", "middle-name": "Paltiel", "surname": "Lantsman"}	zkn zrkh-pityi iantsman	{"primary-name": "zkn zrkh-pityi", "surname": "iantsman"}
+Isak Kremer	{"given-name": "Isak", "surname": "Kremer"}	ysak kremer	{"given-name": "ysak", "surname": "kremer"}
+Yosef Kremer	{"given-name": "Yosef", "surname": "Kremer"}	yusf kremer	{"given-name": "yusf", "surname": "kremer"}
+Leon Kuperman	{"given-name": "Leon", "surname": "Kuperman"}	ieon (ysheyh-ryh) kuperman	{"primary-name": "ieon", "alternative-name": "ysheyh-ryh", "surname": "kuperman"}
+Leyb Kuznetsov	{"given-name": "Leyb", "surname": "Kuznetsov"}	ieyb kuznyetsov	{"given-name": "ieyb", "surname": "kuznyetsov"}
+Yehuda Leib Landau	{"given-name": "Yehuda", "middle-name": "Leib", "surname": "Landau"}	yhudh-ieyv iandoy	{"given-name": "yhudh-ieyv", "surname": "iandoy"}
+Zisha Landau	{"given-name": "Zisha", "surname": "Landau"}	zyshe iandoy	{"given-name": "zyshe", "surname": "iandoy"}
+Joseph Landis	{"given-name": "Joseph", "surname": "Landis"}	yusf indys	{"given-name": "yusf", "surname": "indys"}
+Harry Lang	{"given-name": "Harry", "surname": "Lang"}	h iang	{"acronym": "h", "professional-name": "ing"}
+Berta Latovitsh	{"given-name": "Berta", "surname": "Latovitsh"}	verta (veyie gurevytsh) iatovytsh	{"given-name": "verta", "alternative-name": "veyie", "surname": "iatovytsh", "matronymic": "gurevytsh"}
 Jennie Lavitz	{"given-name": "Jennie", "surname": "Lavitz"}	dzheny (shmyiovytsh) ivyts	{"given-name": "dzheny", "alternative-name": "shmyiovytsh", "surname": "ivyts"}
 Pepi Lavitz	{"given-name": "Pepi", "surname": "Lavitz"}	pepy (pipui) iavyts	{"given-name": "pepy", "alternative-name": "pipui", "surname": "iavyts"}
 Pinchus Lawanda	{"given-name": "Pinchus", "surname": "Lawanda"}	pnkhs iavenda	{"given-name": "pnkhs", "surname": "iavenda"}
-Elias Lazarov	{"given-name": "Elias", "surname": "Lazarov"}	eiyas (iyezr shayr) iazarov	{"given-name": "eiyas", "alternative-name": "iyezr shayr", "surname": "iazarov"}
-Feige Lazarov	{"given-name": "Feige", "surname": "Lazarov"}	eyge (krynytsaya) iazarov	{"given-name": "eyge", "alternative-name": "krynytsaya", "surname": "iazarov"}
+Aaron Lebedeff	{"given-name": "Aaron", "surname": "Lebedeff"}	ahrn ievedyev	{"given-name": "ahrn", "surname": "ievedyev"}
 Vera Lebedeff	{"given-name": "Vera", "surname": "Lebedeff"}	vyera (rbkh shekhtman) ievedyev	{"primary-name": "vyera", "given-name": "rbkh", "alternative-name": "vyera", "surname": "shekhtman", "nisba": "ievedyev"}
-Adolf Lehrer	{"given-name": "Adolf", "surname": "Lehrer"}	adoif (hrn) iehrer	{"given-name": "duif", "alternative-name": "hrn", "surname": "iehrer"}
+David Lederman	{"given-name": "David", "surname": "Lederman"}	dud iederman	{"given-name": "dud", "surname": "iederman"}
+Zalman Lehrer	{"given-name": "Zalman", "surname": "Lehrer"}	zimn iehrer	{"given-name": "zimn", "surname": "iehrer"}
+Daniel Leibel	{"given-name": "Daniel", "surname": "Leibel"}	dnyi ieyvi	{"given-name": "dnyi", "surname": "ieyvi"}
+Herts Leibovitsh	{"given-name": "Herts", "surname": "Leibovitsh"}	herts ieybovytsh	{"primary-name": "herts ieybovytsh", "surname": "ieybovytsh"}
+Raytshel Leibovitsh	{"given-name": "Raytshel", "surname": "Leibovitsh"}	reytshei ieyvovytsh	{"surname": "ieyvovytsh"}
+Tsile Leibovitsh	{"given-name": "Tsile", "surname": "Leibovitsh"}	tsyiye ieybovytsh	{}: 
 H. Leivick	{"given-name": "H.", "surname": "Leivick"}	h (ieyvyk haiper) ieyvyk	{"given-name": "ieyvyk", "alternative-name": "haiper", "surname": "ieyvyk"}
-S. Lemberg	{"given-name": "S.", "surname": "Lemberg"}	s (sara eynshteyn) iemverg	{"given-name": "sara", "alternative-name": "eynshteyn", "surname": "iemverg", "honorific": "s"}
-Leonid Leonov	{"given-name": "Leonid", "surname": "Leonov"}	ieonyd ieonov	{"primary-name": "ieonyd ieonov", "given-name": "ieonyd", "surname": "ieonov"}
-Joseph Lessing	{"given-name": "Joseph", "surname": "Lessing"}	dzhozef iesyng	{"given-name": "dzhozef", "surname": "iesyng"}
-Feyga Levando	{"given-name": "Feyga", "surname": "Levando"}	eyge (ievyn) ievando	{"given-name": "eyge", "alternative-name": "ievyn", "surname": "ievando"}
-Fannie Levenshteyn	{"given-name": "Fannie", "surname": "Levenshteyn"}	eny (periman) ievenshteyn	{"given-name": "eny", "alternative-name": "periman", "surname": "ievenshteyn"}
+Bertha Lelchuk	{"given-name": "Bertha", "surname": "Lelchuk"}	verta ieitshuk	{"primary-name": "verta ieitshuk"}
+Miriam Lerer	{"given-name": "Miriam", "surname": "Lerer"}	mrym ierer	{"primary-name": "mrym ierer", "given-name": "mrym", "surname": "ierer"}
+Isidor Levenstein	{"given-name": "Isidor", "surname": "Levenstein"}	yzydor (rym-ytskhk) ievenshteyn	{"given-name": "yzydor", "alternative-name": "rym-ytskhk", "surname": "ievenshteyn"}
+Alter Levin	{"given-name": "Alter", "surname": "Levin"}	aiter ievyn	{"primary-name": "aiter ievyn", "given-name": "aiter", "surname": "ievyn"}
+Harry Levin	{"given-name": "Harry", "surname": "Levin"}	hery (hershi) ievyn	{"primary-name": "hery", "alternative-name": "hershi", "surname": "ievyn"}
 Lucy Levin	{"given-name": "Lucy", "surname": "Levin"}	iusy (iyve) ievyn	{"given-name": "iusy", "alternative-name": "iyve", "surname": "ievyn"}
+Shmuel Levin	{"given-name": "Shmuel", "surname": "Levin"}	shmui ievyn	{"given-name": "shmui", "surname": "ievyn"}
 Ludvig Levinzon	{"given-name": "Ludvig", "surname": "Levinzon"}	iudvyg (ryh-ieyv) ievynzon	{"given-name": "iudvyg", "alternative-name": "ryh-ieyv", "surname": "ievynzon"}
-Julius Levy	{"given-name": "Julius", "surname": "Levy"}	yuiyus iyvey	{"primary-name": "yuiyus iyvey", "given-name": "yuiyus", "surname": "iyvey"}
+Max Levy	{"given-name": "Max", "surname": "Levy"}	maks iyvey	{"given-name": "maks", "surname": "iyvey"}
+A. Leyb	{"given-name": "A.", "surname": "Leyb"}	 (brhm-mrdkhy) ieyb	{"given-name": "brhm-mrdkhy", "surname": "ieyb", "acronym": ""}
 Sarah L. Libert	{"given-name": "Sarah", "middle-name": "L.", "surname": "Libert"}	shrh (ih) iybert	{"given-name": "shrh", "alternative-name": "ih", "surname": "iybert"}
-Olya Libert-Lubotski	{"given-name": "Olya", "maiden-surname": "Libert", "surname": "Lubotski"}	oiy iybert-iubotsky	{"given-name": "oiy", "surname": "iubotsky"}
 Z. Libin	{"given-name": "Z.", "surname": "Libin"}	z (yshri-zimn hyrvytsh) iyvyn	{"given-name": "yshri-zimn", "surname": "iyvyn", "matronymic": "hyrvytsh", "acronym": "z"}
 Paul Libman	{"given-name": "Paul", "surname": "Libman"}	pui (ytskovsky) iyvman	{"given-name": "pui", "alternative-name": "ytskovsky", "surname": "iyvman"}
-Moritz Lieblich	{"given-name": "Moritz", "surname": "Lieblich"}	moryts (ytskhk-mshh) iyviykh	{"primary-name": "moryts", "given-name": "ytskhk-mshh", "alternative-name": "ytskhk-mshh", "surname": "iyviykh"}
-Liliput	{"given-name": "Liliput"}	iyiyput (gbryi-hyrsh kretshmer)	{"primary-name": "iyiyput", "given-name": "gbryi", "alternative-name": "hyrsh", "surname": "kretshmer"}
-Ola Lilith	{"given-name": "Ola", "middle-name": "Lilith"}	oiya (ioiya tsedervoym) iyiys	{"given-name": "oiya", "alternative-name": "ioi tsedervoym", "surname": "iyiys"}
-Isaac Joel Linetzky	{"given-name": "Isaac", "middle-name": "Joel", "surname": "Linetzky"}	ytskhk-yui iyneytsky	{"primary-name": "iyneytsky", "given-name": "ytskhk", "alternative-name": "yui"}
+Paul Liman	{"given-name": "Paul", "surname": "Liman"}	pui (ieybovytsh) iyman	{"primary-name": "iyman", "given-name": "pui", "alternative-name": "ieybovytsh"}
 M. Lipson	{"given-name": "M.", "surname": "Lipson"}	m (mrdkhy yavorovsky) iypson	{"given-name": "mrdkhy", "alternative-name": "yavorovsky", "surname": "iypson", "honorific": "m"}
-Celia Lipzin	{"given-name": "Celia", "surname": "Lipzin"}	syiye (peker) iyptsyn	{"given-name": "syiye", "alternative-name": "peker", "surname": "iyptsyn"}
-Berta Litvina-Veyshof	{"given-name": "Berta", "surname": "Litvina-Veyshof"}	verta iytvyna-veyshof	{"given-name": "verta", "surname": "iytvyna-veyshof"}
 L. Litvinov	{"given-name": "L.", "surname": "Litvinov"}	i (ieyv gurevytsh) iytvynov	{"given-name": "ieyv", "alternative-name": "gurevytsh", "surname": "iytvynov", "acronym": "i"}
 Malvina Lobel	{"given-name": "Malvina", "surname": "Lobel"}	maivyna (treytier) iovei	{"primary-name": "maivyna", "alternative-name": "treytier", "surname": "iovei"}
-Betsalel London	{"given-name": "Betsalel", "surname": "London"}	btsii iondon	{"primary-name": "btsii", "surname": "iondon"}
-Regina Lubartovska	{"given-name": "Regina", "surname": "Lubartovska"}	regyna (rbkh) iuvartovska	{"given-name": "regyna", "alternative-name": "rbkh", "surname": "iuvartovska"}
+Leo Loew	{"given-name": "Leo", "surname": "Loew"}	ieo (mshh-ieyv) iyov	{"given-name": "mshh-ieyv", "alternative-name": "ieo", "surname": "iyov"}
+Shmuel-Yakir Londinski	{"given-name": "Shmuel-Yakir", "surname": "Londinski"}	shmui-ykyr iondynsky	{"given-name": "shmui", "alternative-name": "ykyr", "surname": "iondynsky"}
 Annie Lubin	{"given-name": "Annie", "surname": "Lubin"}	eny (hendzhya iuvmyak) iuvyn	{"given-name": "eny", "alternative-name": "hendzhya iuvmyak", "surname": "iuvyn"}
-Leon Lubinski	{"given-name": "Leon", "surname": "Lubinski"}	ieon (ieybush) iubynsky	{"primary-name": "iubynsky", "given-name": "ieon", "alternative-name": "ieybush"}
-SonIa Ludner	{"given-name": "SonIa", "surname": "Ludner"}	sonya (kurytska) iudner	{"primary-name": "sonya", "alternative-name": "kurytska", "surname": "iudner"}
-R. Machnovska	{"given-name": "R", "surname": "Machnovska"}	r makhnovska	{"surname": "makhnovska", "honorific": "r"}
-Ida Magidzohn	{"given-name": "Ida", "surname": "Magidzohn"}	eyda (ston) magydzohn	{"given-name": "eyda", "alternative-name": "ston", "surname": "magydzohn"}
-F.H. Maley	{"given-name": "F.", "surname": "Maley"}	 h maiey	{"surname": "maiey", "acronym": " h"}
+Boruch Lumet	{"given-name": "Boruch", "surname": "Lumet"}	vrukh iumet	{"primary-name": "vrukh iumet", "given-name": "brukh", "surname": "ioymt"}
+Khana Magid	{"given-name": "Khana", "surname": "Magid"}	khnh mgyd	{"given-name": "khnh", "surname": "mgyd"}
+Leib Malach	{"given-name": "Leib", "surname": "Malach"}	i (ieyvi zaitsman) mikh	{"given-name": "ieyvi", "alternative-name": "i", "surname": "zaitsman", "honorific": "mikh"}
+M.Sh. Mandel	{"given-name": "M.", "surname": "Mandel"}	m sh mandei	{"acronym": "m sh mundei"}
 Leon Mandeltort	{"given-name": "Leon", "surname": "Mandeltort"}	ieon mandeitort	{"primary-name": "mandeitort", "given-name": "ieon", "surname": "manditort"}
 Annie Manne	{"given-name": "Annie", "surname": "Manne"}	eny (eyzenverg) mane	{"given-name": "eny", "alternative-name": "eyzenverg", "surname": "mane"}
-Clara Margolin	{"given-name": "Clara", "surname": "Margolin"}	kiara (vieykhman) margoiyn	{"given-name": "kiara", "alternative-name": "bieykhman", "surname": "margoiyn"}
+Solomon Manne	{"given-name": "Solomon", "surname": "Manne"}	soiomon mane	{"given-name": "soiomon", "surname": "man"}
 A. Margolin	{"given-name": "A.", "surname": "Margolin"}	 margoiyn	{"surname": "margoiyn", "acronym": ""}
-Edward Margolis	{"given-name": "Edward", "surname": "Margolis"}	edvard (ykusyi) margoiys	{"given-name": "edvard", "alternative-name": "ykusyi", "surname": "margoiys"}
-Max Marienhof	{"given-name": "Max", "surname": "Marienhof"}	maks maryenhof	{"primary-name": "maks maryenhof", "given-name": "maks", "surname": "maryenhof"}
-A. Markov	{"given-name": "A.", "surname": "Markov"}	 markov	{"surname": "markuv", "acronym": ""}
-Joseph Markowitz	{"given-name": "Joseph", "surname": "Markowitz"}	yusf markovytsh	{"given-name": "yusf", "surname": "markvytsh"}
-Grisha Marmo	{"given-name": "Grisha", "surname": "Marmo"}	grysh marmo	{"given-name": "grysh", "surname": "marmo"}
-Jennie Masoff	{"given-name": "Jennie", "surname": "Masoff"}	zhenye (vynkier) masof	{"given-name": "zhenye", "alternative-name": "vynkier", "surname": "masof"}
-Yoel Mastboym	{"given-name": "Yoel", "surname": "Mastboym"}	yui mastvoym	{"surname": "mastvoym"}
-Raisa Medviedeva	{"given-name": "Raisa", "surname": "Medviedeva"}	rayse medvedeva	{"given-name": "rayse", "surname": "medvedeva"}
-Rosie Medviedeva	{"given-name": "Rosie", "surname": "Medviedeva"}	rosy medvyedeva	{"given-name": "rosy", "surname": "medvyedeva"}
+Louie Markowitz	{"given-name": "Louie", "surname": "Markowitz"}	iuy markovytsh	{"given-name": "iuy", "surname": "markvytsh"}
+Shmuel Marvil	{"given-name": "Shmuel", "surname": "Marvil"}	shmui marvyi	{"given-name": "shmui", "surname": "marvyi"}
 Hela Mel	{"given-name": "Hela", "surname": "Mel"}	hei mei (meiman)	{"primary-name": "hei mei", "alternative-name": "meiman"}
-Adolf Meltzer	{"given-name": "Adolf", "surname": "Meltzer"}	adoif meitser	{"primary-name": "meitser", "given-name": "adoif"}
+Moshe Melamed	{"given-name": "Moshe", "surname": "Melamed"}	mshh mimd	{"given-name": "mshh", "surname": "mimd"}
+Nachum Melnick	{"given-name": "Nachum", "surname": "Melnick"}	nkhum meinyk	{}: 
 Annie Meltzer	{"given-name": "Annie", "surname": "Meltzer"}	eny meitser	{"primary-name": "eny meitser", "given-name": "eny", "surname": "meitser"}
-Fanya Mendelevitsh	{"given-name": "Fanya", "surname": "Mendelevitsh"}	anye mendeievytsh	{"given-name": "anyh", "surname": "mendeievytsh"}
-Jozef Mendelson	{"given-name": "Jozef", "surname": "Mendelson"}	yozef mandeikern	{"given-name": "yozef", "surname": "mandeikern"}
-Shlomo Mendelson	{"given-name": "Shlomo", "surname": "Mendelson"}	shimh (kuyavsky) mendeison	{"primary-name": "mendeisun", "given-name": "shimh", "alternative-name": "kuyavsky", "surname": "mendeisun"}
-Yelena Menes	{"given-name": "Yelena", "surname": "Menes"}	yeiena menes	{"primary-name": "yeiena menes", "given-name": "yeiena", "surname": "menes"}
-Wolf Merkur	{"given-name": "Wolf", "surname": "Merkur"}	voif merkur	{"primary-name": "merkur", "given-name": "voif"}
-Yitzhak Mestel	{"given-name": "Yitzhak", "surname": "Mestel"}	ytskhk (-yunh) mestei	{"given-name": "ytskhk", "alternative-name": "yunh", "surname": "mestei"}
-Boris Meydelman	{"given-name": "Boris", "surname": "Meydelman"}	borys meydeiman	{"given-name": "borys", "surname": "meydeiman"}
+Isidor Meltzer	{"given-name": "Isidor", "surname": "Meltzer"}	yzydor meitser	{"primary-name": "yzydor meitser", "given-name": "yzydor", "surname": "meitser"}
 Morris Meyer	{"given-name": "Morris", "surname": "Meyer"}	morrys (mshh) meyer	{"given-name": "mshh", "alternative-name": "morrys", "surname": "meyer"}
-David Meyerowitz	{"given-name": "David", "surname": "Meyerowitz"}	dud meyerovytsh	{"given-name": "dud", "surname": "meyerovytsh"}
-Tessie Meyerowitz	{"given-name": "Tessie", "surname": "Meyerowitz"}	tesy (toyve shtark) meyerovytsh	{"given-name": "tesy", "alternative-name": "toyve shtark", "surname": "meyerovytsh"}
-Yehoshua Mezach	{"given-name": "Yehoshua", "surname": "Mezach"}	yhushe (m sgi) mzkh	{"given-name": "yhushe", "alternative-name": "m sgi", "surname": "mzkh"}
 Adolfo Mide	{"given-name": "Adolfo", "surname": "Mide"}	adaif (brhm) myde	{"given-name": "dif", "alternative-name": "brhm", "surname": "myde"}
-Nakhmen Mifelev	{"given-name": "Nakhmen", "surname": "Mifelev"}	nkhmn myeiev	{"primary-name": "nkhmn myeiev", "given-name": "nkhmn", "surname": "myeiev"}
-Ignatsi Migdalski	{"given-name": "Ignatsi", "surname": "Migdalski"}	ygnatsy (mygdai) mygdaisky	{"primary-name": "mygdaisky", "given-name": "ygnatsy", "alternative-name": "mygdi"}
+Harry Miller	{"given-name": "Harry", "surname": "Miller"}	hery (hersh maietts) myier	{"given-name": "hery", "alternative-name": "hersh", "surname": "myier"}
+Hyman [?] Miller	{"given-name": "Hyman", "surname": "Miller"}	heyman () myier	{"given-name": "heyman", "surname": "myir"}
 Louis E. Miller	{"given-name": "Louis", "middle-name": "E.", "surname": "Miller"}	iuys e (i vandes) myiier	{"given-name": "iuys", "alternative-name": "i vandes", "surname": "myiir", "acronym": "e"}
-Marko Milner	{"given-name": "Marko", "surname": "Milner"}	marko (marek) myiner	{"given-name": "marku", "alternative-name": "mrk", "surname": "myiner"}
-M. and I. Milton	{"given-name": "M.", "alternative-name": "I.", "surname": "Milton"}	m un y myiton	{"given-name": "un", "surname": "myitun", "acronym": "y"}
-Eli Mintz	{"given-name": "Eli", "surname": "Mintz"}	eiye (iyhu zats) mynts	{"given-name": "eiye", "alternative-name": "iyhu zats", "surname": "mynts"}
-Rose Mishnun	{"given-name": "Rose", "surname": "Mishnun"}	roze (rashei) myshnun	{"given-name": "roze", "alternative-name": "rashei", "surname": "myshnun"}
-Max Mishurat	{"given-name": "Max", "surname": "Mishurat"}	maks (moti) myshurat	{"primary-name": "maks", "alternative-name": "moti", "surname": "myshurat"}
-Meyer Mishurat	{"given-name": "Meyer", "surname": "Mishurat"}	myr (ratushnyk) myshurat	{"given-name": "myr", "alternative-name": "ratushnyk", "surname": "myshur"}
-Ike Mitnick	{"given-name": "Ike", "surname": "Mitnick"}	eyk mytnyk	{"primary-name": "mytnyk", "given-name": "eyk"}
-Mark Moen	{"given-name": "Mark", "surname": "Moen"}	mark moyn	{"given-name": "mark", "surname": "moyn"}
-Amalia Mogulesko	{"given-name": "Amalia", "surname": "Mogulesko"}	amaiye (ynkeishteyn) moguiesko	{"primary-name": "amiye", "alternative-name": "ynkeishteyn", "surname": "moguiesko"}
-Ari Monfried	{"given-name": "Ari", "surname": "Monfried"}	ary (dud-ryh rydman) monryd	{"given-name": "ary", "alternative-name": "dud-ryh", "surname": "rydman", "patronymic": "monryd"}
-Lazarus Monfried	{"given-name": "Lazarus", "surname": "Monfried"}	iazarus (iyezr) monryd	{"primary-name": "monryd", "given-name": "iazarus", "alternative-name": "iyezr", "surname": "monryd"}
-Sam Morris	{"given-name": "Sam", "surname": "Morris"}	sem (shmui-mshh ganz) morys	{"primary-name": "sem", "given-name": "shmui-mshh", "surname": "morys"}
-Moritz Morrison	{"given-name": "Moritz", "surname": "Morrison"}	y  meryson)	{"surname": "meryson", "acronym": "y "}
-Morris Moshkovitch	{"given-name": "Morris", "surname": "Moshkovitch"}	morys moshkovytsh	{"primary-name": "morys moshkovytsh", "given-name": "morys", "surname": "moshkovytsh"}
+Aaron Mittelman	{"given-name": "Aaron", "surname": "Mittelman"}	hrn myteiman	{"given-name": "hrn", "surname": "myteiman"}
+Bessie Mogulesko	{"given-name": "Bessie", "surname": "Mogulesko"}	vesy moguiesko	{"primary-name": "vesy moguiesko"}
+Avraham Morevski	{"given-name": "Avraham", "surname": "Morevski"}	brhm (mnkr) marevsky	{"given-name": "brhm", "alternative-name": "mnkr", "surname": "marevsky"}
 Max Moshkovitsh	{"given-name": "Max", "surname": "Moshkovitsh"}	maks moshkovytsh	{"given-name": "maks", "surname": "moshkovytsh"}
 Moshe Moshkovitsh	{"given-name": "Moshe", "surname": "Moshkovitsh"}	mshh moshkovytsh	{"given-name": "mshh", "surname": "moshkovytsh"}
 Nadya Moshkovitsh	{"given-name": "Nadya", "surname": "Moshkovitsh"}	nadya (gudevytsh) moshkovytsh	{"primary-name": "nadya", "alternative-name": "gudevytsh", "surname": "moshkovytsh"}
 Pasha Moshkovitsh	{"given-name": "Pasha", "surname": "Moshkovitsh"}	pasha (vasya) moshkovytsh	{"given-name": "pasha", "alternative-name": "vasya", "surname": "moshkovytsh"}
-A. Mukdoni	{"given-name": "A.", "surname": "Mukdoni"}	 mukduny	{"surname": "mukduny", "acronym": ""}
-Mark Myodovnik	{"given-name": "Mark", "surname": "Myodovnik"}	mork myodovnyk	{"primary-name": "mork myodovnyk", "given-name": "mork", "surname": "myodovnyk"}
-Bella Mysell	{"given-name": "Bella", "surname": "Mysell"}	veia meyzei	{"primary-name": "veia meyzei", "given-name": "veia", "surname": "meyzei"}
-Nadina	{"given-name": "Nadina"}	nadyna (n v katsneivoygn)	{"alternative-name": "nadyna", "surname": "katsneivoygn", "acronym": "n v"}
-Leon Nadolsky	{"given-name": "Leon", "surname": "Nadolsky"}	ien (ieyv) nadoisky	{"primary-name": "nadoisky", "given-name": "ien", "alternative-name": "ieyv"}
-Sonia Nadolsky	{"given-name": "Sonia", "surname": "Nadolsky"}	sonya (shrh kats) nadoisky	{"given-name": "shrh", "alternative-name": "sonya", "surname": "nadoisky", "matronymic": "kats"}
-Doli Nakhbar	{"given-name": "Doli", "surname": "Nakhbar"}	doiy (ury) nkhvr	{"given-name": "ury", "alternative-name": "doiy", "surname": "nkhvr"}
-[?] Nakhumovitsh	{"given-name": "[?]", "surname": "Nakhumovitsh"}	nakhumovytsh ()	{"primary-name": "nakhumovytsh", "surname": "nakhumovytsh"}
-Aron Namyot	{"given-name": "Aron", "surname": "Namyot"}	aron namyot	{"given-name": "orn", "surname": "namyot"}
-B. Natan	{"given-name": "B.", "surname": "Natan"}	v (natan vreytman) natan	{"given-name": "natn", "alternative-name": "v (natn vreytman)", "surname": "breytman"}
-Amalya Natanson	{"given-name": "Amalya", "surname": "Natanson"}	amaiye (nataiya ) natanson	{"given-name": "amaiye", "alternative-name": "natai", "surname": "natansun"}
-Charles Nathanson	{"given-name": "Charles", "surname": "Nathanson"}	tsharis natanson	{"given-name": "tsharis", "surname": "natanson"}
-Julius Nathanson	{"given-name": "Julius", "surname": "Nathanson"}	dzhuiyus (yuiyus natanson	{"given-name": "yuiyus", "alternative-name": "dzhuiyus", "surname": "natansun"}
+Leah Naomi	{"given-name": "Leah", "middle-name": "Naomi"}	ih (kygei-eyzenverg) nemy	{"given-name": "ih", "alternative-name": "kygei-eyzenverg", "surname": "nemy"}
 Sonia Nathanson	{"given-name": "Sonia", "surname": "Nathanson"}	sony (khyh-shrh) natanson	{"given-name": "sony", "alternative-name": "khyh-shrh", "surname": "natansun"}
-Moshe Nelken	{"given-name": "Moshe", "surname": "Nelken"}	mshh neiken	{"given-name": "mshh", "surname": "neiken"}
 Charles Nelson	{"given-name": "Charles", "surname": "Nelson"}	tsharis (shkhn) neison	{"given-name": "tsharis", "alternative-name": "shkhn", "surname": "neison"}
-Leye Nelson	{"given-name": "Leye", "surname": "Nelson"}	ieye (katsneison) neison	{"given-name": "ieye", "alternative-name": "katsneison", "surname": "neisun"}
-Esther Neroslavska	{"given-name": "Esther", "surname": "Neroslavska"}	ssr nerosiavska	{"given-name": "ssr", "surname": "nerosiavska"}
-Mozes Ney	{"given-name": "Mozes", "surname": "Ney"}	mozes ney	{"given-name": "mozes", "surname": "ney"}
-David Neymark	{"given-name": "David", "surname": "Neymark"}	dud neymark	{"given-name": "dud", "surname": "neym"}
-Barukh Nord	{"given-name": "Barukh", "surname": "Nord"}	vrukh (venedykt ievyn) nord	{"primary-name": "vrukh", "alternative-name": "venedykt ievyn", "surname": "nord"}
+Yakov Newman	{"given-name": "Yakov", "surname": "Newman"}	yekb nyuman	{"given-name": "yekb", "surname": "nyuman"}
+Abraham Neyman	{"given-name": "Abraham", "surname": "Neyman"}	brhm (varakan) neyman	{"given-name": "brhm", "alternative-name": "varakan", "surname": "neymn"}
 Yosef Norflus	{"given-name": "Yosef", "surname": "Norflus"}	yusf norium	{"given-name": "yusf", "surname": "norium"}
-Moritz Norvid	{"given-name": "Moritz", "surname": "Norvid"}	moryts (treier) norvyd	{"primary-name": "moryts", "alternative-name": "treier", "nisba": "norvyd"}
-Morris Novikov	{"given-name": "Morris", "surname": "Novikov"}	mrys (vakhnov) nvykov	{"given-name": "mrys", "alternative-name": "vakhnov", "surname": "nvykov"}
-Adolf Oberberg	{"given-name": "Adolf", "surname": "Oberberg"}	adoif aververg	{"given-name": "adoif", "surname": "aververg"}
-Joseph Oberlander	{"given-name": "Joseph", "surname": "Oberlander"}	yozef veriender	{"given-name": "eyzef", "surname": "veriender"}
+Leyzer Nussenbaum	{"given-name": "Leyzer", "surname": "Nussenbaum"}	ieyzer nusenboym	{"given-name": "ieyzer", "surname": "nusenboym"}
+Alexander Oberlender	{"given-name": "Alexander", "surname": "Oberlender"}	aieksader averiender	{"given-name": "aieksader", "surname": "averiender"}
 Paulina Offerman	{"given-name": "Paulina", "surname": "Offerman"}	peiyna (peri) oerman	{"given-name": "eiyna", "alternative-name": "peri", "surname": "oerman"}
-Ume Olkenitski	{"given-name": "Ume", "surname": "Olkenitski"}	ume (rume) oikenytsky	{"given-name": "ume", "alternative-name": "rume", "surname": "oikenhytsky"}
-Joseph Opatoshu	{"given-name": "Joseph", "surname": "Opatoshu"}	yusf (yusf opatovsky) optashu	{"given-name": "yusf", "alternative-name": "yusf", "surname": "opatovsky", "nisba": "optashu"}
-Shimeon Orliuk	{"given-name": "Shimeon", "surname": "Orliuk"}	shmeun oriyuk	{"given-name": "shmeun", "surname": "oriyuk"}
-Esther Orzhevskaya	{"given-name": "Esther", "surname": "Orzhevskaya"}	ssr (snyegov) orzhevskaya	{"primary-name": "ssr", "alternative-name": "snyegov", "surname": "orzhevskaya"}
+Alexander Olshanetsky	{"given-name": "Alexander", "surname": "Olshanetsky"}	aieksander (yhushe) oishanetsky	{"given-name": "aieksander", "alternative-name": "yhushe", "surname": "oishanetsky"}
 M. Osherowitch	{"given-name": "M.", "surname": "Osherowitch"}	m osherovytsh	{"surname": "osherovytsh", "acronym": "m"}
-Julius Oskar	{"given-name": "Julius", "middle-name": "Oskar"}	yuiyus (eyzenbet) oskar	{"primary-name": "yuiyus", "alternative-name": "eyzenbet", "surname": "oskar"}
 Oscar Ostroff	{"given-name": "Oscar", "surname": "Ostroff"}	oskar (yhushe ostrytsky) astrof	{"given-name": "yhushe", "alternative-name": "oskar", "surname": "astrf", "patronymic": "ostrytsky"}
-Fraydele Oysher	{"given-name": "Fraydele", "surname": "Oysher"}	reydeie (oysher)	{"given-name": "reydeie", "alternative-name": "oyshter"}
-Yohan Paley	{"given-name": "Yohan", "surname": "Paley"}	yohan (yunh) piey	{"given-name": "yunh", "alternative-name": "yohan", "surname": "piey"}
-S. Palme	{"given-name": "S.", "surname": "Palme"}	s paime	{"given-name": "s", "surname": "paime"}
-Janet Paskewitz	{"given-name": "Janet", "surname": "Paskewitz"}	dzhanet paskevytsh	{"given-name": "dzhanet", "surname": "paskevytsh"}
-Malvina Paskewitz	{"given-name": "Malvina", "surname": "Paskewitz"}	maivyna paskevytsh	{"given-name": "maivyna", "surname": "paskevytsh"}
-Elihu Patron	{"given-name": "Elihu", "surname": "Patron"}	iyhu (eiyas) patron	{"given-name": "iyhu", "alternative-name": "eiyas", "surname": "patron"}
-Pola Patroni	{"given-name": "Pola", "surname": "Patroni"}	poia (pauiyna patron) patrony	{"primary-name": "poia", "alternative-name": "pauiyna patrun", "surname": "patruny"}
+Samuel Ostrowsky	{"given-name": "Samuel", "surname": "Ostrowsky"}	sem (shmui) ostrovsky	{"primary-name": "ostrovsky", "given-name": "shmui", "alternative-name": "sem"}
+Moishe Oysher	{"given-name": "Moishe", "surname": "Oysher"}	mshh oysher	{"given-name": "mshh", "surname": "oysher"}
+Feigele Panitz	{"given-name": "Feigele", "surname": "Panitz"}	eygeie panyts	{"given-name": "eygeie", "surname": "panyts"}
+H. Papak	{"given-name": "H.", "surname": "Papak"}	h popak	{"given-name": "pop", "acronym": "h"}
+Willy Pasternak	{"given-name": "Willy", "surname": "Pasternak"}	vyiy pasternak	{"given-name": "vyiy", "surname": "pasternak"}
+Jacob Pat	{"given-name": "Jacob", "middle-name": "P"}	yekb pat	{"primary-name": "yekb pt", "given-name": "yekb", "surname": "pat"}
 H. Paul	{"given-name": "H.", "surname": "Paul"}	h pui	{"primary-name": "h pui", "acronym": "h"}
-P. Pavik	{"given-name": "P.", "surname": "Pavik"}	p pvyk	{"surname": "pvyk", "salutation": "p"}
-Celia Pearson	{"given-name": "Celia", "surname": "Pearson"}	tsyie pyrson	{"primary-name": "tsyie pyrson", "surname": "pyrson"}
-Clara Pecker	{"given-name": "Clara", "surname": "Pecker"}	kiara peker	{"given-name": "kiara", "surname": "peker"}
-Rubin Perkofff	{"given-name": "Rubin", "surname": "Perkofff"}	rubyn perkof	{"primary-name": "rubyn perkof", "surname": "perkof"}
 Efrim Perlmuter	{"given-name": "Efrim", "surname": "Perlmuter"}	rym perimuter	{"given-name": "rym", "surname": "erimuter"}
 Max Pine	{"given-name": "Max", "surname": "Pine"}	maks peyn	{"primary-name": "maks peyn", "given-name": "maks", "surname": "peyn"}
-P. Pintshik	{"given-name": "P.", "surname": "Pintshik"}	p pyntshyk	{"given-name": "p", "surname": "pyntshyk"}
-Rose Pivar	{"given-name": "Rose", "surname": "Pivar"}	roze pyvar	{"primary-name": "pyvuar", "given-name": "roze"}
-Katya Plavina	{"given-name": "Katya", "surname": "Plavina"}	katya piavyna	{"given-name": "katya", "surname": "piavyna"}
-Chaim Podlias	{"given-name": "Chaim", "surname": "Podlias"}	kheym podiyas	{"given-name": "kheym", "surname": "pudiys"}
-Froyke Podlubny	{"given-name": "Froyke", "surname": "Podlubny"}	royke (rym) podiubny	{"given-name": "rym", "alternative-name": "royke", "surname": "podiubny"}
-N.Y. Podlubny	{"given-name": "N.", "middle-name": "Y.", "surname": "Podlubny"}	n y (naum podiubny	{"given-name": "naum", "surname": "podiubny", "acronym": "n y"}
-Toybe Pokh	{"given-name": "Toybe", "surname": "Pokh"}	toybe (yshei) pokh	{"given-name": "toybe", "alternative-name": "yshei", "surname": "pokh"}
-Aron Poliakov	{"given-name": "Aron", "surname": "Poliakov"}	hrn (poiyatshek) poiyakov	{"given-name": "hrn", "alternative-name": "poiyatshek", "surname": "poiyakov"}
 Zon Poliakov	{"given-name": "Zon", "surname": "Poliakov"}	zon poiyakov	{"primary-name": "poiyakov", "given-name": "zon", "surname": "poiyakov"}
 [?] Polyevik	{"given-name": "?", "surname": "Polyevik"}	 poiyevyk	{"primary-name": " poiyevyk"}
-N. Pomerants	{"given-name": "N.", "surname": "Pomerants"}	n pomerants	{"given-name": "n", "surname": "pomerants"}
-Kh. Pontsh	{"given-name": "Kh.", "surname": "Pontsh"}	kh pontsh	{"surname": "pontsh", "honorific": "kh"}
-H. Porski	{"given-name": "H.", "surname": "Porski"}	h (hyrsh porudomynsky) parsky	{"given-name": "hyrsh", "alternative-name": "porudomynsky", "surname": "parsky", "acronym": "h"}
-Rikuda Potash-Fuks	{"given-name": "Rikuda", "surname": "Potash-Fuks"}	rykudh potash-uks	{"primary-name": "rykudh potash-uks", "surname": "potash-uks"}
+David Popper	{"given-name": "David", "surname": "Popper"}	dud paper	{"primary-name": "dud paper", "given-name": "dud", "surname": "paper"}
 Arnold Pozy	{"given-name": "Arnold", "surname": "Pozy"}	aryh (yshrai aryh pozhkov) pozy	{"primary-name": "aryh pozy", "given-name": "aryh", "alternative-name": "yshrai aryh", "surname": "pozy"}
-Jan Pribeagu	{"given-name": "Jan", "surname": "Pribeagu"}	yan (yzyk iazarovytsh) prybeagu	{"given-name": "yzyk", "alternative-name": "yan", "surname": "prybeagu", "patronymic": "iazarovytsh"}
 A. Prints	{"given-name": "A.", "surname": "Prints"}	 prynts	{"surname": "rynts", "acronym": ""}
-Julius Prond	{"given-name": "Julius", "surname": "Prond"}	yuiyus prond	{"given-name": "yuiyus", "surname": "prund"}
-Rosa Rabinowitz	{"given-name": "Rosa", "surname": "Rabinowitz"}	roza (tararutskaya) rabynovytsh	{"given-name": "roza", "alternative-name": "tarrutskaya", "surname": "rabynovytsh"}
-[?] Rakhmanov	{"given-name": "?", "surname": "Rakhmanov"}	rakhmanov ()	{"primary-name": "rakhmanov", "nisba": "rakhmanov"}
+Aharon Psakhis	{"given-name": "Aharon", "surname": "Psakhis"}	hrn psakhys	{"given-name": "hrn", "surname": "sakhys"}
+Lev Pulver	{"given-name": "Lev", "surname": "Pulver"}	iev puiver	{"given-name": "iev", "surname": "puiver"}
+Eva Rafalo	{"given-name": "Eva", "surname": "Rafalo"}	yva raaia	{"given-name": "yva", "surname": "raaia"}
+Chaim M. Rafalovitsh	{"given-name": "Chaim", "middle-name": "M.", "surname": "Rafalovitsh"}	kheym m raaiavytsh	{"given-name": "kheym", "middle-name": "m", "surname": "raaiavytsh"}
 N. Rakov	{"given-name": "N.", "surname": "Rakov"}	n rakov	{"surname": "rakov", "acronym": "n"}
-Julius Rakow	{"given-name": "Julius", "surname": "Rakow"}	yuiyus (ykhyi) rakov	{"primary-name": "yuiyus", "alternative-name": "ykhyi", "surname": "rakov"}
+Leyzer Raukh	{"given-name": "Leyzer", "surname": "Raukh"}	ieyzer rukh	{"given-name": "ieyzer", "surname": "rukh"}
+Jacob Rechtzeit	{"given-name": "Jacob", "surname": "Rechtzeit"}	yekb rekhttseyt	{"given-name": "yekb", "surname": "rekhttseyt"}
+Jacob Reinglass	{"given-name": "Jacob", "surname": "Reinglass"}	yekb reyngias	{"given-name": "yekb", "surname": "reyngias"}
 Sara Reisen	{"given-name": "Sara", "surname": "Reisen"}	shrh reyzen	{"given-name": "shrh", "surname": "reyzen"}
-Edwin A. Relkin	{"given-name": "Edwin", "middle-name": "A.", "surname": "Relkin"}	edvyn  (aroid reikyn	{"given-name": "edvyn", "alternative-name": "aroid", "surname": "reikyn", "acronym": ""}
-Boris Reyski	{"given-name": "Boris", "surname": "Reyski"}	borys reysky	{"given-name": "borys", "surname": "reysky"}
+Zalman Reisen	{"given-name": "Zalman", "surname": "Reisen"}	zimn reyzen	{"primary-name": "zimn reyzen", "given-name": "zimn", "surname": "reyzen"}
+David Reitz	{"given-name": "David", "surname": "Reitz"}	dud reytts (reytsen)	{"primary-name": "reytts (reytsen)", "given-name": "dud"}
+Yakov Reles	{"given-name": "Yakov", "surname": "Reles"}	yekb reies	{"given-name": "yekb", "surname": "reies"}
 Aneta Reyzer	{"given-name": "Aneta", "surname": "Reyzer"}	aneta reyzer	{"given-name": "aneta", "surname": "reyzer"}
-Makar Osipovitsh Reznikov	{"given-name": "Makar", "middle-name": "Osipovitsh", "surname": "Reznikov"}	makar osypovytsh reznykov	{"given-name": "makar", "surname": "reznykov", "patronymic": "osypovytsh"}
 [?] Ribak	{"given-name": "[?]", "surname": "Ribak"}	ryvk ()	{"primary-name": "ryvk", "surname": "ryvk"}
-Neytan Richter	{"given-name": "Neytan", "surname": "Richter"}	neytan rykhter	{"given-name": "neytan", "surname": "rykhter"}
-Jeanette Ringler	{"given-name": "Jeanette", "surname": "Ringler"}	dzhanet ryngier	{"given-name": "dzhanet", "surname": "ryngier"}
-Leo Robbins	{"given-name": "Leo", "surname": "Robbins"}	ieh (iea) robyns	{"given-name": "ieh", "alternative-name": "iea", "surname": "robyns"}
-David Rogow	{"given-name": "David", "surname": "Rogow"}	dud rogov	{"given-name": "dud", "surname": "rogov"}
-Vera Rosanko	{"given-name": "Vera", "surname": "Rosanko"}	vyera (shre vyner) rozanko	{"given-name": "shre", "alternative-name": "vyera", "surname": "rozanko"}
-Gerta Rosen	{"given-name": "Gerta", "surname": "Rosen"}	gerta rozen	{"given-name": "gerta", "surname": "rozen"}
-Adolf Rosenblum	{"given-name": "Adolf", "surname": "Rosenblum"}	adoif (hrun) rozenvium	{"given-name": "adf", "alternative-name": "hrun", "surname": "rozenvium"}
-Boris Rosenthal	{"given-name": "Boris", "surname": "Rosenthal"}	borys rozentai	{"given-name": "borys", "surname": "rozent"}
+Avraham Rosen	{"given-name": "Avraham", "surname": "Rosen"}	brhm rzen	{"given-name": "brhm", "surname": "rzen"}
+Betty Rosenblum	{"given-name": "Betty", "surname": "Rosenblum"}	vety (veyie) rozenvium	{"given-name": "vety", "alternative-name": "veyie", "surname": "rozenvium"}
+Samuel Rosenstein	{"given-name": "Samuel", "surname": "Rosenstein"}	semuei rozenshteyn	{"given-name": "semuei", "surname": "rozenshteyn"}
+Klara Rosenthal	{"given-name": "Klara", "surname": "Rosenthal"}	kiara rozentai	{"given-name": "kiara", "surname": "rozentai"}
 Max Rosenthal	{"given-name": "Max", "surname": "Rosenthal"}	maks rozentai	{"given-name": "maks", "surname": "rozentai"}
+Nathan Rosenthal	{"given-name": "Nathan", "surname": "Rosenthal"}	neytn rozentai	{"primary-name": "rozentai", "given-name": "neytn"}
 Yasha Rosenthal	{"given-name": "Yasha", "surname": "Rosenthal"}	yasha (yekb-ver) rozentai	{"primary-name": "rozentai", "given-name": "yasha", "alternative-name": "yekb-ver"}
-Oziash Rozanietski	{"given-name": "Oziash", "surname": "Rozanietski"}	zysh rznyetsky	{"primary-name": "zysh rznyetsky", "surname": "rznyetsky"}
+Isaac Rothblum	{"given-name": "Isaac", "surname": "Rothblum"}	ytskhk roytvium	{"given-name": "ytskhk", "surname": "roytvium"}
+Elias Rothstein	{"given-name": "Elias", "surname": "Rothstein"}	eiyas rotshteyn	{"given-name": "eiyas", "surname": "rotshteyn"}
+Tuviya-Gedalyahu Rozenberg	{"given-name": "Tuviya-Gedalyahu", "surname": "Rozenberg"}	tubyh-gdiyh rozenverg	{"given-name": "tubyh", "middle-name": "gdiyh", "surname": "roznberg"}
 [?] Rozenblum	{"given-name": "[?]", "surname": "Rozenblum"}	 rozenvium	{"surname": "rozenvium"}
-Yonah Rozenfeld	{"given-name": "Yonah", "surname": "Rozenfeld"}	yunh rozeneid	{"given-name": "yunh", "surname": "rozeneid"}
 Rose Rubin	{"given-name": "Rose", "surname": "Rubin"}	roza rubyn	{"given-name": "roza", "surname": "rubyn"}
-Ossip Runitsch	{"given-name": "Ossip", "surname": "Runitsch"}	osyp runytsh	{"primary-name": "osyp runytsh", "given-name": "osyp", "surname": "runytsh"}
-Yekutiel Rutenberg	{"given-name": "Yekutiel", "surname": "Rutenberg"}	(ykusyi)	{"given-name": "ykutyi"}
-Max Sadowski	{"given-name": "Max", "surname": "Sadowski"}	maks (mrdkhy) shadvsky	{"given-name": "mrdkhy", "alternative-name": "maks", "surname": "shadvsky"}
-Mikhal Samerson	{"given-name": "Mikhal", "surname": "Samerson"}	mykhi somerson	{"given-name": "mykhi", "surname": "somerson"}
-Dave Samolesko	{"given-name": "Dave", "surname": "Samolesko"}	deyv samoiesko	{"primary-name": "deyv samoiesko", "surname": "samoiesko"}
+Harry Sackler	{"given-name": "Harry", "surname": "Sackler"}	hery (tsby-hersh) sekier	{"primary-name": "hery", "alternative-name": "tsby-hersh", "surname": "sekier"}
+Michael Saks	{"given-name": "Michael", "surname": "Saks"}	mykhayi (sadeygursky) saks	{"given-name": "mykhayi", "alternative-name": "sadygursky", "surname": "saks"}
+Kalman Salman	{"given-name": "Kalman", "surname": "Salman"}	kimn saiman	{"given-name": "kimn", "surname": "saimon"}
 S. Samuilov	{"given-name": "S.", "surname": "Samuilov"}	s (shimh rezydent) samuyiov	{"given-name": "shimh", "alternative-name": "rezydent", "surname": "samuyiov", "salutation": "s"}
-Rosa Sandler	{"given-name": "Rosa", "surname": "Sandler"}	roza sandier	{"given-name": "roza", "surname": "sandier"}
-A. Sando	{"given-name": "A.", "surname": "Sando"}	 (aieksangeru-samueiy) sandu	{"given-name": "aieksangeru-samueiy", "surname": "sandu", "acronym": ""}
-Izzy Sapozhnikov	{"given-name": "Izzy", "surname": "Sapozhnikov"}	yzy (ysak) sapozhnykov	{"given-name": "ysak", "alternative-name": "yzy", "surname": "sapozhnykov"}
-Ludwig Satz	{"given-name": "Ludwig", "surname": "Satz"}	iudvyg (ioy ytskhk) zats	{"primary-name": "iudvyg", "alternative-name": "ioy ytskhk", "surname": "zats"}
+Bernard Sauer	{"given-name": "Bernard", "surname": "Sauer"}	bernard (beri zabiotsky) sauer	{"primary-name": "bernard", "given-name": "beri", "alternative-name": "beri zabiotsky", "surname": "sauer"}
 Jubi Sauer	{"given-name": "Jubi", "surname": "Sauer"}	dzhuvy (vveie) sour	{"given-name": "dzhuvy", "alternative-name": "vveie", "surname": "sour"}
-Emanuel Schechter	{"given-name": "Emanuel", "surname": "Schechter"}	emnui shekhter	{"primary-name": "emnui shekhter", "given-name": "emnui", "surname": "shekhter"}
-Leon Schechter	{"given-name": "Leon", "surname": "Schechter"}	ieon shekhter	{"primary-name": "ieon shekhter", "given-name": "ieon", "surname": "shekhter"}
-Rosa Schilling	{"given-name": "Rosa", "surname": "Schilling"}	roza (ryki vryh) shyiyng	{"given-name": "roza", "alternative-name": "ryki", "middle-name": "vryh", "surname": "shyiyng"}
-Sam Schilling	{"given-name": "Sam", "surname": "Schilling"}	sem (shmkhh) shyiyng	{"given-name": "shmkhh", "alternative-name": "sem", "surname": "shyiyng"}
-Rae Schneier	{"given-name": "Rae", "surname": "Schneier"}	rey shneyer	{"primary-name": "shneyer", "given-name": "rey"}
 Samuel S. Schneier	{"given-name": "Samuel", "middle-name": "S.", "surname": "Schneier"}	sem shneyer	{"primary-name": "sem shneyer", "given-name": "sem", "surname": "shneyer"}
 Adela Schwartz	{"given-name": "Adela", "surname": "Schwartz"}	adeia (ynkeishteyn) shvarts	{"given-name": "adeia", "alternative-name": "fynkeishteyn", "surname": "shvarts"}
-Fannie Schwartz	{"given-name": "Fannie", "surname": "Schwartz"}	eny (giager shvarts	{"given-name": "eny", "alternative-name": "giager", "surname": "shvarts"}
-Margareta Schwartz	{"given-name": "Margareta", "surname": "Schwartz"}	margareta shvarts	{"given-name": "margareta", "surname": "shvarts"}
-Joseph Schwartzberg	{"given-name": "Joseph", "surname": "Schwartzberg"}	yusf shvartsverg	{"given-name": "yusf", "surname": "shvartsverg"}
-Amalia Segalesko	{"given-name": "Amalia", "surname": "Segalesko"}	amaiye (mikh) segaiesko	{"given-name": "amaiye", "alternative-name": "mikh", "surname": "segaiesko"}
-Chaim Meir Segalesko	{"given-name": "Chaim", "middle-name": "Meir", "surname": "Segalesko"}	kheym-myr segaiesko	{"given-name": "kheym-myr", "surname": "segaiesko"}
-Marvin L. Seiger	{"given-name": "Marvin", "middle-name": "L.", "surname": "Seiger"}	marvyn i zeyger	{"given-name": "marvyn", "middle-name": "i", "surname": "zeyger"}
-Sheyne Rokhl Semkoff	{"given-name": "Sheyne", "middle-name": "Rokhl", "surname": "Semkoff"}	sheyne-rkhi (zamkov) symkof	{"primary-name": "sheyne-rkhi", "alternative-name": "zamkov", "surname": "symkof"}
-B. Sereny	{"given-name": "B.", "surname": "Sereny"}	v (dub sryiovyten) sereny	{"given-name": "dub", "alternative-name": "sryiovyten", "surname": "sereny", "acronym": "b"}
+Meyer Schwartz	{"given-name": "Meyer", "surname": "Schwartz"}	myr shvarts	{"given-name": "myr", "surname": "shvarts"}
+Zvi Scooler	{"given-name": "Zvi", "surname": "Scooler"}	tsby skuier	{"primary-name": "skuier", "given-name": "tsby"}
+Sholom Secunda	{"given-name": "Sholom", "surname": "Secunda"}	shium sekund	{"given-name": "shium", "surname": "sekund"}
+Herman Serotsky	{"given-name": "Herman", "surname": "Serotsky"}	herman syerotsky	{"primary-name": "herman syerotsky", "surname": "syerotsky", "nisba": "herman"}
 Sevilla	{"surname": "Sevilla"}	pastor) sevyia (vs-shrh zygier	{"given-name": "pastor", "alternative-name": "sevyia", "surname": "zygier", "matronymic": "bs-shrh"}
 Max Seyger	{"given-name": "Max", "surname": "Seyger"}	meks (mrdkhy) seyger	{"given-name": "mrdkhy", "alternative-name": "meks", "surname": "seyger"}
-Charles Shapiro	{"given-name": "Charles", "surname": "Shapiro"}	tshariz shapyro	{"primary-name": "tshariz shapyro", "given-name": "tshariz", "surname": "shapyro"}
-Fime Shapiro	{"given-name": "Fime", "surname": "Shapiro"}	yme shapyro	{"primary-name": "shapyro", "given-name": "yme", "surname": "shapyro"}
-Sani Shapiro	{"given-name": "Sani", "surname": "Shapiro"}	sony (nsni-dud) shapyro	{"primary-name": "shapyro", "given-name": "nsni-dud", "alternative-name": "sony", "surname": "shapyro"}
-David Sharavner	{"given-name": "David", "surname": "Sharavner"}	dud sharavner	{"given-name": "dud", "surname": "sharavner"}
+Genya Shapira	{"given-name": "Genya", "surname": "Shapira"}	genya shapyro	{"primary-name": "shapyro", "given-name": "genya", "surname": "shapyro"}
+Anna Shapiro	{"given-name": "Anna", "surname": "Shapiro"}	anna (eny) shapyro	{"given-name": "anna", "alternative-name": "eny", "surname": "shapyro"}
+Pinchas Shapiro	{"given-name": "Pinchas", "surname": "Shapiro"}	pnkhs shapyro	{"primary-name": "shapyro", "given-name": "pnkhs"}
 Sonia Sharavner	{"given-name": "Sonia", "surname": "Sharavner"}	sonya (soya vyner) sharavner	{"given-name": "sonya", "alternative-name": "soya", "surname": "sharavner", "nisba": "vyner"}
-Dina Shayevitsh	{"given-name": "Dina", "surname": "Shayevitsh"}	dynh (yzeiskya) shayevytsh	{"given-name": "dynh", "alternative-name": "yzeiskya", "surname": "shayevytsh"}
+Israel Shayevitsh	{"given-name": "Israel", "surname": "Shayevitsh"}	yshri shayevytsh	{"given-name": "yshri", "surname": "shayevytsh"}
+Shmuel Shefner	{"given-name": "Shmuel", "surname": "Shefner"}	shmui shner	{"given-name": "shmui", "surname": "shner"}
+Yakov Shefner	{"given-name": "Yakov", "surname": "Shefner"}	yekb shner	{"given-name": "yekb", "surname": "shner"}
 Jack Sheikevitz	{"given-name": "Jack", "surname": "Sheikevitz"}	dzhek sheykevytsh	{"given-name": "dzhek", "surname": "sheykevytsh"}
-Nina Sheikevitz	{"given-name": "Nina", "surname": "Sheikevitz"}	nyna sheykevytsh	{"given-name": "nyna", "surname": "sheykevytsh"}
-Iza Sherf	{"given-name": "Iza", "surname": "Sherf"}	yza sherf	{"primary-name": "sherf", "given-name": "yza"}
-Shimansky	{"surname": "Shimansky"}	brhm-shmui shymansky (seymon)	{"given-name": "brhm-shmui", "alternative-name": "seymon", "surname": "shymansky"}
-Shimele der Heyzeriker	{"given-name": "Shimele", "surname": "Heyzeriker", "qualifier": "der"}	shymeie der heyzeryker (shmyeie)	{"given-name": "shymeie", "alternative-name": "shmyeie", "professional-name": "der heyzeryker"}
-Shkliar	{"surname": "Shkliar"}	shkiyr	{"surname": "shkiyr"}
-Adolf Shliferstein	{"given-name": "Adolf", "surname": "Shliferstein"}	adaif shiyershteyn	{"primary-name": "shiyershteyn", "given-name": "adaif", "surname": "shiyershteyn"}
-Markus Shneck	{"given-name": "Markus", "surname": "Shneck"}	markus shnek	{"given-name": "markus", "surname": "shnek"}
-Clara Shoengold	{"given-name": "Clara", "surname": "Shoengold"}	kiara shehngoid	{"given-name": "kiara", "surname": "shehngoid"}
+Manuel Shekhtman	{"given-name": "Manuel", "surname": "Shekhtman"}	manuei shekhtman	{"given-name": "manui", "surname": "shekhtman"}
+Moshe Shemesh	{"given-name": "Moshe", "surname": "Shemesh"}	mshh shmsh	{"given-name": "mshh", "surname": "shmsh"}
+Dovid [?] Shenkman	{"given-name": "Dovid", "surname": "Shenkman"}	dud  shenkman	{"given-name": "dud", "surname": "shenkman"}
+David Sherman	{"given-name": "David", "surname": "Sherman"}	dud sherman	{"primary-name": "sherman", "given-name": "dud", "surname": "sherman"}
+Benny Shoengold	{"given-name": "Benny", "surname": "Shoengold"}	beny shehngoid	{"primary-name": "beny shehngoid", "given-name": "beny", "surname": "shehngoid"}
 Rose Shoshana	{"given-name": "Rose", "surname": "Shoshana"}	r shushnh	{"given-name": "shushnh"}
-Ferdinand Shtoyb	{"given-name": "Ferdinand", "surname": "Shtoyb"}	erdynand shtoyb	{"primary-name": "shtoyb", "given-name": "erdynand"}
+Kh. Shrage	{"given-name": "Kh.", "surname": "Shrage"}	kh shrge	{"given-name": "shrge", "honorific": "kh"}
 Lyuba Shub	{"given-name": "Lyuba", "surname": "Shub"}	iyuva shuv	{"primary-name": "iyuva shuv"}
-Moshe Shulweis	{"given-name": "Moshe", "surname": "Shulweis"}	mshh shuiveys	{"given-name": "mshh", "surname": "shuiveys"}
-Nina Sibirtseva	{"given-name": "Nina", "surname": "Sibirtseva"}	nyna syvyrtseva	{"given-name": "nyna", "surname": "syvyrtseva"}
-Sam Silberbush	{"given-name": "Sam", "surname": "Silberbush"}	sem (ysmr) zyivervush	{"primary-name": "zyivervush", "given-name": "sem", "alternative-name": "ysmr"}
-Jacob Silbert	{"given-name": "Jacob", "surname": "Silbert"}	yekb (kuiysh) zyivert	{"primary-name": "zyivert", "given-name": "yekb", "alternative-name": "kuiysh", "surname": "zyivert"}
+Teodor-Herzl Silbert	{"given-name": "Teodor-Herzl", "surname": "Silbert"}	teodor-hertsi zyivert	{"primary-name": "teodor-hertsi", "surname": "zyivert"}
+Simon	{"given-name": "Simon"}	seymon	{"given-name": "seymun"}
 Mae Simon	{"given-name": "Mae", "surname": "Simon"}	mey seymon	{"given-name": "mey", "surname": "seymun"}
 Mrs. Simon	{"surname": "Simon", "salutation": "Mrs."}	roy (myshkynd) seymon	{"primary-name": "seymun", "given-name": "roy", "alternative-name": "myshkynd", "surname": "seymun"}
-Abe Sincoff	{"given-name": "Abe", "surname": "Sincoff"}	eyv synkof	{"given-name": "eyv", "surname": "synkof"}
+Regina Simovitsh	{"given-name": "Regina", "surname": "Simovitsh"}	regyna (kuvavytsh) symovytsh	{"primary-name": "regyna", "alternative-name": "kuvavytsh", "surname": "symovytsh"}
 Frances Sincoff	{"given-name": "Frances", "surname": "Sincoff"}	rentsym (shapyro) synkof	{"primary-name": "rentsym", "alternative-name": "shapyro", "surname": "synkof"}
-Chaim Sloves	{"given-name": "Chaim", "surname": "Sloves"}	kheym siaves	{"given-name": "kheym", "surname": "siaves"}
-Rafael Smargonski	{"given-name": "Rafael", "surname": "Smargonski"}	ri (shmargon) smargonsky	{"given-name": "ri", "alternative-name": "shmargon", "surname": "smrgunsky"}
+Sarah Skulnik	{"given-name": "Sarah", "surname": "Skulnik"}	shrh (kutner) skuinyk	{"given-name": "shrh", "alternative-name": "kutner", "surname": "skuinyk"}
 Aaron Soffe	{"given-name": "Aaron", "surname": "Soffe"}	hrn so	{"given-name": "hrn", "surname": "so"}
-Lipman Sokolov	{"given-name": "Lipman", "surname": "Sokolov"}	iypman (sokoiovsky) sokoiov	{"primary-name": "sokoiov", "given-name": "iypman", "alternative-name": "sokoiovsky", "surname": "sokoiov"}
-Esther Solomon	{"given-name": "Esther", "surname": "Solomon"}	ssr soiomon	{"given-name": "ssr", "surname": "soiomon"}
 Nellie Solomonesco	{"given-name": "Nellie", "surname": "Solomonesco"}	neiy (zr) soiomonesko	{"given-name": "neiy", "alternative-name": "zr", "surname": "soiomonesko"}
-Oscar Solomonesco	{"given-name": "Oscar", "surname": "Solomonesco"}	oskar soiomonesko	{"given-name": "oskar", "surname": "soiomonesko"}
-Isidore Solotorefsky	{"given-name": "Isidore", "surname": "Solotorefsky"}	yzydor (ytskhk) zoiotaresky	{"primary-name": "yzydor", "given-name": "ytskhk", "alternative-name": "ytskhk", "surname": "zoiotaresky"}
+Raisa Solovyova	{"given-name": "Raisa", "surname": "Solovyova"}	rays siovyova	{"given-name": "rays", "surname": "siovyova"}
 Leon Spector	{"given-name": "Leon", "surname": "Spector"}	ieon spektor	{"primary-name": "ieon spektor", "given-name": "ieon", "surname": "spektor"}
-Mathilda St. Claire	{"given-name": "Mathilda", "surname": "St. Claire"}	matyida son-kieyr	{"given-name": "matyida", "surname": "son-kieyr"}
+Jonah Spivak	{"given-name": "Jonah", "surname": "Spivak"}	yunh (rumenye) spyvak	{"primary-name": "spyvak", "given-name": "yunh", "alternative-name": "rumenye", "nisba": "rumenye"}
 Adolf Stein	{"given-name": "Adolf", "surname": "Stein"}	adoif (brhm) shteyn	{"given-name": "brhm", "alternative-name": "adoif", "surname": "shteyn"}
-Sonia Strelska	{"given-name": "Sonia", "surname": "Strelska"}	sonye (soye) streiska	{"given-name": "sonye", "alternative-name": "soye", "surname": "streiska"}
-Nakhum Stutchkoff	{"given-name": "Nakhum", "surname": "Stutchkoff"}	nkhum (stutshko) stutshkov	{"primary-name": "stutshko", "given-name": "nkhum", "alternative-name": "stutshko", "surname": "stutshkov"}
-Susan	{"given-name": "Susan"}	suzan (tsyri goidenverg)	{"given-name": "suzan", "alternative-name": "tsyri", "surname": "goidenverg"}
+Morris Strassberg	{"given-name": "Morris", "surname": "Strassberg"}	mshh shtrasberg	{"given-name": "mshh", "surname": "shtrasberg"}
+Isaac Swerdlow	{"given-name": "Isaac", "surname": "Swerdlow"}	ytskhk sverdiov	{"given-name": "ytskhk", "surname": "sverdiv"}
 Sara Sylvia	{"given-name": "Sara", "middle-name": "Sylvia"}	sara (goidshteyn) syivya	{"given-name": "sara", "alternative-name": "goidshteyn", "surname": "syivya"}
-M.I. Tabakschneider	{"given-name": "M.I.", "surname": "Tabakschneider"}	my tavaksheyder	{"surname": "tavaksheyder", "acronym": "my"}
+[?] Tankel	{"given-name": "[?]", "surname": "Tankel"}	tankei	{}: 
 [?] Tantshuk	{"given-name": "[?]", "surname": "Tantshuk"}	tantshuk ()	{"primary-name": "tantshuk"}
+Berta Tanzman	{"given-name": "Berta", "surname": "Tanzman"}	verta (veriyn) tantsman	{"given-name": "verta", "alternative-name": "beriyn", "surname": "tantsman"}
+Joseph Tanzman	{"given-name": "Joseph", "surname": "Tanzman"}	yazef tantsman	{"given-name": "yazef", "surname": "tantsman"}
+Henry Tarlo	{"given-name": "Henry", "surname": "Tarlo"}	henry tario	{"primary-name": "henry tario"}
 Ruth Taru	{"given-name": "Ruth", "surname": "Taru"}	rus (reyzi tukhmakher) tary	{"given-name": "rus", "alternative-name": "reyzi", "surname": "tary", "professional-name": "tukhmakher"}
-Adolf Tefner	{"given-name": "Adolf", "surname": "Tefner"}	adoif tener	{"given-name": "adoif", "surname": "tener"}
-Wolf Tefner	{"given-name": "Wolf", "surname": "Tefner"}	voif tener	{"given-name": "voif", "surname": "tener"}
-Elihu Tenenholtz	{"given-name": "Elihu", "surname": "Tenenholtz"}	iyhu tenenhoits	{"primary-name": "iyhu tenenhoits", "given-name": "iyhu", "surname": "tenenhoits"}
-Moshe Teytsh	{"given-name": "Moshe", "surname": "Teytsh"}	mshh teytsh	{"given-name": "mshh", "surname": "teytsh"}
-Boris Thomashefsky	{"given-name": "Boris", "surname": "Thomashefsky"}	vorys (vrukh-hrn) tomashevsky	{"given-name": "vorys", "alternative-name": "brukh-hrn", "surname": "tomashevsky"}
-Mike Thomashefsky	{"given-name": "Mike", "surname": "Thomashefsky"}	meyk (mrdkhy) tomashevsky	{"given-name": "meyk", "alternative-name": "mrdkhy", "surname": "tomashevsky"}
-Adolf Timianoff	{"given-name": "Adolf", "surname": "Timianoff"}	adoif (tymyanko) tymyanof	{"given-name": "adoif", "alternative-name": "tymyanko", "surname": "tymyanof"}
-Arthur Tracy	{"given-name": "Arthur", "surname": "Tracy"}	artur treysy	{"given-name": "artur", "surname": "treysy"}
-Tsalik Treger	{"given-name": "Tsalik", "surname": "Treger"}	tsaiyk treger	{"given-name": "tsaiyk", "surname": "treg"}
-Nosen Treystman	{"given-name": "Nosen", "surname": "Treystman"}	nosen (nkhemye) treystman	{"given-name": "nosen", "alternative-name": "nkhemye", "surname": "treystman"}
-Ilya Trilling	{"given-name": "Ilya", "surname": "Trilling"}	yiya (symon) tryiyng	{"given-name": "yiya", "alternative-name": "symon", "surname": "tryiyng"}
-Rina Tselzar	{"given-name": "Rina", "surname": "Tselzar"}	ryna (zeiygson) tseizar	{"given-name": "ryna", "alternative-name": "zeiygson", "surname": "tseizar"}
-Lisa Tuchman	{"given-name": "Lisa", "surname": "Tuchman"}	iyza (keydan) tukhman	{"given-name": "iyza", "alternative-name": "keydan", "surname": "tukhman"}
-George Tuller	{"given-name": "George", "surname": "Tuller"}	dzhodzh (zimn toier) tuiier	{"given-name": "zimn", "alternative-name": "dzhodzh", "surname": "tuiier"}
-Herman Tunis	{"given-name": "Herman", "surname": "Tunis"}	herman (kheym-hersh avend) tunys	{"primary-name": "herman", "given-name": "kheym", "alternative-name": "hersh", "surname": "tunys"}
-Jonas Turkow	{"given-name": "Jonas", "surname": "Turkow"}	yonas turkov	{"given-name": "yonas", "surname": "turkov"}
-B. Tursh	{"given-name": "B.", "surname": "Tursh"}	v tursh	{"surname": "tursh", "acronym": "v"}
+Annie Thomashefsky	{"given-name": "Annie", "surname": "Thomashefsky"}	eny tomashevsky	{"primary-name": "tomashevsky", "given-name": "eny", "surname": "tomashevsky"}
+Chaya Trokiner	{"given-name": "Chaya", "surname": "Trokiner"}	khyh trokyner	{"given-name": "khyh", "surname": "trokyner"}
+Zygmunt Turkow	{"given-name": "Zygmunt", "surname": "Turkow"}	zygmunt turkov	{"given-name": "zygmunt", "surname": "turkov"}
 Ulrich	{"given-name": "Ulrich"}	uirykh	{"given-name": "uirykh"}
-Pepi Urich	{"given-name": "Pepi", "surname": "Urich"}	pepy (peri) urykh	{"given-name": "pepy", "alternative-name": "pir", "surname": "urykh"}
 Morris Vaksman	{"given-name": "Morris", "surname": "Vaksman"}	morys (mshh dud) vaksman	{"given-name": "mshh", "alternative-name": "morys", "middle-name": "dud", "surname": "vksmn"}
-David Vardi	{"given-name": "David", "surname": "Vardi"}	dud (rozeneid) vardy	{"given-name": "dud", "alternative-name": "rozeneid", "surname": "vardy"}
-[?] Varman	{"given-name": "[?]", "surname": "Varman"}	 varman	{"primary-name": " varman", "surname": "urman"}
 Saltshe Vaynberg	{"given-name": "Saltshe", "surname": "Vaynberg"}	sitshe (shrh iykht) veynverg	{"primary-name": "sitshe", "given-name": "shrh", "alternative-name": "iykht", "surname": "veynverg"}
 [?] Vaynshteyn	{"given-name": "[?]", "surname": "Vaynshteyn"}	 veynshteyn	{"surname": "veynshteyn"}
-Sophia Vaynshtok	{"given-name": "Sophia", "surname": "Vaynshtok"}	soye (rydman) veynshtok	{"given-name": "soye", "alternative-name": "rydman", "surname": "veynshtok"}
-Enrico Vays	{"given-name": "Enrico", "surname": "Vays"}	enryko veys	{"primary-name": "enryko veys", "given-name": "enryko", "surname": "veys"}
-Marsela Vays	{"given-name": "Marsela", "surname": "Vays"}	marseia (ievyn) veys	{"given-name": "marseia", "alternative-name": "ievyn", "surname": "veys"}
 Feivl Vaysberg	{"given-name": "Feivl", "surname": "Vaysberg"}	eyvi veysverg	{"given-name": "eyvi", "surname": "veysverg"}
-Sam Vaysberg	{"given-name": "Sam", "surname": "Vaysberg"}	sem veysverg	{"primary-name": "sem veysverg", "surname": "veysverg"}
-Helena Velish	{"given-name": "Helena", "surname": "Velish"}	heiena (ynventarzh) veiysh	{"given-name": "heiena", "alternative-name": "ynventarzh", "surname": "veiysh"}
-Sonya Vidov	{"given-name": "Sonya", "surname": "Vidov"}	sonya vydov	{"given-name": "sonya", "surname": "vydov"}
+Morris Vaysman	{"given-name": "Morris", "surname": "Vaysman"}	morys veysman	{"given-name": "morys", "surname": "veysmn"}
 Vitya Viktorov	{"given-name": "Vitya", "surname": "Viktorov"}	vyty (abygdur) vyktorov	{"given-name": "abygdur", "alternative-name": "vyty", "surname": "vykturu"}
-Betty Vinovits	{"given-name": "Betty", "surname": "Vinovits"}	vety vynovytsh	{"given-name": "vety", "surname": "vynovytsh"}
 Frida Vitalina	{"given-name": "Frida", "middle-name": "Vitalina"}	ryd (iapyn) vyaiyn	{"primary-name": "vyaiyn", "given-name": "ryd", "alternative-name": "iapyn", "surname": "vyaiyn"}
-B. Vladeck	{"given-name": "B.", "surname": "Vladeck"}	v (brukh-nkhmn tsharny) viadek	{"given-name": "brukh-nkhmn", "alternative-name": "tsharny", "surname": "viadek", "honorific": "v"}
-Velvl Vladir	{"given-name": "Velvl", "surname": "Vladir"}	veivi vidyr	{"primary-name": "veivi vidyr", "given-name": "veivi", "surname": "uidyr"}
-Pesye Volfine	{"given-name": "Pesye", "surname": "Volfine"}	pesye voiyne	{"given-name": "pesye", "surname": "uoiyne"}
-M. Volgeshafen	{"given-name": "M.", "surname": "Volgeshafen"}	m voigeshaen	{"surname": "vigshyn", "acronym": "m"}
-Lyuba Vyesyolaya	{"given-name": "Lyuba", "surname": "Vyesyolaya"}	iyuva (shoskyn) vyesyoiaya	{"primary-name": "iyuva", "alternative-name": "shoskyn", "surname": "vyesyoiaya"}
 Benny Wallerstein	{"given-name": "Benny", "surname": "Wallerstein"}	veny vaiershteyn	{"given-name": "veny", "surname": "vaiershteyn"}
-Ella Wallerstein	{"given-name": "Ella", "surname": "Wallerstein"}	eia (geshpas) vaiershteyn	{"given-name": "eia", "alternative-name": "geshpas", "surname": "vaiershteyn"}
-Esther Wallerstein	{"given-name": "Esther", "surname": "Wallerstein"}	ssr (goidshteyn) vaiershteyn	{"given-name": "ssr", "alternative-name": "goidshteyn", "surname": "vaiershteyn"}
 Hymie Wallerstein	{"given-name": "Hymie", "surname": "Wallerstein"}	dzheny vaiyer	{"given-name": "dzheny", "surname": "vaiyer"}
-Rose Wallerstein	{"given-name": "Rose", "surname": "Wallerstein"}	roza vaiershteyn	{"given-name": "roza", "surname": "vaiershteyn"}
-Pola Walter	{"given-name": "Pola", "surname": "Walter"}	poiya (shreyder) vaiter	{"primary-name": "vitr", "alternative-name": "poiya", "surname": "viter"}
 Feivl Warshavsky	{"given-name": "Feivl", "surname": "Warshavsky"}	eyi (yserovsky) varshavsky	{"primary-name": "eyi", "alternative-name": "yserovsky", "surname": "varshavsky"}
-Miriam Weide	{"given-name": "Miriam", "surname": "Weide"}	mrym (veydeneid) veyde	{"primary-name": "mrym", "alternative-name": "veydeneid", "surname": "veyde"}
-Moshe Weide	{"given-name": "Moshe", "surname": "Weide"}	mshh veyde	{"given-name": "mshh", "surname": "veyde"}
 Charles Weinblatt	{"given-name": "Charles", "surname": "Weinblatt"}	tsharis (kimn) veynviat	{"given-name": "tsharis", "alternative-name": "kimn", "surname": "veynviat"}
-Max Weinreich	{"given-name": "Max", "surname": "Weinreich"}	maks veynreykh	{"given-name": "maks", "surname": "veynreykh"}
 Bernard Weinstein	{"given-name": "Bernard", "surname": "Weinstein"}	vernard veynshteyn	{"given-name": "bernard", "surname": "veynshteyn"}
 Joseph Weinstock	{"given-name": "Joseph", "surname": "Weinstock"}	yusf veynshtok	{"given-name": "yusf", "surname": "veynshtok"}
-Simcha Weinstock	{"given-name": "Simcha", "surname": "Weinstock"}	shmkhh veynshtok	{"given-name": "shmkhh", "surname": "veynshtok"}
 Frances Weintraub	{"given-name": "Frances", "surname": "Weintraub"}	rentsys (eyge) veyntroyv	{"primary-name": "rentsys", "alternative-name": "eyge", "surname": "veyntroyv"}
-Milton Weintraub	{"given-name": "Milton", "surname": "Weintraub"}	myiton veyntroyv	{"given-name": "myiton", "surname": "veyntroyv"}
-Rebecca Weintraub	{"given-name": "Rebecca", "surname": "Weintraub"}	rbkh (useid) veyntroyv	{"given-name": "rbkh", "alternative-name": "useid", "surname": "veyntroyv"}
-Sigmund Weintraub	{"given-name": "Sigmund", "surname": "Weintraub"}	zygmunt veyntroyv	{"given-name": "zygmunt", "surname": "veyntroyv"}
 Simcha Weintraub	{"given-name": "Simcha", "surname": "Weintraub"}	shmkhh veyntroyv	{"given-name": "shmkhh", "surname": "veyntroyv"}
 Leon Weisenfeld	{"given-name": "Leon", "surname": "Weisenfeld"}	ieon vyzeneid	{"given-name": "ieon", "surname": "vyzeneid"}
-Muni Weisenfreund	{"given-name": "Muni", "surname": "Weisenfreund"}	muny (mshuim-myr) veyzenreynd	{"given-name": "muny", "alternative-name": "mshuim-myr", "surname": "veyzenreynd"}
-Phillip Weisenfreund	{"given-name": "Phillip", "surname": "Weisenfreund"}	yiyp (nkhum-eyvi) veyzenreynd	{"primary-name": "yiyp veyzenreynd", "given-name": "yiyp", "alternative-name": "nkhum-eyvi", "surname": "veyzenreynd"}
+Avraham-Yakov Weislitz	{"given-name": "Avraham-Yakov", "surname": "Weislitz"}	brhm-yekb veysiyts	{}: 
 Yocheved Weislitz	{"given-name": "Yocheved", "surname": "Weislitz"}	yukhbd (provyzor) veysiyts	{"given-name": "yukhbd", "alternative-name": "provyzor", "surname": "veysiyts"}
-Bernardo Weisman	{"given-name": "Bernardo", "surname": "Weisman"}	vernardo veysman	{"primary-name": "veysman", "given-name": "vernardo", "surname": "veysman"}
-Louis Weissberg	{"given-name": "Louis", "surname": "Weissberg"}	iuys veysverg	{"primary-name": "veysverg", "given-name": "iuys", "surname": "veysverg"}
-Yitzhak Wiernik	{"given-name": "Yitzhak", "surname": "Wiernik"}	ytskhk vyernyk	{"given-name": "ytskhk", "surname": "vyernyk"}
-Julian Wilensky	{"given-name": "Julian", "surname": "Wilensky"}	yuiyan vyiensky	{"primary-name": "yuiyan vyiensky", "given-name": "yuiyan", "surname": "vyiensky"}
-Joseph Winogradoff	{"given-name": "Joseph", "surname": "Winogradoff"}	yusf (veynshteyn) vynogradov	{"given-name": "yusf", "alternative-name": "veynshteyn", "surname": "vynogradov"}
-Herman Wohl	{"given-name": "Herman", "surname": "Wohl"}	herman (tsby) vohi	{"primary-name": "herman", "alternative-name": "tsby", "surname": "vohi"}
+Aaron Weisman	{"given-name": "Aaron", "surname": "Weisman"}	hrn veysman	{"given-name": "hrn", "surname": "veysman"}
+Leyb Winer	{"given-name": "Leyb", "surname": "Winer"}	ieyv veyner	{"given-name": "ieyv", "surname": "veyner"}
 Arthur Wolf	{"given-name": "Arthur", "surname": "Wolf"}	arthur voif	{"given-name": "arthur", "surname": "voif"}
 Simon Wolf	{"given-name": "Simon", "surname": "Wolf"}	seymon (shmkhh) vuif	{"given-name": "shmkhh", "alternative-name": "seymun", "surname": "vuif"}
-Chona Wolfstal	{"given-name": "Chona", "surname": "Wolfstal"}	khn voistai	{"primary-name": "khn voistai", "given-name": "khn", "surname": "voistai"}
-Ita Wolhendler-Krause	{"given-name": "Ita", "maiden-surname": "Wolhendler", "surname": "Krause"}	yte voihendier-kroyze	{"primary-name": "voihendier-kroyze", "given-name": "yte", "surname": "voihendier", "nisba": "kroyze"}
-M. Workel	{"given-name": "M.", "surname": "Workel"}	m varkei	{"surname": "varkei", "acronym": "m"}
+Avraham Wolfstat	{"given-name": "Avraham", "surname": "Wolfstat"}	brhm voistat	{"given-name": "brhm", "surname": "voistat"}
+Chaim Yablokoff	{"given-name": "Chaim", "surname": "Yablokoff"}	kheym (yavionyk) yaviokov	{"given-name": "kheym", "alternative-name": "yavionyk", "surname": "yviokov"}
+Mordechai Yachson	{"given-name": "Mordechai", "surname": "Yachson"}	mrdkhy ykhsn	{"given-name": "mrdkhy", "surname": "ykhsn"}
 Yakov ben Yekhezkel from Posnan	{"given-name": "Yakov", "patronymic": "ben Yekhezkel", "nisba": "from Posnan"}	ykb vh ykhzki mpuznn	{"given-name": "ykb", "middle-name": "ykhzki", "surname": "mpuznn", "patronymic": "bh"}
-Lola Yakubovitsh	{"given-name": "Lola", "surname": "Yakubovitsh"}	ioia (siysh) yakuvovytsh	{"given-name": "ioia", "alternative-name": "siysh", "surname": "yakuvovytsh"}
+A.L. Yakubovitsh	{"given-name": "A.L.", "surname": "Yakubovitsh"}	 i yakuvovytsh	{"surname": "yakuvovytsh", "acronym": " i"}
+Leyzer Yakubovitsh	{"given-name": "Leyzer", "surname": "Yakubovitsh"}	ieyzer yakuvovytsh	{"given-name": "ieyzer", "surname": "ykuvovytsh"}
 Lyosha Yakubovitsh	{"given-name": "Lyosha", "surname": "Yakubovitsh"}	iyosha yakuvovytsh	{"given-name": "iyosha", "surname": "akuvovytsh"}
-[?] Yakubzon	{"given-name": "[?]", "surname": "Yakubzon"}	 yakuvzon	{"primary-name": "yakuvzon"}
+Yaakov Yakubovitsh	{"given-name": "Yaakov", "surname": "Yakubovitsh"}	yekb yakubovytsh	{"given-name": "yekb", "surname": "yakubovytsh"}
 Yasha Yanka	{"given-name": "Yasha", "surname": "Yanka"}	yasha (meytes) yanko	{"given-name": "yasha", "alternative-name": "meytes", "surname": "yanko"}
-Zlata Yaroslavska	{"given-name": "Zlata", "surname": "Yaroslavska"}	ziate yarosiavska	{"primary-name": "ziate", "nisba": "yrusiavska"}
-Rosetta Yeger	{"given-name": "Rosetta", "surname": "Yeger"}	rozeta (pget) yeger	{"primary-name": "rozeta", "alternative-name": "pget", "surname": "yeger"}
-Yakov Yofe	{"given-name": "Yakov", "surname": "Yofe"}	ykub yoe	{"given-name": "ykub", "surname": "yoe"}
-Nate Yongelson	{"given-name": "Nate", "surname": "Yongelson"}	neyt (nkhn) yongeison	{"given-name": "nkhn", "alternative-name": "neyt", "surname": "yongeison"}
-Jacob Yongman	{"given-name": "Jacob", "surname": "Yongman"}	dzheykov (yekb yunkman) yongman	{"primary-name": "ddzheykov", "given-name": "yekb", "alternative-name": "yunkman", "surname": "yngman"}
-Chaim Yosilis	{"given-name": "Chaim", "surname": "Yosilis"}	kheym yosyiys	{"given-name": "kheym", "surname": "yosyiys"}
-Semyon Yushkevich	{"given-name": "Semyon", "surname": "Yushkevich"}	semyon yushkevytsh	{"primary-name": "semyon yushkevytsh", "given-name": "semyon", "surname": "yushkevytsh"}
-B. Yushzon	{"given-name": "B.", "surname": "Yushzon"}	v (mshh yustman) yushzon	{"given-name": "mshh", "alternative-name": "yustman", "surname": "yushzon", "salutation": "b"}
-Frida Zagar	{"given-name": "Frida", "surname": "Zagar"}	ryda zagar	{"given-name": "ryda", "surname": "zagar"}
-Roye[?] Zaks	{"given-name": "Roye", "surname": "Zaks"}	roye zaks	{"given-name": "roye", "surname": "zaks"}
-Izzy Zaluzniak	{"given-name": "Izzy", "surname": "Zaluzniak"}	yzy ziuznyk	{"given-name": "yzy", "surname": "ziuznyk"}
-Karolina Zamler	{"given-name": "Karolina", "surname": "Zamler"}	koroiyna zamier	{"primary-name": "koroiyna zamier", "given-name": "koroiyna", "surname": "zamier"}
-Paltiel Zamoshtshin	{"given-name": "Paltiel", "surname": "Zamoshtshin"}	pityi zamoshtshyn	{"primary-name": "pityi zamoshtshyn", "given-name": "pityi", "surname": "zamoshtshyn"}
-Tseshiya Zandberg	{"given-name": "Tseshiya", "surname": "Zandberg"}	tsesh (radoinyk) zandverg	{"given-name": "radoinyk", "alternative-name": "tsesh", "surname": "zandverg"}
-Paulina Zarzhevska	{"given-name": "Paulina", "surname": "Zarzhevska"}	puiyna (keier) zarshevsky	{"given-name": "uiyna", "alternative-name": "keier", "surname": "zarshevsky"}
+David Yanover	{"given-name": "David", "surname": "Yanover"}	dud yanover	{"given-name": "dud", "surname": "ynubr"}
+Elihu Zalmen Yarikhovski	{"given-name": "Elihu", "middle-name": "Zalmen", "surname": "Yarikhovski"}	iyhu-zimn yarykhovsky	{"primary-name": "iyhu-zimn yarykhovsky", "given-name": "iyhu", "alternative-name": "zimn", "surname": "yrykhvsky"}
+Hersh Yedvab	{"given-name": "Hersh", "surname": "Yedvab"}	hersh yedvav	{"primary-name": "hersh yedvav"}
+Chava Yoelit	{"given-name": "Chava", "surname": "Yoelit"}	khuh (grynshpan) yoeiyt	{"given-name": "khuh", "alternative-name": "grynshpn", "surname": "yuiyt"}
+Bernard Young	{"given-name": "Bernard", "surname": "Young"}	vernard (vuez yungvyts) yong	{"primary-name": "bernard", "given-name": "vuez", "alternative-name": "yungvyts", "surname": "yong"}
+David Zahik	{"given-name": "David", "surname": "Zahik"}	dud zahyk	{"given-name": "dud", "surname": "zahyk"}
+Harry Zar	{"given-name": "Harry", "surname": "Zar"}	hery (gbryi zrshevsky) zar	{"given-name": "gbryi", "alternative-name": "hery", "surname": "zar", "nisba": "zrshevsky"}
 Berta Zaslavska	{"given-name": "Berta", "surname": "Zaslavska"}	verta (vasye ievyn) zasiavska	{"given-name": "verta", "alternative-name": "vasye", "surname": "zasiavska"}
-Chava Zeyde	{"given-name": "Chava", "surname": "Zeyde"}	khuh zeyde	{"given-name": "khuh", "surname": "zeyde"}
+Rudolf Zaslavsky	{"given-name": "Rudolf", "surname": "Zaslavsky"}	rudoif (rubn-ieyb) zasiavsky	{"primary-name": "zasiavsky", "given-name": "rubn-ieyb", "alternative-name": "rudoif"}
+David Zayderman	{"given-name": "David", "surname": "Zayderman"}	dud zeyderman	{"given-name": "dud", "surname": "zeyderman"}
+Aaron Zeitlin	{"given-name": "Aaron", "surname": "Zeitlin"}	hrn (iyezr) tseytiyn	{"given-name": "hrn", "alternative-name": "iyezr", "surname": "tseytiyn"}
+Lev Zeitlin	{"given-name": "Lev", "surname": "Zeitlin"}	iev (hrun-ieyv) tseytiyn	{"primary-name": "tseytn", "given-name": "hrun-ieyv", "alternative-name": "iev", "surname": "tseytiyn"}
+Shifra Zeitlin	{"given-name": "Shifra", "surname": "Zeitlin"}	shrh tseytiyn	{"given-name": "shrh", "surname": "tseytiyn"}
 [?] Zeyderman	{"given-name": "[?]", "surname": "Zeyderman"}	 zeyderman	{"primary-name": " zeyderman", "surname": "zeydermn"}
-Leyzer Zhelazo	{"given-name": "Leyzer", "surname": "Zhelazo"}	ieyzer (zheiazny) zheiaz	{"given-name": "ieyzer", "alternative-name": "zheiazny", "surname": "zheiz"}
+Moshe Zeyderman	{"given-name": "Moshe", "surname": "Zeyderman"}	mshh zeyderman	{"given-name": "mshh", "surname": "zeyderman"}
 [?] Zhopnik	{"given-name": "[?]", "surname": "Zhopnik"}	 zhupnyk	{"surname": "zhupnyk"}
-Frida Zibel	{"given-name": "Frida", "surname": "Zibel"}	ryda (zhartovsky) zyvei	{"given-name": "ryda", "alternative-name": "zhartovsky", "surname": "zyvei"}
-Willliam Zigenlaub	{"given-name": "Willliam", "surname": "Zigenlaub"}	vyiyam (voif) zygenioyv	{"given-name": "vyiyam", "alternative-name": "voif", "surname": "zygenioyv"}
-Wolf Zilberberg	{"given-name": "Wolf", "surname": "Zilberberg"}	voif zyiververg	{"given-name": "voif", "surname": "zyiververg"}
-Karl Zilberman	{"given-name": "Karl", "surname": "Zilberman"}	kari zyiverman	{"primary-name": "kari zyiverman", "given-name": "kari", "surname": "zyiverman"}
-Karl Zimbalist	{"given-name": "Karl", "surname": "Zimbalist"}	kari (ekyb) tsymbaiyst	{"primary-name": "tsymbaiyst", "given-name": "ekyb", "alternative-name": "kari"}
+Ela Zibel	{"given-name": "Ela", "surname": "Zibel"}	eia zyvei	{"primary-name": "eia zyvei", "given-name": "eia", "surname": "zyvei"}
+Samuel Zilberberg	{"given-name": "Samuel", "surname": "Zilberberg"}	semuei zyiververg	{"primary-name": "semuei zyiververg"}
+Zalman Zilberblat	{"given-name": "Zalman", "surname": "Zilberblat"}	zimn zyiverviat	{"given-name": "zimn", "surname": "zyiverviat"}
+Morris Zilberman	{"given-name": "Morris", "surname": "Zilberman"}	morys zyiverman	{"given-name": "morys", "surname": "zyiverman"}
+Beynish Zilbershtayn	{"given-name": "Beynish", "surname": "Zilbershtayn"}	beynush zyivershteyn	{"primary-name": "beynush zyivershteyn", "given-name": "beynush", "surname": "zyivershteyn"}
+Kalman Zingman	{"given-name": "Kalman", "surname": "Zingman"}	kimn zyngman	{"given-name": "kimn", "surname": "zyngman"}
 [?] Zlotshevski	{"given-name": "[?]", "surname": "Zlotshevski"}	 ziotshevsky	{"primary-name": "ziotshevsky", "surname": "ziotshevsky"}
-Leon Zolotkoff	{"given-name": "Leon", "surname": "Zolotkoff"}	ieon zoiotkof	{"primary-name": "ieon zoiotkof", "surname": "zoiotkof"}
-Regina Zucker	{"given-name": "Regina", "surname": "Zucker"}	regyna (shvartsshteyn) tsuker	{"primary-name": "regyna", "alternative-name": "shvartsshteyn", "surname": "tsuker"}
 Hershel Zuckerberg	{"given-name": "Hershel", "surname": "Zuckerberg"}	hershi tsukerberg	{"primary-name": "hershi tsukerberg", "given-name": "hershi", "surname": "tsukerberg"}
-Leon Zuckerberg	{"given-name": "Leon", "surname": "Zuckerberg"}	ieon tsukerberg	{"primary-name": "tsukerberg", "given-name": "ieon", "surname": "tsukerberg"}
-Celia Zuckerberg-Zylbercweig	{"given-name": "Celia", "maiden-surname": "Zylbercweig", "surname": "Zuckerberg"}	tsyie tsukerberg-zyibertsveyg	{"alternative-name": "zyibertsveyg", "surname": "tsukerberg"}
-Miriam Shomer Zunser	{"given-name": "Miriam", "maiden-surname": "Shomer", "surname": "Zunser"}	mrym shomer-tsunzer	{"primary-name": "shomer-tsunzer", "given-name": "mrym", "surname": "shomer-tsunzer"}
 Nathan Zylbercweig	{"given-name": "Nathan", "surname": "Zylbercweig"}	nsn zyivertsveyg	{"primary-name": "zyivertsveyg", "given-name": "nsn"}

@@ -188,7 +188,7 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10, update_frequency=
         running_jobs = list(
             filter(
                 lambda job: job["Downloaded"] == "False"
-                and job["Status"] in ["in_progress", "finalizing"],
+                and job["Status"] in ["in_progress", "finalizing", "completed"],
                 tracked_jobs,
             )
         )
@@ -426,17 +426,11 @@ def combine_jsonl(dst_filepath, src_directory):
 
 if __name__ == "__main__":
     # NOTE make sure all specified directories are empty before using them here!
-    main_file = "experiments/partScores200ConfScore/partScores200ConfScore.jsonl"
-    subfiles_directory = (
-        "experiments/partScores200ConfScore/partScores200ConfScoresplit/"
-    )
+    main_file = "experiments/listsTestIteration4/listsTestIteration4.jsonl"
+    subfiles_directory = "experiments/listsTestIteration4/listsTestIteration4split/"
     tracking_file = subfiles_directory + "tracker.csv"
-    output_directory = (
-        "experiments/partScores200ConfScore/partScores200ConfScoresplitOutput/"
-    )
-    output_file = (
-        "experiments/partScores200ConfScore/partScores200ConfScoreoutput.jsonl"
-    )
+    output_directory = "experiments/listsTestIteration4/listsTestIteration4splitOutput/"
+    output_file = "experiments/listsTestIteration4/listsTestIteration4output.jsonl"
 
     with open("secrets.json", "r") as file:
         secrets = json.load(file)

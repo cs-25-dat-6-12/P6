@@ -150,12 +150,12 @@ def prepare_batch_file_filter_lists(
                         "messages": [
                             {
                                 "role": "developer",
-                                "content": f'You will be given a list of names separated by ",". Your task is to determine which name in the list is most likely to refer to the same person as "{df.iloc[record]["title"]}". Your response must be a single name from the input list and nothing else.',
+                                "content": f'You will be given a list of names with one name on each line of the input. One of the names in the input refers to the same person as "{df.iloc[record]["title"]}". You must return that name. Your response must be a single line from the input and nothing else.',
                             },
                             {
                                 "role": "user",
                                 "content": create_name_list(
-                                    sub_block, blocks_df, separator=","
+                                    sub_block, blocks_df, separator="\n"
                                 ),
                             },
                         ],
@@ -322,8 +322,8 @@ if __name__ == "__main__":
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
     )
     blocks_df = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
-        sep="\t",
+        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig.csv",
+        sep=",",
         header=0,
     )
     blocks = {}

@@ -76,6 +76,8 @@ def create_blocks_from_output_pairs_with_confidence_score(
     # create a dictionary that maps records to the records the LLM thinks they match with
     with open(output_filepath) as output_file:
         output_blocks = {}
+        value_errors = 0
+        match_scores = {}
         for line in output_file:
             line = json.loads(line)
             # the custom_id of each request is formatted as "record1#record2".
@@ -89,10 +91,25 @@ def create_blocks_from_output_pairs_with_confidence_score(
                 end="\r",
             )
             output_blocks.update({record: output_blocks.get(record, list())})
+            match_scores.update({record: match_scores.get(record, list())})
             response = line["response"]["body"]["choices"][0]["message"]["content"]
-            if float(response) >= threshold:
-                output_blocks.update({record: output_blocks[record] + [possible_match]})
-        print("")
+            try:
+                score = float(response)
+                if float(response) >= threshold:
+                    output_blocks.update(
+                        {record: output_blocks[record] + [possible_match]}
+                    )
+                    match_scores.update({record: match_scores[record] + [score]})
+            except ValueError:
+                value_errors += 1
+        for record in output_blocks:
+            if len(match_scores[record]) > 0:
+                max_score = max(match_scores[record])
+                possible_matches = output_blocks[record].copy()
+                for i, score in enumerate(match_scores[record]):
+                    if score < max_score:
+                        output_blocks[record].remove(possible_matches[i])
+        print(f"\nSkipped {value_errors} responses due to incorrect format.")
         return output_blocks
 
 
@@ -120,8 +137,8 @@ def test_with_name_list():
 
 def test_with_name_pairs():
     print("Creating response blocks...")
-    output_blocks = create_blocks_from_output_pairs(
-        r"experiments\repromptTransliterationsMatches\repromptTransliterationsMatchessplitOutput\repromptTransliterationsMatches_part_1_output.jsonl"
+    output_blocks = create_blocks_from_output_pairs_with_confidence_score(
+        r"experiments\partScores200ConfScore\partScores200ConfScoreoutput.jsonl"
     )
     matches = pd.read_csv(
         r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
@@ -171,10 +188,12 @@ def update_blocks_with_list_names(
     # given the path to an output file, the path to the blocks-file the input was created from, the dataset the blocks map to, and the path to the leftover blocks,
     # updates the blocks-file. # NOTE This function was made to work with prepare_batch_file_filter_lists.
     with open(output_filepath) as output_file, open(
-        blocks_filepath, "r+"
-    ) as blocks_file, open(leftover_blocks_filepath) as leftover_blocks_file:
+        leftover_blocks_filepath
+    ) as leftover_blocks_file:
         # load the the blocks we started with and load the leftover blocks which will be the base of our new blocks
+        blocks_file = open(blocks_filepath)
         blocks = json.load(blocks_file)
+        blocks_file.close()
         blocks = {int(k): set(v) for k, v in blocks.items()}
         new_blocks = json.load(leftover_blocks_file)
         new_blocks = {int(k): set(v) for k, v in new_blocks.items()}
@@ -194,7 +213,8 @@ def update_blocks_with_list_names(
                     break
         # we're done building the new blocks, now we overwrite the old blocks so we can make a new request out of them
         new_blocks = {k: list(v) for k, v in new_blocks.items()}
-        json.dump(new_blocks, blocks_file, ensure_ascii=False, indent=4)
+        with open(blocks_filepath, "w") as blocks_file:
+            json.dump(new_blocks, blocks_file, ensure_ascii=False, indent=4)
         # if each key maps to exactly one record, then we're ready for pairwise comparisons and should tell the user
         if sum([len(x) for x in new_blocks.values()]) == len(new_blocks):
             print(
@@ -207,9 +227,9 @@ def update_blocks_with_list_names(
 if __name__ == "__main__":
     test_with_name_pairs()
     # update_blocks_with_list_names(
-    #    r"experiments\listsTestIteration0\listsTestIteration0output.jsonl",
-    #    r"experiments\listsTestIteration0\filtered_blocks.json",
-    #    r"experiments\listsTestIteration0\leftoverBlocks.jsonl",
+    #    r"experiments\listsTestIteration3\listsTestIteration3output.jsonl",
+    #    r"experiments\listsTestIteration3\filtered_blocks.json",
+    #    r"experiments\listsTestIteration3\leftoverBlocks.jsonl",
     #    pd.read_csv(
     #        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
     #        sep="\t",
