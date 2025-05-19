@@ -105,3 +105,18 @@ def readData(filenames):
     df["id"] = df.index
 
     return df
+
+def langData(data,lang):
+    data = data[data['lang'] == lang]
+    return data
+
+def matchFile(data, lang1, lang2):
+    
+    return data
+
+if __name__ == "__main__":
+
+    wikiData = pd.read_csv("datasets\wikiData\wikiMedLink.csv")
+    wikiData_yi = langData(wikiData,"yi")
+    wikiData_en = langData(wikiData,"en")
+    print(wikiData_en)
