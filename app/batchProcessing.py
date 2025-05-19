@@ -43,6 +43,18 @@ def name_parts_to_string(name_parts):
     return string
 
 
+def column_name_parts_to_string(row, column_names=["placeholder", "other placeholder"]):
+    # given a row and some column names, convert the name in those columns to a string
+    string = ""
+    for part_name in column_names:
+        name_part = row[part_name]
+        if name_part != None:
+            string += part_name + ": "
+            string += name_part + ", "
+    string = string[:-2]
+    return string
+
+
 def extract_output_string(line):
     # given a line from a batch jsonl-file, extract the output string
     line = json.loads(line)
@@ -131,11 +143,11 @@ def prepare_batch_file_individual_pairs(
                         "messages": [
                             {
                                 "role": "developer",
-                                "content": f'You will be given two names. The first name is a yiddish name written in the roman alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
+                                "content": f'You will be given two names. The first name is originally written in yiddish then transliterated to the roman alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
                             },
                             {
                                 "role": "user",
-                                "content": f'"{name_parts_to_string(json.loads(blocks_df.iloc[possible_match]["name_parts"]))}", "{name_parts_to_string(json.loads(df.iloc[record]["name_parts"]))}"',
+                                "content": f'"{blocks_df.iloc[possible_match]["title"]}", "{df.iloc[record]["title"]}"',
                             },
                         ],
                         "max_tokens": max_tokens_per_request,
@@ -247,7 +259,7 @@ if __name__ == "__main__":
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
     )
     blocks_df = pd.read_csv(
-        r"datasets\phonetic\phoneticZylbercweig_name_parts.csv",
+        r"datasets\phonetic\test_zylbercweig_transliterate.csv",
         sep=",",
         header=0,
     )
