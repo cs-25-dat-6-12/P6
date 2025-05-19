@@ -43,6 +43,18 @@ def name_parts_to_string(name_parts, separator=";"):
     return string
 
 
+def column_name_parts_to_string(row, column_names=["placeholder", "other placeholder"]):
+    # given a row and some column names, convert the name in those columns to a string
+    string = ""
+    for part_name in column_names:
+        name_part = row[part_name]
+        if name_part != None:
+            string += part_name + ": "
+            string += name_part + ", "
+    string = string[:-2]
+    return string
+
+
 def extract_output_string(line):
     # given a line from a batch jsonl-file, extract the output string
     line = json.loads(line)
@@ -149,6 +161,7 @@ def prepare_batch_file_filter_lists(
                         "model": model,
                         "messages": [
                             {
+<<<<<<< HEAD
                                 "role": "system",
                                 "content": "You are a name classification expert, well versed in the form, structure and composition of names in Jewish History. You will be given a target name for which we are looking for a match. Then you will be given a list of candidates and you need to find the most probable match for the target name. Consider that names have been transliterated from Yiddish so the spelling may vary between the source and the target, but they should sound similar. Return the name itself exactly as it is written in the list of candidates, with no additions or omissions.",
                             },
@@ -160,6 +173,14 @@ def prepare_batch_file_filter_lists(
                                 "role": "user",
                                 "content": "Candidates: "
                                 + create_name_list(sub_block, blocks_df, separator=";"),
+=======
+                                "role": "developer",
+                                "content": f'You will be given two names. The first name is originally written in yiddish then transliterated to the roman alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
+                            },
+                            {
+                                "role": "user",
+                                "content": f'"{blocks_df.iloc[possible_match]["title"]}", "{df.iloc[record]["title"]}"',
+>>>>>>> 3231b082679ece4a77f395ab3f9957e77fda20c5
                             },
                         ],
                         "max_tokens": max_tokens_per_request,
@@ -332,8 +353,13 @@ if __name__ == "__main__":
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
     )
     blocks_df = pd.read_csv(
+<<<<<<< HEAD
         r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
         sep="\t",
+=======
+        r"datasets\phonetic\test_zylbercweig_transliterate.csv",
+        sep=",",
+>>>>>>> 3231b082679ece4a77f395ab3f9957e77fda20c5
         header=0,
     )
     blocks = {}

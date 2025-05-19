@@ -175,7 +175,6 @@ def test_on_dataset(filepath):
     recall = true_positives / df["match"].to_list().count(True)
     print(f"Recall: {recall}")
 
-
 if __name__ == "__main__":
     test_on_dataset("datasets\zeroShot\proofOfConcept.csv")
     # test_single_prompt()

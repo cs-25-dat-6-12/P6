@@ -403,7 +403,7 @@ def run_experiments(candidates):
     dataframe.to_csv(f"datasets/testset15-Zylbercweig-Laski/experiment_results_{candidates}.csv", sep="\t")
 
 
-def run_blocking_multiple_dataset(name_list_1, name_list_2, candidates=200, dataset_1_source="Zylbercweig", dataset_2_source="LASKI", model="Zylbercweig-LASKIall-distilroberta-v1", print_progress=False):
+def run_filtering_multiple_dataset(name_list_1, name_list_2, candidates=200, dataset_1_source="Zylbercweig", dataset_2_source="LASKI", model="Zylbercweig-LASKIall-distilroberta-v1", print_progress=False):
     collection = get_db(model)
     results_1, results_2 = [], []
     for i, name in enumerate(name_list_1):
@@ -416,7 +416,7 @@ def run_blocking_multiple_dataset(name_list_1, name_list_2, candidates=200, data
         results_2.append(query_db_by_name(collection, name, dataset_1_source, candidates))
     return results_1, results_2
 
-def run_blocking_singular_dataset(name_list, id_list, candidates=200, model="Zylbercweig-LASKIall-distilroberta-v1", print_progress=False):
+def run_filtering_singular_dataset(name_list, id_list, candidates=200, model="Zylbercweig-LASKIall-distilroberta-v1", print_progress=False):
     collection = get_db(model)
     results = []
     for i, name in enumerate(name_list):
@@ -425,31 +425,107 @@ def run_blocking_singular_dataset(name_list, id_list, candidates=200, model="Zyl
         results.append(query_db_by_name_singular_dataset(collection, name, id_list[i], candidates))
     return results
 
-def create_dict_from_block(block, file_name="n/a"):
+def create_dict_from_blocks(blocks, file_name="n/a"):
     dict = {}
-    for i, singular_block in enumerate(block):
+    for i, singular_block in enumerate(blocks):
         table = []
         for metadata in singular_block["metadatas"][0]:
             table.append(metadata["index"])
         dict.update({i:table})
     if file_name != "n/a":
-        with open(f"datasets/testset15-Zylbercweig-Laski/dicts/{file_name}.json", "w") as f:
-            f.write(json.JSONEncoder().encode(dict).replace(", \"", ", \n\""))
-            #.replace(", ", ", \n").replace(": ", ": \n").replace("[", "[\n").replace("]", "\n]")
+        with open(f"datasets/testset15-Zylbercweig-Laski/dicts/{file_name}.json", "w") as file:
+            json.dump(dict, file, ensure_ascii=False, indent=4)
     return dict
 
-if __name__ == "__main__":
-    #for model in Embedding_function_names.names:
-        #create_db_zylbercweig_laski("Zylbercweig-LASKI" + model, print_progress=True)
-        #create_db_zylbercweig_laski("Zylbercweig-LASKI" + model + "first-sur", print_progress=True)
-    #create_db_yad_vashem("Zylbercweig-LASKI" + "all-distilroberta-v1", print_progress=True)
+def run_with_blocks_zylbercweig_laski(blocks, embedding_function="all-distilroberta-v1", candidates=10, file_name="n/a"):
+    t = time.time()
+    model = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=embedding_function)
+    zylbercweig_dict = {}
+    laski_dict = {}
+    result = {}
     zylbercweig = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig_roman.csv", sep="\t")
     laski = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.tsv", sep="\t")
-    zyl_list, laski_list = [], []
+    db_client = chromadb.EphemeralClient()
     for i, row in zylbercweig.iterrows():
-        zyl_list.append(row["title"])
+        if i%100 == 0:
+            print("embedded", i, "out of", len(zylbercweig), "in Zylbercweig")
+        embedding = model(row["title"])[0]
+        zylbercweig_dict.update({i:embedding})
     for i, row in laski.iterrows():
-        laski_list.append(row["title"])
-    result1, result2 = run_blocking_multiple_dataset(zyl_list, laski_list, 100, print_progress=True)
-    create_dict_from_block(result1, "dict_Zylbercweig")
-    create_dict_from_block(result2, "dict_LASKI")
+        if i%100 == 0:
+            print("embedded", i, "out of", len(laski), "in LASKI")
+        embedding = model(row["title"])[0]
+        laski_dict.update({i:embedding})
+    for i in range(0, len(laski)-1):
+        if i%100 == 0:
+            print("filtered", i, "out of", len(laski), "blocks")
+        collection = db_client.create_collection(name=f"temp{i}", embedding_function=model)
+        embeddings = []
+        ids = []
+        for index in blocks.get(i):
+            embeddings.append(zylbercweig_dict[index])
+            ids.append(str(index))
+        collection.add(ids=ids, embeddings=embeddings)
+        query_result = collection.query(query_embeddings=laski_dict.get(i), n_results=candidates)
+        result.update({i:query_result["ids"][0]})
+    if file_name != "n/a":
+        with open(f"datasets/testset15-Zylbercweig-Laski/dicts/{file_name}.json", "w", encoding="utf-8") as file:
+            json.dump(result, file, ensure_ascii=False, indent=4)
+    print(f'finished in {(time.time()-t)/60} minutes')
+    return result
+
+def run_with_blocks_yad_vashem(blocks, embedding_function="all-distilroberta-v1", candidates=10, file_name="n/a"):
+    t = time.time()
+    model = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=embedding_function)
+    dict = {}
+    result = {}
+    dataset = pd.read_csv("datasets/testset13-YadVAshemitaly/yv_italy.tsv", sep="\t")
+    db_client = chromadb.EphemeralClient()
+    yad_bool = dataset.isna()
+    for i, row in dataset.iterrows():
+        if i%100 == 0:
+            print("embedded", i, "out of", len(dataset))
+        if yad_bool["title"][i]:
+            continue
+        embedding = model(row["title"])[0]
+        dict.update({i:embedding})
+    for i in range(0, len(dict)-1):
+        if i%100 == 0:
+            print(i, "out of", len(dict), "in filtering")
+        collection = db_client.create_collection(name=f"temp{i}", embedding_function=model)
+        embeddings = []
+        ids = []
+        for index in blocks.get(i):
+            embeddings.append(dict[index])
+            ids.append(str(index))
+        collection.add(ids=ids, embeddings=embeddings)
+        query_result = collection.query(query_embeddings=dict.get(i), n_results=candidates, where={"index":{"$ne":str(i)}})
+        result.update({i:query_result["ids"][0]})
+    if file_name != "n/a":
+        with open(f"datasets/testset13-YadVAshemitaly/dicts/{file_name}.json", "w", encoding="utf-8") as file:
+            json.dump(result, file, ensure_ascii=False, indent=4)
+    print(f'finished in {(time.time()-t)/60} minutes')
+    return result
+
+def run_filtering_from_blocks_zylbercweig_laski(block_path_laski, block_path_zylbercweig="n/a", candidates=100):
+    laski = {}
+    with open(block_path_laski) as file:
+        laski = json.load(file)
+        laski = {int(k): set(v) for k, v in laski.items()}
+        run_with_blocks_zylbercweig_laski(laski, candidates=candidates, file_name="laski_vectordb")
+    if block_path_zylbercweig != "n/a":
+        zylbercweig = {}
+        with open(block_path_zylbercweig) as file:
+            zylbercweig = json.load(file)
+            zylbercweig = {int(k): set(v) for k, v in zylbercweig.items()}
+            run_with_blocks_zylbercweig_laski(zylbercweig, candidates=candidates, file_name="zylbercweig_vectordb")
+
+def run_filtering_from_blocks_yad_vashem(block_path, candidates=100, file_name="yad_vashem_vectordb"):
+    with open(block_path) as file:
+        blocks = json.load(file)
+        blocks = {int(k): set(v) for k, v in blocks.items()}
+        run_with_blocks_yad_vashem(blocks, candidates=candidates, file_name=file_name)
+
+
+if __name__ == "__main__":
+    run_filtering_from_blocks_yad_vashem("app/filtered_blocks.json")
