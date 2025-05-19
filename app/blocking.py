@@ -4,6 +4,7 @@ from textFiltering import calculate_recall_better, calculate_reduction_ratio
 from ipapy import is_valid_ipa
 from ipapy import UNICODE_TO_IPA
 from ipapy.ipachar import IPAConsonant
+from itertools import combinations
 
 
 def block_dataframe(df, callable):
@@ -77,9 +78,9 @@ def name_part_presence(row):
         name_parts = json.loads(row["name_parts"]).keys()
         if len(name_parts) > 0:
             return name_parts
+        else:
+            return ["None"]
     except json.JSONDecodeError:
-        pass
-    finally:
         return ["None"]
 
 
@@ -115,7 +116,7 @@ def phonetic_consonant_presence(row):
     return list(labels)
 
 
-def name_length(row, slack=4):
+def name_length(row, slack=1):
     title = row["title"]
     length = len(title)
     labels = []
@@ -126,11 +127,28 @@ def name_length(row, slack=4):
     return labels
 
 
+def potential_name_length(row, slack=1):
+    try:
+        name_parts = json.loads(row["name_parts"])
+        part_lengths = [len(x) for x in name_parts.values()]
+        possible_lengths = []
+        for i in range(1, len(name_parts) + 1):
+            adjusted_slack = slack * i
+            for combination in combinations(part_lengths, i):
+                for j in range(-adjusted_slack, adjusted_slack + 1):
+                    possible_lengths.append(sum(combination) + j)
+        return possible_lengths
+    except json.JSONDecodeError:
+        return ["None"]
+
+
 if __name__ == "__main__":
-    df1 = pd.read_csv(r"datasets\phonetic\LASKI_phonetic.csv", sep=",", header=0)
+    df1 = pd.read_csv(
+        r"datasets\testset15-Zylbercweig-Laski\LASKI.csv", sep=",", header=0
+    )
     df2 = pd.read_csv(
-        r"datasets\phonetic\Zylbercweig_phonetic.csv",
-        sep=",",
+        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
+        sep="\t",
         header=0,
     )
 

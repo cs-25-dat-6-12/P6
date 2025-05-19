@@ -137,7 +137,7 @@ def test_with_name_list():
 
 def test_with_name_pairs():
     print("Creating response blocks...")
-    output_blocks = create_blocks_from_output_pairs_with_confidence_score(
+    output_blocks = create_blocks_from_output_pairs(
         r"experiments\partScores200ConfScore\partScores200ConfScoreoutput.jsonl"
     )
     matches = pd.read_csv(
@@ -166,8 +166,8 @@ def write_missed_matches(
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
     )
     df1 = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
-        sep="\t",
+        r"datasets\phonetic\Zylbercweig_transliteration.csv",
+        sep=",",
         header=0,
     )
     missed_matches = find_missed_matches(output_blocks, matches)
@@ -215,10 +215,29 @@ def update_blocks_with_list_names(
         new_blocks = {k: list(v) for k, v in new_blocks.items()}
         with open(blocks_filepath, "w") as blocks_file:
             json.dump(new_blocks, blocks_file, ensure_ascii=False, indent=4)
-        # if each key maps to exactly one record, then we're ready for pairwise comparisons and should tell the user
-        if sum([len(x) for x in new_blocks.values()]) == len(new_blocks):
+        # calculate recall, precision, and F-measures
+        matches = pd.read_csv(
+            r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
+            sep="\t",
+            header=0,
+        )
+        precision = calculate_precision(new_blocks, matches)
+        recall = calculate_recall_better(new_blocks, matches)
+        f1 = 0
+        fB = 0
+        B = 5
+        # NOTE replace B with something else if you want recall to be considered more or less important
+        if (precision + recall) != 0:
+            f1 = 2 * (precision * recall) / (precision + recall)
+            fB = (1 + B**2) / ((B**2 * recall**-1) + precision**-1)
+        print(f"Precision: {precision}\nRecall: {recall}\nF1: {f1}\nF{B}: {fB}")
+
+        # if each key maps to zero or one record, then we're ready for pairwise comparisons and should tell the user
+        if len(
+            list(filter(lambda block: len(new_blocks[block]) <= 1, new_blocks))
+        ) == len(new_blocks):
             print(
-                "All records have one possible match. Ready for pairwise comparisons!"
+                "All records have at most one possible match. Ready for pairwise comparisons!"
             )
         else:
             print("Blocks updated and ready for next iteration!")
@@ -227,13 +246,13 @@ def update_blocks_with_list_names(
 if __name__ == "__main__":
     test_with_name_pairs()
     # update_blocks_with_list_names(
-    #    r"experiments\listsTestIteration3\listsTestIteration3output.jsonl",
-    #    r"experiments\listsTestIteration3\filtered_blocks.json",
-    #    r"experiments\listsTestIteration3\leftoverBlocks.jsonl",
+    #    r"experiments\pairsTestParts2\pairsTestParts2output.jsonl",
+    #    r"experiments\pairsTestParts2\filtered_blocks.json",
+    #    r"experiments\pairsTestParts2\leftoverBlocks.jsonl",
     #    pd.read_csv(
     #        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
     #        sep="\t",
-    #        header=0,
-    #    ),
+    #         header=0,
+    #     ),
     # )
     pass
