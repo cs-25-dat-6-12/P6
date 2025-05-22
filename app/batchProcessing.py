@@ -161,7 +161,6 @@ def prepare_batch_file_filter_lists(
                         "model": model,
                         "messages": [
                             {
-<<<<<<< HEAD
                                 "role": "system",
                                 "content": "You are a name classification expert, well versed in the form, structure and composition of names in Jewish History. You will be given a target name for which we are looking for a match. Then you will be given a list of candidates and you need to find the most probable match for the target name. Consider that names have been transliterated from Yiddish so the spelling may vary between the source and the target, but they should sound similar. Return the name itself exactly as it is written in the list of candidates, with no additions or omissions.",
                             },
@@ -173,14 +172,6 @@ def prepare_batch_file_filter_lists(
                                 "role": "user",
                                 "content": "Candidates: "
                                 + create_name_list(sub_block, blocks_df, separator=";"),
-=======
-                                "role": "developer",
-                                "content": f'You will be given two names. The first name is originally written in yiddish then transliterated to the roman alphabet and the other name is written in the roman alphabet. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
-                            },
-                            {
-                                "role": "user",
-                                "content": f'"{blocks_df.iloc[possible_match]["title"]}", "{df.iloc[record]["title"]}"',
->>>>>>> 3231b082679ece4a77f395ab3f9957e77fda20c5
                             },
                         ],
                         "max_tokens": max_tokens_per_request,
@@ -214,7 +205,7 @@ def prepare_batch_file_individual_pairs(
         print(f"You have {10-i} seconds to cancel! ", end="\r")
         time.sleep(1)
 
-    with open(filepath, "w") as file:
+    with open(filepath, "w", encoding="utf-8") as file:
         for record in blocks:
             for possible_match in blocks[record]:
                 try:
@@ -231,15 +222,21 @@ def prepare_batch_file_individual_pairs(
                             "messages": [
                                 {
                                     "role": "developer",
-                                    "content": f'You are a name classification expert, well versed in the form, structure and composition of names in Jewish History. You will be given labelled parts of two names and you need to determine if both names refer to the same person. Consider that names have been transliterated from Yiddish so the spelling may vary between them, but they should sound similar. Return "True" if the names refer to the same person and "False" otherwise.',
+                                    "content": f'You are a name classification expert, well versed in the form, structure and composition of names in Jewish History. You will be given two names. The first name has been transliterated from Yiddish so the spelling may vary between the names even if they refer to the same person, but they should sound similar if they do. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise."',
+                                    # You are a name classification expert, well versed in the form, structure and composition of names in Jewish History.
+                                    # so the spelling may vary between the source and the target, but they should sound similar.
                                 },
                                 {
                                     "role": "user",
-                                    "content": f'First name: {name_parts_to_string(json.loads(df.iloc[record]["name_parts"]))}',
+                                    "content": f"First name: {blocks_df.iloc[possible_match]["title"]}",
+                                    # blocks_df.iloc[possible_match]["title"]
+                                    # ; Name parts: {name_parts_to_string(json.loads(blocks_df.iloc[possible_match]["name_parts"]))}
                                 },
                                 {
                                     "role": "user",
-                                    "content": f'Second name: {name_parts_to_string(json.loads(blocks_df.iloc[possible_match]["name_parts"]))}',
+                                    "content": f"Second name: {df.iloc[record]["title"]}",
+                                    # df.iloc[record]["title"]
+                                    # ; Name parts: {name_parts_to_string(json.loads(df.iloc[record]["name_parts"]))}
                                 },
                             ],
                             "max_tokens": max_tokens_per_request,
@@ -353,13 +350,8 @@ if __name__ == "__main__":
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
     )
     blocks_df = pd.read_csv(
-<<<<<<< HEAD
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
-        sep="\t",
-=======
         r"datasets\phonetic\test_zylbercweig_transliterate.csv",
         sep=",",
->>>>>>> 3231b082679ece4a77f395ab3f9957e77fda20c5
         header=0,
     )
     blocks = {}

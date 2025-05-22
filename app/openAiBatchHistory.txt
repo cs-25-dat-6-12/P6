@@ -722,3 +722,52 @@ Batch job with ID batch_6825a4a9f61c81908a0f1d23f77247f3 cancelled.
 
 2025-05-18 20:06:34.153756		New batch file written at app/pairsTestParts2.jsonl
 
+2025-05-19 11:47:51.707001		New batch file written at app/listsTestIteration11.jsonl
+
+2025-05-20 09:38:45.042863		New batch file written at app/listsTestIteration11.1.jsonl
+
+2025-05-22 11:38:37.421657		New batch file written at app/MatchesOriginalTitle.jsonl
+
+2025-05-22 11:41:58.935268		New batch file written at app/MatchesOriginalTitlePersona.jsonl
+
+2025-05-22 11:56:00.668418		New batch file written at app/MatchesOriginalParts.jsonl
+
+2025-05-22 11:56:59.539039		New batch file written at app/MatchesOriginalPartsPersona.jsonl
+
+2025-05-22 12:02:59.453912		New batch file written at app/MatchesOriginalParts.jsonl
+
+2025-05-22 12:04:07.272389		New batch file written at app/MatchesOriginalPartsPersona.jsonl
+
+2025-05-22 12:05:26.052109		New batch file written at app/MatchesOnlyParts.jsonl
+
+2025-05-22 12:07:14.657373		New batch file written at app/MatchesOriginalParts.jsonl
+
+2025-05-22 12:07:45.648521		
+Batch job with ID batch_682ef1cdaf308190a38010c16dd5aa80 cancelled.
+
+2025-05-22 12:09:05.159286		New batch file written at app/MatchesOriginalPartsPersona.jsonl
+
+2025-05-22 12:10:51.905979		New batch file written at app/MatchesOriginalTitle.jsonl
+
+2025-05-22 12:11:38.222580		New batch file written at app/MatchesOriginalTitlePersona.jsonl
+
+2025-05-22 13:41:43.379713		New batch file written at app/MatchesOriginalParts.jsonl
+
+2025-05-22 13:42:49.228730		New batch file written at app/MatchesOriginalPartsPersona.jsonl
+
+2025-05-22 13:49:23.343910		New batch file written at app/MatchesOriginalBoth.jsonl
+
+2025-05-22 13:49:54.430699		New batch file written at app/MatchesOriginalBothPersona.jsonl
+
+2025-05-22 14:32:19.819836		New batch file written at app/MatchesTranslitBothPersona.jsonl
+
+2025-05-22 14:33:04.193966		New batch file written at app/MatchesTranslitBoth.jsonl
+
+2025-05-22 14:38:05.782970		New batch file written at app/MatchesTranslitParts.jsonl
+
+2025-05-22 14:38:40.574580		New batch file written at app/MatchesTranslitPartsPersona.jsonl
+
+2025-05-22 14:40:09.922144		New batch file written at app/MatchesTranslitTitle.jsonl
+
+2025-05-22 14:40:35.910454		New batch file written at app/MatchesTranslitTitlePersona.jsonl
+

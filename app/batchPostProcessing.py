@@ -138,7 +138,7 @@ def test_with_name_list():
 def test_with_name_pairs():
     print("Creating response blocks...")
     output_blocks = create_blocks_from_output_pairs(
-        r"experiments\partScores200ConfScore\partScores200ConfScoreoutput.jsonl"
+        r"experiments\MatchesOriginalTitlePersona\MatchesOriginalTitlePersonaoutput.jsonl"
     )
     matches = pd.read_csv(
         r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
@@ -190,6 +190,8 @@ def update_blocks_with_list_names(
     with open(output_filepath) as output_file, open(
         leftover_blocks_filepath
     ) as leftover_blocks_file:
+        responses_checked = 0
+        valid_responses = 0
         # load the the blocks we started with and load the leftover blocks which will be the base of our new blocks
         blocks_file = open(blocks_filepath)
         blocks = json.load(blocks_file)
@@ -210,12 +212,17 @@ def update_blocks_with_list_names(
                 if blocks_df.iloc[possible_match]["title"] in response:
                     new_blocks[record].add(possible_match)
                     print(f"Found returned name for {id}")
+                    valid_responses += 1
                     break
+            responses_checked += 1
         # we're done building the new blocks, now we overwrite the old blocks so we can make a new request out of them
         new_blocks = {k: list(v) for k, v in new_blocks.items()}
         with open(blocks_filepath, "w") as blocks_file:
             json.dump(new_blocks, blocks_file, ensure_ascii=False, indent=4)
-        # calculate recall, precision, and F-measures
+        # calculate recall, precision, and F-measures, and print the number of valid responses we received
+        print(
+            f"Got {valid_responses}/{responses_checked} valid responses ({valid_responses/responses_checked}%)."
+        )
         matches = pd.read_csv(
             r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
             sep="\t",
@@ -246,13 +253,13 @@ def update_blocks_with_list_names(
 if __name__ == "__main__":
     test_with_name_pairs()
     # update_blocks_with_list_names(
-    #    r"experiments\pairsTestParts2\pairsTestParts2output.jsonl",
-    #    r"experiments\pairsTestParts2\filtered_blocks.json",
-    #    r"experiments\pairsTestParts2\leftoverBlocks.jsonl",
-    #    pd.read_csv(
-    #        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
-    #        sep="\t",
-    #         header=0,
-    #     ),
+    #    r"experiments\listsTestIteration11.1\listsTestIteration11.1output.jsonl",
+    #   r"experiments\listsTestIteration11.1\filtered_blocks.json",
+    #   r"experiments\listsTestIteration11.1\leftoverBlocks.jsonl",
+    #   pd.read_csv(
+    #       r"datasets\phonetic\test_zylbercweig_transliterate.csv",
+    #       sep=",",
+    #       header=0,
+    #   ),
     # )
     pass
