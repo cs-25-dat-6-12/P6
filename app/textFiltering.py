@@ -422,8 +422,8 @@ if __name__ == "__main__":
                 blocks = json.load(file)
                 blocks = {int(k): set(v) for k, v in blocks.items()}
                 start_time = datetime.now()
-                filtered_blocks = filter_with_set_union(
-                    blocks, df2, df1, similarity_threshold=0.6
+                filtered_blocks = filter_with_normalized_scores_revised(
+                    blocks, df2, df1, block_size=200
                 )
                 end_time = datetime.now()
                 print(f"Time taken: {(end_time-start_time).total_seconds()} seconds.")

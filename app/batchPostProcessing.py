@@ -138,7 +138,7 @@ def test_with_name_list():
 def test_with_name_pairs():
     print("Creating response blocks...")
     output_blocks = create_blocks_from_output_pairs(
-        r"experiments\MatchesOriginalTitlePersona\MatchesOriginalTitlePersonaoutput.jsonl"
+        r"experiments\MatchesTranslitBoth\MatchesTranslitBothoutput.jsonl"
     )
     matches = pd.read_csv(
         r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",

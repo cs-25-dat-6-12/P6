@@ -771,3 +771,17 @@ Batch job with ID batch_682ef1cdaf308190a38010c16dd5aa80 cancelled.
 
 2025-05-22 14:40:35.910454		New batch file written at app/MatchesTranslitTitlePersona.jsonl
 
+2025-05-23 10:11:03.040587		New batch file written at app/MatchesPhoneticBothPersona.jsonl
+
+2025-05-23 10:13:39.910979		New batch file written at app/MatchesPhoneticBothPersona.jsonl
+
+2025-05-23 10:15:00.566183		New batch file written at app/MatchesPhoneticBoth.jsonl
+
+2025-05-23 10:17:29.306438		New batch file written at app/MatchesPhoneticPartsPersona.jsonl
+
+2025-05-23 10:18:03.206042		New batch file written at app/MatchesPhoneticParts.jsonl
+
+2025-05-23 10:25:35.377436		New batch file written at app/MatchesPhoneticTitlePersona.jsonl
+
+2025-05-23 10:26:01.507057		New batch file written at app/MatchesPhoneticTitle.jsonl
+
