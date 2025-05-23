@@ -68,6 +68,51 @@ def create_blocks_from_output_pairs(output_filepath):
         return output_blocks
 
 
+def create_blocks_from_output_pairs_with_confidence_score(
+    output_filepath, threshold=0.8
+):
+    # given the path of a jsonl file produced as output to a batch job where individual name pairs are given in each request
+    # and a threshold which the response (formatted as a floating point number) to each request must be above or equal to in order to be included,
+    # create a dictionary that maps records to the records the LLM thinks they match with
+    with open(output_filepath) as output_file:
+        output_blocks = {}
+        value_errors = 0
+        match_scores = {}
+        for line in output_file:
+            line = json.loads(line)
+            # the custom_id of each request is formatted as "record1#record2".
+            # In the original blocks, record1 maps to a number of other records, among which record2 can be found.
+            # We will use this custom_id to construct our output_blocks:
+            record_pair = line["custom_id"].split("#")
+            record = int(record_pair[0])
+            possible_match = int(record_pair[1])
+            print(
+                f"Adding ({record}, {possible_match}) to blocks.     ",
+                end="\r",
+            )
+            output_blocks.update({record: output_blocks.get(record, list())})
+            match_scores.update({record: match_scores.get(record, list())})
+            response = line["response"]["body"]["choices"][0]["message"]["content"]
+            try:
+                score = float(response)
+                if float(response) >= threshold:
+                    output_blocks.update(
+                        {record: output_blocks[record] + [possible_match]}
+                    )
+                    match_scores.update({record: match_scores[record] + [score]})
+            except ValueError:
+                value_errors += 1
+        for record in output_blocks:
+            if len(match_scores[record]) > 0:
+                max_score = max(match_scores[record])
+                possible_matches = output_blocks[record].copy()
+                for i, score in enumerate(match_scores[record]):
+                    if score < max_score:
+                        output_blocks[record].remove(possible_matches[i])
+        print(f"\nSkipped {value_errors} responses due to incorrect format.")
+        return output_blocks
+
+
 def test_with_name_list():
     print("Loading response...")
     output_booleans = load_response_booleans(r"app\batchfile3test_output.jsonl")
@@ -93,7 +138,7 @@ def test_with_name_list():
 def test_with_name_pairs():
     print("Creating response blocks...")
     output_blocks = create_blocks_from_output_pairs(
-        r"experiments\repromptTransliterationsMatches\repromptTransliterationsMatchessplitOutput\repromptTransliterationsMatches_part_1_output.jsonl"
+        r"experiments\MatchesPhoneticBoth\MatchesPhoneticBothoutput.jsonl"
     )
     matches = pd.read_csv(
         r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
@@ -121,8 +166,8 @@ def write_missed_matches(
         r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv", sep="\t", header=0
     )
     df1 = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
-        sep="\t",
+        r"datasets\phonetic\Zylbercweig_transliteration.csv",
+        sep=",",
         header=0,
     )
     missed_matches = find_missed_matches(output_blocks, matches)
@@ -137,5 +182,84 @@ def write_missed_matches(
                 )
 
 
+def update_blocks_with_list_names(
+    output_filepath, blocks_filepath, leftover_blocks_filepath, blocks_df
+):
+    # given the path to an output file, the path to the blocks-file the input was created from, the dataset the blocks map to, and the path to the leftover blocks,
+    # updates the blocks-file. # NOTE This function was made to work with prepare_batch_file_filter_lists.
+    with open(output_filepath) as output_file, open(
+        leftover_blocks_filepath
+    ) as leftover_blocks_file:
+        responses_checked = 0
+        valid_responses = 0
+        # load the the blocks we started with and load the leftover blocks which will be the base of our new blocks
+        blocks_file = open(blocks_filepath)
+        blocks = json.load(blocks_file)
+        blocks_file.close()
+        blocks = {int(k): set(v) for k, v in blocks.items()}
+        new_blocks = json.load(leftover_blocks_file)
+        new_blocks = {int(k): set(v) for k, v in new_blocks.items()}
+        for line in output_file:
+            line = json.loads(line)
+            # get the response and the record we're trying to find a match for
+            response = line["response"]["body"]["choices"][0]["message"]["content"]
+            id = line["custom_id"]
+            record = int(id.split("-")[0])
+            # find out which record in the block was chosen and add it to the new blocks
+            for possible_match in blocks[record]:
+                # FIXME hardcoded to use the title right now. If the names get a different format, this must be changed!
+                # NOTE we're checking if the name is in the response in case the response has other stuff in it too, like extra quotation marks or a prefix like "the most likely match is:"
+                if blocks_df.iloc[possible_match]["title"] in response:
+                    new_blocks[record].add(possible_match)
+                    print(f"Found returned name for {id}")
+                    valid_responses += 1
+                    break
+            responses_checked += 1
+        # we're done building the new blocks, now we overwrite the old blocks so we can make a new request out of them
+        new_blocks = {k: list(v) for k, v in new_blocks.items()}
+        with open(blocks_filepath, "w") as blocks_file:
+            json.dump(new_blocks, blocks_file, ensure_ascii=False, indent=4)
+        # calculate recall, precision, and F-measures, and print the number of valid responses we received
+        print(
+            f"Got {valid_responses}/{responses_checked} valid responses ({valid_responses/responses_checked}%)."
+        )
+        matches = pd.read_csv(
+            r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
+            sep="\t",
+            header=0,
+        )
+        precision = calculate_precision(new_blocks, matches)
+        recall = calculate_recall_better(new_blocks, matches)
+        f1 = 0
+        fB = 0
+        B = 5
+        # NOTE replace B with something else if you want recall to be considered more or less important
+        if (precision + recall) != 0:
+            f1 = 2 * (precision * recall) / (precision + recall)
+            fB = (1 + B**2) / ((B**2 * recall**-1) + precision**-1)
+        print(f"Precision: {precision}\nRecall: {recall}\nF1: {f1}\nF{B}: {fB}")
+
+        # if each key maps to zero or one record, then we're ready for pairwise comparisons and should tell the user
+        if len(
+            list(filter(lambda block: len(new_blocks[block]) <= 1, new_blocks))
+        ) == len(new_blocks):
+            print(
+                "All records have at most one possible match. Ready for pairwise comparisons!"
+            )
+        else:
+            print("Blocks updated and ready for next iteration!")
+
+
 if __name__ == "__main__":
     test_with_name_pairs()
+    # update_blocks_with_list_names(
+    #    r"experiments\listsTestIteration11.1\listsTestIteration11.1output.jsonl",
+    #   r"experiments\listsTestIteration11.1\filtered_blocks.json",
+    #   r"experiments\listsTestIteration11.1\leftoverBlocks.jsonl",
+    #   pd.read_csv(
+    #       r"datasets\phonetic\test_zylbercweig_transliterate.csv",
+    #       sep=",",
+    #       header=0,
+    #   ),
+    # )
+    pass

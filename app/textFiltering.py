@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 import pandas as pd
 import winsound
@@ -7,9 +8,9 @@ from strsimpy.jaro_winkler import JaroWinkler
 
 
 def load_data(filepath1, filepath2, matches_path):
-    df1 = pd.read_csv(filepath1, sep="\t", header=0)
+    df1 = pd.read_csv(filepath1, sep=",", header=0)
 
-    df2 = pd.read_csv(filepath2, sep="\t", header=0)
+    df2 = pd.read_csv(filepath2, sep=",", header=0)
 
     matches = pd.read_csv(matches_path, sep="\t", header=0)
 
@@ -387,10 +388,22 @@ def find_missed_matches(blocks, matches):
     return missed_matches
 
 
+def create_phonetic_name_parts(row, columns=[]):
+    # given a pd.Series that is a row in a dataframe, replace its name parts with the phonetic equivalent if available
+    name_parts = {}
+    for label in columns:
+        try:
+            if label.endswith("_phoneme") and row[label] != None:
+                name_parts[label] = row[label]
+        except KeyError:
+            pass
+    row.at["name_parts"] = json.dumps(name_parts)
+
+
 if __name__ == "__main__":
     df2, df1, matches = load_data(
-        r"datasets\testset15-Zylbercweig-Laski\LASKI.tsv",
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig_roman.csv",
+        r"datasets\phonetic\LASKI_phonetic.csv",
+        r"datasets\phonetic\Zylbercweig_phonetic.csv",
         r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
     )
 
@@ -408,7 +421,12 @@ if __name__ == "__main__":
                 # load the blocks created in the blocking phase and make the lists into sets again
                 blocks = json.load(file)
                 blocks = {int(k): set(v) for k, v in blocks.items()}
-                filtered_blocks = filter_with_part_scores(blocks, df2, df1)
+                start_time = datetime.now()
+                filtered_blocks = filter_with_normalized_scores_revised(
+                    blocks, df2, df1, block_size=200
+                )
+                end_time = datetime.now()
+                print(f"Time taken: {(end_time-start_time).total_seconds()} seconds.")
         except Exception as e:
             # beep with frequency 1000 for 1000 ms if something goes wrong during filtering
             winsound.Beep(1000, 1000)

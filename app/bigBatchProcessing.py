@@ -153,6 +153,8 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10, update_frequency=
     while len(list(filter(lambda job: job["Downloaded"] == "False", tracked_jobs))) > 0:
         # Spawning mode
         pending_jobs = list(filter(lambda job: job["Started"] == "False", tracked_jobs))
+        if job_budget > 0 and len(pending_jobs) > 0:
+            print("Jobs pending and budget available. Switch to spawning.")
         for tracked_job in pending_jobs:
             if job_budget < 1:
                 print("Budget depleted. Switch to tracking.")
@@ -186,7 +188,7 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10, update_frequency=
         running_jobs = list(
             filter(
                 lambda job: job["Downloaded"] == "False"
-                and job["Status"] in ["in_progress", "finalizing"],
+                and job["Status"] in ["in_progress", "finalizing", "completed"],
                 tracked_jobs,
             )
         )
@@ -215,7 +217,6 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10, update_frequency=
                     running_job.update({"Downloaded": "True"})
                     job_budget += 1
                     dict_list_to_csv(src_filepath, tracked_jobs)
-                    print("Budget available. Switch to spawning.")
             # reevaluate how many jobs are currently running
             running_jobs = list(
                 filter(
@@ -425,11 +426,13 @@ def combine_jsonl(dst_filepath, src_directory):
 
 if __name__ == "__main__":
     # NOTE make sure all specified directories are empty before using them here!
-    main_file = "experiments/repromptTransliterationsMatches/repromptTransliterationsMatches.jsonl"
-    subfiles_directory = "experiments/repromptTransliterationsMatches/repromptTransliterationsMatchessplit/"
+    main_file = "experiments/MatchesPhoneticTitle/MatchesPhoneticTitle.jsonl"
+    subfiles_directory = "experiments/MatchesPhoneticTitle/MatchesPhoneticTitlesplit/"
     tracking_file = subfiles_directory + "tracker.csv"
-    output_directory = "experiments/repromptTransliterationsMatches/repromptTransliterationsMatchessplitOutput/"
-    output_file = "experiments/repromptTransliterationsMatches/repromptTransliterationsMatchesoutput.jsonl"
+    output_directory = (
+        "experiments/MatchesPhoneticTitle/MatchesPhoneticTitlesplitOutput/"
+    )
+    output_file = "experiments/MatchesPhoneticTitle/MatchesPhoneticTitleoutput.jsonl"
 
     with open("secrets.json", "r") as file:
         secrets = json.load(file)
