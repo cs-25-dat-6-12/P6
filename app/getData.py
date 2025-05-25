@@ -2,6 +2,7 @@ import csv
 import re
 from unidecode import unidecode
 import pandas as pd
+import g2p
 
 string_feature_set = set()
 full_feature_list = []
@@ -106,17 +107,25 @@ def readData(filenames):
 
     return df
 
-def langData(data,lang):
-    data = data[data['lang'] == lang]
-    return data
-
-def matchFile(data, lang1, lang2):
-    
-    return data
+def langData(df, lang):
+    df = df[df['lang'] == lang]
+    df = df.drop_duplicates(subset='id')
+    df.drop("lang", axis='columns', inplace=True)
+    return df
 
 if __name__ == "__main__":
-
+    
     wikiData = pd.read_csv("datasets\wikiData\wikiMedLink.csv")
     wikiData_yi = langData(wikiData,"yi")
+    wikiData_he = langData(wikiData,"he")
+    wikiData_ar = langData(wikiData,"ar")
     wikiData_en = langData(wikiData,"en")
-    print(wikiData_en)
+    wikiData_de = langData(wikiData,"de")
+    wikiData_tr = langData(wikiData,"tr")
+
+    #g2p.write_g2p(wikiData_yi,"wikiData_yi")
+    #g2p.write_g2p(wikiData_he,"wikiData_he")
+    #g2p.write_g2p(wikiData_ar,"wikiData_ar")
+    #g2p.write_g2p(wikiData_en,"wikiData_en")
+    #g2p.write_g2p(wikiData_de,"wikiData_de")
+    #g2p.write_g2p(wikiData_tr,"wikiData_tr")
