@@ -182,8 +182,8 @@ if __name__ == "__main__":
     Zylbercweig_file = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.csv")
     LASKI_file = pd.read_csv("datasets/testset15-Zylbercweig-Laski/LASKI.csv")
 
-    print(Zylbercweig_file.head())  
-    print(LASKI_file.head())        
+    print(Zylbercweig_file.head())
+    print(LASKI_file.head())
     
     Zylbercweig_file = getData.readData(Zylbercweig_file)
     LASKI_file = getData.readData(LASKI_file)

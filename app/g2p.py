@@ -14,6 +14,7 @@ import json
 import unittest
 from translit_me.transliterator import transliterate as tr
 from translit_me.lang_tables import *
+from transphone import read_tokenizer
 
 
 def send_data_to_service(
@@ -136,10 +137,26 @@ def prep_df(df: pd.DataFrame):
 
     return merged_df
 
+def prep_yid(df: pd.DataFrame):
+    yid = read_tokenizer('yid')
+
+    df['lang'] = 'yid'
+
+    df['title'] = df['title']
+
+    df['phoneme'] = df['title'].apply(lambda t: ' '.join([''.join(yid.tokenize(word)) for word in t.split('@')[0].split()]))
+
+    df_setup = ['id', 'title', 'lang', 'phoneme', 'personAltLabel', 'personDescription', 'birth', 'death', 'age']
+    df = df[[col for col in df_setup if col in df.columns]]
+
+    return df
 
 def write_g2p(data, name):
     print(f"Preparing and saving G2P data for: {name}")
-    data = prep_df(data)
+    if (name == "wikiData_yid"):
+        data = prep_yid(data)
+    else:
+        data = prep_df(data)
 
     """ if name == "LASKI":
         columns = ['name_part_given-name', 'name_part_middle-name', 'name_part_surname' , 'name_part_salutation', 'name_part_patronymic', 'name_part_professional-name', 'name_part_maiden-surname', 'name_part_nisba','name_part_alternative-name', 'name_part_qualifier','name_part_honorific', 'acronym', 'maiden-surname', 'honorific', 'primary-name', 'professional-name', 'salutation', 'teknonym', 'patronymic', 'middle-name', 'qualifier', 'surname', 'given-name', 'alternative-name', 'appellation', 'matronymic', 'nisba']
