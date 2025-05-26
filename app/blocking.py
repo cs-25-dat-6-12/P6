@@ -145,6 +145,15 @@ def potential_name_length(row, slack=3):
         return possible_lengths
     except json.JSONDecodeError:
         return ["None"]
+    
+
+def age_blocking(row, slack=0):
+    age = row["age"]
+    labels = []
+    for i in range(age - slack, age + slack + 1):
+        labels += [i]
+    return labels
+
 
 
 if __name__ == "__main__":
