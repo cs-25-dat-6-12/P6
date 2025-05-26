@@ -200,5 +200,5 @@ def translit(data, name, lang):
 
 if __name__ == "__main__":
 
-    Zylbercweig_file = pd.read_csv("datasets/testset15-Zylbercweig-Laski/Zylbercweig.csv")
+    Zylbercweig_file = pd.read_csv("datasets/phonetic/wikiData-title-nameparts/wikiData_ar_phonetic.csv")
     translit(Zylbercweig_file, "zylbercweig", YI_EN)

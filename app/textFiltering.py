@@ -29,7 +29,7 @@ def create_parts_dictionary(df, allowed_records=None):
             break
         try:
             name_parts = json.loads(row["name_parts"]).values()
-        except json.JSONDecodeError:
+        except (json.JSONDecodeError, TypeError):
             # print(f"Error decoding name parts. Skipping record {index}")
             continue
         for name_part in name_parts:
@@ -158,9 +158,9 @@ def filter_with_normalized_scores_revised(blocks, df, blocks_df, block_size=100)
         # a comparison block is an index of a record and a set of all the indexes of records that it might match with
 
         # REVIEW: this part is intended to help filter giant datasets faster. Try to remove it and see if filtering happens faster or slower
-        name_parts_indexes = create_parts_dictionary(
-            blocks_df, allowed_records=blocks[index]
-        )
+        # name_parts_indexes = create_parts_dictionary(
+        #    blocks_df, allowed_records=blocks[index]
+        # )
         # end of that part
 
         print(
@@ -412,8 +412,8 @@ def create_phonetic_name_parts(row, columns=[]):
 
 if __name__ == "__main__":
     df2, df1, matches = load_data(
-        r"datasets\phonetic\LASKI_phonetic.csv",
-        r"datasets\phonetic\Zylbercweig_phonetic.csv",
+        r"datasets\phonetic\wikiData-title-nameparts\wikiData_merged_phonetic.csv",
+        r"datasets\phonetic\wikiData-title-nameparts\wikiData_merged_phonetic.csv",
         r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
     )
 
@@ -433,7 +433,7 @@ if __name__ == "__main__":
                 blocks = {int(k): set(v) for k, v in blocks.items()}
                 start_time = datetime.now()
                 filtered_blocks = filter_with_normalized_scores_revised(
-                    blocks, df2, df1, block_size=200
+                    blocks, df2, df1, block_size=50
                 )
                 end_time = datetime.now()
                 print(f"Time taken: {(end_time-start_time).total_seconds()} seconds.")
