@@ -1,6 +1,7 @@
 from datetime import datetime
 import json
 import pandas as pd
+from wikidataPostProcessing import getWikidataDf
 from textFiltering import (
     calculate_recall_better,
     calculate_reduction_ratio,
@@ -158,13 +159,17 @@ def age_blocking(row, slack=0):
 
 if __name__ == "__main__":
     df1 = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\LASKI.csv", sep=",", header=0
+        r"datasets\phonetic\wikiData-title-nameparts\wikiData_merged_phonetic.csv", sep=",", header=0
     )
     df2 = pd.read_csv(
-        r"datasets\testset15-Zylbercweig-Laski\Zylbercweig.csv",
+        r"datasets\phonetic\wikiData-title-nameparts\wikiData_merged_phonetic.csv",
         sep=",",
         header=0,
     )
+    
+    df1 = getWikidataDf()
+    
+    df2 = getWikidataDf()
 
     labeler = no_distinguishing
 
@@ -176,7 +181,12 @@ if __name__ == "__main__":
     end_time = datetime.now()
 
     print("Preparing pairwise comparisons...")
-    blocks = create_pairwise_comparison_blocks(dict_1, dict_2, is_same_df=False)
+    blocks = create_pairwise_comparison_blocks(dict_1, dict_2, is_same_df=True)
+
+    print("Writing blocks to file...")
+    blocks = {k: list(v) for k, v in blocks.items()}
+    with open(r"app\blocks.json", "w", encoding="utf-8") as file:
+        json.dump(blocks, file, ensure_ascii=False, indent=4)
 
     print("Evaluating blocks...\n")
     matches = pd.read_csv(
@@ -190,8 +200,4 @@ if __name__ == "__main__":
     reduction_ration = calculate_reduction_ratio(blocks, df1, df2)
     print(f"Reduction ratio: {reduction_ration}\n")
 
-    print("Writing blocks to file...")
-    blocks = {k: list(v) for k, v in blocks.items()}
-    with open(r"app\blocks.json", "w", encoding="utf-8") as file:
-        json.dump(blocks, file, ensure_ascii=False, indent=4)
     print("All done and ready for filtering!")

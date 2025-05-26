@@ -137,14 +137,24 @@ def langData(df, lang):
 
 
 if __name__ == "__main__":
+    
+    folder = "datasets\phonetic\wikiData-title"
 
-    wikiData = pd.read_csv("datasets\wikiData\wikiMedLink.csv")
+    csv_files = glob.glob(os.path.join(folder, "*.csv"))
+
+    merged_df = pd.concat((pd.read_csv(f) for f in csv_files), ignore_index=True)
+
+    merged_df.to_csv(os.path.join(folder, "wikiData_merged_phonetic.csv"), index=False)
+
+    print(f"Merged {len(csv_files)} files into 'wikiData_merged_phonetic.csv'")
+
+    """ wikiData = pd.read_csv("datasets\wikiData\wikiMedLink.csv")
     wikiData_yi = langData(wikiData, "yi")
     wikiData_he = langData(wikiData, "he")
     wikiData_ar = langData(wikiData, "ar")
     wikiData_en = langData(wikiData, "en")
     wikiData_de = langData(wikiData, "de")
-    wikiData_tr = langData(wikiData, "tr")
+    wikiData_tr = langData(wikiData, "tr") """
 
     # g2p.write_g2p(wikiData_yi,"wikiData_yid")
     # g2p.write_g2p(wikiData_he,"wikiData_he")
