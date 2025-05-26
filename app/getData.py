@@ -138,6 +138,7 @@ def langData(df, lang):
 
 if __name__ == "__main__":
     
+
     folder = "datasets/translit-wikiData"
 
     csv_files = glob.glob(os.path.join(folder, "*.csv"))
@@ -147,6 +148,7 @@ if __name__ == "__main__":
     merged_df.to_csv(os.path.join(folder, "wikiData_merged_transliteration.csv"), index=False)
 
     print(f"Merged {len(csv_files)} files into 'wikiData_merged_transliteration.csv'")
+
 
     """ wikiData = pd.read_csv("datasets\wikiData\wikiMedLink.csv")
     wikiData_yi = langData(wikiData, "yi")
