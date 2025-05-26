@@ -95,6 +95,6 @@ if __name__ == "__main__":
     ##create_block_files(filter_with_normalized_scores_revised)
     # post_process(r"app\test_queries_input.jsonl", filter_with_part_scores, 10, r"app\test_queries_result.jsonl")
     create_query_files(
-        r"experiments\PaperExperiments\ZylbercweigLaski\PhoneticExtras\PhoneticParts\PhoneticPartsoutput.jsonl",
+        r"experiments\PaperExperiments\ZylbercweigLaski\PhoneticExtras\PhoneticTitle\PhoneticTitleoutput.jsonl",
         range(50, 200 + 1, 50),
     )

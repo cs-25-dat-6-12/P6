@@ -434,7 +434,7 @@ if __name__ == "__main__":
     # NOTE make sure all specified directories are empty before using them here!
     main_file = "experiments/PaperExperiments/ZylbercweigLaski/PhoneticExtras/PhoneticTitle/PhoneticTitle.jsonl"
     subfiles_directory = "experiments/PaperExperiments/ZylbercweigLaski/PhoneticExtras/PhoneticTitle/PhoneticTitlesplit/"
-    tracking_file = subfiles_directory + "tracker.csv"
+    tracking_file = subfiles_directory + "tracker alt.csv"
     output_directory = "experiments/PaperExperiments/ZylbercweigLaski/PhoneticExtras/PhoneticTitle/PhoneticTitlesplitOutput/"
     output_file = "experiments/PaperExperiments/ZylbercweigLaski/PhoneticExtras/PhoneticTitle/PhoneticTitleoutput.jsonl"
 
@@ -453,8 +453,8 @@ if __name__ == "__main__":
         secrets = json.load(file)
         client = openai.OpenAI(api_key=secrets["api_key"])
 
-        # Doing: PT, PTP, PP, PPP, PB, PBP
-        # Done: saturday evening ->| OB, OP, OT, TT, TP | sunday evening->| OPP, TTP, TPP, OTP | monday morning ->| TB, TBP, OBP |
+        # Doing: Nothing!
+        # Done: saturday evening ->| OB, OP, OT, TT, TP | sunday evening->| OPP, TTP, TPP, OTP | monday morning ->| TB, TBP, OBP | monday evening ->| PBP, PB, PPP, PP, PTP, PT |
 
     split_jsonl(main_file, subfiles_directory)
     prepare_batch_jobs(tracking_file, subfiles_directory)
