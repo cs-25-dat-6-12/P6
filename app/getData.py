@@ -10,6 +10,7 @@ string_feature_set = set()
 full_feature_list = []
 rows = []
 
+
 def preProcess(column):
     if isinstance(column, (int, float)):
         return str(
@@ -30,10 +31,12 @@ def preProcess(column):
 # Read and preprocess data from CSV file, ignoring lat and lon columns
 def readData(filenames):
     data_d = {}
-    
+
     # If filenames is a DataFrame, just use it directly
     if isinstance(filenames, pd.DataFrame):
-        rows = filenames.to_dict(orient='records')  # Convert DataFrame rows to list of dictionaries
+        rows = filenames.to_dict(
+            orient="records"
+        )  # Convert DataFrame rows to list of dictionaries
     else:
         rows = []
         file_number = -1
@@ -44,7 +47,7 @@ def readData(filenames):
                 for row in reader:
                     row.update({"data_source": file_number})
                     rows.append(row)
-    
+
     # Rest of the code remains the same...
     print("Finding distinct name parts")
     bad_rows = []
@@ -80,7 +83,19 @@ def readData(filenames):
         clean_row = {
             k: preProcess(v)
             for k, v in row.items()
-            if k not in ["", "start", "id", "geo_id", "geowkt", "geo_source", "title_source", "description", "lat", "lon"] #, "title", "name_parts"
+            if k
+            not in [
+                "",
+                "start",
+                "id",
+                "geo_id",
+                "geowkt",
+                "geo_source",
+                "title_source",
+                "description",
+                "lat",
+                "lon",
+            ]  # , "title", "name_parts"
         }
 
         clean_row["title"] = preProcess(row.get("title", ""))
@@ -103,36 +118,37 @@ def readData(filenames):
 
         row_id = int(row["id"])
         data_d[row_id] = clean_row
-    
+
     df = pd.DataFrame.from_dict(data_d, orient="index")
     df["id"] = df.index
 
     return df
 
+
 def langData(df, lang):
-    df = df[df['lang'] == lang]
-    df = df.drop_duplicates(subset='id')
+    df = df[df["lang"] == lang]
+    df = df.drop_duplicates(subset="id")
     if lang == "yi":
         df["title"] = df["title"] + f"@yid"
     else:
         df["title"] = df["title"] + f"@{lang}"
-    df.drop("lang", axis='columns', inplace=True)
+    df.drop("lang", axis="columns", inplace=True)
     return df
 
-if __name__ == "__main__":
-    
-    
-    wikiData = pd.read_csv("datasets\wikiData\wikiMedLink.csv")
-    wikiData_yi = langData(wikiData,"yi")
-    wikiData_he = langData(wikiData,"he")
-    wikiData_ar = langData(wikiData,"ar")
-    wikiData_en = langData(wikiData,"en")
-    wikiData_de = langData(wikiData,"de")
-    wikiData_tr = langData(wikiData,"tr")
 
-    #g2p.write_g2p(wikiData_yi,"wikiData_yid")
-    #g2p.write_g2p(wikiData_he,"wikiData_he")
-    #g2p.write_g2p(wikiData_ar,"wikiData_ar")
-    #g2p.write_g2p(wikiData_en,"wikiData_en")
-    #g2p.write_g2p(wikiData_de,"wikiData_de")
-    #g2p.write_g2p(wikiData_tr,"wikiData_tr")
+if __name__ == "__main__":
+
+    wikiData = pd.read_csv("datasets\wikiData\wikiMedLink.csv")
+    wikiData_yi = langData(wikiData, "yi")
+    wikiData_he = langData(wikiData, "he")
+    wikiData_ar = langData(wikiData, "ar")
+    wikiData_en = langData(wikiData, "en")
+    wikiData_de = langData(wikiData, "de")
+    wikiData_tr = langData(wikiData, "tr")
+
+    # g2p.write_g2p(wikiData_yi,"wikiData_yid")
+    # g2p.write_g2p(wikiData_he,"wikiData_he")
+    # g2p.write_g2p(wikiData_ar,"wikiData_ar")
+    # g2p.write_g2p(wikiData_en,"wikiData_en")
+    # g2p.write_g2p(wikiData_de,"wikiData_de")
+    # g2p.write_g2p(wikiData_tr,"wikiData_tr")

@@ -226,23 +226,25 @@ def prepare_batch_file_individual_pairs(
                             "messages": [
                                 {
                                     "role": "developer",
-                                    "content": f'You will be given the phonetic encodings of two names. The encodings may vary between the names even if they refer to the same person, but they should sound similar if they do. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise."',
+                                    "content": f'You are a name classification expert, well versed in the form, structure and composition of names in Jewish History. You will be given the phonetic encodings of the parts of two names. The encodings may vary between the names even if they refer to the same person, but they should sound similar if they do. Your task is to determine if the names refer to the same person and respond with "True" if they do and "False" otherwise.',
                                     # You are a name classification expert, well versed in the form, structure and composition of names in Jewish History.
                                     # so the spelling may vary between the source and the target, but they should sound similar.
                                 },
                                 {
                                     "role": "user",
-                                    "content": f"First name: {blocks_df.iloc[possible_match]["phoneme"]}",
+                                    "content": f"First name: {column_name_parts_to_string(blocks_df.iloc[possible_match], [x for x in blocks_df.columns if x.endswith("_phoneme")])}",
                                     # blocks_df.iloc[possible_match]["title"]
                                     # blocks_df.iloc[possible_match]["phoneme"]
                                     # ; Name parts: {name_parts_to_string(json.loads(blocks_df.iloc[possible_match]["name_parts"]))}
+                                    # ; Name parts: {column_name_parts_to_string(blocks_df.iloc[possible_match], [x for x in blocks_df.columns if x.endswith("_phoneme")])}
                                 },
                                 {
                                     "role": "user",
-                                    "content": f"Second name: {df.iloc[record]["phoneme"]}",
+                                    "content": f"Second name: {column_name_parts_to_string(df.iloc[record], [x for x in df.columns if x.endswith("_phoneme")])}",
                                     # df.iloc[record]["phoneme"]
                                     # df.iloc[record]["title"]
                                     # ; Name parts: {name_parts_to_string(json.loads(df.iloc[record]["name_parts"]))}
+                                    # ; Name parts: {column_name_parts_to_string(df.iloc[record], [x for x in df.columns if x.endswith("_phoneme")])}
                                 },
                             ],
                             "max_tokens": max_tokens_per_request,
@@ -366,13 +368,13 @@ if __name__ == "__main__":
         blocks = {int(k): list(v) for k, v in blocks.items()}
 
     # FIXME for testing only!
-    blocks = create_match_blocks(
-        pd.read_csv(
-            r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
-            sep="\t",
-            header=0,
-        )
-    )
+    # blocks = create_match_blocks(
+    #    pd.read_csv(
+    #        r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
+    #        sep="\t",
+    #        header=0,
+    #    )
+    # )
 
     # setup the client as a global variable
     with open("secrets.json", "r") as file:
@@ -393,8 +395,11 @@ if __name__ == "__main__":
         match choice:
             case "write":
                 print("WRITE selected.")
-                print("Enter filename for new .jsonl file:")
-                filename = input()
+                print("Enter filepath for new .jsonl file:")
+                filepath = input()
+                if not filepath.endswith(".jsonl"):
+                    print("Only .jsonl files allowed!")
+                    break
                 print(
                     'Type "pairs" to create pairwise comparison requests.\nType "lists" to create list selection requests.'
                 )
@@ -403,7 +408,7 @@ if __name__ == "__main__":
                     case "pairs":
                         print("PAIRS selected.")
                         prepare_batch_file_individual_pairs(
-                            blocks, df, blocks_df, "app/" + filename + ".jsonl"
+                            blocks, df, blocks_df, filepath
                         )
                     case "lists":
                         print("LISTS selected.")
@@ -411,7 +416,7 @@ if __name__ == "__main__":
                             blocks,
                             df,
                             blocks_df,
-                            "app/" + filename + ".jsonl",
+                            filepath,
                         )
 
             case "upload":

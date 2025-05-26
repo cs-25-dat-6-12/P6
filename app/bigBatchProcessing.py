@@ -204,6 +204,12 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10, update_frequency=
                     )
                     running_job.update({"Status": status})
                     dict_list_to_csv(src_filepath, tracked_jobs)
+                if status == "expired":
+                    # change the expired job's started-flag and readd it to pending_jobs so we'll try to start it again ASAP
+                    running_job.update({"Started": "False"})
+                    job_budget += 1
+                    dict_list_to_csv(src_filepath, tracked_jobs)
+                    pending_jobs.append(running_job)
                 if status == "completed":
                     # download the output content of the completed job
                     name, extension = os.path.splitext(running_job["Filename"])
@@ -221,7 +227,7 @@ def run_batch_jobs(src_filepath, dst_directory, job_budget=10, update_frequency=
             running_jobs = list(
                 filter(
                     lambda job: job["Downloaded"] == "False"
-                    and job["Status"] in ["in_progress", "finalizing"],
+                    and job["Status"] in ["in_progress", "finalizing", "completed"],
                     tracked_jobs,
                 )
             )
@@ -426,22 +432,29 @@ def combine_jsonl(dst_filepath, src_directory):
 
 if __name__ == "__main__":
     # NOTE make sure all specified directories are empty before using them here!
-    main_file = "experiments/MatchesPhoneticTitle/MatchesPhoneticTitle.jsonl"
-    subfiles_directory = "experiments/MatchesPhoneticTitle/MatchesPhoneticTitlesplit/"
+    main_file = "experiments/PaperExperiments/ZylbercweigLaski/PhoneticExtras/PhoneticTitle/PhoneticTitle.jsonl"
+    subfiles_directory = "experiments/PaperExperiments/ZylbercweigLaski/PhoneticExtras/PhoneticTitle/PhoneticTitlesplit/"
     tracking_file = subfiles_directory + "tracker.csv"
-    output_directory = (
-        "experiments/MatchesPhoneticTitle/MatchesPhoneticTitlesplitOutput/"
-    )
-    output_file = "experiments/MatchesPhoneticTitle/MatchesPhoneticTitleoutput.jsonl"
+    output_directory = "experiments/PaperExperiments/ZylbercweigLaski/PhoneticExtras/PhoneticTitle/PhoneticTitlesplitOutput/"
+    output_file = "experiments/PaperExperiments/ZylbercweigLaski/PhoneticExtras/PhoneticTitle/PhoneticTitleoutput.jsonl"
 
     with open("secrets.json", "r") as file:
         secrets = json.load(file)
         global client
+        # client 1 (handles most of one big batch at a time): Doing OB, OBP <- Moved parts 2, 6, and 10 of OB to client 3. Moved parts 1, 3, 5, and 8 to client 3
         client = openai.OpenAI(
             organization=secrets["organization"],
             project=secrets["project"],
             api_key=secrets["api_key"],
         )
+
+        # client 2 (handles around seven or eight big batches at a time): Doing TB, OP, OPP, TP, TPP, OT, TBP, TT, TTP, OTP, OBP <- basically doing everything now
+    with open("secretsNew.json", "r") as file:
+        secrets = json.load(file)
+        client = openai.OpenAI(api_key=secrets["api_key"])
+
+        # Doing: PT, PTP, PP, PPP, PB, PBP
+        # Done: saturday evening ->| OB, OP, OT, TT, TP | sunday evening->| OPP, TTP, TPP, OTP | monday morning ->| TB, TBP, OBP |
 
     split_jsonl(main_file, subfiles_directory)
     prepare_batch_jobs(tracking_file, subfiles_directory)

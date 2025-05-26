@@ -1,0 +1,120 @@
+Block size: 10
+Precision: 0.1910
+Recall: 0.8218
+F1: 0.3099
+F5: 0.7291
+
+Block size: 20
+Precision: 0.1135
+Recall: 0.8534
+F1: 0.2004
+F5: 0.6824
+
+Block size: 30
+Precision: 0.0836
+Recall: 0.8651
+F1: 0.1525
+F5: 0.6364
+
+Block size: 40
+Precision: 0.0666
+Recall: 0.8690
+F1: 0.1237
+F5: 0.5937
+
+Block size: 50
+Precision: 0.0559
+Recall: 0.8728
+F1: 0.1051
+F5: 0.5587
+
+Block size: 60
+Precision: 0.0486
+Recall: 0.8756
+F1: 0.0921
+F5: 0.5293
+
+Block size: 70
+Precision: 0.0430
+Recall: 0.8756
+F1: 0.0820
+F5: 0.5020
+
+Block size: 80
+Precision: 0.0389
+Recall: 0.8784
+F1: 0.0746
+F5: 0.4803
+
+Block size: 90
+Precision: 0.0356
+Recall: 0.8795
+F1: 0.0684
+F5: 0.4600
+
+Block size: 100
+Precision: 0.0328
+Recall: 0.8795
+F1: 0.0632
+F5: 0.4413
+
+Block size: 110
+Precision: 0.0305
+Recall: 0.8812
+F1: 0.0590
+F5: 0.4254
+
+Block size: 120
+Precision: 0.0286
+Recall: 0.8828
+F1: 0.0555
+F5: 0.4111
+
+Block size: 130
+Precision: 0.0269
+Recall: 0.8828
+F1: 0.0522
+F5: 0.3971
+
+Block size: 140
+Precision: 0.0254
+Recall: 0.8834
+F1: 0.0495
+F5: 0.3846
+
+Block size: 150
+Precision: 0.0241
+Recall: 0.8834
+F1: 0.0470
+F5: 0.3729
+
+Block size: 160
+Precision: 0.0230
+Recall: 0.8845
+F1: 0.0449
+F5: 0.3626
+
+Block size: 170
+Precision: 0.0220
+Recall: 0.8845
+F1: 0.0429
+F5: 0.3525
+
+Block size: 180
+Precision: 0.0210
+Recall: 0.8845
+F1: 0.0411
+F5: 0.3429
+
+Block size: 190
+Precision: 0.0202
+Recall: 0.8862
+F1: 0.0395
+F5: 0.3345
+
+Block size: 200
+Precision: 0.0194
+Recall: 0.8862
+F1: 0.0380
+F5: 0.3259
+

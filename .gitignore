@@ -163,6 +163,7 @@ cython_debug/
 
 # API keys and temporary files
 secrets.json
+secretsNew.json
 server.py
 database.db
 demo_database.db

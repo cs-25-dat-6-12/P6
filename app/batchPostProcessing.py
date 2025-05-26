@@ -135,10 +135,10 @@ def test_with_name_list():
         print(f"Precision: {precision}\nRecall: {recall}\nF1: {f1}")
 
 
-def test_with_name_pairs():
+def test_with_name_pairs(write_new_filtered_blocks_file=False):
     print("Creating response blocks...")
     output_blocks = create_blocks_from_output_pairs(
-        r"experiments\MatchesPhoneticBoth\MatchesPhoneticBothoutput.jsonl"
+        r"experiments\PaperExperiments\MatchesOnly\MatchesOriginalParts\MatchesOriginalPartsoutput.jsonl"
     )
     matches = pd.read_csv(
         r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
@@ -157,6 +157,62 @@ def test_with_name_pairs():
         fB = (1 + B**2) / ((B**2 * recall**-1) + precision**-1)
     print(f"Precision: {precision}\nRecall: {recall}\nF1: {f1}\nF{B}: {fB}")
     write_missed_matches(output_blocks, matches)
+    if write_new_filtered_blocks_file:
+        print(r"Overwriting app\filtered_blocks.json...")
+        with open(r"app\filtered_blocks.json", "w") as file:
+            json.dump(output_blocks, file)
+
+
+def test_with_name_pairs_new(array):
+    print("Creating response blocks...")
+    output_blocks = create_blocks_from_output_pairs_new(array)
+    matches = pd.read_csv(
+        r"datasets\testset15-Zylbercweig-Laski\transliterated_em.csv",
+        sep="\t",
+        header=0,
+    )
+    array = []
+    for k, v in output_blocks.items():
+        array.append(k)
+    for i in range(2475):
+        if not i in array:
+            print(f"added {i} since no suitable queries were found")
+            output_blocks.update({i: []})
+    precision = calculate_precision(output_blocks, matches)
+    recall = calculate_recall_better(output_blocks, matches)
+    f1 = 0
+    fB = 0
+    B = 5
+    # NOTE replace B with something else if you want recall to be considered more or less important
+    if (precision + recall) != 0:
+        f1 = 2 * (precision * recall) / (precision + recall)
+        # fB = ((1 + B**2) * precision * recall) / (B**2 * precision) + recall
+        fB = (1 + B**2) / ((B**2 * recall**-1) + precision**-1)
+    return f"Precision: {precision:.4f}\nRecall: {recall:.4f}\nF1: {f1:.4f}\nF{B}: {fB:.4f}"
+
+
+def create_blocks_from_output_pairs_new(array):
+    # given the path of a jsonl file produced as output to a batch job where individual name pairs are given in each request
+    # create a dictionary that maps records to the records the LLM thinks they match with
+    output_blocks = {}
+    for line in array:
+        line = json.loads(line)
+        # the custom_id of each request is formatted as "record1#record2".
+        # In the original blocks, record1 maps to a number of other records, among which record2 can be found.
+        # We will use this custom_id to construct our output_blocks:
+        record_pair = line["custom_id"].split("#")
+        record = int(record_pair[0])
+        possible_match = int(record_pair[1])
+        print(
+            f"Adding ({record}, {possible_match}) to blocks.     ",
+            end="\r",
+        )
+        output_blocks.update({record: output_blocks.get(record, list())})
+        response = line["response"]["body"]["choices"][0]["message"]["content"]
+        if "True" in response:
+            output_blocks.update({record: output_blocks[record] + [possible_match]})
+    print("")
+    return output_blocks
 
 def test_with_name_pairs_new(array):
     print("Creating response blocks...")

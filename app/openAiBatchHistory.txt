@@ -785,3 +785,52 @@ Batch job with ID batch_682ef1cdaf308190a38010c16dd5aa80 cancelled.
 
 2025-05-23 10:26:01.507057		New batch file written at app/MatchesPhoneticTitle.jsonl
 
+2025-05-23 14:56:22.002019		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\OriginalBoth\OriginalBoth.jsonl
+
+2025-05-23 14:59:21.488337		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\OriginalBothPersona\OriginalBothPersona.jsonl
+
+2025-05-23 15:01:36.993335		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\OriginalParts\OriginalParts.jsonl
+
+2025-05-23 15:04:15.062875		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\OriginalPartsPersona\OriginalPartsPersona.jsonl
+
+2025-05-23 15:06:17.494011		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\OriginalTitle\OriginalTitle.jsonl
+
+2025-05-23 15:07:58.820640		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\OriginalTitlePersona\OriginalTitlePersona.jsonl
+
+2025-05-23 15:11:03.117085		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\TranslitBoth\TranslitBoth.jsonl
+
+2025-05-23 15:13:09.821908		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\TranslitBothPersona\TranslitBothPersona.jsonl
+
+2025-05-23 15:14:44.263107		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\TranslitParts\TranslitParts.jsonl
+
+2025-05-23 15:16:42.799335		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\TranslitPartsPersona\TranslitPartsPersona.jsonl
+
+2025-05-23 15:18:18.338729		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\TranslitTitle\TranslitTitle.jsonl
+
+2025-05-23 15:21:11.665243		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\TranslitTitlePersona\TranslitTitlePersona.jsonl
+
+2025-05-23 20:25:58.331575		
+Batch job with ID batch_68306c091d70819082ded166d2b44c4e cancelled.
+
+2025-05-25 18:00:42.608058		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticBoth\PhoneticBoth.jsonl
+
+2025-05-25 18:03:59.036288		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticBothPersona\PhoneticBothPersona.jsonl
+
+2025-05-25 18:09:13.669089		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticParts\PhoneticParts.jsonl
+
+2025-05-25 18:13:29.569336		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticParts\PhoneticParts.jsonl
+
+2025-05-25 18:17:22.918897		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticPartsPersona\PhoneticPartsPersona.jsonl
+
+2025-05-25 18:20:09.081440		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticTitle\PhoneticTitle.jsonl
+
+2025-05-25 18:22:28.348483		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticTitlePersona\PhoneticTitlePersona.jsonl
+
+2025-05-26 12:27:01.227641		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticExtras\PhoneticBoth\PhoneticBoth.jsonl
+
+2025-05-26 12:30:00.595878		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticExtras\PhoneticBothPersona\PhoneticBothPersona.jsonl
+
+2025-05-26 12:32:17.961634		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticExtras\PhoneticParts\PhoneticParts.jsonl
+
+2025-05-26 12:35:08.429016		New batch file written at experiments\PaperExperiments\ZylbercweigLaski\PhoneticExtras\PhoneticPartsPersona\PhoneticPartsPersona.jsonl
+
