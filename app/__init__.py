@@ -402,8 +402,8 @@ if __name__ == "__main__":
     # )
 
     add_name_parts_from_title(
-        "datasets/phonetic/wikiData_merged_phonetic.csv",
-        "datasets/phonetic/wikiData-nameparts/wikiData_merged_phonetic.csv"
+        "datasets\phonetic\wikiData-title\wikiData_de_phonetic.csv",
+        "datasets\phonetic\wikiData-title-nameparts\wikiData_de_phonetic.csv"
     )
     
     # write_indexed_italy_em(
