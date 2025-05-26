@@ -1,0 +1,24 @@
+Block size: 50
+Precision: 0.1590
+Recall: 0.8967
+F1: 0.2700
+F5: 0.7609
+
+Block size: 100
+Precision: 0.1197
+Recall: 0.9039
+F1: 0.2114
+F5: 0.7220
+
+Block size: 150
+Precision: 0.1024
+Recall: 0.9084
+F1: 0.1841
+F5: 0.6973
+
+Block size: 200
+Precision: 0.0921
+Recall: 0.9100
+F1: 0.1673
+F5: 0.6784
+

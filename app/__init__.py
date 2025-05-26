@@ -332,10 +332,15 @@ def add_name_parts_from_title(input_filepath, output_filepath):
     df = pd.read_csv(input_filepath, sep=",")
     df["name_parts"] = pd.Series()
     for i, row in df.iterrows():
-        df["name_parts"].iat[i] = json.dumps({
-            f"name_part_{index}": name_part
-            for index, name_part in enumerate(row["title"].split(" "))
-        })
+        #if pd.isna(row["phoneme"]) or row["phoneme"].strip() == "":
+        #    continue
+        df["name_parts"].iat[i] = json.dumps(
+            {
+                f"name_part_{index}": name_part
+                for index, name_part in enumerate(row["phoneme"].split(" "))
+            },
+            ensure_ascii=False,
+        )
     df.to_csv(output_filepath, sep=",")
 
 
@@ -397,10 +402,10 @@ if __name__ == "__main__":
     # )
 
     add_name_parts_from_title(
-        "datasets/phonetic/LASKI_phonetic.csv",
-        "datasets/phonetic/LASKI_phonetic_name_parts.csv",
+        "datasets/phonetic/wikiData_merged_phonetic.csv",
+        "datasets/phonetic/wikiData-nameparts/wikiData_merged_phonetic.csv"
     )
-
+    
     # write_indexed_italy_em(
     #    r"datasets\testset13-YadVAshemItaly\em_indexes.tsv",
     # )

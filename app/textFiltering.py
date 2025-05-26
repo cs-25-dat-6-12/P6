@@ -17,26 +17,29 @@ def load_data(filepath1, filepath2, matches_path):
     return df1, df2, matches
 
 
-def create_parts_dictionary(df):
+def create_parts_dictionary(df, allowed_records=None):
     name_parts_indexes = {}
     # NOTE name_parts_indexes will map a name part to a set of indexes of all the records with that name part
     # so if we do name_parts_indexes["Emil"] we get the set of indexes of all records that have "Emil" as a name part
     # Most sets will probably have just a single entry, but some names are much more common than others!
+    # Use allowed_records to specify indexes to include in the dictionary. If it is None, all relevant indexes are included.
     for index, row in df.iterrows():
         name_parts = []
+        if allowed_records is not None and index not in allowed_records:
+            break
         try:
             name_parts = json.loads(row["name_parts"]).values()
         except json.JSONDecodeError:
-            print(f"Error decoding name parts. Skipping record {index}")
+            # print(f"Error decoding name parts. Skipping record {index}")
             continue
         for name_part in name_parts:
             name_parts_indexes.update(
                 {name_part: (name_parts_indexes.get(name_part, set()).union({index}))}
             )
     # Note that the size of a set is equivalent to the support of the name_part that maps to it, as defined in the Yad Vashem-paper
-    print(
-        f"Biggest set size: {max([len(item) for item in name_parts_indexes.values()])}"
-    )
+    # print(
+    #    f"Biggest set size: {max([len(item) for item in name_parts_indexes.values()])}"
+    # )
     return name_parts_indexes
 
 
@@ -153,6 +156,13 @@ def filter_with_normalized_scores_revised(blocks, df, blocks_df, block_size=100)
 
     for index, row in df.iterrows():
         # a comparison block is an index of a record and a set of all the indexes of records that it might match with
+
+        # REVIEW: this part is intended to help filter giant datasets faster. Try to remove it and see if filtering happens faster or slower
+        name_parts_indexes = create_parts_dictionary(
+            blocks_df, allowed_records=blocks[index]
+        )
+        # end of that part
+
         print(
             f"Filtering record {index}",
             end="\r",
