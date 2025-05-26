@@ -138,8 +138,12 @@ def langData(df, lang):
 
 if __name__ == "__main__":
     
-
-    folder = "datasets/translit-wikiData"
+    YadVashem_df = pd.read_csv("datasets/testset13-YadVAshemItaly/yv_italy.tsv", sep ="\t")
+    
+    g2p.write_g2p(YadVashem_df,"yv_italy")
+    
+    
+    """ folder = "datasets/translit-wikiData"
 
     csv_files = glob.glob(os.path.join(folder, "*.csv"))
 
@@ -147,7 +151,7 @@ if __name__ == "__main__":
 
     merged_df.to_csv(os.path.join(folder, "wikiData_merged_transliteration.csv"), index=False)
 
-    print(f"Merged {len(csv_files)} files into 'wikiData_merged_transliteration.csv'")
+    print(f"Merged {len(csv_files)} files into 'wikiData_merged_transliteration.csv'") """
 
 
     """ wikiData = pd.read_csv("datasets\wikiData\wikiMedLink.csv")
