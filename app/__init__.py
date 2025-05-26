@@ -330,6 +330,7 @@ def write_indexed_italy_em(output_path):
 
 def add_name_parts_from_title(input_filepath, output_filepath):
     df = pd.read_csv(input_filepath, sep=",")
+    df["title"] = df["title"].str.split("@").str[0]
     df["name_parts"] = pd.Series()
     for i, row in df.iterrows():
         # if pd.isna(row["phoneme"]) or row["phoneme"].strip() == "":
@@ -337,7 +338,7 @@ def add_name_parts_from_title(input_filepath, output_filepath):
         df["name_parts"].iat[i] = json.dumps(
             {
                 f"name_part_{index}": name_part
-                for index, name_part in enumerate(row["phoneme"].split(" "))
+                for index, name_part in enumerate(row["title"].split(" "))
             },
             ensure_ascii=False,
         )
@@ -402,8 +403,8 @@ if __name__ == "__main__":
     # )
 
     add_name_parts_from_title(
-        "datasets\phonetic\wikiData-title\wikiData_de_phonetic.csv",
-        "datasets\phonetic\wikiData-title-nameparts\wikiData_de_phonetic.csv",
+        "datasets/phonetic/wikiData-title/wikiData_he_phonetic.csv",
+        "datasets/translit-wikiData/wikiData_he_transliteration.csv"
     )
 
     # write_indexed_italy_em(
