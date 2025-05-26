@@ -185,20 +185,26 @@ def translit(data, name, lang):
         try:
             tr_name_parts = {}
             name_parts = json.loads(name_parts)
+            if not name_parts:  # Skip if empty dictionary
+                continue
             for name_part in name_parts:
-                results = tr([name_parts[name_part]], lang)
+                value = name_parts[name_part].strip()
+                if not value:  # Skip empty values
+                    continue
+                results = tr([value], lang)
                 tr_name_parts[name_part] = results[0]
             tr_name_parts_dicts.append(json.dumps(tr_name_parts,ensure_ascii=False))
         except json.JSONDecodeError:
             pass
     data["name_parts"] = pd.Series(tr_name_parts_dicts)
 
-    output_file_path = f"datasets/phonetic/test_{name}_transliterate.csv"
+    output_file_path = f"datasets/translit-wikiData/{name}_transliteration.csv"
     data.to_csv(output_file_path, index=False)
     print(data)
 
 
 if __name__ == "__main__":
 
-    Zylbercweig_file = pd.read_csv("datasets/phonetic/wikiData-title-nameparts/wikiData_ar_phonetic.csv")
-    translit(Zylbercweig_file, "zylbercweig", YI_EN)
+    wikiData_he = pd.read_csv("datasets/translit-wikiData/wikiData_he_transliteration.csv")
+    
+    translit(wikiData_he, "wikiData_he", HE_EN)
